@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+    <head>
+        <!-- Authors need to replace asterisked values or delete unneeded meta tags as appropriate -->
+        <meta content='Prototype.x3d' name='title'/>
+        <meta content='Prototype version for IU modeling' name='description'/>
+        <meta content='Do Quoc Thinh' name='creator'/>
+        <meta content='Oct 21th, 2017' name='created'/>
+        <meta content='Oct 21th, 2017' name='modified'/>
+        <meta content='v1.0' name='version'/>
+        <meta content='*enter drawing filename/url here*' name='drawing'/>
+        <meta content='*enter image filename/url here*' name='Image'/>
+        <meta content='*enter movie filename/url here*' name='MovingImage'/>
+        <meta content='*enter photo filename/url here*' name='photo'/>
+        <meta content='VR, Virtual Reality, X3D, IU' name='subject'/>
+        <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+        <meta content='../license.html' name='license'/>
+        <!-- Additional authoring resources for meta-tags: http://www.dublincore.org/documents/dcmi-terms http://www.dublincore.org/documents/dces http://www.w3.org/TR/html4/struct/global.html#h-7.4.4 http://vancouver-webpages.com/META http://vancouver-webpages.com/META/about-mk-metas2.html Additional authoring resources for language codes: http://www.rfc-editor.org/rfc/bcp/bcp47.txt http://www.loc.gov/standards/iso639-2/langhome.html http://www.iana.org/numbers.html#L -->
+    </head>
+    <Scene>
+        <Transform DEF='BuildingsA1Transform'>
+            <!-- Main building -->
+            <Transform DEF='MainBuildingA1Transform'>
+                <Shape DEF='MainBuildingShape'>
+                    <Appearance DEF='MainBuildingAppearance'>
+                        <Material ambientIntensity='0.05' diffuseColor='0.858824 0 0.078431' emissiveColor='0.239216 0 0.035294' shininess='0.46' specularColor='0.4 0 0.047059'/>
+                    </Appearance>
+                    <Box size='8.9 10 5' />
+                </Shape>
+            </Transform>
+            <!-- Right-side buildings, compared with the main building (NOT with viewer) -->
+            <Group DEF='RightSideBuildingsA1Group'>
+                <Transform DEF='SubBehindRightBuildingA1Transform' translation='-9.575 -0.5 -0.3'>
+                    <Shape DEF='SubBehindBuildingShape'>
+                        <Appearance DEF='SubBuildingAppearance'>
+                            <Material ambientIntensity='0.02' diffuseColor='1 0.941176 0.941176' emissiveColor='0.141176 0.141176 0.141176' shininess='0.73' specularColor='0.941176 1 0.992157'/>
+                        </Appearance>
+                        <Box size='8.15 9 4.4' />
+                    </Shape>
+                </Transform>
+                <Transform DEF='SubConnectedRightBuilldingA1Transform' translation='-4.975 -0.8 -0.5'>
+                    <Shape DEF='SubConnectedBuildingShape'>
+                        <Appearance USE='SubBuildingAppearance' />
+                        <Box size='1.05 8.4 4' />
+                    </Shape>
+                </Transform>
+                <Transform DEF='SubFrontRightBuildingA1Transform' translation='-6.85 0 2.7'>
+                    <Shape DEF='SubFrontBuildingShape'>
+                        <Appearance USE='MainBuildingAppearance' />
+                        <Box size='2.7 10 1.6' />
+                    </Shape>
+                </Transform>
+                <Transform DEF='SubTopRightBuildingA1Transform' translation='-6.85 4.5 -0.3'>
+                    <Shape DEF='SubTopBuildingShape'>
+                        <Appearance USE='MainBuildingAppearance' />
+                        <Box size='2.7 1 4.4' />
+                    </Shape>
+                </Transform>
+            </Group>
+            <!-- Left-side buildings, compared with the main building (NOT with viewer) --> 
+            <Group DEF='LeftSideBuildingsA1Group'>           
+                <Transform DEF='SubBehindLefttBuildingA1Transform' translation='9.575 -0.5 -0.3'>
+                    <Shape USE='SubBehindBuildingShape' />
+                </Transform>
+                <Transform DEF='SubConnectedLeftBuilldingA1Transform' translation='4.975 -0.8 -0.5'>
+                    <Shape USE='SubConnectedBuildingShape' />
+                </Transform>
+                <Transform DEF='SubFrontLeftBuildingA1Transform' translation='6.85 0 2.7'>
+                    <Shape USE='SubFrontBuildingShape' />
+                </Transform>
+                <Transform DEF='SubTopLeftBuildingA1Transform' translation='6.85 4.5 -0.3'>
+                    <Shape USE='SubTopBuildingShape' />
+                </Transform>
+                <Group DEF='SubLowerLeftBuildingGroup'>
+                    <Transform DEF='SubLowerLeftBuildingA1Transform-a' translation='9.2 -2.6 2.7'>
+                        <Shape DEF='SubLowerLeftBuildingShape-a'>
+                            <Appearance DEF='SubLowerLeftBuildingAppearance'>
+                                <Material ambientIntensity='0.19' diffuseColor='0.866667 0.866667 0.866667' emissiveColor='0.003922 0.003922 0.003922' shininess='0.3'/>
+                            </Appearance>
+                            <Box size='2 4.8 1.6' />
+                        </Shape>
+                    </Transform>
+                    <Transform DEF='SubLowerLeftBuildingA1Transform-b' translation='11.925 -2.6 2.2'>
+                        <Shape DEF='SubLowerLeftBuildingShape-b'>
+                            <Appearance USE='SubLowerLeftBuildingAppearance'/>
+                            <Box size='3.45 4.8 0.6' />
+                        </Shape>
+                    </Transform>
+                    <Transform DEF='SubLowerLeftBuildingA1Transform-c' translation='15.65 -2.6 0'>
+                        <Shape DEF='SubLowerLeftBuildingShape-c'>
+                            <Appearance USE='SubLowerLeftBuildingAppearance'/>
+                            <Box size='4 4.8 5' />
+                        </Shape>
+                    </Transform>
+                </Group>
+            </Group>
+        </Transform>
+        <Transform DEF='BuildingsA2Transform' translation='0 0 -11.4'>
+            <!-- Main building -->
+            <Transform DEF='MainBuildingA2Transform'>
+                <Shape USE='MainBuildingShape' />
+            </Transform>
+            <!-- Left-side buildings, compared with the main building (NOT with viewer) -->
+            <Group DEF='LeftSideBuildingsA2Group'>
+                <Transform DEF='SubBehindLeftBuildingA2Transform' translation='-9.575 -0.5 0.3'>
+                    <Shape USE='SubBehindBuildingShape' />
+                </Transform>
+                <Transform DEF='SubConnectedLeftBuilldingA2Transform' translation='-4.975 -0.8 0.5'>
+                    <Shape USE='SubConnectedBuildingShape' />
+                </Transform>
+                <Transform DEF='SubFrontLeftBuildingA2Transform' translation='-6.85 0 -2.7'>
+                    <Shape USE='SubFrontBuildingShape' />
+                </Transform>
+                <Transform DEF='SubTopLeftBuildingA2Transform' translation='-6.85 4.5 0.3'>
+                    <Shape USE='SubTopBuildingShape' />
+                </Transform>
+            </Group>
+            <!-- Right-side buildings, compared with the main building (NOT with viewer) --> 
+            <Group DEF='RightSideBuildingsA2Group'>           
+                <Transform DEF='SubBehindRighttBuildingA2Transform' translation='9.575 -0.5 0.3'>
+                    <Shape USE='SubBehindBuildingShape' />
+                </Transform>
+                <Transform DEF='SubConnectedRightBuilldingA2Transform' translation='4.975 -0.8 0.5'>
+                    <Shape USE='SubConnectedBuildingShape' />
+                </Transform>
+                <Transform DEF='SubFrontRightBuildingA2Transform' translation='6.85 0 -2.7'>
+                    <Shape USE='SubFrontBuildingShape' />
+                </Transform>
+                <Transform DEF='SubTopRightBuildingA2Transform' translation='6.85 4.5 0.3'>
+                    <Shape USE='SubTopBuildingShape' />
+                </Transform>
+                <Group DEF='SubLowerRightBuildingGroup'>
+                    <Transform DEF='SubLowerRightBuildingA2Transform-a' translation='9.2 -2.6 -2.7'>
+                        <Shape USE='SubLowerLeftBuildingShape-a' />
+                    </Transform>
+                    <Transform DEF='SubLowerRightBuildingA2Transform-b' translation='11.925 -2.6 -2.2'>
+                        <Shape USE='SubLowerLeftBuildingShape-b' />
+                    </Transform>
+                    <Transform DEF='SubLowerRightBuildingA2Transform-c' translation='15.65 -2.6 0'>
+                        <Shape USE='SubLowerLeftBuildingShape-c' />
+                    </Transform>
+                </Group>
+            </Group>
+        </Transform>
+        <Group DEF='LibraryBuildingsGroup'>
+            <Transform DEF='LibraryBridgeBuildingsTransform' translation='-8.95 -0.5 -5.7'>
+                <Shape DEF='LibraryBridgeBuildingShape'>
+                    <Appearance USE='SubBuildingAppearance'/>
+                    <Box size='1.5 9 6.4' />
+                </Shape>
+            </Transform>
+            <Transform DEF='LibraryMainBuildingTransform' translation='-13.3 -3.7 -6.95'>
+                <Shape DEF='LibraryMainBuildingShape'>
+                    <Appearance USE='SubBuildingAppearance'/>
+                    <Box size='7.2 2.6 8.9' />
+                </Shape>
+            </Transform>
+            <Transform DEF='LibrarySideBuildingTransform' translation='-15.275 -3 -1.2'>
+                <Shape DEF='LibrarySideBuildingShape'>
+                    <Appearance USE='SubLowerLeftBuildingAppearance' />
+                    <Box size='3.25 4 2.6' />
+                </Shape>
+            </Transform>
+        </Group>
+        <Transform DEF='BridgeBuildingsTransform' translation='8.95 -2.1 -5.7'>
+            <Transform DEF='BridgePillar1Transform' translation='0 0 2.6'>
+                <Shape DEF='PillarShape'>
+                    <Appearance USE='SubBuildingAppearance'/>
+                    <Box size='1.5 5.8 1.2'/>
+                </Shape>
+            </Transform>
+            <Transform DEF='BridgePillar2Transform' translation='0 0 -2.6'>
+                <Shape USE='PillarShape'/>
+            </Transform>
+            <Transform DEF='BridgeTransform' translation='0 1.1 0'>
+                <Shape DEF='BridgeShape'>
+                    <Appearance USE='SubBuildingAppearance'/>
+                    <Box size='1.5 3.2 4'/>
+                </Shape>
+            </Transform>
+        </Transform>
+    </Scene>
+</X3D>
