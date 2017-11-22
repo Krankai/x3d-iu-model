@@ -211,12 +211,8 @@ function toggleShowDebugLogs()
 <meta content='Prototype version for IU modeling' name='description'/>
 <meta content='Do Quoc Thinh' name='creator'/>
 <meta content='Oct 21th, 2017' name='created'/>
-<meta content='Oct 21th, 2017' name='modified'/>
-<meta content='v1.0' name='version'/>
-<meta content='*enter drawing filename/url here*' name='drawing'/>
-<meta content='*enter image filename/url here*' name='Image'/>
-<meta content='*enter movie filename/url here*' name='MovingImage'/>
-<meta content='*enter photo filename/url here*' name='photo'/>
+<meta content='Oct 22th, 2017' name='modified'/>
+<meta content='v1.1' name='version'/>
 <meta content='VR, Virtual Reality, X3D, IU' name='subject'/>
 <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
 <meta content='../license.html' name='license'/>
@@ -228,11 +224,63 @@ function toggleShowDebugLogs()
 <Transform DEF='MainBuildingA1Transform'>
 <Shape DEF='MainBuildingShape'>
 <Appearance DEF='MainBuildingAppearance'>
-<Material ambientIntensity='0.05' diffuseColor='0.858824 0 0.078431' emissiveColor='0.239216 0 0.035294' shininess='0.46' specularColor='0.4 0 0.047059'/>
+<Material ambientIntensity='0.05' diffuseColor='0.478431 0 0.086275' emissiveColor='0.239216 0 0.035294' shininess='0.14' specularColor='0.05098 0.05098 0.05098'/>
 </Appearance>
 <Box size='8.9 10 5'/>
 </Shape>
 </Transform>
+<Group DEF='StepsGroup'>
+<Transform DEF='Step5' translation='0 -4.5 3.25'>
+<Shape DEF='StepShape5'>
+<Appearance DEF='StepAppearance'>
+<Material ambientIntensity='0.06' diffuseColor='0.521569 0.219608 0' emissiveColor='0.101961 0.035294 0' shininess='0.21' specularColor='0.003922 0.003922 0.003922'/>
+</Appearance>
+<Box size='4.8 1 1.5'/>
+</Shape>
+</Transform>
+<Transform DEF='Step4' translation='0 -4.6 4.2'>
+<Shape DEF='StepShape4'>
+<Appearance USE='StepAppearance'/>
+<Box size='4.8 0.8 0.4'/>
+</Shape>
+</Transform>
+<Transform DEF='Step3' translation='0 -4.7 4.6'>
+<Shape DEF='StepShape3'>
+<Appearance USE='StepAppearance'/>
+<Box size='4.8 0.6 0.4'/>
+</Shape>
+</Transform>
+<Transform DEF='Step2' translation='0 -4.8 5'>
+<Shape DEF='StepShape2'>
+<Appearance USE='StepAppearance'/>
+<Box size='4.8 0.4 0.4'/>
+</Shape>
+</Transform>
+<Transform DEF='Step1' translation='0 -4.9 5.4'>
+<Shape DEF='StepShape1'>
+<Appearance USE='StepAppearance'/>
+<Box size='4.8 0.2 0.4'/>
+</Shape>
+</Transform>
+</Group>
+<Group DEF='PorchGroup'>
+<Transform DEF='DoorTransform' translation='0 -3.3 2.55'>
+<Shape DEF='DoorShape'>
+<Appearance DEF='DoorAppearance'>
+<Material emissiveColor='1 0.984314 0.980392' specularColor='0 0.098039 0.121569' transparency='0.38'/>
+</Appearance>
+<Box size='4.8 1.4 0.1'/>
+</Shape>
+</Transform>
+<Transform DEF='RoofTransform' translation='0 -2.2 3.3'>
+<Shape DEF='RoofShape'>
+<Appearance DEF='RoofAppearance'>
+<Material ambientIntensity='0.11' diffuseColor='0.321569 1 0.470588' emissiveColor='0.431373 1 0.341176' specularColor='0 0.658824 0.184314'/>
+</Appearance>
+<Box size='4.8 0.1 1.6'/>
+</Shape>
+</Transform>
+</Group>
 <Group DEF='RightSideBuildingsA1Group'>
 <Transform DEF='SubBehindRightBuildingA1Transform' translation='-9.575 -0.5 -0.3'>
 <Shape DEF='SubBehindBuildingShape'>
@@ -248,16 +296,16 @@ function toggleShowDebugLogs()
 <Box size='1.05 8.4 4'/>
 </Shape>
 </Transform>
-<Transform DEF='SubFrontRightBuildingA1Transform' translation='-6.85 0 2.7'>
+<Transform DEF='SubFrontRightBuildingA1Transform' translation='-6.85 0.5 2.7'>
 <Shape DEF='SubFrontBuildingShape'>
 <Appearance USE='MainBuildingAppearance'/>
-<Box size='2.7 10 1.6'/>
+<Box size='2.7 11 1.6'/>
 </Shape>
 </Transform>
-<Transform DEF='SubTopRightBuildingA1Transform' translation='-6.85 4.5 -0.3'>
+<Transform DEF='SubTopRightBuildingA1Transform' translation='-6.85 5 -0.3'>
 <Shape DEF='SubTopBuildingShape'>
 <Appearance USE='MainBuildingAppearance'/>
-<Box size='2.7 1 4.4'/>
+<Box size='2.7 2 4.4'/>
 </Shape>
 </Transform>
 </Group>
@@ -268,10 +316,10 @@ function toggleShowDebugLogs()
 <Transform DEF='SubConnectedLeftBuilldingA1Transform' translation='4.975 -0.8 -0.5'>
 <Shape USE='SubConnectedBuildingShape'/>
 </Transform>
-<Transform DEF='SubFrontLeftBuildingA1Transform' translation='6.85 0 2.7'>
+<Transform DEF='SubFrontLeftBuildingA1Transform' translation='6.85 0.5 2.7'>
 <Shape USE='SubFrontBuildingShape'/>
 </Transform>
-<Transform DEF='SubTopLeftBuildingA1Transform' translation='6.85 4.5 -0.3'>
+<Transform DEF='SubTopLeftBuildingA1Transform' translation='6.85 5 -0.3'>
 <Shape USE='SubTopBuildingShape'/>
 </Transform>
 <Group DEF='SubLowerLeftBuildingGroup'>
@@ -289,10 +337,10 @@ function toggleShowDebugLogs()
 <Box size='3.45 4.8 0.6'/>
 </Shape>
 </Transform>
-<Transform DEF='SubLowerLeftBuildingA1Transform-c' translation='15.65 -2.6 0'>
+<Transform DEF='SubLowerLeftBuildingA1Transform-c' translation='14.65 -2.6 0'>
 <Shape DEF='SubLowerLeftBuildingShape-c'>
 <Appearance USE='SubLowerLeftBuildingAppearance'/>
-<Box size='4 4.8 5'/>
+<Box size='2 4.8 5'/>
 </Shape>
 </Transform>
 </Group>
@@ -309,10 +357,10 @@ function toggleShowDebugLogs()
 <Transform DEF='SubConnectedLeftBuilldingA2Transform' translation='-4.975 -0.8 0.5'>
 <Shape USE='SubConnectedBuildingShape'/>
 </Transform>
-<Transform DEF='SubFrontLeftBuildingA2Transform' translation='-6.85 0 -2.7'>
+<Transform DEF='SubFrontLeftBuildingA2Transform' translation='-6.85 0.5 -2.7'>
 <Shape USE='SubFrontBuildingShape'/>
 </Transform>
-<Transform DEF='SubTopLeftBuildingA2Transform' translation='-6.85 4.5 0.3'>
+<Transform DEF='SubTopLeftBuildingA2Transform' translation='-6.85 5 0.3'>
 <Shape USE='SubTopBuildingShape'/>
 </Transform>
 </Group>
@@ -323,10 +371,10 @@ function toggleShowDebugLogs()
 <Transform DEF='SubConnectedRightBuilldingA2Transform' translation='4.975 -0.8 0.5'>
 <Shape USE='SubConnectedBuildingShape'/>
 </Transform>
-<Transform DEF='SubFrontRightBuildingA2Transform' translation='6.85 0 -2.7'>
+<Transform DEF='SubFrontRightBuildingA2Transform' translation='6.85 0.5 -2.7'>
 <Shape USE='SubFrontBuildingShape'/>
 </Transform>
-<Transform DEF='SubTopRightBuildingA2Transform' translation='6.85 4.5 0.3'>
+<Transform DEF='SubTopRightBuildingA2Transform' translation='6.85 5 0.3'>
 <Shape USE='SubTopBuildingShape'/>
 </Transform>
 <Group DEF='SubLowerRightBuildingGroup'>
@@ -336,7 +384,7 @@ function toggleShowDebugLogs()
 <Transform DEF='SubLowerRightBuildingA2Transform-b' translation='11.925 -2.6 -2.2'>
 <Shape USE='SubLowerLeftBuildingShape-b'/>
 </Transform>
-<Transform DEF='SubLowerRightBuildingA2Transform-c' translation='15.65 -2.6 0'>
+<Transform DEF='SubLowerRightBuildingA2Transform-c' translation='14.65 -2.6 0'>
 <Shape USE='SubLowerLeftBuildingShape-c'/>
 </Transform>
 </Group>
@@ -374,10 +422,20 @@ function toggleShowDebugLogs()
 </Transform>
 <Transform DEF='BridgeTransform' translation='0 1.1 0'>
 <Shape DEF='BridgeShape'>
-<Appearance USE='SubBuildingAppearance'/>
+<Appearance DEF='BridgeAppearance'>
+<Material diffuseColor='1 0.968627 0.960784' transparency='0.14'/>
+</Appearance>
 <Box size='1.5 3.2 4'/>
 </Shape>
 </Transform>
+</Transform>
+<Transform DEF='GroundTransform' translation='0 -5.2 -5.7'>
+<Shape DEF='GroundShape'>
+<Appearance DEF='GroundAppearance'>
+<Material ambientIntensity='0.16' diffuseColor='0.007843 0.458824 0' emissiveColor='0 0.2 0.090196' specularColor='0.027451 0 0.101961'/>
+</Appearance>
+<Box size='40 0.2 30'/>
+</Shape>
 </Transform>
 </Scene>
 </X3D>
@@ -417,36 +475,12 @@ function toggleShowDebugLogs()
             <tr>
                <td style="text-align:right;color:green">modified</td>
                <td> &nbsp; </td>
-               <td>Oct 21th, 2017</td>
+               <td>Oct 22th, 2017</td>
             </tr>
             <tr>
                <td style="text-align:right;color:green">version</td>
                <td> &nbsp; </td>
-               <td>v1.0</td>
-            </tr>
-            <tr>
-               <td style="text-align:right;color:green">drawing</td>
-               <td> &nbsp; </td>
-               <td>*enter drawing filename/url here*</td>
-            </tr>
-            <tr>
-               <td style="text-align:right;color:green">Image</td>
-               <td> &nbsp; </td>
-               <td>
-                  <a href="*enter image filename/url here*">*enter image filename/url here*</a>
-               </td>
-            </tr>
-            <tr>
-               <td style="text-align:right;color:green">MovingImage</td>
-               <td> &nbsp; </td>
-               <td>
-                  <a href="*enter movie filename/url here*">*enter movie filename/url here*</a>
-               </td>
-            </tr>
-            <tr>
-               <td style="text-align:right;color:green">photo</td>
-               <td> &nbsp; </td>
-               <td>*enter photo filename/url here*</td>
+               <td>v1.1</td>
             </tr>
             <tr>
                <td style="text-align:right;color:green">subject</td>
