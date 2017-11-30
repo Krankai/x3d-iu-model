@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+    <head>
+        <!-- Authors need to replace asterisked values or delete unneeded meta tags as appropriate -->
+        <meta content='A1Buildings.x3d' name='title'/>
+        <meta content='Model the entire A1 buildings of IU' name='description'/>
+        <meta content='Do Quoc Thinh - Krankai' name='creator'/>
+        <meta content='30 Nov, 2017' name='created'/>
+        <meta content='30 Nov, 2017' name='modified'/>
+        <meta content='Version 1.0' name='version'/>
+        <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+        <meta content='../license.html' name='license'/>
+        <!-- Additional authoring resources for meta-tags: http://www.dublincore.org/documents/dcmi-terms http://www.dublincore.org/documents/dces http://www.w3.org/TR/html4/struct/global.html#h-7.4.4 http://vancouver-webpages.com/META http://vancouver-webpages.com/META/about-mk-metas2.html Additional authoring resources for language codes: http://www.rfc-editor.org/rfc/bcp/bcp47.txt http://www.loc.gov/standards/iso639-2/langhome.html http://www.iana.org/numbers.html#L -->
+    </head>
+    <Scene>
+        <!-- Temporary wall -->
+        <Transform>
+            <Shape>
+                <Appearance>
+                    <Material/>
+                </Appearance>
+                <!--
+                    Width = 8 x 135cm + 5 x 84cm + 4 x 56cm = 1724cm
+                    Height = 7 x 220cm = 1540cm
+                    Depth = 2cm (dummy)
+                -->
+                <Box size='17.24 15.4 2'/>
+            </Shape>
+        </Transform>
+        
+        <!-- Front columns on the surface of the main building -->
+        <!-- Vertical columns - From left to right. Pattern: B-S-B-S-B'-S-B-S-B -->
+        <Group DEF='VerticalColumns'>
+            <Transform DEF='BigVerticalColumnTransform1' translation='-8.2 -0.455 1.25'>
+                <Shape DEF='BigVerticalColumnShape'>
+                    <Appearance DEF='MainRedAppearance'>
+                        <Material DEF='MainRedMaterial' diffuseColor='1 0 0'/>
+                    </Appearance>
+                    <!--
+                        Big column:
+                            Width = 84cm
+                            Height = 6 x 84cm + 7 x 135cm (size of small 'window') = 1449cm
+                            Depth = 50cm (guessed)
+                    -->
+                    <Box size='0.84 14.49 0.5'/>
+                </Shape>
+            </Transform>
+            <Transform DEF='SmallVerticalColumnTransform2' translation='-6.15 -0.455 1.25'>
+                <Shape DEF='SmallVerticalColumnShape'>
+                    <Appearance USE='MainRedAppearance'/>
+                    <!--
+                        Small column:
+                            Width = Big-Width / 1.5 = 56cm
+                            Height = Big-Heigth = 1449cm
+                            Depth = Big-Depth = 50cm
+                    -->
+                    <Box size='0.56 14.49 0.5'/>
+                </Shape>
+            </Transform>
+            <Transform DEF='BigVerticalColumnTransform3' translation='-4.1 -0.455 1.25'>
+                <Shape USE='BigVerticalColumnShape'/>
+            </Transform>
+            <Transform DEF='SmallVerticalColumnTransform4' translation='-2.05 1.315 1.25'>
+                <Shape DEF='DoorSmallVerticalColumnShape'> <!-- Shorter height -> for door -->
+                    <Appearance USE='MainRedAppearance'/>
+                    <Box size='0.56 10.95 0.5'/>
+                </Shape>
+            </Transform>
+            <Transform DEF='BigVerticalColumnTransform5' translation='0 1.315 1.25'>
+                <Shape DEF='DoorBigVerticalColumnShape'>
+                    <Appearance USE='MainRedAppearance'/>
+                    <Box size='0.84 10.95 0.5'/>
+                </Shape>
+            </Transform>
+            <Transform DEF='SmallVerticalColumnTransform6' translation='2.05 1.315 1.25'>
+                <Shape USE='DoorSmallVerticalColumnShape'/>
+            </Transform>
+            <Transform DEF='BigVerticalColumnTransform7' translation='4.1 -0.455 1.25'>
+                <Shape USE='BigVerticalColumnShape'/>
+            </Transform>
+            <Transform DEF='SmallVerticalColumnTransform8' translation='6.15 -0.455 1.25'>
+                <Shape USE='SmallVerticalColumnShape'/>
+            </Transform>
+            <Transform DEF='BigVerticalColumnTransform9' translation='8.2 -0.455 1.25'>
+                <Shape USE='BigVerticalColumnShape'/>
+            </Transform>
+        </Group>
+        <!-- Horizontal columns - From bottom to top -->
+    </Scene>
+</X3D>
