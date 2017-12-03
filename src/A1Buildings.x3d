@@ -15,7 +15,7 @@
     </head>
     <Scene>
         <!-- Temporary wall -->
-        <Transform>
+        <Transform translation='0 7.7 0'>
             <Shape>
                 <Appearance>
                     <Material/>
@@ -31,8 +31,8 @@
         
         <!-- Front columns on the surface of the main building -->
         <!-- Vertical columns - From left to right. Pattern: B-S-B-S-B'-S-B-S-B -->
-        <Group DEF='VerticalColumns'>
-            <Transform DEF='BigVerticalColumnTransform1' translation='-8.2 -0.455 1.25'>
+        <Transform DEF='VerticalColumns' translation='0 7.245 1.25'>
+            <Transform DEF='BigVerticalColumnTransform1' translation='-8.2 0 0'>
                 <Shape DEF='BigVerticalColumnShape'>
                     <Appearance DEF='MainRedAppearance'>
                         <Material DEF='MainRedMaterial' diffuseColor='1 0 0'/>
@@ -46,7 +46,7 @@
                     <Box size='0.84 14.49 0.5'/>
                 </Shape>
             </Transform>
-            <Transform DEF='SmallVerticalColumnTransform2' translation='-6.15 -0.455 1.25'>
+            <Transform DEF='SmallVerticalColumnTransform2' translation='-6.15 0 0'>
                 <Shape DEF='SmallVerticalColumnShape'>
                     <Appearance USE='MainRedAppearance'/>
                     <!--
@@ -58,34 +58,34 @@
                     <Box size='0.56 14.49 0.5'/>
                 </Shape>
             </Transform>
-            <Transform DEF='BigVerticalColumnTransform3' translation='-4.1 -0.455 1.25'>
+            <Transform DEF='BigVerticalColumnTransform3' translation='-4.1 0 0'>
                 <Shape USE='BigVerticalColumnShape'/>
             </Transform>
-            <Transform DEF='SmallVerticalColumnTransform4' translation='-2.05 1.315 1.25'>
+            <Transform DEF='SmallVerticalColumnTransform4' translation='-2.05 1.77 0'>
                 <Shape DEF='DoorSmallVerticalColumnShape'> <!-- Shorter height -> for door -->
                     <Appearance USE='MainRedAppearance'/>
                     <Box size='0.56 10.95 0.5'/>
                 </Shape>
             </Transform>
-            <Transform DEF='BigVerticalColumnTransform5' translation='0 1.315 1.25'>
+            <Transform DEF='BigVerticalColumnTransform5' translation='0 1.77 0'>
                 <Shape DEF='DoorBigVerticalColumnShape'>
                     <Appearance USE='MainRedAppearance'/>
                     <Box size='0.84 10.95 0.5'/>
                 </Shape>
             </Transform>
-            <Transform DEF='SmallVerticalColumnTransform6' translation='2.05 1.315 1.25'>
+            <Transform DEF='SmallVerticalColumnTransform6' translation='2.05 1.77 0'>
                 <Shape USE='DoorSmallVerticalColumnShape'/>
             </Transform>
-            <Transform DEF='BigVerticalColumnTransform7' translation='4.1 -0.455 1.25'>
+            <Transform DEF='BigVerticalColumnTransform7' translation='4.1 -0 0'>
                 <Shape USE='BigVerticalColumnShape'/>
             </Transform>
-            <Transform DEF='SmallVerticalColumnTransform8' translation='6.15 -0.455 1.25'>
+            <Transform DEF='SmallVerticalColumnTransform8' translation='6.15 0 0'>
                 <Shape USE='SmallVerticalColumnShape'/>
             </Transform>
-            <Transform DEF='BigVerticalColumnTransform9' translation='8.2 -0.455 1.25'>
+            <Transform DEF='BigVerticalColumnTransform9' translation='8.2 0 0'>
                 <Shape USE='BigVerticalColumnShape'/>
             </Transform>
-        </Group>
+        </Transform>
         <!-- Horizontal columns - From bottom to top -->
     </Scene>
 </X3D>
