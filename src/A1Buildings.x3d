@@ -15,77 +15,100 @@
     </head>
     <Scene>
         <!-- Temporary wall -->
-        <Transform translation='0 7.7 0'>
+        <Transform translation='0 13 -4'>
             <Shape>
                 <Appearance>
                     <Material/>
                 </Appearance>
                 <!--
-                    Width = 8 x 135cm + 5 x 84cm + 4 x 56cm = 1724cm
-                    Height = 7 x 220cm = 1540cm
+                    Width = 8 x 275cm + 5 x 90cm + 4 x 60cm = 2890cm
+                    Height = 7 x 290cm + 6 x 90cm + padding = 2600cm
                     Depth = 2cm (dummy)
                 -->
-                <Box size='17.24 15.4 2'/>
+                <Box size='28.90 26 2'/>
             </Shape>
         </Transform>
         
         <!-- Front columns on the surface of the main building -->
-        <!-- Vertical columns - From left to right. Pattern: B-S-B-S-B'-S-B-S-B -->
-        <Transform DEF='VerticalColumns' translation='0 7.245 1.25'>
-            <Transform DEF='BigVerticalColumnTransform1' translation='-8.2 0 0'>
+        <!-- Vertical columns - From left to right. Pattern: B-S-B-DS-B-DS-B-S-B -->
+        <!-- Center: at the middle of the fifth (5th) column -->
+        <Transform DEF='VerticalColumns' translation='0 12.85 0.25'>
+            <Transform DEF='BigVerticalColumnTransform1' translation='-14.00 0 0'>
                 <Shape DEF='BigVerticalColumnShape'>
                     <Appearance DEF='MainRedAppearance'>
                         <Material DEF='MainRedMaterial' diffuseColor='1 0 0'/>
                     </Appearance>
-                    <!--
-                        Big column:
-                            Width = 84cm
-                            Height = 6 x 84cm + 7 x 135cm (size of small 'window') = 1449cm
-                            Depth = 50cm (guessed)
-                    -->
-                    <Box size='0.84 14.49 0.5'/>
+                    <!-- Height = 6 x 90cm + 7 x 450cm (height of square) = 3690cm -->
+                    <Box size='0.90 25.70 0.5'/>
                 </Shape>
             </Transform>
-            <Transform DEF='SmallVerticalColumnTransform2' translation='-6.15 0 0'>
+            <Transform DEF='SmallVerticalColumnTransform2' translation='-10.50 0 0'>
                 <Shape DEF='SmallVerticalColumnShape'>
                     <Appearance USE='MainRedAppearance'/>
-                    <!--
-                        Small column:
-                            Width = Big-Width / 1.5 = 56cm
-                            Height = Big-Heigth = 1449cm
-                            Depth = Big-Depth = 50cm
-                    -->
-                    <Box size='0.56 14.49 0.5'/>
+                    <Box size='0.60 25.70 0.5'/>
                 </Shape>
             </Transform>
-            <Transform DEF='BigVerticalColumnTransform3' translation='-4.1 0 0'>
+            <Transform DEF='BigVerticalColumnTransform3' translation='-7.00 0 0'>
                 <Shape USE='BigVerticalColumnShape'/>
             </Transform>
-            <Transform DEF='SmallVerticalColumnTransform4' translation='-2.05 1.77 0'>
+            <Transform DEF='SmallVerticalColumnTransform4' translation='-3.50 3.80 0'>
                 <Shape DEF='DoorSmallVerticalColumnShape'> <!-- Shorter height -> for door -->
                     <Appearance USE='MainRedAppearance'/>
-                    <Box size='0.56 10.95 0.5'/>
+                    <Box size='0.60 18.10 0.5'/>
                 </Shape>
             </Transform>
-            <Transform DEF='BigVerticalColumnTransform5' translation='0 1.77 0'>
-                <Shape DEF='DoorBigVerticalColumnShape'>
-                    <Appearance USE='MainRedAppearance'/>
-                    <Box size='0.84 10.95 0.5'/>
-                </Shape>
-            </Transform>
-            <Transform DEF='SmallVerticalColumnTransform6' translation='2.05 1.77 0'>
-                <Shape USE='DoorSmallVerticalColumnShape'/>
-            </Transform>
-            <Transform DEF='BigVerticalColumnTransform7' translation='4.1 -0 0'>
+            <Transform DEF='BigVerticalColumnTransform5' translation='0 0 0'>
                 <Shape USE='BigVerticalColumnShape'/>
             </Transform>
-            <Transform DEF='SmallVerticalColumnTransform8' translation='6.15 0 0'>
+            <Transform DEF='SmallVerticalColumnTransform6' translation='3.50 3.80 0'>
+                <Shape USE='DoorSmallVerticalColumnShape'/>
+            </Transform>
+            <Transform DEF='BigVerticalColumnTransform7' translation='7.00 -0 0'>
+                <Shape USE='BigVerticalColumnShape'/>
+            </Transform>
+            <Transform DEF='SmallVerticalColumnTransform8' translation='10.50 0 0'>
                 <Shape USE='SmallVerticalColumnShape'/>
             </Transform>
-            <Transform DEF='BigVerticalColumnTransform9' translation='8.2 0 0'>
+            <Transform DEF='BigVerticalColumnTransform9' translation='14.00 0 0'>
                 <Shape USE='BigVerticalColumnShape'/>
             </Transform>
         </Transform>
-        <!-- Horizontal columns - From bottom to top -->
+        
+        <!-- Horizontal columns - From bottom to top. Pattern: -B(Left&Right)-B-B-B-B-B- -->
+        <!-- Center: at the middle of the fourth (4th) colum -->
+        <Transform DEF='HorizontalColumns' translation='0 14.75 0.25'>
+            <Transform DEF='HorizontalColumnTransformLeft1' translation='-10.50 -11.40 0'>
+                <Shape DEF='SmallHorizontalColumnShape'>
+                    <Appearance USE='MainRedAppearance'/>
+                    <!-- Width = 2 x Square.width + SmallVerticalColumn.width = 780cm -->
+                    <Box size='6.10 0.9 0.5'/>
+                </Shape>
+            </Transform>
+            <Transform DEF='HorizontalColumntransformRight1' translation='10.50 -11.40 0'>
+                <Shape USE='SmallHorizontalColumnShape'/>
+            </Transform>
+            <Transform DEF='HorizontalColumnTransform2' translation='0 -7.60 0'>
+                <Shape DEF='HorizontalColumnShape'>
+                    <Appearance USE='MainRedAppearance'/>
+                    <Box size='28.90 0.9 0.5'/>
+                </Shape>
+            </Transform>
+            <Transform DEF='HorizontalColumnTransform3' translation='0 -3.80 0'>
+                <Shape USE='HorizontalColumnShape'/>
+            </Transform>
+            <Transform DEF='HorizontalColumnTransform4' translation='0 0 0'>
+                <Shape USE='HorizontalColumnShape'/>
+            </Transform>
+            <Transform DEF='HorizontalColumnTransform5' translation='0 3.80 0'>
+                <Shape USE='HorizontalColumnShape'/>
+            </Transform>
+            <Transform DEF='HorizontalColumnTransform6' translation='0 7.60 0'>
+                <Shape USE='HorizontalColumnShape'/>
+            </Transform>
+        </Transform>
+        
+        <!-- Steps Hall - Divided into GroupSteps - Pattern: 2B-1R-4B-1R-2B -->
+        <!-- Center: [horizontal] between 5th and 6th group step -->
+        <!-- Center: [vertical] top of the steps (the whole Steps) -->
     </Scene>
 </X3D>

@@ -1,0 +1,27 @@
+Front Building
+    Vertical Columns
+        Big 		-> W = 90cm | H = ??cm | D = 50cm
+        Small 		-> W = 60cm | H = ??cm | D = 50cm
+        Small-Door	-> W = 60cm | H = ??cm (shorter) | D = 50cm
+    Horizontal Columns
+        W = ??cm 
+        H = 90cm (same as VerticalColumn.Big.width)
+        D = 50cm
+    Square (beteen columns; with window)
+        W = 275cm
+        H = (slightly > then W) 290cm [still not sure]
+    Steps Hall (in front of the door leading to Main Building)
+        Side 
+            
+        Divided into 10 'group steps' horizontally.
+        Pattern for 'group steps': 2 (Black) + 1 (Red) + 4B + 1R + 2B
+        Each 'group step' -> 1 base + 5 (small) steps
+            Small step: upper	-> W = 140cm | H = 2cm (?) | D = 32cm
+                        lower	-> W = 140cm | H = 15cm | D = 30cm
+            (Note: upper slightly lean towards than lower)
+            Base: lower		-> W = 140cm | H = (15+2)x5 = 100cm |
+                                   D = 4x62 = 248cm
+                  upper		-> W = 140cm | H = 2cm (?) | D = 250cm
+    Door Glasses + Roofs
+        Horizontal Columns of 2 doors (where the roofs are)
+            
