@@ -29,10 +29,21 @@
             </Shape>
         </Transform>
         
+        <!-- Base to support the buildings -->
+        <Transform translation='0 0.50 -2'>
+            <Shape>
+                <Appearance>
+                    <Material/>
+                </Appearance>
+                <!-- The height of the 'steps' is 102cm -> Let the height of the base be 100cm -->
+                <Box size='28.90 1.00 5'/>
+            </Shape>
+        </Transform>
+        
         <!-- Front columns on the surface of the main building -->
         <!-- Vertical columns - From left to right. Pattern: B-S-B-DS-B-DS-B-S-B -->
         <!-- Center: at the middle of the fifth (5th) column -->
-        <Transform DEF='VerticalColumns' translation='0 12.85 0.25'>
+        <Transform DEF='VerticalColumns' translation='0 13.85 0.25'>
             <Transform DEF='BigVerticalColumnTransform1' translation='-14.00 0 0'>
                 <Shape DEF='BigVerticalColumnShape'>
                     <Appearance DEF='MainRedAppearance'>
@@ -76,7 +87,7 @@
         
         <!-- Horizontal columns - From bottom to top. Pattern: -B(Left&Right)-B-B-B-B-B- -->
         <!-- Center: at the middle of the fourth (4th) colum -->
-        <Transform DEF='HorizontalColumns' translation='0 14.75 0.25'>
+        <Transform DEF='HorizontalColumns' translation='0 15.75 0.25'>
             <Transform DEF='HorizontalColumnTransformLeft1' translation='-10.50 -11.40 0'>
                 <Shape DEF='SmallHorizontalColumnShape'>
                     <Appearance USE='MainRedAppearance'/>
@@ -110,5 +121,29 @@
         <!-- Steps Hall - Divided into GroupSteps - Pattern: 2B-1R-4B-1R-2B -->
         <!-- Center: [horizontal] between 5th and 6th group step -->
         <!-- Center: [vertical] top of the steps (the whole Steps) -->
+        <!-- Center: ['depth'] at the tail-end of the GroupSteps -->
+        <Transform DEF='StepsHall' translation='0 1.00 0.5'>
+            <Transform DEF='GroupStepsTransform1' translation='-6.30 -0.52 1.24'>
+                <Group DEF='BlackGroupStepsGroup'>
+                    <!-- 'Base' for the GroupSteps -->
+                    <Transform DEF='GroupStepsBaseGroup'>
+                        <!-- 'lower' part -->
+                        <Shape DEF='GroupStepsBaseLower'>
+                            <Appearance DEF='BlackStepAppearance'>
+                                <Material DEF='BlackStepMaterial' diffuseColor='0.3 0.3 0.3'/>
+                            </Appearance>
+                            <Box size='1.40 1.00 2.48'/>
+                        </Shape>
+                        <!-- 'upper' part - Slightly ahead -->
+                        <Transform DEF='GroupStepBaseUpperTransform' translation='0 0.51 0.01'>
+                            <Shape DEF='GroupStepsBaseUpper'>
+                                <Appearance USE='BlackStepAppearance'/>
+                                <Box size='1.40 0.02 2.50'/>
+                            </Shape>
+                        </Transform>
+                    </Transform>
+                </Group>
+            </Transform>
+        </Transform>
     </Scene>
 </X3D>

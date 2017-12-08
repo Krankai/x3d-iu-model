@@ -22,6 +22,7 @@ Front Building
             Base: lower		-> W = 140cm | H = (15+2)x5 = 100cm |
                                    D = 4x62 = 248cm
                   upper		-> W = 140cm | H = 2cm (?) | D = 250cm
+        (Note: black and red 'group steps' -> different widthds -> check later)
     Door Glasses + Roofs
         Horizontal Columns of 2 doors (where the roofs are)
             
