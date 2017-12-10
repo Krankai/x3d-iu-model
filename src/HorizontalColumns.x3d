@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+    <head>
+        <!-- Authors need to replace asterisked values or delete unneeded meta tags as appropriate -->
+        <meta content='HorizontalColumns.x3d' name='title'/>
+        <meta content='Model the set of horizontal columns (separating classrooms)' name='description'/>
+        <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
+        <meta content='10th December, 2017' name='created'/>
+        <meta content='10th December, 2017' name='modified'/>
+        <meta content='Version 1.0' name='version'/>
+        <meta content='HorizontalColumns, columns, horizontal' name='subject'/>
+        <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+        <meta content='../license.html' name='license'/>
+        <!-- Additional authoring resources for meta-tags: http://www.dublincore.org/documents/dcmi-terms http://www.dublincore.org/documents/dces http://www.w3.org/TR/html4/struct/global.html#h-7.4.4 http://vancouver-webpages.com/META http://vancouver-webpages.com/META/about-mk-metas2.html Additional authoring resources for language codes: http://www.rfc-editor.org/rfc/bcp/bcp47.txt http://www.loc.gov/standards/iso639-2/langhome.html http://www.iana.org/numbers.html#L -->
+    </head>
+    <Scene>
+        <Transform DEF='HorizontalColumnTransformLeft1' translation='-10.50 -11.40 0'>
+            <Shape DEF='SmallHorizontalColumnShape'>
+                <Appearance DEF='MainRedAppearance'>
+                    <Material DEF='MainRedMaterial' diffuseColor='1 0 0'/>
+                </Appearance>
+                <!-- Width = 2 x Square.width + SmallVerticalColumn.width = 780cm -->
+                <Box size='6.10 0.9 0.5'/>
+            </Shape>
+        </Transform>
+        <Transform DEF='HorizontalColumntransformRight1' translation='10.50 -11.40 0'>
+            <Shape USE='SmallHorizontalColumnShape'/>
+        </Transform>
+        <Transform DEF='HorizontalColumnTransform2' translation='0 -7.60 0'>
+            <Shape DEF='HorizontalColumnShape'>
+                <Appearance USE='MainRedAppearance'/>
+                <Box size='28.90 0.9 0.5'/>
+            </Shape>
+        </Transform>
+        <Transform DEF='HorizontalColumnTransform3' translation='0 -3.80 0'>
+            <Shape USE='HorizontalColumnShape'/>
+        </Transform>
+        <Transform DEF='HorizontalColumnTransform4' translation='0 0 0'>
+            <Shape USE='HorizontalColumnShape'/>
+        </Transform>
+        <Transform DEF='HorizontalColumnTransform5' translation='0 3.80 0'>
+            <Shape USE='HorizontalColumnShape'/>
+        </Transform>
+        <Transform DEF='HorizontalColumnTransform6' translation='0 7.60 0'>
+            <Shape USE='HorizontalColumnShape'/>
+        </Transform>
+    </Scene>
+</X3D>

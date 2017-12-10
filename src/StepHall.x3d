@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+    <head>
+        <!-- Authors need to replace asterisked values or delete unneeded meta tags as appropriate -->
+        <meta content='StepHall.x3d' name='title'/>
+        <meta content='Model the (main) step hall of IU' name='description'/>
+        <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
+        <meta content='10th December, 2017' name='created'/>
+        <meta content='10th December, 2017' name='modified'/>
+        <meta content='Version 1.0' name='version'/>
+        <meta content='IU, StepHall, step' name='subject'/>
+        <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+        <meta content='../license.html' name='license'/>
+        <!-- Additional authoring resources for meta-tags: http://www.dublincore.org/documents/dcmi-terms http://www.dublincore.org/documents/dces http://www.w3.org/TR/html4/struct/global.html#h-7.4.4 http://vancouver-webpages.com/META http://vancouver-webpages.com/META/about-mk-metas2.html Additional authoring resources for language codes: http://www.rfc-editor.org/rfc/bcp/bcp47.txt http://www.loc.gov/standards/iso639-2/langhome.html http://www.iana.org/numbers.html#L -->
+    </head>
+    <Scene>
+        <Transform DEF='BlackGroupStepTransform1' translation='-6.30 -0.52 1.24'>
+            <!-- Black GroupStep group -->
+            <Group DEF='BlackGroupStepGroup'>
+                <!-- Base for GroupStep -->
+                <Group DEF='BlackGroupStepBaseGroup'>
+                    <!-- lower part -->
+                    <Shape DEF='BlackGroupStepBaseLowerShape'>
+                        <Appearance DEF='BlackStepAppearance'>
+                            <Material DEF='BlackStepMaterial' diffuseColor='0.3 0.3 0.3'/>
+                        </Appearance>
+                        <Box DEF='GroupStepBaseLowerBox' size='1.40 1.00 2.48'/>
+                    </Shape>
+                    <!-- upper part - Slightly ahead -->
+                    <Transform translation='0 0.51 0.01'>
+                        <Shape DEF='BlackGroupStepBaseUpperShape'>
+                            <Appearance USE='BlackStepAppearance'/>
+                            <Box DEF='GroupStepBaseUpperBox' size='1.40 0.02 2.50'/>
+                        </Shape>
+                    </Transform>
+                </Group>
+                <!-- Level for GroupStep - Starting from the highest -->
+                <Transform DEF='BlackGroupStepLevelTransform1' translation='0 -0.085 1.39'>
+                    <Group>
+                        <!-- lower part -->
+                        <Shape DEF='BlackGroupStepLevelLowerShape1'>
+                            <Appearance USE='BlackStepAppearance'/>
+                            <Box DEF='GroupStepLevelLowerBox1' size='1.40 0.83 0.3'/>
+                        </Shape>
+                        <!-- upper part - Slightly ahead -->
+                        <Transform translation='0 0.425 0.01'>
+                            <Shape DEF='BlackGroupStepLevelUpperShape'>
+                                <Appearance USE='BlackStepAppearance'/>
+                                <Box DEF='GroupStepLevelUpperBox' size='1.40 0.02 0.32'/>
+                            </Shape>
+                        </Transform>
+                    </Group>
+                </Transform>
+                <Transform DEF='BlackGroupStepLevelTransform2' translation='0 -0.17 1.69'>
+                    <Group>
+                        <!-- lower part -->
+                        <Shape DEF='BlackGroupStepLevelLowerShape2'>
+                            <Appearance USE='BlackStepAppearance'/>
+                            <Box DEF='GroupStepLevelLowerBox2' size='1.40 0.66 0.3'/>
+                        </Shape>
+                        <!-- upper part - Slightly ahead -->
+                        <Transform translation='0 0.34 0.01'>
+                            <Shape USE='BlackGroupStepLevelUpperShape'/>
+                        </Transform>
+                    </Group>
+                </Transform>
+                <Transform DEF='BlackGroupStepLevelTransform3' translation='0 -0.255 1.99'>
+                    <Group>
+                        <!-- lower part -->
+                        <Shape DEF='BlackGroupStepLevelLowerShape3'>
+                            <Appearance USE='BlackStepAppearance'/>
+                            <Box DEF='GroupStepLevelLowerBox3' size='1.40 0.49 0.3'/>
+                        </Shape>
+                        <!-- upper part - Slightly ahead -->
+                        <Transform translation='0 0.255 0.01'>
+                            <Shape USE='BlackGroupStepLevelUpperShape'/>
+                        </Transform>
+                    </Group>
+                </Transform>
+                <Transform DEF='BlackGroupStepLevelTransform4' translation='0 -0.34 2.29'>
+                    <Group>
+                        <!-- lower part -->
+                        <Shape DEF='BlackGroupStepLevelLowerShape4'>
+                            <Appearance USE='BlackStepAppearance'/>
+                            <Box DEF='GroupStepLevelLowerBox4' size='1.40 0.32 0.3'/>
+                        </Shape>
+                        <!-- upper part - Slightly ahead -->
+                        <Transform translation='0 0.17 0.01'>
+                            <Shape USE='BlackGroupStepLevelUpperShape'/>
+                        </Transform>
+                    </Group>
+                </Transform>
+                <Transform DEF='BlackGroupStepLevelTransform5' translation='0 -0.425 2.59'>
+                    <Group>
+                        <!-- lower part -->
+                        <Shape DEF='BlackGroupStepLevelLowerShape5'>
+                            <Appearance USE='BlackStepAppearance'/>
+                            <Box DEF='GroupStepLevelLowerBox5' size='1.40 0.15 0.3'/>
+                        </Shape>
+                        <!-- upper part - Slightly ahead -->
+                        <Transform translation='0 0.085 0.01'>
+                            <Shape USE='BlackGroupStepLevelUpperShape'/>
+                        </Transform>
+                    </Group>
+                </Transform>
+            </Group>
+        </Transform>
+        <Transform DEF='BlackGroupStepTransform2' translation='-4.90 -0.52 1.24'>
+            <Group USE='BlackGroupStepGroup'/>
+        </Transform>
+        <Transform DEF='RedGroupStepTransform3' translation='-3.5 -0.52 1.24'>
+            <!-- Red GroupStep group -->
+            <Group DEF='RedGroupStepGroup'>
+                <!-- Base for GroupStep -->
+                <Group DEF='RedGroupStepBaseGroup'>
+                    <Shape DEF='RedGroupStepBaseLowerShape'>
+                        <Appearance DEF='RedStepAppearance'>
+                            <Material DEF='RedStepMaterial' diffuseColor='0.8 0.2 0.2'/>
+                        </Appearance>
+                        <Box USE='GroupStepBaseLowerBox'/>
+                    </Shape>
+                    <Transform translation='0 0.51 0.01'>
+                        <Shape DEF='RedGroupStepBaseUpperShape'>
+                            <Appearance USE='RedStepAppearance'/>
+                            <Box USE='GroupStepBaseUpperBox'/>
+                        </Shape>
+                    </Transform>
+                </Group>
+                <!-- Level for GroupStep - Start from the highest -->
+                <Transform DEF='RedGroupStepLevelTransform1' translation='0 -0.085 1.39'>
+                    <Group>
+                        <!-- lower part -->
+                        <Shape DEF='RedGroupStepLevelLowerShape1'>
+                            <Appearance USE='RedStepAppearance'/>
+                            <Box USE='GroupStepLevelLowerBox1'/>
+                        </Shape>
+                        <!-- upper part -->
+                        <Transform translation='0 0.425 0.01'>
+                            <Shape DEF='RedGroupStepLevelUpperShape'>
+                                <Appearance USE='RedStepAppearance'/>
+                                <Box USE='GroupStepLevelUpperBox'/>
+                            </Shape>
+                        </Transform>
+                    </Group>
+                </Transform>
+                <Transform DEF='RedGroupStepLevelTransform2' translation='0 -0.17 1.69'>
+                    <Group>
+                        <!-- lower part -->
+                        <Shape DEF='RedGroupStepLevelLowerShape2'>
+                            <Appearance USE='RedStepAppearance'/>
+                            <Box USE='GroupStepLevelLowerBox2'/>
+                        </Shape>
+                        <!-- upper part -->
+                        <Transform translation='0 0.34 0.01'>
+                            <Shape USE='RedGroupStepLevelUpperShape'/>
+                        </Transform>
+                    </Group>
+                </Transform>
+                <Transform DEF='RedGroupStepLevelTransform3' translation='0 -0.255 1.99'>
+                    <Group>
+                        <!-- lower part -->
+                        <Shape DEF='RedGroupStepLevelLowerShape3'>
+                            <Appearance USE='RedStepAppearance'/>
+                            <Box USE='GroupStepLevelLowerBox3'/>
+                        </Shape>
+                        <!-- upper part -->
+                        <Transform translation='0 0.255 0.01'>
+                            <Shape USE='RedGroupStepLevelUpperShape'/>
+                        </Transform>
+                    </Group>
+                </Transform>
+                <Transform DEF='RedGroupStepLevelTransform4' translation='0 -0.34 2.29'>
+                    <Group>
+                        <!-- lower part -->
+                        <Shape DEF='RedGroupStepLevelLowerShape4'>
+                            <Appearance USE='RedStepAppearance'/>
+                            <Box USE='GroupStepLevelLowerBox4'/>
+                        </Shape>
+                        <!-- upper part -->
+                        <Transform translation='0 0.17 0.01'>
+                            <Shape USE='RedGroupStepLevelUpperShape'/>
+                        </Transform>
+                    </Group>
+                </Transform>
+                <Transform DEF='RedGroupStepLevelTransform5' translation='0 -0.425 2.59'>
+                    <Group>
+                        <!-- lower part -->
+                        <Shape DEF='RedGroupStepLevelLowerShape5'>
+                            <Appearance USE='RedStepAppearance'/>
+                            <Box USE='GroupStepLevelLowerBox5'/>
+                        </Shape>
+                        <!-- upper part -->
+                        <Transform translation='0 0.085 0.01'>
+                            <Shape USE='RedGroupStepLevelUpperShape'/>
+                        </Transform>
+                    </Group>
+                </Transform>
+            </Group>
+        </Transform>
+        <Transform DEF='BlackGroupStepTransform4' translation='-2.10 -0.52 1.24'>
+            <Group USE='BlackGroupStepGroup'/>
+        </Transform>
+        <Transform DEF='BlackGroupStepTransform5' translation='-0.70 -0.52 1.24'>
+            <Group USE='BlackGroupStepGroup'/>
+        </Transform>
+        <Transform DEF='BlackGroupStepTransform6' translation='0.70 -0.52 1.24'>
+            <Group USE='BlackGroupStepGroup'/>
+        </Transform>
+        <Transform DEF='BlackGroupStepTransform7' translation='2.10 -0.52 1.24'>
+            <Group USE='BlackGroupStepGroup'/>
+        </Transform>
+        <Transform DEF='RedGroupStepTransform8' translation='3.50 -0.52 1.24'>
+            <Group USE='RedGroupStepGroup'/>
+        </Transform>
+        <Transform DEF='BlackGroupStepTransform9' translation='4.90 -0.52 1.24'>
+            <Group USE='BlackGroupStepGroup'/>
+        </Transform>
+        <Transform DEF='BlackGroupStepTransform10' translation='6.30 -0.52 1.24'>
+            <Group USE='BlackGroupStepGroup'/>
+        </Transform>
+    </Scene>
+</X3D>

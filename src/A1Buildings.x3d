@@ -5,9 +5,10 @@
         <!-- Authors need to replace asterisked values or delete unneeded meta tags as appropriate -->
         <meta content='A1Buildings.x3d' name='title'/>
         <meta content='Model the entire A1 buildings of IU' name='description'/>
-        <meta content='Do Quoc Thinh - Krankai' name='creator'/>
-        <meta content='30 Nov, 2017' name='created'/>
-        <meta content='30 Nov, 2017' name='modified'/>
+        <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
+        <meta content='30th Nov, 2017' name='created'/>
+        <meta content='10th December, 2017' name='modified'/>
+        <meta content='IU, A1Buildings, building, A1' name='subject'/>
         <meta content='Version 1.0' name='version'/>
         <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
         <meta content='../license.html' name='license'/>
@@ -43,107 +44,22 @@
         <!-- Front columns on the surface of the main building -->
         <!-- Vertical columns - From left to right. Pattern: B-S-B-DS-B-DS-B-S-B -->
         <!-- Center: at the middle of the fifth (5th) column -->
-        <Transform DEF='VerticalColumns' translation='0 13.85 0.25'>
-            <Transform DEF='BigVerticalColumnTransform1' translation='-14.00 0 0'>
-                <Shape DEF='BigVerticalColumnShape'>
-                    <Appearance DEF='MainRedAppearance'>
-                        <Material DEF='MainRedMaterial' diffuseColor='1 0 0'/>
-                    </Appearance>
-                    <!-- Height = 6 x 90cm + 7 x 450cm (height of square) = 3690cm -->
-                    <Box size='0.90 25.70 0.5'/>
-                </Shape>
-            </Transform>
-            <Transform DEF='SmallVerticalColumnTransform2' translation='-10.50 0 0'>
-                <Shape DEF='SmallVerticalColumnShape'>
-                    <Appearance USE='MainRedAppearance'/>
-                    <Box size='0.60 25.70 0.5'/>
-                </Shape>
-            </Transform>
-            <Transform DEF='BigVerticalColumnTransform3' translation='-7.00 0 0'>
-                <Shape USE='BigVerticalColumnShape'/>
-            </Transform>
-            <Transform DEF='SmallVerticalColumnTransform4' translation='-3.50 3.80 0'>
-                <Shape DEF='DoorSmallVerticalColumnShape'> <!-- Shorter height -> for door -->
-                    <Appearance USE='MainRedAppearance'/>
-                    <Box size='0.60 18.10 0.5'/>
-                </Shape>
-            </Transform>
-            <Transform DEF='BigVerticalColumnTransform5' translation='0 0 0'>
-                <Shape USE='BigVerticalColumnShape'/>
-            </Transform>
-            <Transform DEF='SmallVerticalColumnTransform6' translation='3.50 3.80 0'>
-                <Shape USE='DoorSmallVerticalColumnShape'/>
-            </Transform>
-            <Transform DEF='BigVerticalColumnTransform7' translation='7.00 -0 0'>
-                <Shape USE='BigVerticalColumnShape'/>
-            </Transform>
-            <Transform DEF='SmallVerticalColumnTransform8' translation='10.50 0 0'>
-                <Shape USE='SmallVerticalColumnShape'/>
-            </Transform>
-            <Transform DEF='BigVerticalColumnTransform9' translation='14.00 0 0'>
-                <Shape USE='BigVerticalColumnShape'/>
-            </Transform>
+        <Transform DEF='VerticalColumnsTransform' translation='0 13.85 0.25'>
+            <Inline url='VerticalColumns.x3d'/>
         </Transform>
         
         <!-- Horizontal columns - From bottom to top. Pattern: -B(Left&Right)-B-B-B-B-B- -->
         <!-- Center: at the middle of the fourth (4th) colum -->
-        <Transform DEF='HorizontalColumns' translation='0 15.75 0.25'>
-            <Transform DEF='HorizontalColumnTransformLeft1' translation='-10.50 -11.40 0'>
-                <Shape DEF='SmallHorizontalColumnShape'>
-                    <Appearance USE='MainRedAppearance'/>
-                    <!-- Width = 2 x Square.width + SmallVerticalColumn.width = 780cm -->
-                    <Box size='6.10 0.9 0.5'/>
-                </Shape>
-            </Transform>
-            <Transform DEF='HorizontalColumntransformRight1' translation='10.50 -11.40 0'>
-                <Shape USE='SmallHorizontalColumnShape'/>
-            </Transform>
-            <Transform DEF='HorizontalColumnTransform2' translation='0 -7.60 0'>
-                <Shape DEF='HorizontalColumnShape'>
-                    <Appearance USE='MainRedAppearance'/>
-                    <Box size='28.90 0.9 0.5'/>
-                </Shape>
-            </Transform>
-            <Transform DEF='HorizontalColumnTransform3' translation='0 -3.80 0'>
-                <Shape USE='HorizontalColumnShape'/>
-            </Transform>
-            <Transform DEF='HorizontalColumnTransform4' translation='0 0 0'>
-                <Shape USE='HorizontalColumnShape'/>
-            </Transform>
-            <Transform DEF='HorizontalColumnTransform5' translation='0 3.80 0'>
-                <Shape USE='HorizontalColumnShape'/>
-            </Transform>
-            <Transform DEF='HorizontalColumnTransform6' translation='0 7.60 0'>
-                <Shape USE='HorizontalColumnShape'/>
-            </Transform>
+        <Transform DEF='HorizontalColumnsTransform' translation='0 15.75 0.25'>
+            <Inline url='HorizontalColumns.x3d'/>
         </Transform>
         
         <!-- Steps Hall - Divided into GroupSteps - Pattern: 2B-1R-4B-1R-2B -->
         <!-- Center: [horizontal] between 5th and 6th group step -->
         <!-- Center: [vertical] top of the steps (the whole Steps) -->
         <!-- Center: ['depth'] at the tail-end of the GroupSteps -->
-        <Transform DEF='StepsHall' translation='0 1.00 0.5'>
-            <Transform DEF='GroupStepsTransform1' translation='-6.30 -0.52 1.24'>
-                <Group DEF='BlackGroupStepsGroup'>
-                    <!-- 'Base' for the GroupSteps -->
-                    <Transform DEF='GroupStepsBaseGroup'>
-                        <!-- 'lower' part -->
-                        <Shape DEF='GroupStepsBaseLower'>
-                            <Appearance DEF='BlackStepAppearance'>
-                                <Material DEF='BlackStepMaterial' diffuseColor='0.3 0.3 0.3'/>
-                            </Appearance>
-                            <Box size='1.40 1.00 2.48'/>
-                        </Shape>
-                        <!-- 'upper' part - Slightly ahead -->
-                        <Transform DEF='GroupStepBaseUpperTransform' translation='0 0.51 0.01'>
-                            <Shape DEF='GroupStepsBaseUpper'>
-                                <Appearance USE='BlackStepAppearance'/>
-                                <Box size='1.40 0.02 2.50'/>
-                            </Shape>
-                        </Transform>
-                    </Transform>
-                </Group>
-            </Transform>
+        <Transform DEF='StepHall' translation='0 1.00 0.5'>
+            <Inline url='StepHall.x3d'/>
         </Transform>
     </Scene>
 </X3D>
