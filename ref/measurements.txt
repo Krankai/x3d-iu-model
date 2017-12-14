@@ -12,18 +12,30 @@ Front Building
         H = (slightly > then W) 290cm [still not sure]
     Steps Hall (in front of the door leading to Main Building)
         Side 
-            
+            Layer (on top of upper)	-> W = 90cm | H = 3cm (?)
+            Upper 			-> W = 90cm | angle = 32 degree
+                                           H = 8cm (?)
+            Lower (three parts):
+                Part1 - W = 45cm | H = 102cm + 60cm = 162cm | D = 248cm
+                Part2 - W = 45cm | H = 65cm | D = 205cm | angle = 0.52rad
+                Part3 - W = 45cm | H = 60cm | D = 178cm
+                Part4 (dummy)
         Divided into 10 'group steps' horizontally.
         Pattern for 'group steps': 2 (Black) + 1 (Red) + 4B + 1R + 2B
+            2 outside Black	-> W = 120cm
+            4 inside Black	-> W = 130cm
+            Red			-> W = 200cm 
         Each 'group step' -> 1 base + 5 level (i.e. small steps)
-            Level: upper	-> W = 140cm | H = 2cm (?) | D = 32cm
-                   lower	-> W = 140cm | D = 30cm
+            Level: upper	-> W = [above] | H = 2cm (?) | D = 32cm
+                   lower	-> W = [above] | D = 30cm
                                    H = {15cm; 32cm; 49cm; 66cm; 83cm}
-            (Note: upper slightly lean towards than lower)
-            Base: lower		-> W = 140cm | H = (15+2)x5 = 100cm |
+            Base: lower		-> W = [above] | H = (15+2)x5 = 100cm |
                                    D = 4x62 = 248cm
-                  upper		-> W = 140cm | H = 2cm (?) | D = 250cm
-        (Note: black and red 'group steps' -> different widthds -> check later)
+                  upper		-> W = [above] | H = 2cm (?) | D = 250cm
     Door Glasses + Roofs
         Horizontal Columns of 2 doors (where the roofs are)
             
+
+    Glasses (at door hall)
+        Pattern: S-S-B-B-S-S (S.width = 100cm | B.width = 105cm)
+        Frames (around the glass): W = 5cm | D = 12cm | H = 
