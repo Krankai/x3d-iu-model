@@ -24,7 +24,7 @@
                 <Box size='6.10 0.9 0.5'/>
             </Shape>
         </Transform>
-        <Transform DEF='HorizontalColumntransformRight1' translation='10.50 -11.40 0'>
+        <Transform DEF='HorizontalColumnTransformRight1' translation='10.50 -11.40 0'>
             <Shape USE='SmallHorizontalColumnShape'/>
         </Transform>
         <Transform DEF='HorizontalColumnTransform2' translation='0 -7.60 0'>

@@ -31,7 +31,7 @@
         </Transform>
         
         <!-- Base to support the buildings -->
-        <Transform translation='0 0.50 -2'>
+        <Transform translation='0 0.50 -2.5'>
             <Shape>
                 <Appearance>
                     <Material/>
@@ -44,13 +44,13 @@
         <!-- Front columns on the surface of the main building -->
         <!-- Vertical columns - From left to right. Pattern: B-S-B-DS-B-DS-B-S-B -->
         <!-- Center: at the middle of the fifth (5th) column -->
-        <Transform DEF='VerticalColumnsTransform' translation='0 13.85 0.25'>
+        <Transform DEF='VerticalColumnsTransform' translation='0 12.85 0.25'>
             <Inline url='VerticalColumns.x3d'/>
         </Transform>
         
         <!-- Horizontal columns - From bottom to top. Pattern: -B(Left&Right)-B-B-B-B-B- -->
         <!-- Center: at the middle of the fourth (4th) colum -->
-        <Transform DEF='HorizontalColumnsTransform' translation='0 15.75 0.25'>
+        <Transform DEF='HorizontalColumnsTransform' translation='0 14.75 0.25'>
             <Inline url='HorizontalColumns.x3d'/>
         </Transform>
         
@@ -58,7 +58,7 @@
         <!-- Center: [horizontal] between 5th and 6th group step -->
         <!-- Center: [vertical] top of the steps (the whole Steps) -->
         <!-- Center: ['depth'] at the tail-end of the GroupSteps -->
-        <Transform DEF='StepHall' translation='0 1.00 0.5'>
+        <Transform DEF='StepHall' translation='0 1.00 0'>
             <Inline url='StepHall.x3d'/>
         </Transform>
     </Scene>

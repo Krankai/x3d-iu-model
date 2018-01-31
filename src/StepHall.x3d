@@ -323,7 +323,7 @@
                 <!-- upper part -->
                 <!-- lower part -->
                 <Group DEF='SideHolderLowerGroup'>
-                    <Transform DEF='SideHolderLowerTransform1' translation='0 -0.21 1.24'>
+                    <Transform DEF='SideHolderLowerTransform1' translation='0 -0.21 1.74'>
                         <Shape DEF='SideHolderLowerShape1'>
                             <Appearance DEF='WhiteSideHolderAppearance'>
                                 <Material DEF='WhiteSideHolderMaterial' diffuseColor='1 1 1'/>
@@ -331,20 +331,26 @@
                             <Box DEF='SideHolderLowerBox1' size='0.45 1.62 2.48'/>
                         </Shape>
                     </Transform>
-                    <Transform DEF='SideHolderLowerTransform2' translation='0 0.275 3.505'
+                    <Transform DEF='SideHolderLowerTransform2' translation='0 0.275 4.005'
                                rotation='1 0 0 0.52' center='0 0.325 -1.025'>
                         <Shape DEF='SideHolderLowerShape2'>
                             <Appearance USE='WhiteSideHolderAppearance'/>
                             <Box DEF='SideHolderLowerBox2' size='0.45 0.65 2.05'/>
                         </Shape>
                     </Transform>
-                    <Transform DEF='SideHolderLowerTransform3' translation='0 -0.72 3.37'>
+                    <Transform DEF='SideHolderLowerTransform3' translation='0 -0.72 3.87'>
                         <Shape DEF='SideHolderLowerShape3'>
                             <Appearance USE='WhiteSideHolderAppearance'/>
                             <Box DEF='SideHolderLowerBox3' size='0.45 0.60 1.78'/>
                         </Shape>
                     </Transform>
                     <!-- Dummy shape to hide holes -->
+                    <Transform DEF='SideHolderDummyTransform' translation='0 -0.25 3.23'>
+                        <Shape DEF='SideHolderDummyShape'>
+                            <Appearance USE='WhiteSideHolderAppearance'/>
+                            <Box DEF='SideHolderDummyBox' size='0.45 0.5 0.5'/>
+                        </Shape>
+                    </Transform>
                 </Group>
             </Group>
         </Transform>
