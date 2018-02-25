@@ -12,13 +12,20 @@ Front Building
         H = (slightly > then W) 290cm [still not sure]
     Steps Hall (in front of the door leading to Main Building)
         Side Step-Holder
-            Layer (on top of upper)	-> W = 90cm | H = 3cm (?)
-            Upper 			-> W = 90cm | angle = 32 degree
-                                           H = 8cm (?)
+            Layer (on top of upper) (three parts):
+                Part1 (~ Upper.Part1)	-> W = 90cm | H = 3cm | D = 248cm
+                Part2 (~ Upper.Part2)	-> W = 90cm | H = 3cm | D = 206cm
+                                           angle = 0.52 rad (32 degree)
+                Part3 (~ Upper.Part3)	-> W = 90cm | H = 3cm | D = 22cm (D'=23cm)
+            Upper (three parts):
+                Part1 (~ Lower.Part1)	-> W = 86cm | H = 8cm | D = 248cm
+                Part2 (~ Lower.Part2)	-> W = 86cm | H = 8cm | D = 207.5cm |
+                                           angle = 0.52 rad (32 degree)
+                Part3	-> W = 86cm | H = 8cm | D = 20cm (D'=22cm)
             Lower (three parts):
-                Part1 - W = 45cm | H = 102cm + 60cm = 162cm | D = 248cm
-                Part2 - W = 45cm | H = 65cm | D = 205cm | angle = 0.52rad
-                Part3 - W = 45cm | H = 60cm | D = 178cm
+                Part1	-> W = 45cm | H = 102cm + 60cm = 162cm | D = 248cm
+                Part2	-> W = 45cm | H = 65cm | D = 205cm | angle = 0.52rad
+                Part3	-> W = 45cm | H = 60cm | D = 178cm
                 Part4 (dummy)
         Main steps -> divided into 10 'group steps' horizontally.
             Pattern for 'group steps': 2 (Black) + 1 (Red) + 4B + 1R + 2B

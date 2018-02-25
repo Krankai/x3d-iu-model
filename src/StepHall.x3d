@@ -317,44 +317,99 @@
         </Transform>
         
         <!-- Side - Step holders -->
-        <Transform DEF='LeftSideHolderTransform' translation='-7.00 0 0'>
+        <Transform DEF='LeftSideHolderTransform' translation='-7.00 0 0.5'>
             <Group DEF='SideHolderGroup'>
-                <!-- layer part -->
-                <!-- upper part -->
-                <!-- lower part -->
+                <!-- Layer part -->
+                <Group DEF='SideHolderLayerGroup'>
+                    <!-- Part 1 -->
+                    <Transform DEF='SideHolderLayerTransform1' translation='0 0.695 1.24'>
+                        <Shape DEF='SideHolderLayerShape1'>
+                            <Appearance USE='RedStepAppearance'/>
+                            <Box DEF='SideHolderLayerBox1' size='0.9 0.03 2.48'/>
+                        </Shape>
+                    </Transform>
+                    <!-- Part 2 -->
+                    <Transform DEF='SideHolderLayerTransform2' translation='0 0.695 3.51'
+                               rotation='1 0 0 0.52' center='0 0.015 -1.03'>
+                        <Shape DEF='SideHolderLayerShape2'>
+                            <Appearance USE='RedStepAppearance'/>
+                            <Box DEF='SideHolderLayerBox2' size='0.9 0.03 2.06'/>
+                        </Shape>
+                    </Transform>
+                    <!-- Part 3 -->
+                    <!-- Original depth = 0.22. Need to change the depth and z-translation
+                         to cover the "hollow" parts -->
+                    <Transform DEF='SideHolderLayerTransform3' translation='0 -0.325 4.365'>
+                        <Shape DEF='SideHolderLayerShape3'>
+                            <Appearance USE='RedStepAppearance'/>
+                            <Box DEF='SideHolderLayerBox3' size='0.9 0.03 0.23'/>
+                        </Shape>
+                    </Transform>
+                </Group>
+                <!-- Upper part -->
+                <Group DEF='SideHolderUpperGroup'>
+                    <!-- Part 1 -->
+                    <Transform DEF='SideHolderUpperTransform1' translation='0 0.64 1.24'>
+                        <Shape DEF='SideHolderUpperShape1'>
+                            <Appearance USE='BlackStepAppearance'/>
+                            <Box DEF='SideHolderUpperBox1' size='0.86 0.08 2.48'/>
+                        </Shape>
+                    </Transform>
+                    <!-- Part 2 -->
+                    <Transform DEF='SideHolderUpperTransform2' translation='0 0.64 3.5175'
+                               rotation='1 0 0 0.52' center='0 0.04 -1.0375'>
+                        <Shape DEF='SideHolderUpperShape2'>
+                            <Appearance USE='BlackStepAppearance'/>
+                            <Box DEF='SideHolderUpperBox2' size='0.86 0.08 2.075'/>
+                        </Shape>
+                    </Transform>
+                    <!-- Part 3 -->
+                    <!-- Original depth = 0.20. Need to add just the depth and z-translation
+                         to cover the "hollow" parts -->
+                    <Transform DEF='SideHolderUpperTransform3' translation='0 -0.38 4.35'>
+                        <Shape DEF='SideHolderUpperShape3'>
+                            <Appearance USE='BlackStepAppearance'/>
+                            <Box DEF='SideHolderUpperBox3' size='0.86 0.08 0.22'/>
+                        </Shape>
+                    </Transform>
+                </Group>
+                <!-- Lower part -->
                 <Group DEF='SideHolderLowerGroup'>
-                    <Transform DEF='SideHolderLowerTransform1' translation='0 -0.21 1.74'>
+                    <!-- Part 1 -->
+                    <Transform DEF='SideHolderLowerTransform1' translation='0 -0.21 1.24'>
                         <Shape DEF='SideHolderLowerShape1'>
                             <Appearance DEF='WhiteSideHolderAppearance'>
                                 <Material DEF='WhiteSideHolderMaterial' diffuseColor='1 1 1'/>
                             </Appearance>
-                            <Box DEF='SideHolderLowerBox1' size='0.45 1.62 2.48'/>
+                            <Box DEF='SideHolderLowerBox1' size='0.55 1.62 2.48'/>
                         </Shape>
                     </Transform>
-                    <Transform DEF='SideHolderLowerTransform2' translation='0 0.275 4.005'
+                    <!-- Part 2 -->
+                    <Transform DEF='SideHolderLowerTransform2' translation='0 0.275 3.505'
                                rotation='1 0 0 0.52' center='0 0.325 -1.025'>
                         <Shape DEF='SideHolderLowerShape2'>
                             <Appearance USE='WhiteSideHolderAppearance'/>
-                            <Box DEF='SideHolderLowerBox2' size='0.45 0.65 2.05'/>
+                            <Box DEF='SideHolderLowerBox2' size='0.55 0.65 2.05'/>
                         </Shape>
                     </Transform>
-                    <Transform DEF='SideHolderLowerTransform3' translation='0 -0.72 3.87'>
+                    <!-- Part 3 -->
+                    <Transform DEF='SideHolderLowerTransform3' translation='0 -0.72 3.37'>
                         <Shape DEF='SideHolderLowerShape3'>
                             <Appearance USE='WhiteSideHolderAppearance'/>
-                            <Box DEF='SideHolderLowerBox3' size='0.45 0.60 1.78'/>
+                            <Box DEF='SideHolderLowerBox3' size='0.55 0.60 1.78'/>
                         </Shape>
                     </Transform>
-                    <!-- Dummy shape to hide holes -->
-                    <Transform DEF='SideHolderDummyTransform' translation='0 -0.25 3.23'>
+                    <!-- Part 4 - Dummy shape to hide holes -->
+                    <Transform DEF='SideHolderDummyTransform' translation='0 -0.25 2.73'>
                         <Shape DEF='SideHolderDummyShape'>
                             <Appearance USE='WhiteSideHolderAppearance'/>
-                            <Box DEF='SideHolderDummyBox' size='0.45 0.5 0.5'/>
+                            <Box DEF='SideHolderDummyBox' size='0.55 0.5 0.5'/>
                         </Shape>
                     </Transform>
                 </Group>
             </Group>
         </Transform>
-        <Transform DEF='RightSideHolderTransform' translation='7.00 0 0'>
+        <Transform DEF='RightSideHolderTransform' translation='7.00 0 0.5'>
             <Group USE='SideHolderGroup'/>
         </Transform>
     </Scene>
