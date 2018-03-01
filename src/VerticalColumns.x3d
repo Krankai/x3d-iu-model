@@ -7,7 +7,7 @@
         <meta content='Model the set of vertical columns (separating classrooms)' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
         <meta content='10th December, 2017' name='created'/>
-        <meta content='10th December, 2017' name='modified'/>
+        <meta content='1st March, 2018' name='modified'/>
         <meta content='Version 1.0' name='version'/>
         <meta content='VerticalColumns, columns, vertical' name='subject'/>
         <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
@@ -15,43 +15,55 @@
         <!-- Additional authoring resources for meta-tags: http://www.dublincore.org/documents/dcmi-terms http://www.dublincore.org/documents/dces http://www.w3.org/TR/html4/struct/global.html#h-7.4.4 http://vancouver-webpages.com/META http://vancouver-webpages.com/META/about-mk-metas2.html Additional authoring resources for language codes: http://www.rfc-editor.org/rfc/bcp/bcp47.txt http://www.loc.gov/standards/iso639-2/langhome.html http://www.iana.org/numbers.html#L -->
     </head>
     <Scene>
-    <Transform DEF='BigVerticalColumnTransform1' translation='-14.00 0 0'>
+        <!-- Translation:
+                |x| = 4*300cm + 4*0.5*90cm + 4*0.5*60cm = 1500cm -->
+        <Transform DEF='BigVerticalColumnTransform1' translation='-15.00 0 0'>
             <Shape DEF='BigVerticalColumnShape'>
                 <Appearance DEF='MainRedAppearance'>
                     <Material DEF='MainRedMaterial' diffuseColor='1 0 0'/>
                 </Appearance>
-                <!-- Height = 6 x 90cm + 7 x 450cm (height of square) = 3690cm -->
-                <Box size='0.90 25.70 0.5'/>
+                <!-- Height = 6*90cm (height of column) + 7*320cm (height of square) = 2780cm -->
+                <Box size='0.90 27.80 0.5'/>
             </Shape>
         </Transform>
-        <Transform DEF='SmallVerticalColumnTransform2' translation='-10.50 0 0'>
+        <!-- Translation:
+                |x| = 3*300cm + 3*0.5*90cm + 3*0.5*60cm = 1125cm -->
+        <Transform DEF='SmallVerticalColumnTransform2' translation='-11.25 0 0'>
             <Shape DEF='SmallVerticalColumnShape'>
                 <Appearance USE='MainRedAppearance'/>
-                <Box size='0.60 25.70 0.5'/>
+                <!-- Height = [same as Big Column] -->
+                <Box size='0.60 27.80 0.5'/>
             </Shape>
         </Transform>
-        <Transform DEF='BigVerticalColumnTransform3' translation='-7.00 0 0'>
+        <!-- Translation:
+                |x| = 2*300cm + 2*0.5*90cm + 2*0.5*60cm = 750cm -->
+        <Transform DEF='BigVerticalColumnTransform3' translation='-7.50 0 0'>
             <Shape USE='BigVerticalColumnShape'/>
         </Transform>
-        <Transform DEF='SmallVerticalColumnTransform4' translation='-3.50 3.80 0'>
-            <Shape DEF='DoorSmallVerticalColumnShape'> <!-- Shorter height -> for door -->
+        <!-- Translation:
+                |x| = 0.5*60cm (small column) + 0.5*90cm (big column) + 300cm(square) = 375cm
+                |y| = 0.5*(2*320cm + 2*90cm) (height of front gate) = 410cm --> 
+        <Transform DEF='SmallVerticalColumnTransform4' translation='-3.75 4.10 0'>
+            <Shape DEF='GateSmallVerticalColumnShape'>
                 <Appearance USE='MainRedAppearance'/>
-                <Box size='0.60 18.10 0.5'/>
+                <!-- Height = 4*90cm (height of column) + 5*320cm (height of square) = 1960cm -->
+                <Box size='0.60 19.60 0.5'/>
             </Shape>
         </Transform>
+        <!-- Center vertical column -->
         <Transform DEF='BigVerticalColumnTransform5' translation='0 0 0'>
             <Shape USE='BigVerticalColumnShape'/>
         </Transform>
-        <Transform DEF='SmallVerticalColumnTransform6' translation='3.50 3.80 0'>
-            <Shape USE='DoorSmallVerticalColumnShape'/>
+        <Transform DEF='SmallVerticalColumnTransform6' translation='3.75 4.10 0'>
+            <Shape USE='GateSmallVerticalColumnShape'/>
         </Transform>
-        <Transform DEF='BigVerticalColumnTransform7' translation='7.00 -0 0'>
+        <Transform DEF='BigVerticalColumnTransform7' translation='7.50 -0 0'>
             <Shape USE='BigVerticalColumnShape'/>
         </Transform>
-        <Transform DEF='SmallVerticalColumnTransform8' translation='10.50 0 0'>
+        <Transform DEF='SmallVerticalColumnTransform8' translation='11.25 0 0'>
             <Shape USE='SmallVerticalColumnShape'/>
         </Transform>
-        <Transform DEF='BigVerticalColumnTransform9' translation='14.00 0 0'>
+        <Transform DEF='BigVerticalColumnTransform9' translation='15.00 0 0'>
             <Shape USE='BigVerticalColumnShape'/>
         </Transform>
     </Scene>

@@ -1,15 +1,15 @@
-Front Building
+Main Buildings (A1 & A2)
     Vertical Columns
-        Big 		-> W = 90cm | H = 2570cm | D = 50cm
-        Small 		-> W = 60cm | H = 2570cm | D = 50cm
-        Small-Door	-> W = 60cm | H = 1810cm | D = 50cm
+        Big 		-> W = 90cm | H = 2570cm (H' = 2780cm) | D = 50cm
+        Small 		-> W = 60cm | H = 2570cm (H' = 2780cm) | D = 50cm
+        Small-Gate	-> W = 60cm | H = 1810cm (H' = 1960cm) | D = 50cm
     Horizontal Columns
-        Normal		-> W = 2890cm | H = 90cm | D = 50cm
-        Small-Door	-> W =  610cm | H = 90cm | D = 50cm
+        Normal		-> W = 2890cm (W' = 3090cm) | H = 90cm | D = 50cm
+        Small-Gate	-> W =  610cm (W' =  660cm) | H = 90cm | D = 50cm
         (Note: HorizontalColumn.Height == VerticalColumn.Big.Width)
     Square (beteen columns; with window)
-        W = 275cm
-        H = (slightly > then W) 290cm [still not sure]
+        W = 275cm (W' = 300cm)
+        H = 290cm (H' = 320cm)
     Steps Hall (in front of the door leading to Main Building)
         Side Step-Holder
             Layer (on top of upper) (three parts):
@@ -29,9 +29,9 @@ Front Building
                 Part4 (dummy)
         Main steps -> divided into 10 'group steps' horizontally.
             Pattern for 'group steps': 2 (Black) + 1 (Red) + 4B + 1R + 2B
-                2 outside Black	-> W = 120cm
-                4 inside Black	-> W = 130cm
-                Red		-> W = 200cm 
+                2 outside Black	-> W = 120cm (W' = 136cm)
+                4 inside Black	-> W = 130cm (W' = 134cm)
+                Red		-> W = 200cm (W' = 210cm)
             Each 'group step' -> 1 base + 5 level (gradual decrease in height)
                 Level: upper	-> W = [above] | H = 2cm |
 				   D = lower.depth + 2cm = 30cm + 2cm = 32cm
@@ -41,6 +41,62 @@ Front Building
                                    D = 4x62 = 248cm
                        upper	-> W = [above] | H = 2cm |
 				   D = lower.depth + 2cm = 248cm + 2cm = 250cm
+    Floor 1st
+        Main hall	-> W = 2*700 = 1400cm | H = ?? |
+			   D = 9cm + 9*40cm + 21cm = 390cm
+	(between the door and the corridor)
+        Corridor	-> W = ?? | H = ?? | D = 31cm + 8*40cm = 351cm
+        Right Side (to the building)
+            Corridor	-> W = 830cm + 317cm + 459cm = 1606cm | H = ?? |
+			   D = ~9*40cm = 360cm
+	    (not counting main hall and side hall)
+            Room 1 (O1-111)	-> W = 20*40cm + 30cm = 830cm | H = ?? |
+				   D = [ MainHall.Depth ]
+                Distance to door = 14*40cm + 30cm = 590cm
+		(from the right edge - viewing from inside out, door direction)
+                Door	-> W = ~135cm | H = ??
+            Window Wall	-> W = 2*40cm + 89cm + (28cm + 3*40cm) = 317cm (W' = 320cm)
+			   H = ?? | D = 5cm (?)
+            Room 2 + Elevator	-> W = (40cm + 28cm) + ~74cm + (20cm + 7*40cm + 17cm)
+			     	     = 459cm
+				   H = ?? | D = [ MainHall.Depth ]
+                Distance to door = 40cm + 28cm = 68cm
+		(from the right edge - viewing from inside out, door direction)
+                Door	-> W = ~74cm | H = ??
+            { Room 2	-> W = 205cm | H = ?? | D = 
+                  Distance to door = 68cm
+                  Door	-> W = 75cm | H = ??
+              Elevator	-> W = [ MainHall.Depth ] | D = 255cm }
+            Side Hall (leading to canteen / leading to library-corridor)
+                From Elevator to edge of toiler = 25cm + 8*40cm = 345cm
+                Door 1 (leading to stairs) = ~3*40cm = 120cm
+                Door 2 (leading to outside-canteen) = ~8*40cm = 500cm
+                From Elevator to Door 1 = ~5*40cm = 200cm (WALL)
+                From Door 1 to Door 2 = 40cm (WALL)
+        Left Side (to the building)
+            Corridor	->
+            (not counting main hall and side hall)
+            Room 1 (O1-110)	-> W = (7cm + 7*40cm + 15cm) + ~135cm + (21cm)
+				     = 458cm (W' = 450cm)
+				   H = ?? | D = [ MainHall.Depth ]
+                Distance to door = 7cm + 7*40cm + 15cm = 302cm (d' = 297cm)
+		(from the left edge - viewing from inside out, door direction)
+                Door	-> W = ~135cm | H = ??
+            WC Men/Women	-> W = (26cm) + ~74cm + (~20cm + 2*40cm) = 200cm
+				   (W' = 190cm)
+				   H = ?? | D = [ MainHall.Depth]
+                Distance to door (men) = 26cm (from the left ...) (d' = 25cm)
+                Distance to door (women) = 26cm (from the right ...) (d' = 25cm)
+                Door	-> W = ~74cm | H = ??
+            Window Wall	-> W = 9*40cm = 360cm (W' = 320cm) | H = ?? | D = 5cm (?)
+            Room 2 + Elevator	-> W = (35cm + 6*40cm + ~37cm) + ~74cm + (~10cm + 40cm)
+				     = 436cm
+				   H = ?? | D = [ MainHall.Depth ]
+                Distance to door = ~10cm + 40cm = 50cm
+		(from the left edge ...)
+                Door	-> W = ~74cm | H = ??
+            Side Hall
+
     Door Glasses + Roofs
         Horizontal Columns of 2 doors (where the roofs are)
             
