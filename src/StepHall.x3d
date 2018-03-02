@@ -7,7 +7,7 @@
         <meta content='Model the (main) step hall of IU' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
         <meta content='10th December, 2017' name='created'/>
-        <meta content='1st March, 2018' name='modified'/>
+        <meta content='2nd March, 2018' name='modified'/>
         <meta content='Version 1.0' name='version'/>
         <meta content='IU, StepHall, step' name='subject'/>
         <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
@@ -393,7 +393,7 @@
                             <Appearance DEF='WhiteSideHolderAppearance'>
                                 <Material DEF='WhiteSideHolderMaterial' diffuseColor='1 1 1'/>
                             </Appearance>
-                            <Box DEF='SideHolderLowerBox1' size='0.55 1.62 2.48'/>
+                            <Box DEF='SideHolderLowerBox1' size='0.50 1.62 2.48'/>
                         </Shape>
                     </Transform>
                     <!-- Part 2 -->
@@ -401,21 +401,21 @@
                                rotation='1 0 0 0.52' center='0 0.325 -1.025'>
                         <Shape DEF='SideHolderLowerShape2'>
                             <Appearance USE='WhiteSideHolderAppearance'/>
-                            <Box DEF='SideHolderLowerBox2' size='0.55 0.65 2.05'/>
+                            <Box DEF='SideHolderLowerBox2' size='0.50 0.65 2.05'/>
                         </Shape>
                     </Transform>
                     <!-- Part 3 -->
                     <Transform DEF='SideHolderLowerTransform3' translation='0 -0.72 3.37'>
                         <Shape DEF='SideHolderLowerShape3'>
                             <Appearance USE='WhiteSideHolderAppearance'/>
-                            <Box DEF='SideHolderLowerBox3' size='0.55 0.60 1.78'/>
+                            <Box DEF='SideHolderLowerBox3' size='0.50 0.60 1.78'/>
                         </Shape>
                     </Transform>
                     <!-- Part 4 - Dummy shape to hide holes -->
                     <Transform DEF='SideHolderDummyTransform' translation='0 -0.25 2.73'>
                         <Shape DEF='SideHolderDummyShape'>
                             <Appearance USE='WhiteSideHolderAppearance'/>
-                            <Box DEF='SideHolderDummyBox' size='0.55 0.5 0.5'/>
+                            <Box DEF='SideHolderDummyBox' size='0.50 0.5 0.5'/>
                         </Shape>
                     </Transform>
                 </Group>

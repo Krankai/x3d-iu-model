@@ -23,9 +23,9 @@ Main Buildings (A1 & A2)
                                            angle = 0.52 rad (32 degree)
                 Part3	-> W = 86cm | H = 8cm | D = 20cm (D'=22cm)
             Lower (three parts):
-                Part1	-> W = 45cm | H = 102cm + 60cm = 162cm | D = 248cm
-                Part2	-> W = 45cm | H = 65cm | D = 205cm | angle = 0.52rad
-                Part3	-> W = 45cm | H = 60cm | D = 178cm
+                Part1	-> W = 50cm | H = 102cm + 60cm = 162cm | D = 248cm
+                Part2	-> W = 50cm | H = 65cm | D = 205cm | angle = 0.52rad
+                Part3	-> W = 50cm | H = 60cm | D = 178cm
                 Part4 (dummy)
         Main steps -> divided into 10 'group steps' horizontally.
             Pattern for 'group steps': 2 (Black) + 1 (Red) + 4B + 1R + 2B

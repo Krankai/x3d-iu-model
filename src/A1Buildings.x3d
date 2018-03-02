@@ -7,7 +7,7 @@
         <meta content='Model the entire A1 buildings of IU' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
         <meta content='30th Nov, 2017' name='created'/>
-        <meta content='1st March, 2018' name='modified'/>
+        <meta content='2nd March, 2018' name='modified'/>
         <meta content='IU, A1Buildings, building, A1' name='subject'/>
         <meta content='Version 1.0' name='version'/>
         <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
@@ -15,48 +15,115 @@
         <!-- Additional authoring resources for meta-tags: http://www.dublincore.org/documents/dcmi-terms http://www.dublincore.org/documents/dces http://www.w3.org/TR/html4/struct/global.html#h-7.4.4 http://vancouver-webpages.com/META http://vancouver-webpages.com/META/about-mk-metas2.html Additional authoring resources for language codes: http://www.rfc-editor.org/rfc/bcp/bcp47.txt http://www.loc.gov/standards/iso639-2/langhome.html http://www.iana.org/numbers.html#L -->
     </head>
     <Scene>
+        <!-- Center of building: at (0 0 0) -->
+        
         <!-- Temporary wall -->
-        <Transform translation='0 14 -4'>
+<!--        <Transform translation='0 14 -4'>
             <Shape>
                 <Appearance>
                     <Material/>
                 </Appearance>
-                <!--
+                
                     Width = 8 x 300cm + 5 x 90cm + 4 x 60cm = 3090cm
                     Height = 7 x 320cm + 6 x 90cm + padding = 2800cm
                     Depth = 2cm (dummy)
-                -->
+                
                 <Box size='30.90 28 2'/>
             </Shape>
-        </Transform>
+        </Transform>-->
         
         <!-- Base to support the buildings -->
-        <Transform translation='0 0.50 -2.5'>
-            <Shape>
-                <Appearance>
-                    <Material/>
-                </Appearance>
-                <!-- The height of the 'steps' is 102cm -> Let the height of the base be 100cm -->
-                <Box size='28.90 1.00 5'/>
-            </Shape>
-        </Transform>
+        <Group DEF='BuildingBase'>
+            <!-- Main base -->
+            <!-- Translation:
+                    |z| = 0.5*500cm (temporary depth) = 250cm -->
+            <Transform DEF='MainBaseTransform' translation='0 0.51 -2.5'>
+                <Shape>
+                    <Appearance>
+                        <Material/>
+                    </Appearance>
+                    <!-- Height of base = Height of 'hall steps' -->
+                    <!-- Width = 2*(830cm) (each side) + 1500cm (center) + 40cm (dummy) =  3200cm -->
+                    <!-- Depth (temporary) = 500cm -->
+                    <Box size='32.00 1.02 5'/>
+                </Shape>
+            </Transform>
+            <!-- Stone layer -->
+            <Group DEF='StoneLayerGroup'>
+                <!-- Translation:
+                        |x| = 3*300cm + 3*0.5*60cm + 3*0.5*90cm = 1125cm -->
+                <Transform translation='-11.25 0.51 0.025'>
+                    <Shape DEF='StoneLayerThreeColumnsShape'> <!-- Thin layer spanning under 3 columns -->
+                        <Appearance DEF='StoneLayerAppearance'>
+                            <Material diffuseColor='0.35 0.35 0.35'/>
+                        </Appearance>
+                        <!-- Size:
+                            width = 2*300cm (square) + 60cm (small col) + 2*90cm (big col) = 840cm
+                            height = 102cm (height of base)
+                            depth = 5cm -->
+                        <Box size='8.40 1.02 0.05'/>
+                    </Shape>
+                </Transform>
+                <!-- Translation:
+                        |x| = 2*300cm + 2*0.5*60cm + 2*0.5*90cm = 750cm -->
+                <Transform translation='-7.50 0.51 0.25'>
+                    <Shape DEF='StoneLayerBigColumnShape'> <!-- Thick layer under big column -->
+                        <Appearance USE='StoneLayerAppearance'/>
+                        <!-- Size:
+                            width = 90cm (big column)
+                            height = 102cm (height of base)
+                            depth = 50cm (depth of column) -->
+                        <Box size='0.9 1.02 0.5'/>
+                    </Shape>
+                </Transform>
+                <!-- Translation:
+                        |x| = 3*300cm + 3*0.5*60cm + 3*0.5*90cm = 1125cm -->
+                <Transform translation='-11.25 0.51 0.25'>
+                    <Shape DEF='StoneLayerSmallColumnShape'> <!-- Thick layer under small column -->
+                        <Appearance USE='StoneLayerAppearance'/>
+                        <!-- Size:
+                            width = 60cm (small column)
+                            height = 102cm (height of base)
+                            depth = 50cm (depth of column) -->
+                        <Box size='0.6 1.02 0.5'/>
+                    </Shape>
+                </Transform>
+                <!-- Translation:
+                        |x| = 4*300cm + 4*0.5*60cm + 4*0.5*90cm = 1500cm -->
+                <Transform translation='-15.00 0.51 0.25'>
+                    <Shape USE='StoneLayerBigColumnShape'/>
+                </Transform>
+                <Transform translation='11.25 0.51 0.025'>
+                    <Shape USE='StoneLayerThreeColumnsShape'/>
+                </Transform>
+                <Transform translation='7.50 0.51 0.25'>
+                    <Shape USE='StoneLayerBigColumnShape'/>
+                </Transform>
+                <Transform translation='11.25 0.51 0.25'>
+                    <Shape USE='StoneLayerSmallColumnShape'/>
+                </Transform>
+                <Transform translation='15.00 0.51 0.25'>
+                    <Shape USE='StoneLayerBigColumnShape'/>
+                </Transform>
+            </Group>
+        </Group>
         
         <!-- Front columns on the surface of the main building -->
         <!-- Vertical columns - From left to right. Pattern: B-S-B-DS-B-DS-B-S-B -->
         <!-- Center: at the middle of the fifth (5th) column -->
         <!-- Translation:
-                y = 0.5*2780cm (height) = 1390cm
+                y = 0.5*2780cm (height) + 102cm (height of base) = 1492cm
                 z = 0.5*50cm (depth) = 25cm -->
-        <Transform DEF='VerticalColumnsTransform' translation='0 13.90 0.25'>
+        <Transform DEF='VerticalColumnsTransform' translation='0 14.92 0.25'>
             <Inline url='VerticalColumns.x3d'/>
         </Transform>
         
         <!-- Horizontal columns - From bottom to top. Pattern: -B(Left&Right)-B-B-B-B-B- -->
         <!-- Center: at the middle of the fourth (4th) colum -->
         <!-- Translation:
-                y = 4*320cm + 3*90cm + 0.5*90cm = 1595cm
+                y = 4*320cm + 3*90cm + 0.5*90cm + 102cm (height of base) = 1697cm
                 z = 0.5*50cm (depth) = 25cm -->
-        <Transform DEF='HorizontalColumnsTransform' translation='0 15.95 0.25'>
+        <Transform DEF='HorizontalColumnsTransform' translation='0 16.97 0.25'>
             <Inline url='HorizontalColumns.x3d'/>
         </Transform>
         
@@ -66,6 +133,15 @@
         <!-- Center: ['depth'] at the tail-end of the GroupSteps -->
         <Transform DEF='StepHall' translation='0 1.00 0'>
             <Inline url='StepHall.x3d'/>
+        </Transform>
+        
+        <!-- Center of the room is in the middle, but on the floor -->
+        <!-- Translation:
+                |x| = 0.5*830cm (room's width) + 0.5*90cm + 60cm + 2*300cm = 1120cm
+                |y| = 102cm (height of base)
+                |z| = 0.5*390cm (depth of the room) -->
+        <Transform DEF='RoomO1111Transform' translation='-11.30 1.02 -1.95'>
+            <Inline url='RoomO1111.x3d'/>
         </Transform>
     </Scene>
 </X3D>
