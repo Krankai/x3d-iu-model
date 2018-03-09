@@ -26,23 +26,24 @@
         </Group>
         
         <!-- Front columns on the surface of the main building -->
-        <!-- Vertical columns - From left to right. Pattern: B-S-B-DS-B-DS-B-S-B -->
-        <!-- Center: at the middle of the fifth (5th) column -->
-        <!-- Translation:
-                y = 0.5*2780cm (height) + 102cm (height of base) = 1492cm
-                z = 0.5*50cm (depth) = 25cm -->
-        <Transform DEF='VerticalColumnsTransform' translation='0 14.92 0.25'>
-            <Inline url='VerticalColumns.x3d'/>
-        </Transform>
-        
-        <!-- Horizontal columns - From bottom to top. Pattern: -B(Left&Right)-B-B-B-B-B- -->
-        <!-- Center: at the middle of the fourth (4th) colum -->
-        <!-- Translation:
-                y = 4*320cm + 3*90cm + 0.5*90cm + 102cm (height of base) = 1697cm
-                z = 0.5*50cm (depth) = 25cm -->
-        <Transform DEF='HorizontalColumnsTransform' translation='0 16.97 0.25'>
-            <Inline url='HorizontalColumns.x3d'/>
-        </Transform>
+        <Group DEF='FrontColumnsGroup'>
+            <!-- Vertical columns - From left to right. Pattern: B-S-B-DS-B-DS-B-S-B -->
+            <!-- Center: at the middle of the fifth (5th) column -->
+            <!-- Translation:
+                    y = 0.5*2780cm (height) + 102cm (height of base) = 1492cm
+                    z = 0.5*50cm (depth) = 25cm -->
+            <Transform DEF='VerticalColumnsTransform' translation='0 14.92 0.25'>
+                <Inline url='VerticalColumns.x3d'/>
+            </Transform>
+            <!-- Horizontal columns - From bottom to top. Pattern: -B(Left&Right)-B-B-B-B-B- -->
+            <!-- Center: at the middle of the fourth (4th) colum -->
+            <!-- Translation:
+                    y = 4*320cm + 3*90cm + 0.5*90cm + 102cm (height of base) = 1697cm
+                    z = 0.5*50cm (depth) = 25cm -->
+            <Transform DEF='HorizontalColumnsTransform' translation='0 16.97 0.25'>
+                <Inline url='HorizontalColumns.x3d'/>
+            </Transform>
+        </Group>
         
         <!-- Steps Hall - Divided into GroupSteps - Pattern: 2B-1R-4B-1R-2B -->
         <!-- Center: [horizontal] between 5th and 6th group step -->
@@ -53,39 +54,67 @@
         </Transform>
         
         <!-- Rooms (NOTE: center of room is at the 'center' - middle, but on the floor) -->
-        <!-- RIGHT rooms -->
-        <!-- Translation:
-                |x| = 0.5*830cm (room's width) + 0.5*90cm + 60cm + 2*300cm + 10cm (padding) = 1130cm
-                |y| = 102cm (height of base)
-                |z| = 0.5*390cm (depth of the room) = 195cm
-                NOTE: padding is for the firt room (on each side) -->
-        <Transform DEF='RoomO1111Transform' translation='-11.30 1.02 -1.95' rotation='0 1 0 3.1416'>
-            <Inline url='first_floor/RoomO1111.x3d'/>
-        </Transform>
-        <!-- LEFT rooms -->
-        <!-- Translation:
-                |x| = 0.5*450cm (room's width) + 0.5*90cm + 60cm + 2*300cm + 10cm (padding) = 940cm
-                |y| = 102cm (height of base)
-                |z| = 0.5*390cm (depth of the room) = 195cm 
-                NOTE: padding is for the firt room (on each side) -->
-        <Transform DEF='RoomO1110Transform' translation='9.40 1.02 -1.95' rotation='0 1 0 3.1416'>
-            <Inline url='first_floor/RoomO1110.x3d'/>
-        </Transform>
-        <!-- Translation:
-                |x| = 0.5*190cm (room's width) + 0.5*90cm + 2*300cm + 60cm + 10cm (padding) 450cm (previous room's width)
-                    = 1260cm
-                |y| = 102cm (height of base)
-                |z| = 0.5*390cm (depth of the room) = 195cm -->
-        <Transform DEF='SmallMaleWaterClosetTransform' translation='12.60 1.02 -1.95' rotation='0 1 0 3.1416'>
-            <Inline url='first_floor/SmallMaleWaterCloset.x3d'/>
-        </Transform>
-        <!-- Translation:
-                |x| = 0.5*190cm (room's width) + 0.5*90cm + 2*300cm + 60cm + 10cm (padding) (450cm + 190cm) (previous room's width)
-                    = 1450cm
-                |y| = 102cm (height of base)
-                |z| = 0.5*390cm (depth of the room) = 195cm -->
-        <Transform DEF='SmalleFemaleWaterClosetTransform' translation='14.50 1.02 -1.95' rotation='0 1 0 3.1416'>
-            <Inline url='first_floor/SmallFemaleWaterCloset.x3d'/>
-        </Transform>
+        <Group DEF='RoomsGroup'>
+            <!-- RIGHT rooms -->
+            <Group DEF='RightRoomsGroup'>
+                <!-- Translation:
+                        |x| = 0.5*830cm (room's width) + 0.5*90cm + 60cm + 2*300cm + 10cm (padding) = 1130cm
+                        |y| = 102cm (height of base)
+                        |z| = 0.5*390cm (depth of the room) = 195cm
+                        NOTE: padding is for the firt room (on each side) -->
+                <Transform DEF='RoomO1111Transform' translation='-11.30 1.02 -1.95' rotation='0 1 0 3.1416'>
+                    <Inline url='first_floor/RoomO1111.x3d'/>
+                </Transform>
+                <!-- Translation:
+                        |x| = 0.5*205cm (width) + (5*0.5*90cm + 2*60cm + 4*300cm) + 320cm (connected base) = 1967.5cm
+                        |y| = 102cm (height of base)
+                        |z| = 0.5*390cm (depth of the room) = 195cm -->
+                <Transform DEF='RightStoreRoomTransform' translation='-19.675 1.02 -1.95' rotation='0 1 0 3.1416'>
+                    <Inline url='first_floor/RightStoreRoom.x3d'/>
+                </Transform>
+                <!-- Translation:
+                        |x| = 0.5*255cm (depth) + (5*0.5*90cm + 2*60cm + 4*300cm) + 320cm (connected base) + 205cm (store room) = 2197.5cm
+                        |y| = 102cm (height of base)
+                        |z| = 0.5*390cm (width of the room) = 195cm
+                     Rotation:
+                        angle = -(pi/2) -->
+                <Transform DEF='RightElevatorsTransform' translation='-21.975 1.02 -1.95' rotation='0 1 0 -1.5708'>
+                    <Inline url='first_floor/Elevators.x3d'/>
+                </Transform>
+            </Group>
+            <!-- LEFT rooms -->
+            <Group DEF='LeftRoomsGroup'>
+                <!-- Translation:
+                        |x| = 0.5*450cm (room's width) + 0.5*90cm + 60cm + 2*300cm + 10cm (padding) = 940cm
+                        |y| = 102cm (height of base)
+                        |z| = 0.5*390cm (depth of the room) = 195cm 
+                        NOTE: padding is for the firt room (on each side) -->
+                <Transform DEF='RoomO1110Transform' translation='9.40 1.02 -1.95' rotation='0 1 0 3.1416'>
+                    <Inline url='first_floor/RoomO1110.x3d'/>
+                </Transform>
+                <!-- Translation:
+                        |x| = 0.5*190cm (room's width) + 0.5*90cm + 2*300cm + 60cm + 10cm (padding) 450cm (previous room's width)
+                            = 1260cm
+                        |y| = 102cm (height of base)
+                        |z| = 0.5*390cm (depth of the room) = 195cm -->
+                <Transform DEF='SmallMaleWaterClosetTransform' translation='12.60 1.02 -1.95' rotation='0 1 0 3.1416'>
+                    <Inline url='first_floor/SmallMaleWaterCloset.x3d'/>
+                </Transform>
+                <!-- Translation:
+                        |x| = 0.5*190cm (room's width) + 0.5*90cm + 2*300cm + 60cm + 10cm (padding) (450cm + 190cm) (previous room's width)
+                            = 1450cm
+                        |y| = 102cm (height of base)
+                        |z| = 0.5*390cm (depth of the room) = 195cm -->
+                <Transform DEF='SmalleFemaleWaterClosetTransform' translation='14.50 1.02 -1.95' rotation='0 1 0 3.1416'>
+                    <Inline url='first_floor/SmallFemaleWaterCloset.x3d'/>
+                </Transform>
+                <Transform DEF='LeftStoreRoomTransform' translation='19.675 1.02 -1.95' rotation='0 1 0 3.1416'>
+                    <Inline url='first_floor/LeftStoreRoom.x3d'/>
+                </Transform>
+                <Transform DEF='LeftElevatorsTransform' translation='21.975 1.02 -1.95' rotation='0 1 0 1.5708'>
+                    <Inline url='first_floor/Elevators.x3d'/>
+                </Transform>
+            </Group>
+        </Group>
     </Scene>
 </X3D>
