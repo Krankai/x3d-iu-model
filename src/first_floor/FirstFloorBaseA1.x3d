@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+    <head>
+        <!-- Authors need to replace asterisked values or delete unneeded meta tags as appropriate -->
+        <meta content='FirstFloorBaseA1' name='title'/>
+        <meta content='Model the floor/base of the first floor of the International University (A1 Building)' name='description'/>
+        <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
+        <meta content='8th March, 2018' name='created'/>
+        <meta content='8th March, 2018' name='modified'/>
+        <meta content='v1.0' name='version'/>
+        <meta content='*enter reference citation or relative/online url here*' name='reference'/>
+        <meta content='*enter additional url/bibliographic reference information here*' name='reference'/>
+        <meta content='*enter reference resource here if required to support function, delivery, or coherence of content*' name='requires'/>
+        <meta content='*enter copyright information here* Example: Copyright (c) Web3D Consortium Inc. 2006 to present' name='rights'/>
+        <meta content='*enter drawing filename/url here*' name='drawing'/>
+        <meta content='*enter image filename/url here*' name='Image'/>
+        <meta content='*enter movie filename/url here*' name='MovingImage'/>
+        <meta content='*enter photo filename/url here*' name='photo'/>
+        <meta content='floor, base, A1 building, International University, first' name='subject'/>
+        <meta content='*enter permission statements or url here*' name='accessRights'/>
+        <meta content='*insert any known warnings, bugs or errors here*' name='warning'/>
+        <meta content='*enter online Uniform Resource Identifier (URI) or Uniform Resource Locator (URL) address for this file here*' name='identifier'/>
+        <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+        <meta content='../license.html' name='license'/>
+        <!-- Additional authoring resources for meta-tags: http://www.dublincore.org/documents/dcmi-terms http://www.dublincore.org/documents/dces http://www.w3.org/TR/html4/struct/global.html#h-7.4.4 http://vancouver-webpages.com/META http://vancouver-webpages.com/META/about-mk-metas2.html Additional authoring resources for language codes: http://www.rfc-editor.org/rfc/bcp/bcp47.txt http://www.loc.gov/standards/iso639-2/langhome.html http://www.iana.org/numbers.html#L -->
+    </head>
+    <Scene>
+        <!-- Center of the model = same as center of A1Buildings.x3d - (0 0 0) -->
+        
+        <!-- Center corridor base (floor/base at the middle of the corridor) -->
+        <!-- Translation:
+                |z| = 0.5*500cm (temporary depth) = 250cm -->
+        <Transform DEF='CenterCorridorBaseTransform' translation='0 0.51 -2.5'>
+            <Shape>
+                <Appearance>
+                    <Material/>
+                </Appearance>
+                <!-- Size:
+                        w = 2*(830cm) (each side) + (1500cm - 90cm) (center) + 2*10cm (padding) = 3093cm
+                        h = 102cm (height of base - 'hall step')
+                        d = 500cm (temporary) -->
+                <Box size='30.93 1.02 5'/>
+            </Shape>
+        </Transform>
+        
+        <!-- Side corridor base (left/right) -->
+        <!-- Translation:
+                |x| = 0.5*460cm (width) + (4*300cm + 5*0.5*90cm + 2*60cm) + 320cm (connected base) = 2095cm
+                |y| = 0.5*102cm (height) = 51cm
+                |z| = 0.5*500cm (temporary depth) = 250cm -->
+        <Transform DEF='RightCorridorBaseTransform' translation='-20.95 0.51 -2.50'>
+            <Shape DEF='CorridorSideBaseShape'>
+                <Appearance>
+                    <Material/>
+                </Appearance>
+                <!-- Size:
+                        w = 205cm (store room) + 255cm (elevator's depth) = 460cm
+                        h = 102cm (height of base - 'hall step')
+                        d = 500cm (temporary) -->
+                <Box size='4.60 1.02 5'/>
+            </Shape>
+        </Transform>
+        <Transform DEF='LeftCorridorBaseTransform' translation='20.95 0.51 -2.50'>
+            <Shape USE='CorridorSideBaseShape'/>
+        </Transform>
+        
+        <!-- Connected corridor base (right under connected wall) -->
+        <!-- Translation:
+                |x| = 0.5*320cm (width) + 4*(300cm + 0.5*90cm + 0.5*60cm) + 0.5*90cm = 1705cm
+                |y| = 0.5*102cm = 51cm
+                |z| = |0.5*234cm (depth) - 500cm (temporary)| = 383cm -->
+        <Transform DEF='RightConnectedCorridorBaseTransform' translation='-17.05 0.51 -3.83'>
+            <Shape DEF='ConnectedCorridorBaseShape'>
+                <Appearance>
+                    <Material/>
+                </Appearance>
+                <!-- Size:
+                        w = 320cm (width of connected wall)
+                        h = 102cm (height of base)
+                        d = (500cm (temporary) - 390cm (depth of room)) + 24cm (depth of wall) 100cm (?) = 234cm -->
+                <Box size='3.20 1.02 2.34'/>
+            </Shape>
+        </Transform>
+        <Transform DEF='LeftConnectedCorridorBaseTransform' translation='17.05 0.51 -3.83'>
+            <Shape USE='ConnectedCorridorBaseShape'/>
+        </Transform>
+
+        <!-- Connected wall (connect two sets of rooms in the corridor) -->
+        <!-- Translation:
+                |x| = 0.5*320cm (width) + 4*(300cm + 0.5*90cm + 0.5*60cm) + 0.5*90cm = 1705cm
+                |y| = 0.5*320cm (height of wall) + 102cm (height of base) = 262cm
+                |z| = |0.5*24cm (depth of wall) - 390cm (depth of room)| = 378cm -->
+        <Transform DEF='RightConnectedWallTransform' translation='-17.05 2.62 -3.78'>
+            <Shape DEF='RightConnectedWallShape'>
+                <Appearance DEF='WallAppearance'>
+                    <Material diffuseColor='1 1 1'/>
+                </Appearance>
+                <!-- Size:
+                        w = 320cm
+                        h = 320cm (height of square = height of room)
+                        d = 24cm  -->
+                <Box DEF='ConnectedWallBox' size='3.20 3.20 0.24'/>
+            </Shape>
+        </Transform>
+        <Transform DEF='LeftConnectedWallTransform' translation='17.05 2.62 -3.78'>
+            <Shape DEF='LeftConnectedWallShape'>
+                <Appearance USE='WallAppearance'/>
+                <Box USE='ConnectedWallBox'/>
+            </Shape>
+        </Transform>
+        
+        <!-- Stone layer -->
+        <Group DEF='StoneLayerGroup'>
+            <!-- Translation:
+                    |x| = 3*300cm + 3*0.5*60cm + 3*0.5*90cm = 1125cm -->
+            <Transform translation='-11.25 0.51 0.025'>
+                <Shape DEF='StoneLayerThreeColumnsShape'> <!-- Thin layer spanning under 3 columns -->
+                    <Appearance DEF='StoneLayerAppearance'>
+                        <Material diffuseColor='0.35 0.35 0.35'/>
+                    </Appearance>
+                    <!-- Size:
+                        width = 2*300cm (square) + 60cm (small col) + 2*90cm (big col) = 840cm
+                        height = 102cm (height of base)
+                        depth = 5cm -->
+                    <Box size='8.40 1.02 0.05'/>
+                </Shape>
+            </Transform>
+            <!-- Translation:
+                    |x| = 2*300cm + 2*0.5*60cm + 2*0.5*90cm = 750cm -->
+            <Transform translation='-7.50 0.51 0.25'>
+                <Shape DEF='StoneLayerBigColumnShape'> <!-- Thick layer under big column -->
+                    <Appearance USE='StoneLayerAppearance'/>
+                    <!-- Size:
+                        width = 90cm (big column)
+                        height = 102cm (height of base)
+                        depth = 50cm (depth of column) -->
+                    <Box size='0.9 1.02 0.5'/>
+                </Shape>
+            </Transform>
+            <!-- Translation:
+                    |x| = 3*300cm + 3*0.5*60cm + 3*0.5*90cm = 1125cm -->
+            <Transform translation='-11.25 0.51 0.25'>
+                <Shape DEF='StoneLayerSmallColumnShape'> <!-- Thick layer under small column -->
+                    <Appearance USE='StoneLayerAppearance'/>
+                    <!-- Size:
+                        width = 60cm (small column)
+                        height = 102cm (height of base)
+                        depth = 50cm (depth of column) -->
+                    <Box size='0.6 1.02 0.5'/>
+                </Shape>
+            </Transform>
+            <!-- Translation:
+                    |x| = 4*300cm + 4*0.5*60cm + 4*0.5*90cm = 1500cm -->
+            <Transform translation='-15.00 0.51 0.25'>
+                <Shape USE='StoneLayerBigColumnShape'/>
+            </Transform>
+            <Transform translation='11.25 0.51 0.025'>
+                <Shape USE='StoneLayerThreeColumnsShape'/>
+            </Transform>
+            <Transform translation='7.50 0.51 0.25'>
+                <Shape USE='StoneLayerBigColumnShape'/>
+            </Transform>
+            <Transform translation='11.25 0.51 0.25'>
+                <Shape USE='StoneLayerSmallColumnShape'/>
+            </Transform>
+            <Transform translation='15.00 0.51 0.25'>
+                <Shape USE='StoneLayerBigColumnShape'/>
+            </Transform>
+        </Group>
+    </Scene>
+</X3D>

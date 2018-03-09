@@ -7,7 +7,7 @@
         <meta content='Model os Male WC (small version) of the International University' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
         <meta content='8th March, 2018' name='created'/>
-        <meta content='8th March, 2018' name='modified'/>
+        <meta content='9th March, 2018' name='modified'/>
         <meta content='v1.0' name='version'/>
         <meta content='*enter reference citation or relative/online url here*' name='reference'/>
         <meta content='*enter additional url/bibliographic reference information here*' name='reference'/>
@@ -33,36 +33,36 @@
             <!-- Front wall (with main door) -->
             <!-- Translation:
                     |y| = 0.5*320cm = 160cm
-                    |z| = 0.5*390cm - 0.5*10cm  = 190cm -->
-            <Transform DEF='FrontWallTransform' translation='0 1.6 1.9'>
+                    |z| = 0.5*390cm - 0.5*24cm  = 183cm -->
+            <Transform DEF='FrontWallTransform' translation='0 1.6 1.83'>
                 <Shape DEF='FrontWallShape'>
                     <Appearance DEF='WallAppearance'>
                         <Material diffuseColor='1 1 1'/>
                     </Appearance>
-                    <!-- Depth = 10cm -->
-                    <Box size='1.90 3.20 0.1'/>
+                    <!-- Depth = 24cm -->
+                    <Box size='1.90 3.20 0.24'/>
                 </Shape>
             </Transform>
             <!-- Back wall (with window) -->
-            <Transform DEF='BackWallTransform' translation='0 1.6 -1.9'>
+            <Transform DEF='BackWallTransform' translation='0 1.6 -1.83'>
                 <Shape DEF='BackWallShape'>
                     <Appearance USE='WallAppearance'/>
-                    <Box size='1.90 3.20 0.10'/>
+                    <Box size='1.90 3.20 0.24'/>
                 </Shape>
             </Transform>
             <!-- Side walls (perspective: inside out; in the door direction) -->
             <!-- Translation:
-                    |x| = 0.5*190cm (room's width) - 0.5*10cm = 90cm -->
-            <Transform DEF='LeftSideWallTransform' translation='0.9 1.6 0'>
+                    |x| = 0.5*190cm (room's width) - 0.5*24cm = 83cm -->
+            <Transform DEF='LeftSideWallTransform' translation='0.83 1.6 0'>
                 <Shape DEF='SideWallShape'>
                     <Appearance USE='WallAppearance'/>
                     <!-- Size:
-                        width = 10cm (depth of fron/back wall)
-                        depth = 390cm (depth of room) - 2*10cm (depth of fron/back wall) = 370cm -->
-                    <Box size='0.10 3.20 3.70'/>
+                        width = 24cm (depth of fron/back wall)
+                        depth = 390cm (depth of room) - 2*24cm (depth of fron/back wall) = 342cm -->
+                    <Box size='0.24 3.20 3.42'/>
                 </Shape>
             </Transform>
-            <Transform DEF='RightSideWallTransform' translation='-0.9 1.6 0'>
+            <Transform DEF='RightSideWallTransform' translation='-0.83 1.6 0'>
                 <Shape USE='SideWallShape'/>
             </Transform>
         </Group>

@@ -20,80 +20,9 @@
         <!-- Base to support the buildings -->
         <Group DEF='BuildingBase'>
             <!-- 1st Floor base -->
-            <Group DEF='FirstFloorBase'>
-                <!-- Translation:
-                        |z| = 0.5*500cm (temporary depth) = 250cm -->
-                <Transform DEF='FirstFloorBaseTransform' translation='0 0.51 -2.5'>
-                    <Shape>
-                        <Appearance>
-                            <Material/>
-                        </Appearance>
-                        <!-- Height of base = 102cm (height of 'hall steps') -->
-                        <!-- Width = 2*(830cm) (each side) + (1500cm - 90cm) (center) +
-                                     2*10cm (padding) =  3093cm -->
-                        <!-- Depth (temporary) = 500cm -->
-                        <Box size='30.93 1.02 5'/>
-                    </Shape>
-                </Transform>
-                <!-- Stone layer -->
-                <Group DEF='StoneLayerGroup'>
-                    <!-- Translation:
-                            |x| = 3*300cm + 3*0.5*60cm + 3*0.5*90cm = 1125cm -->
-                    <Transform translation='-11.25 0.51 0.025'>
-                        <Shape DEF='StoneLayerThreeColumnsShape'> <!-- Thin layer spanning under 3 columns -->
-                            <Appearance DEF='StoneLayerAppearance'>
-                                <Material diffuseColor='0.35 0.35 0.35'/>
-                            </Appearance>
-                            <!-- Size:
-                                width = 2*300cm (square) + 60cm (small col) + 2*90cm (big col) = 840cm
-                                height = 102cm (height of base)
-                                depth = 5cm -->
-                            <Box size='8.40 1.02 0.05'/>
-                        </Shape>
-                    </Transform>
-                    <!-- Translation:
-                            |x| = 2*300cm + 2*0.5*60cm + 2*0.5*90cm = 750cm -->
-                    <Transform translation='-7.50 0.51 0.25'>
-                        <Shape DEF='StoneLayerBigColumnShape'> <!-- Thick layer under big column -->
-                            <Appearance USE='StoneLayerAppearance'/>
-                            <!-- Size:
-                                width = 90cm (big column)
-                                height = 102cm (height of base)
-                                depth = 50cm (depth of column) -->
-                            <Box size='0.9 1.02 0.5'/>
-                        </Shape>
-                    </Transform>
-                    <!-- Translation:
-                            |x| = 3*300cm + 3*0.5*60cm + 3*0.5*90cm = 1125cm -->
-                    <Transform translation='-11.25 0.51 0.25'>
-                        <Shape DEF='StoneLayerSmallColumnShape'> <!-- Thick layer under small column -->
-                            <Appearance USE='StoneLayerAppearance'/>
-                            <!-- Size:
-                                width = 60cm (small column)
-                                height = 102cm (height of base)
-                                depth = 50cm (depth of column) -->
-                            <Box size='0.6 1.02 0.5'/>
-                        </Shape>
-                    </Transform>
-                    <!-- Translation:
-                            |x| = 4*300cm + 4*0.5*60cm + 4*0.5*90cm = 1500cm -->
-                    <Transform translation='-15.00 0.51 0.25'>
-                        <Shape USE='StoneLayerBigColumnShape'/>
-                    </Transform>
-                    <Transform translation='11.25 0.51 0.025'>
-                        <Shape USE='StoneLayerThreeColumnsShape'/>
-                    </Transform>
-                    <Transform translation='7.50 0.51 0.25'>
-                        <Shape USE='StoneLayerBigColumnShape'/>
-                    </Transform>
-                    <Transform translation='11.25 0.51 0.25'>
-                        <Shape USE='StoneLayerSmallColumnShape'/>
-                    </Transform>
-                    <Transform translation='15.00 0.51 0.25'>
-                        <Shape USE='StoneLayerBigColumnShape'/>
-                    </Transform>
-                </Group>
-            </Group>
+            <Transform DEF='FirstFloorBase' translation='0 0 0'>
+                <Inline url='first_floor/FirstFloorBaseA1.x3d'/>
+            </Transform>
         </Group>
         
         <!-- Front columns on the surface of the main building -->
@@ -119,7 +48,7 @@
         <!-- Center: [horizontal] between 5th and 6th group step -->
         <!-- Center: [vertical] top of the steps (the whole Steps) -->
         <!-- Center: ['depth'] at the tail-end of the GroupSteps -->
-        <Transform DEF='StepHall' translation='0 1.00 0'>
+        <Transform DEF='StepHall' translation='0 1.02 0'>
             <Inline url='StepHall.x3d'/>
         </Transform>
         
@@ -131,7 +60,7 @@
                 |z| = 0.5*390cm (depth of the room) = 195cm
                 NOTE: padding is for the firt room (on each side) -->
         <Transform DEF='RoomO1111Transform' translation='-11.30 1.02 -1.95' rotation='0 1 0 3.1416'>
-            <Inline url='1st_floor_rooms/RoomO1111.x3d'/>
+            <Inline url='first_floor/RoomO1111.x3d'/>
         </Transform>
         <!-- LEFT rooms -->
         <!-- Translation:
@@ -140,7 +69,7 @@
                 |z| = 0.5*390cm (depth of the room) = 195cm 
                 NOTE: padding is for the firt room (on each side) -->
         <Transform DEF='RoomO1110Transform' translation='9.40 1.02 -1.95' rotation='0 1 0 3.1416'>
-            <Inline url='1st_floor_rooms/RoomO1110.x3d'/>
+            <Inline url='first_floor/RoomO1110.x3d'/>
         </Transform>
         <!-- Translation:
                 |x| = 0.5*190cm (room's width) + 0.5*90cm + 2*300cm + 60cm + 10cm (padding) 450cm (previous room's width)
@@ -148,7 +77,7 @@
                 |y| = 102cm (height of base)
                 |z| = 0.5*390cm (depth of the room) = 195cm -->
         <Transform DEF='SmallMaleWaterClosetTransform' translation='12.60 1.02 -1.95' rotation='0 1 0 3.1416'>
-            <Inline url='1st_floor_rooms/SmallMaleWaterCloset.x3d'/>
+            <Inline url='first_floor/SmallMaleWaterCloset.x3d'/>
         </Transform>
         <!-- Translation:
                 |x| = 0.5*190cm (room's width) + 0.5*90cm + 2*300cm + 60cm + 10cm (padding) (450cm + 190cm) (previous room's width)
@@ -156,7 +85,7 @@
                 |y| = 102cm (height of base)
                 |z| = 0.5*390cm (depth of the room) = 195cm -->
         <Transform DEF='SmalleFemaleWaterClosetTransform' translation='14.50 1.02 -1.95' rotation='0 1 0 3.1416'>
-            <Inline url='1st_floor_rooms/SmallFemaleWaterCloset.x3d'/>
+            <Inline url='first_floor/SmallFemaleWaterCloset.x3d'/>
         </Transform>
     </Scene>
 </X3D>

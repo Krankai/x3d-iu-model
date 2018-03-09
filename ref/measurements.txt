@@ -56,17 +56,17 @@ Main Buildings (A1 & A2)
 		(from the right edge - viewing from inside out, door direction)
                 Door	-> W = ~135cm | H = ??
             Window Wall	-> W = 2*40cm + 89cm + (28cm + 3*40cm) = 317cm (W' = 320cm)
-			   H = ?? | D = 5cm (?)
+			   H = ?? | D = 10cm (?)
             Room 2 + Elevator	-> W = (40cm + 28cm) + ~74cm + (20cm + 7*40cm + 17cm)
 			     	     = 459cm
 				   H = ?? | D = [ MainHall.Depth ]
                 Distance to door = 40cm + 28cm = 68cm
 		(from the right edge - viewing from inside out, door direction)
                 Door	-> W = ~74cm | H = ??
-            { Room 2	-> W = 205cm | H = ?? | D = 
+            { Room 2	-> W = 205cm | H = ?? | D = [MainHall.depth]
                   Distance to door = 68cm
                   Door	-> W = 75cm | H = ??
-              Elevator	-> W = [ MainHall.Depth ] | D = 255cm }
+              Elevator	-> W = [ MainHall.Depth ] | D = 230cm/255cm }
             Side Hall (leading to canteen / leading to library-corridor)
                 From Elevator to edge of toiler = 25cm + 8*40cm = 345cm
                 Door 1 (leading to stairs) = ~3*40cm = 120cm
