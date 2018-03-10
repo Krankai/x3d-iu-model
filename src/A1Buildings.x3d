@@ -53,10 +53,10 @@
             <Inline url='StepHall.x3d'/>
         </Transform>
         
-        <!-- Rooms (NOTE: center of room is at the 'center' - middle, but on the floor) -->
-        <Group DEF='RoomsGroup'>
+        <!-- Front Rooms (NOTE: center of room is at the 'center' - middle, but on the floor) -->
+        <Group DEF='FrontRoomsGroup'>
             <!-- RIGHT rooms -->
-            <Group DEF='RightRoomsGroup'>
+            <Group DEF='FrontRightRoomsGroup'>
                 <!-- Translation:
                         |x| = 0.5*830cm (room's width) + 0.5*90cm + 60cm + 2*300cm + 10cm (padding) = 1130cm
                         |y| = 102cm (height of base)
@@ -83,7 +83,7 @@
                 </Transform>
             </Group>
             <!-- LEFT rooms -->
-            <Group DEF='LeftRoomsGroup'>
+            <Group DEF='FrontLeftRoomsGroup'>
                 <!-- Translation:
                         |x| = 0.5*450cm (room's width) + 0.5*90cm + 60cm + 2*300cm + 10cm (padding) = 940cm
                         |y| = 102cm (height of base)
@@ -98,7 +98,7 @@
                         |y| = 102cm (height of base)
                         |z| = 0.5*390cm (depth of the room) = 195cm -->
                 <Transform DEF='SmallMaleWaterClosetTransform' translation='12.60 1.02 -1.95' rotation='0 1 0 3.1416'>
-                    <Inline url='first_floor/SmallMaleWaterCloset.x3d'/>
+                    <Inline url='first_floor/StaffMaleWaterCloset.x3d'/>
                 </Transform>
                 <!-- Translation:
                         |x| = 0.5*190cm (room's width) + 0.5*90cm + 2*300cm + 60cm + 10cm (padding) (450cm + 190cm) (previous room's width)
@@ -106,7 +106,7 @@
                         |y| = 102cm (height of base)
                         |z| = 0.5*390cm (depth of the room) = 195cm -->
                 <Transform DEF='SmalleFemaleWaterClosetTransform' translation='14.50 1.02 -1.95' rotation='0 1 0 3.1416'>
-                    <Inline url='first_floor/SmallFemaleWaterCloset.x3d'/>
+                    <Inline url='first_floor/StaffFemaleWaterCloset.x3d'/>
                 </Transform>
                 <Transform DEF='LeftStoreRoomTransform' translation='19.675 1.02 -1.95' rotation='0 1 0 3.1416'>
                     <Inline url='first_floor/LeftStoreRoom.x3d'/>
@@ -115,6 +115,23 @@
                     <Inline url='first_floor/Elevators.x3d'/>
                 </Transform>
             </Group>
+        </Group>
+        
+        <!-- Back Rooms (NOTE: center of each room is at the middle, but on the floor) -->
+        <Group DEF='BackRoomsGroup'>
+            <!-- Normal rooms -->
+            <!-- Right Water Closets (WCs) -->
+            <Group DEF='BackRightWCsGroup'>
+                <!-- Male -->
+                <!-- Translation:
+                        |x| = (5*0.5*90cm + 2*60cm + 4*300cm + 320cm + 460cm) (half-width of corridor) - 0.5*360cm (depth of Male WC) = 2145cm
+                        |y| = 102cm (height of base)
+                        |z| = 1614cm (total depth of base) - [0.5*456cm (width of Male WC) + 208cm (width of disabled WC) + 200cm (width of Female WC) = 978cm -->
+                <Transform DEF='BackRightMaleWCTransform' translation='-21.45 1.02 -9.78' rotation='0 1 0 -1.5708'>
+                    <Inline url='first_floor/RightMaleWaterCloset.x3d'/>
+                </Transform>
+            </Group>
+            <!-- Left Water Closets (WCs) -->
         </Group>
     </Scene>
 </X3D>

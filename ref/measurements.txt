@@ -3,10 +3,12 @@ Main Buildings (A1 & A2)
         Big 		-> W = 90cm | H = 2570cm (H' = 2780cm) | D = 50cm
         Small 		-> W = 60cm | H = 2570cm (H' = 2780cm) | D = 50cm
         Small-Gate	-> W = 60cm | H = 1810cm (H' = 1960cm) | D = 50cm
+        Distance	-> d = 300cm
     Horizontal Columns
         Normal		-> W = 2890cm (W' = 3090cm) | H = 90cm | D = 50cm
         Small-Gate	-> W =  610cm (W' =  660cm) | H = 90cm | D = 50cm
         (Note: HorizontalColumn.Height == VerticalColumn.Big.Width)
+        Distance	-> d = 320cm
     Square (beteen columns; with window)
         W = 275cm (W' = 300cm)
         H = 290cm (H' = 320cm)
@@ -45,8 +47,8 @@ Main Buildings (A1 & A2)
         Main hall	-> W = 2*700 = 1400cm | H = ?? |
 			   D = 9cm + 9*40cm + 21cm = 390cm
 	(between the door and the corridor)
-        Corridor	-> W = ?? | H = ?? | D = 31cm + 8*40cm = 351cm
-        Right Side (to the building)
+        Corridor	-> W = ?? | D = ~9*40cm = 360cm
+        Front Rooms - Right Side (to the building)
             Corridor	-> W = 830cm + 317cm + 459cm = 1606cm | H = ?? |
 			   D = ~9*40cm = 360cm
 	    (not counting main hall and side hall)
@@ -73,7 +75,7 @@ Main Buildings (A1 & A2)
                 Door 2 (leading to outside-canteen) = ~8*40cm = 500cm
                 From Elevator to Door 1 = ~5*40cm = 200cm (WALL)
                 From Door 1 to Door 2 = 40cm (WALL)
-        Left Side (to the building)
+        Front Rooms - Left Side (to the building)
             Corridor	->
             (not counting main hall and side hall)
             Room 1 (O1-110)	-> W = (7cm + 7*40cm + 15cm) + ~135cm + (21cm)
@@ -96,6 +98,19 @@ Main Buildings (A1 & A2)
 		(from the left edge ...)
                 Door	-> W = ~74cm | H = ??
             Side Hall
+        Back Rooms	-> 1 WCs + 5 rooms + 1 WCs
+            Size	-> W = 2*360cm + 3870cm = 4530cm | H = 320cm
+			   D = 456cm + 208cm + 200cm = 864cm
+            WCs - Water Closet
+                Male	-> W = 456cm | H = 320cm | D = 360cm | abs(angle) = pi/2
+			-> distance to door = ~27cm (from the right)
+                Female	-> W = ~200cm | H = 320cm | D = 360cm | abs(angle) = pi/2
+			-> distance to door = ~40cm (from the left)
+                Distabled	-> W = 208cm | H = 320cm | D = 360cm | abs(angle) = pi/2
+				-> distance to door = 10cm (from the left)
+            (Remaining) Five rooms	-> divided equally
+                Total width = 3870cm	-> W = 774cm (for each)
+                Height = 320cm | Depth = 864cm
 
     Door Glasses + Roofs
         Horizontal Columns of 2 doors (where the roofs are)

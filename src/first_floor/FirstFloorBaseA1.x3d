@@ -7,7 +7,7 @@
         <meta content='Model the floor/base of the first floor of the International University (A1 Building)' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
         <meta content='8th March, 2018' name='created'/>
-        <meta content='8th March, 2018' name='modified'/>
+        <meta content='10th March, 2018' name='modified'/>
         <meta content='v1.0' name='version'/>
         <meta content='*enter reference citation or relative/online url here*' name='reference'/>
         <meta content='*enter additional url/bibliographic reference information here*' name='reference'/>
@@ -30,17 +30,17 @@
         
         <!-- Center corridor base (floor/base at the middle of the corridor) -->
         <!-- Translation:
-                |z| = 0.5*500cm (temporary depth) = 250cm -->
-        <Transform DEF='CenterCorridorBaseTransform' translation='0 0.51 -2.5'>
+                |z| = 0.5*1614cm (temporary depth) = 807cm -->
+        <Transform DEF='CenterCorridorBaseTransform' translation='0 0.51 -8.07'>
             <Shape>
                 <Appearance>
                     <Material/>
                 </Appearance>
                 <!-- Size:
-                        w = 2*(830cm) (each side) + (1500cm - 90cm) (center) + 2*10cm (padding) = 3093cm
+                        w = 2*(830cm) (each side) + (1500cm - 90cm) (center) + 2*10cm (padding) = 3090cm
                         h = 102cm (height of base - 'hall step')
-                        d = 500cm (temporary) -->
-                <Box size='30.93 1.02 5'/>
+                        d = 390cm (main hall/front rooms) + 360cm (corridor) + 864cm (back rooms) = 1614cm -->
+                <Box size='30.90 1.02 16.14'/>
             </Shape>
         </Transform>
         
@@ -48,8 +48,8 @@
         <!-- Translation:
                 |x| = 0.5*460cm (width) + (4*300cm + 5*0.5*90cm + 2*60cm) + 320cm (connected base) = 2095cm
                 |y| = 0.5*102cm (height) = 51cm
-                |z| = 0.5*500cm (temporary depth) = 250cm -->
-        <Transform DEF='RightCorridorBaseTransform' translation='-20.95 0.51 -2.50'>
+                |z| = 0.5*1614cm (depth) = 807cm -->
+        <Transform DEF='RightCorridorBaseTransform' translation='-20.95 0.51 -8.07'>
             <Shape DEF='CorridorSideBaseShape'>
                 <Appearance>
                     <Material/>
@@ -57,11 +57,11 @@
                 <!-- Size:
                         w = 205cm (store room) + 255cm (elevator's depth) = 460cm
                         h = 102cm (height of base - 'hall step')
-                        d = 500cm (temporary) -->
-                <Box size='4.60 1.02 5'/>
+                        d = 390cm + 360cm + 864cm = 1614cm -->
+                <Box size='4.60 1.02 16.14'/>
             </Shape>
         </Transform>
-        <Transform DEF='LeftCorridorBaseTransform' translation='20.95 0.51 -2.50'>
+        <Transform DEF='LeftCorridorBaseTransform' translation='20.95 0.51 -8.07'>
             <Shape USE='CorridorSideBaseShape'/>
         </Transform>
         
@@ -69,8 +69,8 @@
         <!-- Translation:
                 |x| = 0.5*320cm (width) + 4*(300cm + 0.5*90cm + 0.5*60cm) + 0.5*90cm = 1705cm
                 |y| = 0.5*102cm = 51cm
-                |z| = |0.5*234cm (depth) - 500cm (temporary)| = 383cm -->
-        <Transform DEF='RightConnectedCorridorBaseTransform' translation='-17.05 0.51 -3.83'>
+                |z| = |0.5*1348cm (depth of connected base) - 1614cm (depth of corridor) | = 940cm -->
+        <Transform DEF='RightConnectedCorridorBaseTransform' translation='-17.05 0.51 -9.40'>
             <Shape DEF='ConnectedCorridorBaseShape'>
                 <Appearance>
                     <Material/>
@@ -78,11 +78,11 @@
                 <!-- Size:
                         w = 320cm (width of connected wall)
                         h = 102cm (height of base)
-                        d = (500cm (temporary) - 390cm (depth of room)) + 24cm (depth of wall) 100cm (?) = 234cm -->
-                <Box size='3.20 1.02 2.34'/>
+                        d = (1614cm (depth of corridor) - 390cm (depth of room)) + 24cm (depth of wall) + 100cm (excessive part) = 1348cm -->
+                <Box size='3.20 1.02 13.48'/>
             </Shape>
         </Transform>
-        <Transform DEF='LeftConnectedCorridorBaseTransform' translation='17.05 0.51 -3.83'>
+        <Transform DEF='LeftConnectedCorridorBaseTransform' translation='17.05 0.51 -9.40'>
             <Shape USE='ConnectedCorridorBaseShape'/>
         </Transform>
 
