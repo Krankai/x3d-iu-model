@@ -3,10 +3,10 @@
 <X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
     <head>
         <!-- Authors need to replace asterisked values or delete unneeded meta tags as appropriate -->
-        <meta content='RightMaleWaterCloset.x3d' name='title'/>
-        <meta content='Male WC (for students) of the International University' name='description'/>
+        <meta content='RoomLA1108.x3d' name='title'/>
+        <meta content='Model of Room LA1-104 (first floor, A1 building) of the International University' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
-        <meta content='8th March, 2018' name='created'/>
+        <meta content='11th March, 2018' name='created'/>
         <meta content='11th March, 2018' name='modified'/>
         <meta content='v1.0' name='version'/>
         <meta content='*enter reference citation or relative/online url here*' name='reference'/>
@@ -17,7 +17,7 @@
         <meta content='*enter image filename/url here*' name='Image'/>
         <meta content='*enter movie filename/url here*' name='MovingImage'/>
         <meta content='*enter photo filename/url here*' name='photo'/>
-        <meta content='water closet, male, WC, toilet, International University' name='subject'/>
+        <meta content='LA1-103, lab room, first floor, A1 building, International University' name='subject'/>
         <meta content='*enter permission statements or url here*' name='accessRights'/>
         <meta content='*insert any known warnings, bugs or errors here*' name='warning'/>
         <meta content='*enter online Uniform Resource Identifier (URI) or Uniform Resource Locator (URL) address for this file here*' name='identifier'/>
@@ -26,46 +26,55 @@
         <!-- Additional authoring resources for meta-tags: http://www.dublincore.org/documents/dcmi-terms http://www.dublincore.org/documents/dces http://www.w3.org/TR/html4/struct/global.html#h-7.4.4 http://vancouver-webpages.com/META http://vancouver-webpages.com/META/about-mk-metas2.html Additional authoring resources for language codes: http://www.rfc-editor.org/rfc/bcp/bcp47.txt http://www.loc.gov/standards/iso639-2/langhome.html http://www.iana.org/numbers.html#L -->
     </head>
     <Scene>
-        <!-- Male WC (for students) - On the right side of the building -->
+        <!-- Room LA1-108 - first floor; A1 building -->
         <!-- Center: at the middle of the room, but on the floor -->
-        <!-- Size: width = 456cm | heigth = 320 (height of square) | depth = 360cm -->
+        <!-- Size: width = 775cm | heigth = 320 (height of square) | depth = 864cm -->
         
-        <Group DEF='WallGroup'>
-            <!-- Front wall (with main door) -->
-            <!-- Translation:
-                    |y| = 0.5*320cm = 160cm
-                    |z| = 0.5*360cm - 0.5*24cm  = 168cm -->
-            <Transform DEF='FrontWallTransform' translation='0 1.6 1.68'>
+        <Inline url='RoomLA1104.x3d'/>
+        
+<!--        <Group DEF='WallGroup'>
+             Front wall (with main door) 
+             Translation:
+                    |x| = 0cm
+                    |y| = 0.5*320cm (height of the wall) = 160cm
+                    |z| = 0.5*864cm (depth of the room) - 0.5*24cm (depth of the wall) = 420cm 
+            <Transform DEF='FrontWallTransform' translation='0 1.6 4.20'>
                 <Shape DEF='FrontWallShape'>
                     <Appearance DEF='WallAppearance'>
                         <Material diffuseColor='1 1 1'/>
                     </Appearance>
-                    <!-- Depth = 24cm -->
-                    <Box size='4.56 3.20 0.24'/>
+                     Size:
+                            w = 775cm (width of the room)
+                            h = 320cm (height of the room)
+                            d = 24cm (depth of the wall) 
+                    <Box size='7.75 3.20 0.24'/>
                 </Shape>
             </Transform>
-            <!-- Back wall (with window) -->
-            <Transform DEF='BackWallTransform' translation='0 1.6 -1.68'>
+             Back wall (with window) 
+            <Transform DEF='BackWallTransform' translation='0 1.6 -4.20'>
                 <Shape DEF='BackWallShape'>
                     <Appearance USE='WallAppearance'/>
-                    <Box size='4.56 3.20 0.24'/>
+                    <Box size='7.75 3.20 0.24'/>
                 </Shape>
             </Transform>
-            <!-- Side walls (perspective: inside out; in the door direction) -->
-            <!-- Translation:
-                    |x| = 0.5*456cm (room's width) - 0.5*24cm = 216cm -->
-            <Transform DEF='LeftSideWallTransform' translation='2.16 1.6 0'>
+             Side walls (perspective: inside out; in the door direction) 
+             Translation:
+                    |x| = 0.5*775cm (room's width) - 0.5*24cm (width of wall) = 375.5cm
+                    |y| = 0.5*320cm (height of the wall) = 160cm
+                    |z| = 0cm 
+            <Transform DEF='LeftSideWallTransform' translation='3.755 1.6 0'>
                 <Shape DEF='SideWallShape'>
                     <Appearance USE='WallAppearance'/>
-                    <!-- Size:
-                        width = 24cm (depth of fron/back wall)
-                        depth = 360cm (depth of room) - 2*24cm (depth of fron/back wall) = 312cm -->
-                    <Box size='0.24 3.20 3.12'/>
+                     Size:
+                            w = 24cm (width/depth of wall)
+                            h = 320cm (height of room)
+                            d = 864cm (depth of room) - 2*24cm (depth of fron/back wall) = 816cm 
+                    <Box size='0.24 3.20 8.64'/>
                 </Shape>
             </Transform>
-            <Transform DEF='RightSideWallTransform' translation='-2.16 1.6 0'>
+            <Transform DEF='RightSideWallTransform' translation='-3.755 1.6 0'>
                 <Shape USE='SideWallShape'/>
             </Transform>
-        </Group>
+        </Group>-->
     </Scene>
 </X3D>

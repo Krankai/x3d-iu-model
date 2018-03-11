@@ -108,8 +108,10 @@ Main Buildings (A1 & A2)
 			-> distance to door = ~40cm (from the left)
                 Distabled	-> W = 208cm | H = 320cm | D = 360cm | abs(angle) = pi/2
 				-> distance to door = 10cm (from the left)
-            (Remaining) Five rooms	-> divided equally
-                Total width = 3870cm	-> W = 774cm (for each)
+            (Remaining) Five rooms	-> divided into six (6) part
+                {(left) LA1-108 (1 part) | O1-106 (VASS) (2 parts) | O1-105 (1 part)
+			LA1-104 (1 part) | LA1-103 (1 part) (right)}
+                Total width = 4650cm	-> W = 775cm (1 part) | W = 1550cm (2 parts)
                 Height = 320cm | Depth = 864cm
 
     Door Glasses + Roofs

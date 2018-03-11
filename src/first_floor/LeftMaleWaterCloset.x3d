@@ -6,7 +6,7 @@
         <meta content='RightMaleWaterCloset.x3d' name='title'/>
         <meta content='Male WC (for students) of the International University' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
-        <meta content='8th March, 2018' name='created'/>
+        <meta content='11th March, 2018' name='created'/>
         <meta content='11th March, 2018' name='modified'/>
         <meta content='v1.0' name='version'/>
         <meta content='*enter reference citation or relative/online url here*' name='reference'/>
@@ -26,7 +26,7 @@
         <!-- Additional authoring resources for meta-tags: http://www.dublincore.org/documents/dcmi-terms http://www.dublincore.org/documents/dces http://www.w3.org/TR/html4/struct/global.html#h-7.4.4 http://vancouver-webpages.com/META http://vancouver-webpages.com/META/about-mk-metas2.html Additional authoring resources for language codes: http://www.rfc-editor.org/rfc/bcp/bcp47.txt http://www.loc.gov/standards/iso639-2/langhome.html http://www.iana.org/numbers.html#L -->
     </head>
     <Scene>
-        <!-- Male WC (for students) - On the right side of the building -->
+        <!-- Male WC (for students) - On the left side of the building -->
         <!-- Center: at the middle of the room, but on the floor -->
         <!-- Size: width = 456cm | heigth = 320 (height of square) | depth = 360cm -->
         
