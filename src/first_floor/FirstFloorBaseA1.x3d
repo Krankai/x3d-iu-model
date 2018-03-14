@@ -7,7 +7,7 @@
         <meta content='Model the floor/base of the first floor of the International University (A1 Building)' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
         <meta content='8th March, 2018' name='created'/>
-        <meta content='10th March, 2018' name='modified'/>
+        <meta content='14th March, 2018' name='modified'/>
         <meta content='v1.0' name='version'/>
         <meta content='*enter reference citation or relative/online url here*' name='reference'/>
         <meta content='*enter additional url/bibliographic reference information here*' name='reference'/>
@@ -28,7 +28,9 @@
     <Scene>
         <!-- Center of the model = same as center of A1Buildings.x3d - (0 0 0) -->
         
+        <!-- Center corridor -->
         <!-- Translation:
+                |y| = 0.5*102cm (own height) = 51cm
                 |z| = 0.5*1614cm (temporary depth) = 807cm -->
         <Transform DEF='CenterCorridorBaseTransform' translation='0 0.51 -8.07'>
             <Shape>

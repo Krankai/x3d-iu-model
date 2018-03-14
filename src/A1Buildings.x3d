@@ -20,8 +20,12 @@
         <!-- Base to support the buildings -->
         <Group DEF='BuildingBase'>
             <!-- 1st Floor base -->
-            <Transform DEF='FirstFloorBase' translation='0 0 0'>
+            <Transform DEF='FirstFloorBaseTransform' translation='0 0 0'>
                 <Inline url='first_floor/FirstFloorBaseA1.x3d'/>
+            </Transform>
+            <!-- 2nd Floor base -->
+            <Transform DEF='SecondFloorBaseTransform' translation='0 0 0'>
+                <Inline url='second_floor/SecondFloorBaseA1.x3d'/>
             </Transform>
         </Group>
         

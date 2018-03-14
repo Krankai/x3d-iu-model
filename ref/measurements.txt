@@ -45,7 +45,7 @@ Main Buildings (A1 & A2)
                                    D = 4x62 = 248cm
                        upper	-> W = [above] | H = 2cm |
 				   D = lower.depth + 2cm = 248cm + 2cm = 250cm
-    Floor 1st
+    First Floor (1st)
         Main hall	-> W = 2*(0.5*90cm + 60cm + 2*300cm) + 2*10cm (padding)
 			     = 1430cm (715cm each side)
 			   H = 320cm (1st floor's height) + 90cm (2nd floor's base) +
@@ -110,6 +110,32 @@ Main Buildings (A1 & A2)
                 Each room	-> W = 775cm (1 part) / 1550cm (2 parts)
 				   H = 320cm | D = 864cm
                 Total width = 4650cm	-> W = 775cm (1 part) | W = 1550cm (2 parts)
+    Second Floor (2nd)
+        Floor	-> height = 90cm (horizontal column) [+ 10cm (padding)] = 90cm
+            Note: excessive part is below
+        Fence	-> W = 3*40cm + 14cm = 134cm | H = ?? | D = ~20cm (?)
+            At the center of the building
+            Translation: z = - (3*40cm + 14cm) = -134cm
+        Front Rooms - Right Side
+            Room O1-210	-> W = (14*40cm + ~40cm) + ~135cm + (40cm + ~30cm) = 805cm
+			   (W' = 830cm)
+                           H = 320cm | D = 390cm
+                Distance to door = 40cm + ~30cm = 70cm (from the left edge)
+                Door (big)
+            Store Room + Elevators	-> [same as first floor ones]
+        Front Rooms - Left Side
+            Room O1-209	-> W = (7*40cm) + ~75cm + (~20cm) = 375cm (W' = 450cm)
+            Male/Female Staff WCs	-> [same as first floor ones]
+            Store Room + Elevators	-> [same as first floor ones]
+        Back Rooms (Pattern: 1WCs + 6 rooms + 1 WCs)
+            Size	-> W = 5370cm | H = 320cm | D = 864cm (same as 1st floor one)
+            WC (for students)	-> same
+            Center Normal rooms - 6 rooms with same size (different door position)
+                { (right) A1-203 | A1-204 | A1-205 | A1-206 | A1-207A | A1-207B (left)}
+                Each room	-> W = 775cm | H = 320cm | D = 864cm
+            Distance to door
+                Room A1-203	-> d = ...cm (from the right - near the right)
+                Other rooms	-> d = ...cm (from the left - near the left)
 
     Door Glasses + Roofs
         Horizontal Columns of 2 doors (where the roofs are)

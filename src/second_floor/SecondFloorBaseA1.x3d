@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+    <head>
+        <!-- Authors need to replace asterisked values or delete unneeded meta tags as appropriate -->
+        <meta content='SecondFloorBaseA1.x3d' name='title'/>
+        <meta content='Model the second floor (base) of A1 building of the Internation University' name='description'/>
+        <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
+        <meta content='14th March, 2018' name='created'/>
+        <meta content='14th March, 2018' name='modified'/>
+        <meta content='v1.0' name='version'/>
+        <meta content='*enter reference citation or relative/online url here*' name='reference'/>
+        <meta content='*enter additional url/bibliographic reference information here*' name='reference'/>
+        <meta content='*enter reference resource here if required to support function, delivery, or coherence of content*' name='requires'/>
+        <meta content='*enter copyright information here* Example: Copyright (c) Web3D Consortium Inc. 2006 to present' name='rights'/>
+        <meta content='*enter drawing filename/url here*' name='drawing'/>
+        <meta content='*enter image filename/url here*' name='Image'/>
+        <meta content='*enter movie filename/url here*' name='MovingImage'/>
+        <meta content='*enter photo filename/url here*' name='photo'/>
+        <meta content='second floor, 2nd floor, A1 building, base, floor, International University' name='subject'/>
+        <meta content='*enter permission statements or url here*' name='accessRights'/>
+        <meta content='*insert any known warnings, bugs or errors here*' name='warning'/>
+        <meta content='*enter online Uniform Resource Identifier (URI) or Uniform Resource Locator (URL) address for this file here*' name='identifier'/>
+        <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+        <meta content='../license.html' name='license'/>
+        <!-- Additional authoring resources for meta-tags: http://www.dublincore.org/documents/dcmi-terms http://www.dublincore.org/documents/dces http://www.w3.org/TR/html4/struct/global.html#h-7.4.4 http://vancouver-webpages.com/META http://vancouver-webpages.com/META/about-mk-metas2.html Additional authoring resources for language codes: http://www.rfc-editor.org/rfc/bcp/bcp47.txt http://www.loc.gov/standards/iso639-2/langhome.html http://www.iana.org/numbers.html#L -->
+    </head>
+    <Scene>
+        <!-- Center of the model = same as the center of A1Building.x3d - at (0 0 0) -->
+        
+        <!-- Primary/Center base - Covering the corridor + back rooms (except two WCs) -->
+        <!-- Translation:
+                x = 0cm
+                y = -0.5*90cm (own base) + 102cm (1st floor base) + 320cm (distance b/t two floors) + 90cm ('expectation' of 2nd floor'base) = 467cm
+                z = -1614cm (total depth - from main gate to behind of back rooms) + 0.5*1224cm (own depth) = -1002cm -->
+        <Transform DEF='CenterBaseTransform' translation='0 4.67 -10.02'>
+            <Shape>
+                <Appearance>
+                    <Material/>
+                </Appearance>
+                <!-- Size:
+                        w = 6*775cm (width of each room) = 4650cm
+                        h = 90cm (height of 'all' bases)
+                        d = 360cm (corridor's) + 864cm (back rooms') = 1224cm -->
+                <Box size='46.50 0.9 12.24'/>
+            </Shape>
+        </Transform>
+    </Scene>
+</X3D>
