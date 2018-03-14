@@ -7,7 +7,7 @@
         <meta content='Model of (small) store room in the right side of the building' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
         <meta content='9th March, 2018' name='created'/>
-        <meta content='9th March, 2018' name='modified'/>
+        <meta content='12th March, 2018' name='modified'/>
         <meta content='v1.0' name='version'/>
         <meta content='*enter reference citation or relative/online url here*' name='reference'/>
         <meta content='*enter additional url/bibliographic reference information here*' name='reference'/>
@@ -24,15 +24,16 @@
         <!-- Additional authoring resources for meta-tags: http://www.dublincore.org/documents/dcmi-terms http://www.dublincore.org/documents/dces http://www.w3.org/TR/html4/struct/global.html#h-7.4.4 http://vancouver-webpages.com/META http://vancouver-webpages.com/META/about-mk-metas2.html Additional authoring resources for language codes: http://www.rfc-editor.org/rfc/bcp/bcp47.txt http://www.loc.gov/standards/iso639-2/langhome.html http://www.iana.org/numbers.html#L -->
     </head>
     <Scene>
+        <!-- 'Store room' - Right next to the Elevators -->
         <!-- Center: at the 'center' of the room, but on the floor (y = 0) -->
-        <!-- Size: width = 205cm | height = 320cm (height of square) | depth = 390cm (main hall) -->
+        <!-- Size: width = 205cm | height = 320cm (height of square) | depth = 360cm (slightly 'less' than at the center corridor) -->
         
         <Group DEF='WallGroup'>
             <!-- Fron wall (with main door) -->
             <!-- Translation:
                     |y| = 0.5*320cm (height of the room) = 160cm
-                    |z| = 0.5*390cm (depth of the room) - 0.5*24cm (depth of front wall) = 183cm -->
-            <Transform DEF='FrontWallTransform' translation='0 1.6 1.83'>
+                    |z| = 0.5*360cm (depth of the room) - 0.5*24cm (depth of front wall) = 168cm -->
+            <Transform DEF='FrontWallTransform' translation='0 1.6 1.68'>
                 <Shape DEF='FrontWallShape'>
                     <Appearance DEF='WallAppearance'>
                         <Material diffuseColor='1 1 1'/>
@@ -42,7 +43,7 @@
                 </Shape>
             </Transform>
             <!-- Back wall (with window) -->
-            <Transform DEF='BackWallTransform' translation='0 1.6 -1.83'>
+            <Transform DEF='BackWallTransform' translation='0 1.6 -1.68'>
                 <Shape DEF='BackWallShape'>
                     <Appearance USE='WallAppearance'/>
                     <Box size='2.05 3.20 0.24'/>
@@ -57,8 +58,8 @@
                     <Appearance USE='WallAppearance'/>
                     <!-- Size:
                         width = 24cm (depth of fron/back wall)
-                        depth = 390cm (depth of room) - 2*24cm (depth of fron/back wall) = 342cm -->
-                    <Box size='0.24 3.20 3.42'/>
+                        depth = 360cm (depth of room) - 2*24cm (depth of fron/back wall) = 312cm -->
+                    <Box size='0.24 3.20 3.12'/>
                 </Shape>
             </Transform>
             <Transform DEF='RightSideWallTransform' translation='-0.905 1.6 0'>

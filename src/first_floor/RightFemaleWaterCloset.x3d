@@ -28,7 +28,7 @@
     <Scene>
         <!-- Female WC (for students) - On the right side of the building -->
         <!-- Center: at the middle of the room, but on the floor -->
-        <!-- Size: width = 200cm | heigth = 320 (height of square) | depth = 360cm -->
+        <!-- Size: width = 408cm | heigth = 320 (height of square) | depth = 360cm -->
         
         <Group DEF='WallGroup'>
             <!-- Front wall (with main door) -->
@@ -41,23 +41,23 @@
                         <Material diffuseColor='1 1 1'/>
                     </Appearance>
                     <!-- Size:
-                            w = 200cm (width of the room)
+                            w = 408cm (width of the room)
                             h = 320cm (height of the room)
                             d = 24cm (depth of the wall) -->
-                    <Box size='2.00 3.20 0.24'/>
+                    <Box size='4.08 3.20 0.24'/>
                 </Shape>
             </Transform>
             <!-- Back wall (with window) -->
             <Transform DEF='BackWallTransform' translation='0 1.6 -1.68'>
                 <Shape DEF='BackWallShape'>
                     <Appearance USE='WallAppearance'/>
-                    <Box size='2.00 3.20 0.24'/>
+                    <Box size='4.08 3.20 0.24'/>
                 </Shape>
             </Transform>
             <!-- Side walls (perspective: inside out; in the door direction) -->
             <!-- Translation:
-                    |x| = 0.5*200cm (room's width) - 0.5*24cm = 88cm -->
-            <Transform DEF='LeftSideWallTransform' translation='0.88 1.6 0'>
+                    |x| = 0.5*408cm (room's width) - 0.5*24cm = 192cm -->
+            <Transform DEF='LeftSideWallTransform' translation='1.92 1.6 0'>
                 <Shape DEF='SideWallShape'>
                     <Appearance USE='WallAppearance'/>
                     <!-- Size:
@@ -66,7 +66,7 @@
                     <Box size='0.24 3.20 3.12'/>
                 </Shape>
             </Transform>
-            <Transform DEF='RightSideWallTransform' translation='-0.88 1.6 0'>
+            <Transform DEF='RightSideWallTransform' translation='-1.92 1.6 0'>
                 <Shape USE='SideWallShape'/>
             </Transform>
         </Group>

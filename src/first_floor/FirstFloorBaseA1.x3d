@@ -28,7 +28,6 @@
     <Scene>
         <!-- Center of the model = same as center of A1Buildings.x3d - (0 0 0) -->
         
-        <!-- Center corridor base (floor/base at the middle of the corridor) -->
         <!-- Translation:
                 |z| = 0.5*1614cm (temporary depth) = 807cm -->
         <Transform DEF='CenterCorridorBaseTransform' translation='0 0.51 -8.07'>
@@ -48,8 +47,8 @@
         <!-- Translation:
                 |x| = 0.5*820cm (width) + (4*300cm + 5*0.5*90cm + 2*60cm) + 320cm (connected base) = 2275cm
                 |y| = 0.5*102cm (height) = 51cm
-                |z| = 0.5*1614cm (depth) = 807cm -->
-        <Transform DEF='RightCorridorBaseTransform' translation='-22.75 0.51 -8.07'>
+                |z| = 1614cm (max depth of center) - 0.5*1584cm (depth of side - store room & elevators) = 822cm -->
+        <Transform DEF='RightCorridorBaseTransform' translation='-22.75 0.51 -8.22'>
             <Shape DEF='CorridorSideBaseShape'>
                 <Appearance>
                     <Material/>
@@ -57,11 +56,13 @@
                 <!-- Size:
                         w = 205cm (store room) + 255cm (elevator's depth) + 360cm (WCs at 'back-rooms') = 820cm
                         h = 102cm (height of base - 'hall step')
-                        d = 390cm + 360cm + 864cm = 1614cm -->
-                <Box size='8.20 1.02 16.14'/>
+                        d = (390cm - 30cm) (*) + 360cm + 864cm = 1584cm
+                        (*)Note: depth of [store room + elevators] is slightly less than
+                                 total depth of the center part of corridor -->
+                <Box size='8.20 1.02 15.84'/>
             </Shape>
         </Transform>
-        <Transform DEF='LeftCorridorBaseTransform' translation='22.75 0.51 -8.07'>
+        <Transform DEF='LeftCorridorBaseTransform' translation='22.75 0.51 -8.22'>
             <Shape USE='CorridorSideBaseShape'/>
         </Transform>
         
