@@ -1,37 +1,41 @@
-Front Building
-    Vertical Columns
-        Big 		-> W = 90cm | H = 2570cm | D = 50cm
-        Small 		-> W = 60cm | H = 2570cm | D = 50cm
-        Small-Door	-> W = 60cm | H = 1810cm | D = 50cm
-    Horizontal Columns
-        Normal		-> W = 2890cm | H = 90cm | D = 50cm
-        Small-Door	-> W =  610cm | H = 90cm | D = 50cm
-        (Note: HorizontalColumn.Height == VerticalColumn.Big.Width)
-    Square (beteen columns; with window)
-        W = 275cm
-        H = (slightly > then W) 290cm [still not sure]
+Main Buildings (A1 & A2)
+    Front (Building)
+        Vertical Columns
+            Big		-> W = 90cm | H = 2780cm | D = 50cm
+            Small 	-> W = 60cm | H = 2780cm | D = 50cm
+            Small-Gate	-> W = 60cm | H = 1960cm | D = 50cm
+            Distance	-> d = 300cm (between two consecutive ones)
+        Horizontal Columns
+            Normal	-> W = 3090cm | H = 90cm | D = 50cm
+            Small-Gate	-> W =  660cm | H = 90cm | D = 50cm
+            (Note: HorizontalColumn.Height == VerticalColumn.Big.Width)
+            Distance	-> d = 320cm (between two consecutive ones)
+        Square (beteen columns; with window)
+            W = 300cm
+            H = 320cm
+    Back (Building)
     Steps Hall (in front of the door leading to Main Building)
         Side Step-Holder
             Layer (on top of upper) (three parts):
                 Part1 (~ Upper.Part1)	-> W = 90cm | H = 3cm | D = 248cm
                 Part2 (~ Upper.Part2)	-> W = 90cm | H = 3cm | D = 206cm
                                            angle = 0.52 rad (32 degree)
-                Part3 (~ Upper.Part3)	-> W = 90cm | H = 3cm | D = 22cm (D'=23cm)
+                Part3 (~ Upper.Part3)	-> W = 90cm | H = 3cm | D=23cm
             Upper (three parts):
                 Part1 (~ Lower.Part1)	-> W = 86cm | H = 8cm | D = 248cm
                 Part2 (~ Lower.Part2)	-> W = 86cm | H = 8cm | D = 207.5cm |
                                            angle = 0.52 rad (32 degree)
-                Part3	-> W = 86cm | H = 8cm | D = 20cm (D'=22cm)
+                Part3	-> W = 86cm | H = 8cm | D =22cm
             Lower (three parts):
-                Part1	-> W = 45cm | H = 102cm + 60cm = 162cm | D = 248cm
-                Part2	-> W = 45cm | H = 65cm | D = 205cm | angle = 0.52rad
-                Part3	-> W = 45cm | H = 60cm | D = 178cm
-                Part4 (dummy)
+                Part1	-> W = 50cm | H = 102cm + 60cm = 162cm | D = 248cm
+                Part2	-> W = 50cm | H = 65cm | D = 205cm | angle = 0.52rad
+                Part3	-> W = 50cm | H = 60cm | D = 178cm
+                Part4 (dummy)	-> W = 50cm | H = 5cm | D = 5cm
         Main steps -> divided into 10 'group steps' horizontally.
             Pattern for 'group steps': 2 (Black) + 1 (Red) + 4B + 1R + 2B
-                2 outside Black	-> W = 120cm
-                4 inside Black	-> W = 130cm
-                Red		-> W = 200cm 
+                2 outside Black	-> W = 136cm
+                4 inside Black	-> W = 134cm
+                Red		-> W = 210cm
             Each 'group step' -> 1 base + 5 level (gradual decrease in height)
                 Level: upper	-> W = [above] | H = 2cm |
 				   D = lower.depth + 2cm = 30cm + 2cm = 32cm
@@ -41,6 +45,72 @@ Front Building
                                    D = 4x62 = 248cm
                        upper	-> W = [above] | H = 2cm |
 				   D = lower.depth + 2cm = 248cm + 2cm = 250cm
+    Floor 1st
+        Main hall	-> W = 2*(0.5*90cm + 60cm + 2*300cm) + 2*10cm (padding)
+			     = 1430cm (715cm each side)
+			   H = 320cm (1st floor's height) + 90cm (2nd floor's base) +
+			       320cm (2nd floor's height) = 730cm (?)
+			   D = 390cm (distance between gate and corridor)
+        Corridor	-> W = 2*(5*0.5*90cm + 2*60cm + 4*300cm) (center) + 
+			       2*320cm (connected wall) + 2*460cm (two rear rooms)
+			     = 4650cm (2325cm each side) (include center/main hall)
+			   D = 360cm (distance between front and back rooms)
+        Front Rooms - Right Side (to the building)
+            Room O1-111	-> W = 830cm | H = 320cm | D = 390cm (main hall's depth)
+                Distance to door = 14*40cm + 30cm = 590cm (?)
+		(from the right edge - viewing from inside out, door direction)
+                Door	-> W = ~135cm | H = ?? | (?)
+            Connected Wall	-> W = 320cm | H = 320cm | D = 24cm
+            Store Room	-> W = 205cm | H = 320cm | D = 360cm (less than center)
+                Distance to door = 40cm + 28cm = 68cm (from the right edge - inside out)
+                Door	-> W = 75cm (?) | H = ?? (?)
+            Elevators	-> W = 360cm (same as Store room's) | H = 320cm | D = 255cm
+                Angle = |pi/2| (face to the side of the building)
+            Side Hall (leading to canteen / leading to library-corridor) (?)
+                From Elevator to edge of toiler = 25cm + 8*40cm = 345cm
+                Door 1 (leading to stairs) = ~3*40cm = 120cm
+                Door 2 (leading to outside-canteen) = ~8*40cm = 500cm
+                From Elevator to Door 1 = ~5*40cm = 200cm (WALL)
+                From Door 1 to Door 2 = 40cm (WALL)
+        Front Rooms - Left Side (to the building)
+            Room O1-110	-> W = 450cm | H = 320cm | D = 390cm
+                Distance to door = 7cm + 7*40cm + 15cm = 302cm (d' = 297cm)
+		(from the left edge - viewing from inside out, door direction)
+                Door	-> W = ~135cm | H = ??
+            Male/Female Staff WC	-> W = 190cm | H = 320cm | D = 390cm
+                Distance to door (men) = 26cm (from the left ...) (d' = 25cm)
+                Distance to door (women) = 26cm (from the right ...) (d' = 25cm)
+                Door	-> W = ~74cm | H = ??
+            Connected Wall	-> W = 320cm | H = 320cm | D = 24cm
+            Store Room	-> W = 205cm | H = 320cm | D = 360cm (less than center)
+                Distance to door = ~10cm + 40cm = 50cm (from the left edge) (?)
+                Door	-> W = ~74cm | H = ?? (?)
+            Elevator (same as one in the right side)
+            Side Hall
+        Back Rooms (Pattern: 1 WCs + 5 rooms + 1 WCs)
+            Size	-> W = 2*360cm (WCs) + 4650cm (center rooms) = 5370cm
+			   H = 320cm | D = 864cm
+            WCs - Water Closet (for students)
+                Pattern	-> Left		-> Male - Disabled - Female
+			   Right	-> Male - Female
+                Male WC	-> W = 456cm | H = 320cm | D = 360cm | abs(angle) = pi/2
+                    Distance to door = ~27cm (from the right)
+                Female WC	-> (right) W = 408cm | H = 320cm | D = 360cm
+				-> (left) W = 200cm | H = 320cm | D = 360cm
+                    abs(Angle) = pi/2 (facing to the side)
+                    Distance to door = ~40cm (from the left)
+                Distabled	-> W = 208cm | H = 320cm | D = 360cm
+                    Distance to door = 10cm (from the left)
+                    abs(Angle) = pi/2 (facing to the side)
+                    Note: only in the left side
+            Five classrooms (in the center) - Divided into six (6) part
+                => {(left) LA1-108 (1 part) | O1-106 (VASS) (2 parts) | O1-105 (1 part)
+		    LA1-104 (1 part) | LA1-103 (1 part) (right)}
+                Total width = 4650cm
+                Each room	-> W = 775cm (1 part) / 1550cm (2 parts)
+				   H = 320cm | D = 864cm
+                Total width = 4650cm	-> W = 775cm (1 part) | W = 1550cm (2 parts)
+
     Door Glasses + Roofs
         Horizontal Columns of 2 doors (where the roofs are)
             

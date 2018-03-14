@@ -7,7 +7,7 @@
         <meta content='Model the entire A1 buildings of IU' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
         <meta content='30th Nov, 2017' name='created'/>
-        <meta content='10th December, 2017' name='modified'/>
+        <meta content='2nd March, 2018' name='modified'/>
         <meta content='IU, A1Buildings, building, A1' name='subject'/>
         <meta content='Version 1.0' name='version'/>
         <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
@@ -15,51 +15,188 @@
         <!-- Additional authoring resources for meta-tags: http://www.dublincore.org/documents/dcmi-terms http://www.dublincore.org/documents/dces http://www.w3.org/TR/html4/struct/global.html#h-7.4.4 http://vancouver-webpages.com/META http://vancouver-webpages.com/META/about-mk-metas2.html Additional authoring resources for language codes: http://www.rfc-editor.org/rfc/bcp/bcp47.txt http://www.loc.gov/standards/iso639-2/langhome.html http://www.iana.org/numbers.html#L -->
     </head>
     <Scene>
-        <!-- Temporary wall -->
-        <Transform translation='0 13 -4'>
-            <Shape>
-                <Appearance>
-                    <Material/>
-                </Appearance>
-                <!--
-                    Width = 8 x 275cm + 5 x 90cm + 4 x 60cm = 2890cm
-                    Height = 7 x 290cm + 6 x 90cm + padding = 2600cm
-                    Depth = 2cm (dummy)
-                -->
-                <Box size='28.90 26 2'/>
-            </Shape>
-        </Transform>
+        <!-- Center of building: at (0 0 0) -->
         
         <!-- Base to support the buildings -->
-        <Transform translation='0 0.50 -2.5'>
-            <Shape>
-                <Appearance>
-                    <Material/>
-                </Appearance>
-                <!-- The height of the 'steps' is 102cm -> Let the height of the base be 100cm -->
-                <Box size='28.90 1.00 5'/>
-            </Shape>
-        </Transform>
+        <Group DEF='BuildingBase'>
+            <!-- 1st Floor base -->
+            <Transform DEF='FirstFloorBase' translation='0 0 0'>
+                <Inline url='first_floor/FirstFloorBaseA1.x3d'/>
+            </Transform>
+        </Group>
         
         <!-- Front columns on the surface of the main building -->
-        <!-- Vertical columns - From left to right. Pattern: B-S-B-DS-B-DS-B-S-B -->
-        <!-- Center: at the middle of the fifth (5th) column -->
-        <Transform DEF='VerticalColumnsTransform' translation='0 12.85 0.25'>
-            <Inline url='VerticalColumns.x3d'/>
-        </Transform>
-        
-        <!-- Horizontal columns - From bottom to top. Pattern: -B(Left&Right)-B-B-B-B-B- -->
-        <!-- Center: at the middle of the fourth (4th) colum -->
-        <Transform DEF='HorizontalColumnsTransform' translation='0 14.75 0.25'>
-            <Inline url='HorizontalColumns.x3d'/>
-        </Transform>
+        <Group DEF='FrontColumnsGroup'>
+            <!-- Vertical columns - From left to right. Pattern: B-S-B-DS-B-DS-B-S-B -->
+            <!-- Center: at the middle of the fifth (5th) column -->
+            <!-- Translation:
+                    y = 0.5*2780cm (height) + 102cm (height of base) = 1492cm
+                    z = 0.5*50cm (depth) = 25cm -->
+            <Transform DEF='VerticalColumnsTransform' translation='0 14.92 0.25'>
+                <Inline url='VerticalColumns.x3d'/>
+            </Transform>
+            <!-- Horizontal columns - From bottom to top. Pattern: -B(Left&Right)-B-B-B-B-B- -->
+            <!-- Center: at the middle of the fourth (4th) colum -->
+            <!-- Translation:
+                    y = 4*320cm + 3*90cm + 0.5*90cm + 102cm (height of base) = 1697cm
+                    z = 0.5*50cm (depth) = 25cm -->
+            <Transform DEF='HorizontalColumnsTransform' translation='0 16.97 0.25'>
+                <Inline url='HorizontalColumns.x3d'/>
+            </Transform>
+        </Group>
         
         <!-- Steps Hall - Divided into GroupSteps - Pattern: 2B-1R-4B-1R-2B -->
         <!-- Center: [horizontal] between 5th and 6th group step -->
         <!-- Center: [vertical] top of the steps (the whole Steps) -->
         <!-- Center: ['depth'] at the tail-end of the GroupSteps -->
-        <Transform DEF='StepHall' translation='0 1.00 0'>
+        <Transform DEF='StepHall' translation='0 1.02 0'>
             <Inline url='StepHall.x3d'/>
         </Transform>
+        
+        <!-- Front Rooms (NOTE: center of room is at the 'center' - middle, but on the floor) -->
+        <Group DEF='FrontRoomsGroup'>
+            <!-- RIGHT rooms -->
+            <Group DEF='FrontRightRoomsGroup'>
+                <!-- Translation:
+                        |x| = 0.5*830cm (room's width) + 0.5*90cm + 60cm + 2*300cm + 10cm (padding) = 1130cm
+                        |y| = 102cm (height of base)
+                        |z| = 0.5*390cm (depth of the room) = 195cm
+                        NOTE: padding is for the firt room (on each side) -->
+                <Transform DEF='RoomO1111Transform' translation='-11.30 1.02 -1.95' rotation='0 1 0 3.1416'>
+                    <Inline url='first_floor/RoomO1111.x3d'/>
+                </Transform>
+                <!-- Translation:
+                        |x| = 0.5*205cm (width) + (5*0.5*90cm + 2*60cm + 4*300cm) + 320cm (connected base) = 1967.5cm
+                        |y| = 102cm (height of base)
+                        |z| = 0.5*360cm (depth of the room) + 30cm (slightly 'less' than center corridor) = 210cm -->
+                <Transform DEF='RightStoreRoomTransform' translation='-19.675 1.02 -2.10' rotation='0 1 0 3.1416'>
+                    <Inline url='first_floor/RightStoreRoom.x3d'/>
+                </Transform>
+                <!-- Translation:
+                        |x| = 0.5*255cm (depth) + (5*0.5*90cm + 2*60cm + 4*300cm) + 320cm (connected base) + 205cm (store room) = 2197.5cm
+                        |y| = 102cm (height of base)
+                        |z| = 0.5*360cm (width of the room) + 30cm (slightly ...) = 210cm
+                     Rotation:
+                        angle = -(pi/2) -->
+                <Transform DEF='RightElevatorsTransform' translation='-21.975 1.02 -2.10' rotation='0 1 0 -1.5708'>
+                    <Inline url='first_floor/Elevators.x3d'/>
+                </Transform>
+            </Group>
+            <!-- LEFT rooms -->
+            <Group DEF='FrontLeftRoomsGroup'>
+                <!-- Translation:
+                        |x| = 0.5*450cm (room's width) + 0.5*90cm + 60cm + 2*300cm + 10cm (padding) = 940cm
+                        |y| = 102cm (height of base)
+                        |z| = 0.5*390cm (depth of the room) = 195cm 
+                        NOTE: padding is for the firt room (on each side) -->
+                <Transform DEF='RoomO1110Transform' translation='9.40 1.02 -1.95' rotation='0 1 0 3.1416'>
+                    <Inline url='first_floor/RoomO1110.x3d'/>
+                </Transform>
+                <!-- Translation:
+                        |x| = 0.5*190cm (room's width) + 0.5*90cm + 2*300cm + 60cm + 10cm (padding) 450cm (previous room's width)
+                            = 1260cm
+                        |y| = 102cm (height of base)
+                        |z| = 0.5*390cm (depth of the room) = 195cm -->
+                <Transform DEF='SmallMaleWaterClosetTransform' translation='12.60 1.02 -1.95' rotation='0 1 0 3.1416'>
+                    <Inline url='first_floor/StaffMaleWaterCloset.x3d'/>
+                </Transform>
+                <!-- Translation:
+                        |x| = 0.5*190cm (room's width) + 0.5*90cm + 2*300cm + 60cm + 10cm (padding) (450cm + 190cm) (previous room's width)
+                            = 1450cm
+                        |y| = 102cm (height of base)
+                        |z| = 0.5*390cm (depth of the room) = 195cm -->
+                <Transform DEF='SmalleFemaleWaterClosetTransform' translation='14.50 1.02 -1.95' rotation='0 1 0 3.1416'>
+                    <Inline url='first_floor/StaffFemaleWaterCloset.x3d'/>
+                </Transform>
+                <Transform DEF='LeftStoreRoomTransform' translation='19.675 1.02 -2.10' rotation='0 1 0 3.1416'>
+                    <Inline url='first_floor/LeftStoreRoom.x3d'/>
+                </Transform>
+                <Transform DEF='LeftElevatorsTransform' translation='21.975 1.02 -2.10' rotation='0 1 0 1.5708'>
+                    <Inline url='first_floor/Elevators.x3d'/>
+                </Transform>
+            </Group>
+        </Group>
+        
+        <!-- Back Rooms (NOTE: center of each room is at the middle, but on the floor) -->
+        <Group DEF='BackRoomsGroup'>
+            <!-- Normal rooms -->
+            <Group DEF='BackNormalRoomsGroup'>
+                <!-- From right to left -->
+                <!-- LA1-103 -->
+                <!-- Translation:
+                        |x| = [(5*0.5*90cm + 2*60cm + 4*300cm) + 320cm + 460cm] - 0.5*775cm (width of room) = 1937.5cm
+                        |y| = 102cm (height of base)
+                        |z| = 1614cm (total depth) - 0.5*864cm (depth of room) = 1182cm -->
+                <Transform DEF='RoomLA1103Transform' translation='-19.375 1.02 -11.82'>
+                    <Inline url='first_floor/RoomLA1103.x3d'/>
+                </Transform>
+                <!-- LA1-104 -->
+                <!-- Translation:
+                        |x| = [(5*0.5*90cm + 2*60cm + 4*300cm) + 320cm + 460cm] - [775cm (previous room) + 0.5*775 (width of room)] = 1162.5cm
+                        |y| = 102cm (height of base)
+                        |z| = 1614cm (total depth) - 0.5*864cm (depth of room) = 1182cm -->
+                <Transform DEF='RoomLA1104Transform' translation='-11.625 1.02 -11.82'>
+                    <Inline url='first_floor/RoomLA1104.x3d'/>
+                </Transform>
+                <!-- O1-105 -->
+                <!-- Translation:
+                        |x| = 1162.5cm (previous |x|) - 775cm (width of room) = 387.5cm
+                        |y| = 102cm (height of base)
+                        |z| = 1182cm (previous |z|) -->
+                <Transform DEF='RoomO1105Transform' translation='-3.875 1.02 -11.82'>
+                    <Inline url='first_floor/RoomO1105.x3d'/>
+                </Transform>
+                <!-- O1-106 (VASS) -->
+                <!-- Translation:
+                        |x| = |387.5cm (previous |x|) - 0.5*775cm (width of previous room) - 0.5*1550cm (width of room)| = 775cm
+                        |y| = 102cm (height of base)
+                        |z| = 1182cm (previous |z|) -->
+                <Transform DEF='RoomO1106Transform' translation='7.75 1.02 -11.82'>
+                    <Inline url='first_floor/RoomO1106.x3d'/>
+                </Transform>
+                <!-- O1-108 -->
+                <!-- Translation:
+                        |x| = 775cm (previous |x|) + 0.5*1550cm (width of previous room) + 0.5*775cm (width of room) = 1937.5cm
+                        |y| = 102cm (height of base)
+                        |z| = 1182cm (previous |z|) -->
+                <Transform DEF='RoomO1108Transform' translation='19.375 1.02 -11.82'>
+                    <Inline url='first_floor/RoomLA1108.x3d'/>
+                </Transform>
+            </Group>
+            <!-- Right Water Closets (WCs) -->
+            <Group DEF='BackRightWCsGroup'>
+                <!-- For Males -->
+                <!-- Translation:
+                        |x| = (5*0.5*90cm + 2*60cm + 4*300cm + 320cm + 460cm) (half-width of corridor) + 0.5*360cm (depth of Male WC) = 2505cm
+                        |y| = 102cm (height of base)
+                        |z| = 1614cm (total depth of base) - [0.5*456cm (width of Male WC) + 208cm (width of disabled WC) + 200cm (width of Female WC) = 978cm -->
+                <Transform DEF='BackRightMaleWCTransform' translation='-25.05 1.02 -9.78' rotation='0 1 0 -1.5708'>
+                    <Inline url='first_floor/RightMaleWaterCloset.x3d'/>
+                </Transform>
+                <!-- For Females -->
+                <!-- Translation:
+                        |x| = (5*0.5*90cm + 2*60cm + 4*300cm + 320cm + 460cm) (half-width of corridor) + 0.5*360cm (depth of the room) = 2505cm
+                        |y| = 102cm (height of base)
+                        |z| = 1614cm (total depth of base) - 0.5*408cm (width of the room) = 1410cm -->
+                <Transform DEF='BackRightFemaleWCTransform' translation='-25.05 1.02 -14.10' rotation='0 1 0 -1.5708'>
+                    <Inline url='first_floor/RightFemaleWaterCloset.x3d'/>
+                </Transform>
+            </Group>
+            <!-- Left Water Closets (WCs) -->
+            <Group DEF='BackLeftWCsGroup'>
+                <!-- For Males -->
+                <Transform DEF='BackLeftMaleWCTransform' translation='25.05 1.02 -9.78' rotation='0 1 0 -1.5708'>
+                    <Inline url='first_floor/LeftMaleWaterCloset.x3d'/>
+                </Transform>
+                <!-- For Disabled (people) -->
+                <Transform DEF='BackLeftDisabledWCTransform' translation='25.05 1.02 -13.10' rotation='0 1 0 -1.5708'>
+                    <Inline url='first_floor/LeftDisabledWaterCloset.x3d'/>
+                </Transform>
+                <!-- For Females -->
+                <Transform DEF='BackLeftFemaleWCTransform' translation='25.05 1.02 -15.14' rotation='0 1 0 -1.5708'>
+                    <Inline url='first_floor/LeftFemaleWaterCloset.x3d'/>
+                </Transform>
+            </Group>
+        </Group>
     </Scene>
 </X3D>
