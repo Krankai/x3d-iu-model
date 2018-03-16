@@ -28,22 +28,83 @@
     <Scene>
         <!-- Center of the model = same as the center of A1Building.x3d - at (0 0 0) -->
         
-        <!-- Primary/Center base - Covering the corridor + back rooms (except two WCs) -->
+        <!-- *** Primary/Center base - Covering the corridor + back rooms (except two WCs) *** -->
         <!-- Translation:
                 x = 0cm
                 y = -0.5*90cm (own base) + 102cm (1st floor base) + 320cm (distance b/t two floors) + 90cm ('expectation' of 2nd floor'base) = 467cm
                 z = -1614cm (total depth - from main gate to behind of back rooms) + 0.5*1224cm (own depth) = -1002cm -->
         <Transform DEF='CenterBaseTransform' translation='0 4.67 -10.02'>
             <Shape>
-                <Appearance>
-                    <Material/>
+                <Appearance DEF='SecondFloorBaseAppearance'>
+                    <Material diffuseColor='1 1 1'/>
                 </Appearance>
                 <!-- Size:
                         w = 6*775cm (width of each room) = 4650cm
-                        h = 90cm (height of 'all' bases)
+                        h = 90cm (height of 2nd floor/base)
                         d = 360cm (corridor's) + 864cm (back rooms') = 1224cm -->
                 <Box size='46.50 0.9 12.24'/>
             </Shape>
+        </Transform>
+        
+        <!-- *** Front bases - Covering front room(s) *** -->
+        <!-- RIGHT SIDE -->
+        <!-- Front base right inner - Cover the inner (i.e. first) room on the right side -->
+        <!-- Translation:
+                x = -[(0.5*90cm + 60cm + 2*300cm) + 0.5*830cm (own width) + 10cm (padding)] = -1130cm
+                y = 467cm (same as 'center' one)
+                z = -0.5*390cm (own depth) = -195cm -->
+        <Transform DEF='FrontBaseRightInnerTransform' translation='-11.30 4.67 -1.95'>
+            <Shape DEF='FrontBaseInnerShape'>
+                <Appearance USE='SecondFloorBaseAppearance'/>
+                <!-- Size:
+                        w = 830cm (width of the room)
+                        h = 90cm (height of 2nd floor/base)
+                        d = 390cm (depth of the room) -->
+                <Box DEF='FrontBaseInnerBox' size='8.30 0.90 3.90'/>
+            </Shape>
+        </Transform>
+        <!-- Front base right connected - Cover the connected wall on the right side -->
+        <!-- Translation:
+                x = -[(5*0.5*90cm + 2*60cm + 4*300cm) + 0.5*320cm (own width)] = -1705cm
+                y = 467cm (same as above)
+                z = -390cm (main hall's depth) + 0.5*24cm (own depth) = -378cm -->
+        <Transform DEF='FrontBaseRightConnectedTransform' translation='-17.05 4.67 -3.78'>
+            <Shape DEF='FrontBaseConnectedShape'>
+                <Appearance USE='SecondFloorBaseAppearance'/>
+                <!-- Size:
+                        w = 320cm (width of the connected wall)
+                        h = 90cm (height of 2nd floor/base)
+                        d = 24cm (depth of the connected wall) -->
+                <Box DEF='FrontBaseConnectedBox' size='3.20 0.90 0.24'/>
+            </Shape>
+        </Transform>
+        <!-- Front base right outer - Cover the outer (i.e. last two) rooms in the right side -->
+        <!-- Translation:
+                x = -[(5*0.5*90cm + 2*60cm + 4*300cm) + 320cm (connected wall) + 0.5*460cm (own width)] = -2095cm
+                y = 467cm (same as above)
+                z = -[30cm ('padding') + 0.5*360cm (own depth)] = -210cm -->
+        <Transform DEF='FrontBaseRightOuterTransform' translation='-20.95 4.67 -2.10'>
+            <Shape DEF='FrontBaseOuterShape'>
+                <Appearance USE='SecondFloorBaseAppearance'/>
+                <!-- Size:
+                        w = 460cm (total width of the two outer rooms)
+                        h = 90cm (height of 2nd floor/base)
+                        d = 360cm (depth of both outer rooms) -->
+                <Box DEF='FrontBaseOuterBox' size='4.60 0.90 3.60'/>
+            </Shape>
+        </Transform>
+        <!-- LEFT SIDE -->
+        <!-- Front base left inner - Cover the inner (i.e. first two) rooms on the left side -->
+        <Transform DEF='FrontBaseLeftInnerTransform' translation='11.30 4.67 -1.95'>
+            <Shape USE='FrontBaseInnerShape'/>
+        </Transform>
+        <!-- Front base left connected - Cover the connected wall on the left side -->
+        <Transform DEF='FrontBaseLeftConnectedTransform' translation='17.05 4.67 -3.78'>
+            <Shape USE='FrontBaseConnectedShape'/>
+        </Transform>
+        <!-- Front base left outer - Cover the outer (i.e. last two) rooms on the left side -->
+        <Transform DEF='FrontBaseLeftOuterTransform' translation='20.95 4.67 -2.10'>
+            <Shape USE='FrontBaseOuterShape'/>
         </Transform>
     </Scene>
 </X3D>
