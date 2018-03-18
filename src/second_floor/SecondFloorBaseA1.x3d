@@ -106,5 +106,26 @@
         <Transform DEF='FrontBaseLeftOuterTransform' translation='20.95 4.67 -2.10'>
             <Shape USE='FrontBaseOuterShape'/>
         </Transform>
+        
+        <!-- *** Connected Walls (connect two sets of front rooms) *** -->
+        <!-- Translation:
+                x = -[0.5*320cm (own width) + 4*(300cm + 0.5*90cm + 0.5*60cm) + 0.5*90cm = -1705cm
+                y = 0.5*320cm (own height) + 102cm (1st base) + 320cm (b/t 1st and 2nd) + 90cm (2nd base) = 672cm
+                z = -390cm (depth of room) + 0.5*24cm (own depth) = -378cm -->
+        <Transform DEF='RightConnectedWallTransform' translation='-17.05 6.72 -3.78'>
+            <Shape DEF='ConnectedWallShape'>
+                <Appearance DEF='WallAppearance'>
+                    <Material diffuseColor='1 1 1'/>
+                </Appearance>
+                <!-- Size:
+                        w = 320cm
+                        h = 320cm
+                        z = 24cm -->
+                <Box DEF='ConnectedWallBox' size='3.20 3.20 0.24'/>
+            </Shape>
+        </Transform>
+        <Transform DEF='LeftConnectedWallTransform' translation='17.05 6.72 -3.78'>
+            <Shape USE='ConnectedWallShape'/>
+        </Transform>
     </Scene>
 </X3D>

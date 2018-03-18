@@ -43,10 +43,126 @@
         
         <!-- Front Rooms -->
         <!-- Note: center for each room is at the middle, but on the floor -->
-        
+        <Group DEF='FrontRoomsGroup'>
+            <!-- RIGHT Rooms -->
+            <Group DEF='FrontRightRoomsGroup'>
+                <!-- Translation:
+                        x = -[0.5*830cm (own width) + (0.5*90cm + 60cm + 2*300cm) + 10cm (padding)] = -1130cm
+                        y = 102cm (first floor) + 320cm (distance b/t 1st and 2nd floor) + 90cm (second floor) = 512cm
+                        z = -0.5*390cm (own depth) = -195cm -->
+                <Transform DEF='RoomO1210Transform' translation='-11.30 5.12 -1.95' rotation='0 1 0 3.1416'>
+                    <Inline url='RoomO1210.x3d'/>
+                </Transform>
+                <!-- Translation:
+                        x = -[0.5*205cm (own width) + (0.5*5*90cm + 2*60cm + 4*300cm) + 320cm (connected)] = -1967.5cm
+                        y = 512cm (same as above)
+                        z = -[0.5*360cm (own depth) + 30cm (difference b/t center and this)] = -210cm
+                     Rotation:
+                        angle = - pi/2 -->
+                <Transform DEF='RightStoreRoomTransform' translation='-19.675 5.12 -2.10' rotation='0 1 0 3.1416'>
+                    <Inline url='../first_floor/RightStoreRoom.x3d'/>
+                </Transform>
+                <!-- Translation:
+                        x = -[0.5*255cm (own depth) + (5*0.5*90cm + 2*60cm + 4*300cm) + 320cm (connected) + 205cm (store room)] = -2197.5cm
+                        y = 512cm (same as above)
+                        z = -[0.5*360cm (own width) + 30cm (difference ...)] = -210cm
+                     Rotation:
+                        angle = + pi/2 -->
+                <Transform DEF='RightElevatorsTransform' translation='-21.975 5.12 -2.10' rotation='0 1 0 -1.5708'>
+                    <Inline url='../first_floor/Elevators.x3d'/>
+                </Transform>
+            </Group>
+            <!-- LEFT Rooms -->
+            <Group DEF='FrontLeftRoomsGroup'>
+                <!-- Translation:
+                    x = 0.5*450cm (own width) + (0.5*90cm + 60cm + 2*300cm) + 10cm (padding) = 940cm
+                    y = 102cm (1st floor) + 320cm (b/t 1st and 2nd) + 90cm (2nd floor) = 512cm
+                    z = -0.5*390cm (own depth) = -195cm -->
+                <Transform DEF='RoomO1209Transform' translation='9.40 5.12 -1.95' rotation='0 1 0 3.1416'>
+                    <Inline url='RoomO1209.x3d'/>
+                </Transform>
+                <!-- Translation:
+                    x = 0.5*190cm (own width) + (0.5*90cm + 60cm + 2*300cm) + 450cm (previous room's width) + 10cm (padding) = 1260cm
+                    y = 512cm (same as above)
+                    z = -195cm (same as above) -->
+                <Transform DEF='StaffMaleWCTransform' translation='12.60 5.12 -1.95' rotation='0 1 0 3.1416'>
+                    <Inline url='../first_floor/StaffMaleWaterCloset.x3d'/>
+                </Transform>
+                <!-- Translation:
+                    x = 0.5*190cm (own width) + (0.5*90cm + 60cm + 2*300cm) + (450cm + 190cm) (previous rooms' width) + 10cm (padding) = 1450cm
+                    y = 512cm (same as above)
+                    z = -195cm (same as above) -->
+                <Transform DEF='StaffFemaleWCTransform' translation='14.50 5.12 -1.95' rotation='0 1 0 3.1416'>
+                    <Inline url='../first_floor/StaffFemaleWaterCloset.x3d'/>
+                </Transform>
+                <Transform DEF='LeftStoreRoomTransform' translation='19.675 5.12 -2.10' rotation='0 1 0 3.1416'>
+                    <Inline url='../first_floor/LeftStoreRoom.x3d'/>
+                </Transform>
+                <Transform DEF='LeftElevatorsTransform' translation='21.975 5.12 -2.10' rotation='0 1 0 1.5708'>
+                    <Inline url='../first_floor/Elevators.x3d'/>
+                </Transform>
+            </Group>
+        </Group>
         
         <!-- Back Rooms -->
         <!-- Note: center for each room is at the middle, but on the floor -->
+        <Group DEF='BackRoomsGroup'>
+            <!-- Normal Rooms -->
+            <Group DEF='BackNormalRoomsGroup'>
+                <!-- *** From RIGHT to LEFT *** -->
+                <!-- Room A1-203 -->
+                <!-- Translation:
+                        x = -[(5*0.5*90cm + 2*60cm + 4*300cm) + 320cm (connected) + 460cm (store room & elevators)] + 0.5*775cm (own width) = -1937.5cm
+                        y = 102cm (1st base) + 320cm (difference b/t 1st and 2nd) + 90cm (2nd base) = 512cm
+                        z = -1614cm (total depth) + 0.5*864cm (own depth) = -1182cm -->
+                <Transform DEF='RoomA1203Transform' translation='-19.375 5.02 -11.82'>
+                    <Inline url='RoomA1203.x3d'/>
+                </Transform>
+                <!-- Room A1-204 -->
+                <!-- Translation:
+                        x = -1162.5cm (same as that of Room LA-104)
+                        y = 512cm (same as above)
+                        z = -1182cm (same as above) -->
+                <Transform DEF='RoomA1204Transform' translation='-11.625 5.12 -11.82'>
+                    <Inline url='RoomA1204.x3d'/>
+                </Transform>
+                <!-- Room A1-205 -->
+                <!-- Translation:
+                        x = -387.5cm (same as that of Room O1-105)
+                        y = 512cm (same as above)
+                        z = -1182cm (same as above) -->
+                <Transform DEF='RoomA1205Transform' translation='-3.875 5.12 -11.82'>
+                    <Inline url='RoomA1205.x3d'/>
+                </Transform>
+                <!-- Room A1-206 -->
+                <!-- Translation:
+                        x = -387.5cm (previous x) + 0.5*775cm (previous room's width) + 0.5*775cm (own width) = 387.5cm
+                        y = 512cm (same as above)
+                        z = -1182cm (same as above) -->
+                <Transform DEF='RoomA1206Transform' translation='3.875 5.12 -11.82'>
+                    <Inline url='RoomA1206.x3d'/>
+                </Transform>
+                <!-- Room A1-207A -->
+                <!-- Translation:
+                        x = 387.5cm (previous x) + 0.5*775cm (previous room's width) + 0.5*775cm (own width) = 1162.5cm
+                        y = 512cm (same as above)
+                        z = -1182cm (same as above) -->
+                <Transform DEF='RoomA1207ATransform' translation='11.625 5.12 -11.82'>
+                    <Inline url='RoomA1207A.x3d'/>
+                </Transform>
+                <!-- Room A1-207B -->
+                <!-- Translation:
+                        x = 1937.5cm (same as that of Room O1-108)
+                        y = 512cm (same as above)
+                        z = -1182cm (same as above) -->
+                <Transform DEF='RoomA1207BTransform' translation='19.375 5.12 -11.82'>
+                    <Inline url='RoomA1207B.x3d'/>
+                </Transform>
+            </Group>
+            <!-- Right Water Closets (WCs) -->
+            
+            <!-- Left Water Closets (WCs) -->
+        </Group>
         
     </Scene>
 </X3D>

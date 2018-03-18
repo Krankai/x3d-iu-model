@@ -82,11 +82,11 @@
                     <Inline url='RoomO1110.x3d'/>
                 </Transform>
                 <!-- Translation:
-                        |x| = 0.5*190cm (room's width) + 0.5*90cm + 2*300cm + 60cm + 10cm (padding) 450cm (previous room's width)
+                        |x| = 0.5*190cm (room's width) + 0.5*90cm + 2*300cm + 60cm + 10cm (padding) + 450cm (previous room's width)
                             = 1260cm
                         |y| = 102cm (height of base)
                         |z| = 0.5*390cm (depth of the room) = 195cm -->
-                <Transform DEF='SmallMaleWaterClosetTransform' translation='12.60 1.02 -1.95' rotation='0 1 0 3.1416'>
+                <Transform DEF='StaffMaleWaterClosetTransform' translation='12.60 1.02 -1.95' rotation='0 1 0 3.1416'>
                     <Inline url='StaffMaleWaterCloset.x3d'/>
                 </Transform>
                 <!-- Translation:
@@ -94,7 +94,7 @@
                             = 1450cm
                         |y| = 102cm (height of base)
                         |z| = 0.5*390cm (depth of the room) = 195cm -->
-                <Transform DEF='SmalleFemaleWaterClosetTransform' translation='14.50 1.02 -1.95' rotation='0 1 0 3.1416'>
+                <Transform DEF='StaffFemaleWaterClosetTransform' translation='14.50 1.02 -1.95' rotation='0 1 0 3.1416'>
                     <Inline url='StaffFemaleWaterCloset.x3d'/>
                 </Transform>
                 <Transform DEF='LeftStoreRoomTransform' translation='19.675 1.02 -2.10' rotation='0 1 0 3.1416'>
@@ -188,5 +188,6 @@
                 </Transform>
             </Group>
         </Group>
+        
     </Scene>
 </X3D>
