@@ -7,7 +7,7 @@
         <meta content='Model the entire first floor of the A1 building of IU' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
         <meta content='16th March, 2018' name='created'/>
-        <meta content='16th March, 2018' name='modified'/>
+        <meta content='18th March, 2018' name='modified'/>
         <meta content='v1.0' name='version'/>
         <meta content='*enter reference citation or relative/online url here*' name='reference'/>
         <meta content='*enter additional url/bibliographic reference information here*' name='reference'/>
@@ -175,15 +175,15 @@
             <!-- Left Water Closets (WCs) -->
             <Group DEF='BackLeftWCsGroup'>
                 <!-- For Males -->
-                <Transform DEF='BackLeftMaleWCTransform' translation='25.05 1.02 -9.78' rotation='0 1 0 -1.5708'>
+                <Transform DEF='BackLeftMaleWCTransform' translation='25.05 1.02 -9.78' rotation='0 1 0 1.5708'>
                     <Inline url='LeftMaleWaterCloset.x3d'/>
                 </Transform>
                 <!-- For Disabled (people) -->
-                <Transform DEF='BackLeftDisabledWCTransform' translation='25.05 1.02 -13.10' rotation='0 1 0 -1.5708'>
+                <Transform DEF='BackLeftDisabledWCTransform' translation='25.05 1.02 -13.10' rotation='0 1 0 1.5708'>
                     <Inline url='LeftDisabledWaterCloset.x3d'/>
                 </Transform>
                 <!-- For Females -->
-                <Transform DEF='BackLeftFemaleWCTransform' translation='25.05 1.02 -15.14' rotation='0 1 0 -1.5708'>
+                <Transform DEF='BackLeftFemaleWCTransform' translation='25.05 1.02 -15.14' rotation='0 1 0 1.5708'>
                     <Inline url='LeftFemaleWaterCloset.x3d'/>
                 </Transform>
             </Group>
