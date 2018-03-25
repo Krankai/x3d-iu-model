@@ -7,7 +7,7 @@
         <meta content='Model the front "fence" on the second (in the main hall)' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
         <meta content='21st March, 2018' name='created'/>
-        <meta content='24th March, 2018' name='modified'/>
+        <meta content='25th March, 2018' name='modified'/>
         <meta content='v1.0' name='version'/>
         <meta content='*enter reference citation or relative/online url here*' name='reference'/>
         <meta content='*enter additional url/bibliographic reference information here*' name='reference'/>
@@ -40,17 +40,17 @@
                         <Material diffuseColor='0.9 0.9 0.9'/>
                     </Appearance>
                     <!-- Size:
-                            w = (90cm + 2*60cm + 4*300cm) + 2*10cm (padding) + 2*20cm (width of two side-fence-bases) = 1470cm
+                            w = (90cm + 2*60cm + 4*300cm) + 2*40cm (padding) + 2*20cm (width of two side-fence-bases) = 1530cm
                             h = 10cm
                             d = 20cm -->
-                    <Box size='14.70 0.10 0.20'/>
+                    <Box size='15.30 0.10 0.20'/>
                 </Shape>
             </Transform>
             <!-- Translation:
-                    x = -[0.5*1430cm (center-fence-base's width) + 0.5*20cm (own width)] = -725cm
+                    x = -[0.5*(1530cm - 2*20cm) (center-fence-base's width without two side-base's) + 0.5*20cm (own width)] = -755cm
                     y = 0.5*10cm (own height) = 5cm
                     z = 0.5*106cm (own depth) = 53cm -->
-            <Transform DEF='RightSideFenceBaseTransform' translation='-7.25 0.05 0.53'>
+            <Transform DEF='RightSideFenceBaseTransform' translation='-7525 0.05 0.53'>
                 <Shape DEF='SideFenceBaseShape'>
                     <Appearance USE='BaseAppearance'/>
                     <!-- Size:
@@ -60,7 +60,7 @@
                     <Box size='0.20 0.10 1.06'/>
                 </Shape>
             </Transform>
-            <Transform DEF='LeftSideFenceBaseTransfomr' translation='7.25 0.05 0.53'>
+            <Transform DEF='LeftSideFenceBaseTransfomr' translation='7.55 0.05 0.53'>
                 <Shape USE='SideFenceBaseShape'/>
             </Transform>
         </Group>
@@ -70,10 +70,10 @@
             <!-- Vertical Bars -->
             <Group DEF='FenceCylinderVerticalBarGroup'>
                 <!-- Translation:
-                        x = -[0.5*1470cm (width of 'fence') - 0.5*20cm (width of side 'fence' base)] = -725cm
+                        x = -[0.5*1530cm (width of 'fence') - 0.5*20cm (width of side 'fence' base)] = -755cm
                         y = 0.5*94cm (own height) + 10cm ('fence' base) = 57cm
                         z = -0.5*20cm (depth of center 'fence' base) = -10cm -->
-                <Transform DEF='RightCylinderVerticalBarTransform' translation='-7.25 0.57 -0.10'>
+                <Transform DEF='RightCylinderVerticalBarTransform' translation='-7.55 0.57 -0.10'>
                     <Shape DEF='VerticalCylinderBarShape'>
                         <Appearance DEF='BarAppearance'>
                             <Material diffuseColor='0.8 0.8 0.8'/>
@@ -84,7 +84,7 @@
                         <Cylinder height='0.94' radius='0.04' bottom='false'/>
                     </Shape>
                 </Transform>
-                <Transform DEF='LeftCylinderVerticalBarTransform' translation='7.25 0.57 -0.10'>
+                <Transform DEF='LeftCylinderVerticalBarTransform' translation='7.55 0.57 -0.10'>
                     <Shape USE='VerticalCylinderBarShape'/>
                 </Transform>
             </Group>
@@ -100,18 +100,18 @@
                     <Shape>
                         <Appearance USE='BarAppearance'/>
                         <!-- Parameters:
-                                height = 1470cm (entire width of 'fence') - 2*0.5*20cm (width of side 'fence' base) = 1450cm
+                                height = 1530cm (entire width of 'fence') - 2*0.5*20cm (width of side 'fence' base) = 1510cm
                                 radius = 4cm -->
-                        <Cylinder height='14.50' radius='0.04' top='false' bottom='false'/>
+                        <Cylinder height='15.10' radius='0.04' top='false' bottom='false'/>
                     </Shape>
                 </Transform>
                 <!-- Translation:
-                        x = -[0.5*1470cm (width of 'fence') - 0.5*20cm (width of side 'fence' base)] = -725cm
+                        x = -[0.5*1530cm (width of 'fence') - 0.5*20cm (width of side 'fence' base)] = -755cm
                         y = 100cm (same as above)
                         z = (126cm - 20cm) - 0.5*116cm (own depth) = 48cm 
                      Rotation:
                         angle = pi/2 (Ox) -->
-                <Transform DEF='RightCylinderHorizontalBarTransform' translation='-7.25 1.00 0.48' rotation='1 0 0 1.5708'>
+                <Transform DEF='RightCylinderHorizontalBarTransform' translation='-7.55 1.00 0.48' rotation='1 0 0 1.5708'>
                     <Shape DEF='SideCylinderHorizontalBarShape'>
                         <Appearance USE='BarAppearance'/>
                         <!-- Parameters:
@@ -120,7 +120,7 @@
                         <Cylinder height='1.16' radius='0.04' top='false' bottom='false'/>
                     </Shape>
                 </Transform>
-                <Transform DEF='LeftCylinderHorizontalBarTransform' translation='7.25 1.00 0.48' rotation='1 0 0 1.5708'>
+                <Transform DEF='LeftCylinderHorizontalBarTransform' translation='7.55 1.00 0.48' rotation='1 0 0 1.5708'>
                     <Shape USE='SideCylinderHorizontalBarShape'/>
                 </Transform>
             </Group>
@@ -131,14 +131,13 @@
             <!-- Vertical Bars -->
             <Group DEF='FenceCuboidVerticalBarGroup'>
                 <!-- From RIGHT to LEFT
-                     Distance b/t two consecutive bar = 100cm
-                     Distance b/t the two outermost bars and the cylinder bar = 101.5cm -->
+                     Distance b/t two consecutive bar = 104.5cm -->
                 <!-- Translation:
-                        x = [-0.5*1470cm (entire width of 'fence') + 0.5*20cm (width of side 'fence' base)
-                            + 4cm (radius of cylinder bar)]+ 101.5cm + 0.5*3cm (own width) = -618cm
+                        x = [-0.5*1530cm (entire width of 'fence') + 0.5*20cm (width of side 'fence' base)
+                            + 4cm (radius of cylinder bar)]+ 104.5cm + 0.5*3cm (own width) = -645cm
                         y = 10cm ('fence' base) + 0.5*90cm (own height) = 55cm
                         z = -0.5*20cm (depth of center 'fence' base) = -10cm -->
-                <Transform DEF='CuboidVerticalBar1Transform' translation='-6.18 0.55 -0.10'>
+                <Transform DEF='CuboidVerticalBar1Transform' translation='-6.45 0.55 -0.10'>
                     <Shape DEF='CuboidVerticalBarShape'>
                         <Appearance USE='BarAppearance'/>
                         <!-- Size:
@@ -149,67 +148,67 @@
                     </Shape>
                 </Transform>
                 <!-- Translation:
-                        x = -618cm (previous) + 2*0.5*3cm (own width) + 100cm = -515cm
+                        x = -645cm (previous) + 2*0.5*3cm (own width) + 104.5cm = -537.5cm
                         y = 55cm (same as above)
                         z = -10cm (same as above) -->
-                <Transform DEF='CuboidVerticalBar2Transform' translation='-5.15 0.55 -0.10'>
+                <Transform DEF='CuboidVerticalBar2Transform' translation='-5.375 0.55 -0.10'>
                     <Shape USE='CuboidVerticalBarShape'/>
                 </Transform>
                 <!-- Translation:
-                        x = -515cm (previous) + 2*0.5*3cm (own width) + 100cm = -412cm
+                        x = -537.5cm (previous) + 2*0.5*3cm (own width) + 104.5cm = -430cm
                         y = 55cm (same as above)
                         z = -10cm (same as above) -->
-                <Transform DEF='CuboidVerticalBar3Transform' translation='-4.12 0.55 -0.10'>
+                <Transform DEF='CuboidVerticalBar3Transform' translation='-4.30 0.55 -0.10'>
                     <Shape USE='CuboidVerticalBarShape'/>
                 </Transform>
                 <!-- Translation:
-                        x = -412cm (previous) + 2*0.5*3cm (own width) + 100cm = -309cm
+                        x = -430cm (previous) + 2*0.5*3cm (own width) + 104.5cm = -322.5cm
                         y = 55cm (same as above)
                         z = -10cm (same as above) -->
-                <Transform DEF='CuboidVerticalBar4Transform' translation='-3.09 0.55 -0.10'>
+                <Transform DEF='CuboidVerticalBar4Transform' translation='-3.225 0.55 -0.10'>
                     <Shape USE='CuboidVerticalBarShape'/>
                 </Transform>
                 <!-- Translation:
-                        x = -309cm (previous) + 2*0.5*3cm (own width) + 100cm = -206cm
+                        x = -322.5cm (previous) + 2*0.5*3cm (own width) + 104.5cm = -215cm
                         y = 55cm (same as above)
                         z = -10cm (same as above) -->
-                <Transform DEF='CuboidVerticalBar5Transform' translation='-2.06 0.55 -0.10'>
+                <Transform DEF='CuboidVerticalBar5Transform' translation='-2.15 0.55 -0.10'>
                     <Shape USE='CuboidVerticalBarShape'/>
                 </Transform>
                 <!-- Translation:
-                        x = -206cm (previous) + 2*0.5*3cm (own width) + 100cm = -103cm
+                        x = -215cm (previous) + 2*0.5*3cm (own width) + 104.5cm = -107.5cm
                         y = 55cm (same as above)
                         z = -10cm (same as above) -->
-                <Transform DEF='CuboidVerticalBar6Transform' translation='-1.03 0.55 -0.10'>
+                <Transform DEF='CuboidVerticalBar6Transform' translation='-1.075 0.55 -0.10'>
                     <Shape USE='CuboidVerticalBarShape'/>
                 </Transform>
                 <!-- Translation:
-                        x = -103cm (previous) + 2*0.5*3cm (own width) + 100cm = 0cm
+                        x = -107.5cm (previous) + 2*0.5*3cm (own width) + 104.5cm = 0cm
                         y = 55cm (same as above)
                         z = -10cm (same as above) -->
                 <Transform DEF='CuboidVerticalBar7Transform' translation='0 0.55 -0.10'>
                     <Shape USE='CuboidVerticalBarShape'/>
                 </Transform>
                 <!-- Translation:
-                        x = 0cm (previous) + 2*0.5*3cm (own width) + 100cm = 103cm
+                        x = 0cm (previous) + 2*0.5*3cm (own width) + 104.5cm = 107.5cm
                         y = 55cm (same ...)
                         z = -10cm (same ...) -->
-                <Transform DEF='CuboidVerticalBar8Transform' translation='1.03 0.55 -0.10'>
+                <Transform DEF='CuboidVerticalBar8Transform' translation='1.075 0.55 -0.10'>
                     <Shape USE='CuboidVerticalBarShape'/>
                 </Transform>
-                <Transform DEF='CuboidVerticalBar9Transform' translation='2.06 0.55 -0.10'>
+                <Transform DEF='CuboidVerticalBar9Transform' translation='2.15 0.55 -0.10'>
                     <Shape USE='CuboidVerticalBarShape'/>
                 </Transform>
-                <Transform DEF='CuboidVerticalBar10Transform' translation='3.09 0.55 -0.10'>
+                <Transform DEF='CuboidVerticalBar10Transform' translation='3.225 0.55 -0.10'>
                     <Shape USE='CuboidVerticalBarShape'/>
                 </Transform>
-                <Transform DEF='CuboidVerticalBar11Transform' translation='4.12 0.55 -0.10'>
+                <Transform DEF='CuboidVerticalBar11Transform' translation='4.30 0.55 -0.10'>
                     <Shape USE='CuboidVerticalBarShape'/>
                 </Transform>
-                <Transform DEF='CuboidVerticalBar12Transform' translation='5.15 0.55 -0.10'>
+                <Transform DEF='CuboidVerticalBar12Transform' translation='5.375 0.55 -0.10'>
                     <Shape USE='CuboidVerticalBarShape'/>
                 </Transform>
-                <Transform DEF='CuboidVerticalBar13Transform' translation='6.18 0.55 -0.10'>
+                <Transform DEF='CuboidVerticalBar13Transform' translation='6.45 0.55 -0.10'>
                     <Shape USE='CuboidVerticalBarShape'/>
                 </Transform>
             </Group>
@@ -224,10 +223,10 @@
                     <Shape DEF='CenterCuboidHorizontalBarShape'>
                         <Appearance USE='BarAppearance'/>
                         <!-- Size:
-                                w = 1470cm (entire width of 'fence') - 2*0.5*20cm (width of side 'fence' base) = 1450cm
+                                w = 1530cm (entire width of 'fence') - 2*0.5*20cm (width of side 'fence' base) = 1510cm
                                 h = 2cm
                                 d = 3cm -->
-                        <Box size='14.50 0.02 0.03'/>
+                        <Box size='15.10 0.02 0.03'/>
                     </Shape>
                 </Transform>
                 <!-- Translation:
@@ -254,10 +253,10 @@
                 
                 <!-- Right -->
                 <!-- Translation:
-                        x = -[0.5*1470cm (entire width of 'fence') - 0.5*20cm (width of side 'fence' base)] = -725cm
+                        x = -[0.5*1530cm (entire width of 'fence') - 0.5*20cm (width of side 'fence' base)] = -755cm
                         y = 77cm (same as center-1)
                         z = (126cm - 20cm) - 0.5*116cm (own depth) = 48cm -->
-                <Transform DEF='RightCuboidHorizontalBar1Transform' translation='-7.25 0.77 0.48'>
+                <Transform DEF='RightCuboidHorizontalBar1Transform' translation='-7.55 0.77 0.48'>
                     <Shape DEF='SideCuboidHorizontalBarShape'>
                         <Appearance USE='BarAppearance'/>
                         <!-- Size:
@@ -268,38 +267,38 @@
                     </Shape>
                 </Transform>
                 <!-- Translation:
-                        x = -725cm (same as above)
+                        x = -755cm (same as above)
                         y = 61cm (same as center-2)
                         z = 48cm (same as above) -->
-                <Transform DEF='RightCuboidHorizontalBar2Transform' translation='-7.25 0.61 0.48'>
+                <Transform DEF='RightCuboidHorizontalBar2Transform' translation='-7.55 0.61 0.48'>
                     <Shape USE='SideCuboidHorizontalBarShape'/>
                 </Transform>
                 <!-- Translation:
-                        x = -725cm (same as above)
+                        x = -755cm (same as above)
                         y = 45cm (same as center-3)
                         z = 48cm (same as above) -->
-                <Transform DEF='RightCuboidHorizontalBar3Transform' translation='-7.25 0.45 0.48'>
+                <Transform DEF='RightCuboidHorizontalBar3Transform' translation='-7.55 0.45 0.48'>
                     <Shape USE='SideCuboidHorizontalBarShape'/>
                 </Transform>
                 <!-- Translation:
-                        x = -725cm (same as above)
+                        x = -755cm (same as above)
                         y = 29cm (same as center-4)
                         z = 48cm (same as above) -->
-                <Transform DEF='RightCuboidHorizontalBar4Transform' translation='-7.25 0.29 0.48'>
+                <Transform DEF='RightCuboidHorizontalBar4Transform' translation='-7.55 0.29 0.48'>
                     <Shape USE='SideCuboidHorizontalBarShape'/>
                 </Transform>
                 
                 <!-- Left -->
-                <Transform DEF='LeftCuboidHorizontalBar1Transform' translation='7.25 0.77 0.48'>
+                <Transform DEF='LeftCuboidHorizontalBar1Transform' translation='7.55 0.77 0.48'>
                     <Shape USE='SideCuboidHorizontalBarShape'/>
                 </Transform>
-                <Transform DEF='LeftCuboidHorizontalBar2Transform' translation='7.25 0.61 0.48'>
+                <Transform DEF='LeftCuboidHorizontalBar2Transform' translation='7.55 0.61 0.48'>
                     <Shape USE='SideCuboidHorizontalBarShape'/>
                 </Transform>
-                <Transform DEF='LeftCuboidHorizontalBar3Transform' translation='7.25 0.45 0.48'>
+                <Transform DEF='LeftCuboidHorizontalBar3Transform' translation='7.55 0.45 0.48'>
                     <Shape USE='SideCuboidHorizontalBarShape'/>
                 </Transform>
-                <Transform DEF='LeftCuboidHorizontalBar4Transform' translation='7.25 0.29 0.48'>
+                <Transform DEF='LeftCuboidHorizontalBar4Transform' translation='7.55 0.29 0.48'>
                     <Shape USE='SideCuboidHorizontalBarShape'/>
                 </Transform>
             </Group>

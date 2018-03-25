@@ -7,7 +7,7 @@
         <meta content='Model the entire second floor of the A1 building of IU' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
         <meta content='16th March, 2018' name='created'/>
-        <meta content='23rd March, 2018' name='modified'/>
+        <meta content='24th March, 2018' name='modified'/>
         <meta content='v1.0' name='version'/>
         <meta content='*enter reference citation or relative/online url here*' name='reference'/>
         <meta content='*enter additional url/bibliographic reference information here*' name='reference'/>
@@ -56,10 +56,10 @@
             <!-- RIGHT Rooms -->
             <Group DEF='FrontRightRoomsGroup'>
                 <!-- Translation:
-                        x = -[0.5*830cm (own width) + (0.5*90cm + 60cm + 2*300cm) + 10cm (padding)] = -1130cm
+                        x = -[0.5*800cm (own width) + (0.5*90cm + 60cm + 2*300cm) + 40cm (padding)] = -1145cm
                         y = 102cm (first floor) + 320cm (distance b/t 1st and 2nd floor) + 90cm (second floor) = 512cm
                         z = -0.5*390cm (own depth) = -195cm -->
-                <Transform DEF='RoomO1210Transform' translation='-11.30 5.12 -1.95' rotation='0 1 0 3.1416'>
+                <Transform DEF='RoomO1210Transform' translation='-11.45 5.12 -1.95' rotation='0 1 0 3.1416'>
                     <Inline url='RoomO1210.x3d'/>
                 </Transform>
                 <!-- Translation:
@@ -84,21 +84,21 @@
             <!-- LEFT Rooms -->
             <Group DEF='FrontLeftRoomsGroup'>
                 <!-- Translation:
-                    x = 0.5*450cm (own width) + (0.5*90cm + 60cm + 2*300cm) + 10cm (padding) = 940cm
+                    x = 0.5*420cm (own width) + (0.5*90cm + 60cm + 2*300cm) + 40cm (padding) = 95cm
                     y = 102cm (1st floor) + 320cm (b/t 1st and 2nd) + 90cm (2nd floor) = 512cm
                     z = -0.5*390cm (own depth) = -195cm -->
-                <Transform DEF='RoomO1209Transform' translation='9.40 5.12 -1.95' rotation='0 1 0 3.1416'>
+                <Transform DEF='RoomO1209Transform' translation='9.55 5.12 -1.95' rotation='0 1 0 3.1416'>
                     <Inline url='RoomO1209.x3d'/>
                 </Transform>
                 <!-- Translation:
-                    x = 0.5*190cm (own width) + (0.5*90cm + 60cm + 2*300cm) + 450cm (previous room's width) + 10cm (padding) = 1260cm
+                    x = 0.5*190cm (own width) + (0.5*90cm + 60cm + 2*300cm) + 420cm (previous room's width) + 40cm (padding) = 1260cm
                     y = 512cm (same as above)
                     z = -195cm (same as above) -->
                 <Transform DEF='StaffMaleWCTransform' translation='12.60 5.12 -1.95' rotation='0 1 0 3.1416'>
                     <Inline url='../first_floor/StaffMaleWaterCloset.x3d'/>
                 </Transform>
                 <!-- Translation:
-                    x = 0.5*190cm (own width) + (0.5*90cm + 60cm + 2*300cm) + (450cm + 190cm) (previous rooms' width) + 10cm (padding) = 1450cm
+                    x = 0.5*190cm (own width) + (0.5*90cm + 60cm + 2*300cm) + (420cm + 190cm) (previous rooms' width) + 40cm (padding) = 1450cm
                     y = 512cm (same as above)
                     z = -195cm (same as above) -->
                 <Transform DEF='StaffFemaleWCTransform' translation='14.50 5.12 -1.95' rotation='0 1 0 3.1416'>

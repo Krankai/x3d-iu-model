@@ -7,7 +7,7 @@
         <meta content='Model of Room O1-210 (A1 Building) of the International University (VNU-IU)' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
         <meta content='18th March, 2018' name='created'/>
-        <meta content='18th March, 2018' name='modified'/>
+        <meta content='24th March, 2018' name='modified'/>
         <meta content='v1.0' name='version'/>
         <meta content='*enter reference citation or relative/online url here*' name='reference'/>
         <meta content='*enter additional url/bibliographic reference information here*' name='reference'/>
@@ -25,7 +25,7 @@
     </head>
     <Scene>
         <!-- Center: at the 'center' of the room, but on the floor (y = 0) -->
-        <!-- Size: width = 830cm | height = 320cm (height of square) | depth = 390cm (main hall) -->
+        <!-- Size: width = 810cm | height = 320cm (height of square) | depth = 390cm (main hall) -->
         
         <Group DEF='WallGroup'>
             <!-- Fron wall (with main door) -->
@@ -38,21 +38,21 @@
                         <Material diffuseColor='1 1 1'/>
                     </Appearance>
                     <!-- Depth = 24cm -->
-                    <Box size='8.30 3.20 0.24'/>
+                    <Box size='8.00 3.20 0.24'/>
                 </Shape>
             </Transform>
             <!-- Back wall (with window) -->
             <Transform DEF='BackWallTransform' translation='0 1.6 -1.83'>
                 <Shape DEF='BackWallShape'>
                     <Appearance USE='WallAppearance'/>
-                    <Box size='8.30 3.20 0.24'/>
+                    <Box size='8.00 3.20 0.24'/>
                 </Shape>
             </Transform>
             <!-- Side walls (perspective: inside looking out into the door direction) -->
             <!-- Translation:
-                    |x| = 0.5*830cm (width of the room) - 0.5*24cm (depth of side wall) = 403cm
+                    |x| = 0.5*800cm (width of the room) - 0.5*24cm (depth of side wall) = 388cm
                     |y| = 0.5*320cm (height of the room) = 160cm -->
-            <Transform DEF='LeftSideWallTransform' translation='4.03 1.6 0'>
+            <Transform DEF='LeftSideWallTransform' translation='3.88 1.6 0'>
                 <Shape DEF='SideWallShape'>
                     <Appearance USE='WallAppearance'/>
                     <!-- Size:
@@ -61,7 +61,7 @@
                     <Box size='0.24 3.20 3.42'/>
                 </Shape>
             </Transform>
-            <Transform DEF='RightSideWallTransform' translation='-4.03 1.6 0'>
+            <Transform DEF='RightSideWallTransform' translation='-3.88 1.6 0'>
                 <Shape USE='SideWallShape'/>
             </Transform>
         </Group>

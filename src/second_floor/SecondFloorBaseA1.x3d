@@ -7,7 +7,7 @@
         <meta content='Model the second floor (base) of A1 building of the Internation University' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
         <meta content='14th March, 2018' name='created'/>
-        <meta content='23rd March, 2018' name='modified'/>
+        <meta content='24th March, 2018' name='modified'/>
         <meta content='v1.0' name='version'/>
         <meta content='*enter reference citation or relative/online url here*' name='reference'/>
         <meta content='*enter additional url/bibliographic reference information here*' name='reference'/>
@@ -68,17 +68,17 @@
         <!-- RIGHT SIDE -->
         <!-- Front base right inner - Cover the inner (i.e. first) room on the right side -->
         <!-- Translation:
-                x = -[(0.5*90cm + 60cm + 2*300cm) + 0.5*830cm (own width) + 10cm (padding)] = -1130cm
+                x = -[(0.5*90cm + 60cm + 2*300cm) + 0.5*800cm (own width) + 40cm (padding)] = -1145cm
                 y = 467cm (same as 'center' one)
                 z = -0.5*390cm (own depth) = -195cm -->
-        <Transform DEF='FrontBaseRightInnerTransform' translation='-11.30 4.67 -1.95'>
+        <Transform DEF='FrontBaseRightInnerTransform' translation='-11.45 4.67 -1.95'>
             <Shape DEF='FrontBaseInnerShape'>
                 <Appearance USE='SecondFloorBaseAppearance'/>
                 <!-- Size:
-                        w = 830cm (width of the room)
+                        w = 800cm (width of the room)
                         h = 90cm (height of 2nd floor/base)
                         d = 390cm (depth of the room) -->
-                <Box DEF='FrontBaseInnerBox' size='8.30 0.90 3.90'/>
+                <Box DEF='FrontBaseInnerBox' size='8.00 0.90 3.90'/>
             </Shape>
         </Transform>
         <!-- Front base right connected - Cover the connected wall on the right side -->
@@ -113,7 +113,7 @@
         </Transform>
         <!-- LEFT SIDE -->
         <!-- Front base left inner - Cover the inner (i.e. first two) rooms on the left side -->
-        <Transform DEF='FrontBaseLeftInnerTransform' translation='11.30 4.67 -1.95'>
+        <Transform DEF='FrontBaseLeftInnerTransform' translation='11.45 4.67 -1.95'>
             <Shape USE='FrontBaseInnerShape'/>
         </Transform>
         <!-- Front base left connected - Cover the connected wall on the left side -->
