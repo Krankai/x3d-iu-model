@@ -146,6 +146,11 @@ Main Buildings (A1 & A2)
             Distance to door
                 Room A1-203	-> d = ...cm (from the right - near the right)
                 Other rooms	-> d = ...cm (from the left - near the left)
+    Third Floor (3rd)
+        [same as second floor except the 'fence' part]
+        Front Rooms	-> Room O1-313	-> width = 800cm
+			-> Room O1-312 & O1-311	-> width = 745cm
+			-> Room O1-310	-> width = 420cm
 
     Door Glasses + Roofs
         Horizontal Columns of 2 doors (where the roofs are)
