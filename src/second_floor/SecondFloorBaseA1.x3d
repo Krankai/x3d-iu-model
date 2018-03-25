@@ -7,7 +7,7 @@
         <meta content='Model the second floor (base) of A1 building of the Internation University' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
         <meta content='14th March, 2018' name='created'/>
-        <meta content='24th March, 2018' name='modified'/>
+        <meta content='25th March, 2018' name='modified'/>
         <meta content='v1.0' name='version'/>
         <meta content='*enter reference citation or relative/online url here*' name='reference'/>
         <meta content='*enter additional url/bibliographic reference information here*' name='reference'/>
@@ -47,20 +47,20 @@
         </Transform>
         <!-- Cover two sides of the 'fence' part -->
         <!-- Translation:
-                x = -0.5*1610cm (own width) - (0.5*90cm + 60cm + 2*300cm) - 10cm (padding) = -1520cm
+                x = -0.5*1580cm (own width) - (0.5*90cm + 60cm + 2*300cm) - 40cm (padding) = -1535cm
                 y = 467cm (same as above)
                 z = -[390cm (main hall) + 0.5*134cm (own depth)] = -457cm -->
-        <Transform DEF='RightFenceCenterBaseTransform' translation='-15.20 4.67 -4.57'>
+        <Transform DEF='RightFenceCenterBaseTransform' translation='-15.35 4.67 -4.57'>
             <Shape DEF='SideFenceCenterBaseShape'>
                 <Appearance USE='SecondFloorBaseAppearance'/>
                 <!-- Size:
-                        w = 830cm (inner room) + 320cm (connected) + 460cm (outer rooms) = 1610cm
+                        w = 800cm (inner room) + 320cm (connected) + 460cm (outer rooms) = 1580cm
                         h = 90cm (height of 2nd floor/base)
                         d = 134cm (depth of 'fence' part) -->
-                <Box size='16.10 0.90 1.34'/>
+                <Box size='15.80 0.90 1.34'/>
             </Shape>
         </Transform>
-        <Transform DEF='LeftFenceCenterBaseTransform' translation='15.20 4.67 -4.57'>
+        <Transform DEF='LeftFenceCenterBaseTransform' translation='15.35 4.67 -4.57'>
             <Shape USE='SideFenceCenterBaseShape'/>
         </Transform>
         
