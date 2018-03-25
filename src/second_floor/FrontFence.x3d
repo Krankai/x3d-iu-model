@@ -50,7 +50,7 @@
                     x = -[0.5*(1530cm - 2*20cm) (center-fence-base's width without two side-base's) + 0.5*20cm (own width)] = -755cm
                     y = 0.5*10cm (own height) = 5cm
                     z = 0.5*106cm (own depth) = 53cm -->
-            <Transform DEF='RightSideFenceBaseTransform' translation='-7525 0.05 0.53'>
+            <Transform DEF='RightSideFenceBaseTransform' translation='-7.55 0.05 0.53'>
                 <Shape DEF='SideFenceBaseShape'>
                     <Appearance USE='BaseAppearance'/>
                     <!-- Size:

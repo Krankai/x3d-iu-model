@@ -3,11 +3,11 @@
 <X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
     <head>
         <!-- Authors need to replace asterisked values or delete unneeded meta tags as appropriate -->
-        <meta content='RoomO1210' name='title'/>
-        <meta content='Model of Room O1-210 (A1 Building) of the International University (VNU-IU)' name='description'/>
+        <meta content='RoomO1313.x3d' name='title'/>
+        <meta content='Model of Room O1-313 (A1 Building) of the International University (VNU-IU)' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
-        <meta content='18th March, 2018' name='created'/>
-        <meta content='24th March, 2018' name='modified'/>
+        <meta content='25th March, 2018' name='created'/>
+        <meta content='25th March, 2018' name='modified'/>
         <meta content='v1.0' name='version'/>
         <meta content='*enter reference citation or relative/online url here*' name='reference'/>
         <meta content='*enter additional url/bibliographic reference information here*' name='reference'/>
@@ -16,7 +16,7 @@
         <meta content='*enter image filename/url here*' name='Image'/>
         <meta content='*enter movie filename/url here*' name='MovingImage'/>
         <meta content='*enter photo filename/url here*' name='photo'/>
-        <meta content='room, O1-210, second floor, A1 building' name='subject'/>
+        <meta content='room, O1-313, third floor, 3rd floor, A1 building' name='subject'/>
         <meta content='*insert any known warnings, bugs or errors here*' name='warning'/>
         <meta content='*enter online Uniform Resource Identifier (URI) or Uniform Resource Locator (URL) address for this file here*' name='identifier'/>
         <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
