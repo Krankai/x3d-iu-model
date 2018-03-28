@@ -36,6 +36,13 @@
                 <Inline url='third_floor/ThirdFloorA1.x3d'/>
             </Transform>
             <!-- 4th Floor -->
+            <!-- Translation:
+                    x = 0cm
+                    y = 102cm (1st) + 320cm + 90cm (2nd) + 320cm + 90cm (3rd) + 320cm = 1242cm
+                    z = 0cm -->
+            <Transform DEF='FourthFloorTransform' translation='0 12.42 0'>
+                <Inline url='fourth_floor/FourthFloorA1.x3d'/>
+            </Transform>
             <!-- 5th Floor -->
             <!-- 6th Floor -->
         </Group>
