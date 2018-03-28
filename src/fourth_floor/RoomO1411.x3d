@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+    <head>
+        <!-- Authors need to replace asterisked values or delete unneeded meta tags as appropriate -->
+        <meta content='RoomO1411.x3d' name='title'/>
+        <meta content='Model of Room O1-411 (A1 Building) of the International University (VNU-IU)' name='description'/>
+        <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
+        <meta content='28th March, 2018' name='created'/>
+        <meta content='28th March, 2018' name='modified'/>
+        <meta content='v1.0' name='version'/>
+        <meta content='*enter reference citation or relative/online url here*' name='reference'/>
+        <meta content='*enter additional url/bibliographic reference information here*' name='reference'/>
+        <meta content='*enter copyright information here* Example: Copyright (c) Web3D Consortium Inc. 2006 to present' name='rights'/>
+        <meta content='*enter drawing filename/url here*' name='drawing'/>
+        <meta content='*enter image filename/url here*' name='Image'/>
+        <meta content='*enter movie filename/url here*' name='MovingImage'/>
+        <meta content='*enter photo filename/url here*' name='photo'/>
+        <meta content='room, office, O1-411, fourth floor, 4th floor, A1 building' name='subject'/>
+        <meta content='*insert any known warnings, bugs or errors here*' name='warning'/>
+        <meta content='*enter online Uniform Resource Identifier (URI) or Uniform Resource Locator (URL) address for this file here*' name='identifier'/>
+        <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+        <meta content='../license.html' name='license'/>
+        <!-- Additional authoring resources for meta-tags: http://www.dublincore.org/documents/dcmi-terms http://www.dublincore.org/documents/dces http://www.w3.org/TR/html4/struct/global.html#h-7.4.4 http://vancouver-webpages.com/META http://vancouver-webpages.com/META/about-mk-metas2.html Additional authoring resources for language codes: http://www.rfc-editor.org/rfc/bcp/bcp47.txt http://www.loc.gov/standards/iso639-2/langhome.html http://www.iana.org/numbers.html#L -->
+    </head>
+    <Scene>
+        <!-- Center: at the 'center' of the room, but on the floor (y = 0) -->
+        <!-- Size: width = 745cm | height = 320cm (height of square) | depth = 390cm (main hall) -->
+        
+        <Group DEF='WallGroup'>
+            <!-- Fron wall (with main door) -->
+            <!-- Translation:
+                    |y| = 0.5*320cm (height of the room) = 160cm
+                    |z| = 0.5*390cm (depth of the room) - 0.5*24cm (depth of front wall) = 183cm -->
+            <Transform DEF='FrontWallTransform' translation='0 1.6 1.83'>
+                <Shape DEF='FrontWallShape'>
+                    <Appearance DEF='WallAppearance'>
+                        <Material diffuseColor='1 1 1'/>
+                    </Appearance>
+                    <!-- Depth = 24cm -->
+                    <Box size='7.45 3.20 0.24'/>
+                </Shape>
+            </Transform>
+            <!-- Back wall (with window) -->
+            <Transform DEF='BackWallTransform' translation='0 1.6 -1.83'>
+                <Shape DEF='BackWallShape'>
+                    <Appearance USE='WallAppearance'/>
+                    <Box size='7.45 3.20 0.24'/>
+                </Shape>
+            </Transform>
+            <!-- Side walls (perspective: inside looking out into the door direction) -->
+            <!-- Translation:
+                    |x| = 0.5*745cm (width of the room) - 0.5*24cm (depth of side wall) = 360.5cm
+                    |y| = 0.5*320cm (height of the room) = 160cm -->
+            <Transform DEF='LeftSideWallTransform' translation='3.605 1.6 0'>
+                <Shape DEF='SideWallShape'>
+                    <Appearance USE='WallAppearance'/>
+                    <!-- Size:
+                        width = 24cm (depth of fron/back wall)
+                        depth = 390cm (depth of room) - 2*24cm (depth of fron/back wall) = 342cm -->
+                    <Box size='0.24 3.20 3.42'/>
+                </Shape>
+            </Transform>
+            <Transform DEF='RightSideWallTransform' translation='-3.605 1.6 0'>
+                <Shape USE='SideWallShape'/>
+            </Transform>
+        </Group>
+    </Scene>
+</X3D>
