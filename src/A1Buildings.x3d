@@ -52,6 +52,13 @@
                 <Inline url='fifth_floor/FifthFloorA1.x3d'/>
             </Transform>
             <!-- 6th Floor -->
+            <!-- Translation:
+                    x = 0cm
+                    y = 1652cm (previous) + 90cm (5th base) + 320cm = 2062cm
+                    z = 0cm -->
+            <Transform DEF='SixthFloorTransform' translation='0 20.62 0'>
+                <Inline url='sixth_floor/SixthFloorA1.x3d'/>
+            </Transform>
         </Group>
         
         <!-- Front columns on the surface of the main building -->

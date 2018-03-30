@@ -159,6 +159,8 @@ Main Buildings (A1 & A2)
 				-> Room O1-514	-> width = 710cm
 				-> Room O1-513/O1-512	-> width = 390cm
 				-> Room O1-511	-> width = 420cm
+    Sixth Floor (6th)
+        [same as third/fourth floor]
 
     Door Glasses + Roofs
         Horizontal Columns of 2 doors (where the roofs are)
