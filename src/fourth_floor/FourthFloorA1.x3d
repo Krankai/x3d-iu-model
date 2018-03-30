@@ -28,7 +28,7 @@
     <Scene>
         <!-- Fourth floor - A1 Building - the International University -->
         <!-- Components:
-                Base        -> SecondFloorBaseA1.x3d
+                Base        -> FourthFloorBaseA1.x3d
                 Rooms       -> ... -->
 
         <!-- Center of the scene = same as in A1Buildings.x3d

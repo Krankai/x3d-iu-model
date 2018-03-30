@@ -148,9 +148,17 @@ Main Buildings (A1 & A2)
                 Other rooms	-> d = ...cm (from the left - near the left)
     Third Floor (3rd)
         [same as second floor except the 'fence' part]
-        Front Rooms	-> Room O1-313	-> width = 800cm
-			-> Room O1-312 & O1-311	-> width = 745cm
-			-> Room O1-310	-> width = 420cm
+        Front (inner) Rooms	-> Room O1-313	-> width = 800cm
+				-> Room O1-312 & O1-311	-> width = 745cm
+				-> Room O1-310	-> width = 420cm
+    Fourth Floor (4th)
+        [same as third floor]
+    Fifth Floor (5th)
+        [same as third/fourth floor, except for the front-inner rooms]
+        Front (inner) Rooms	-> Room O1-515	-> width = 800cm
+				-> Room O1-514	-> width = 710cm
+				-> Room O1-513/O1-512	-> width = 390cm
+				-> Room O1-511	-> width = 420cm
 
     Door Glasses + Roofs
         Horizontal Columns of 2 doors (where the roofs are)

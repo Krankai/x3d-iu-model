@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+    <head>
+        <!-- Authors need to replace asterisked values or delete unneeded meta tags as appropriate -->
+        <meta content='FifthFloorBaseA1.x3d' name='title'/>
+        <meta content='Model the fifth floor (base) of A1 building of the Internation University' name='description'/>
+        <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
+        <meta content='28th March, 2018' name='created'/>
+        <meta content='28th March, 2018' name='modified'/>
+        <meta content='v1.0' name='version'/>
+        <meta content='*enter reference citation or relative/online url here*' name='reference'/>
+        <meta content='*enter additional url/bibliographic reference information here*' name='reference'/>
+        <meta content='*enter reference resource here if required to support function, delivery, or coherence of content*' name='requires'/>
+        <meta content='*enter copyright information here* Example: Copyright (c) Web3D Consortium Inc. 2006 to present' name='rights'/>
+        <meta content='*enter drawing filename/url here*' name='drawing'/>
+        <meta content='*enter image filename/url here*' name='Image'/>
+        <meta content='*enter movie filename/url here*' name='MovingImage'/>
+        <meta content='*enter photo filename/url here*' name='photo'/>
+        <meta content='fifth floor, 5th floor, A1 building, base, floor, International University' name='subject'/>
+        <meta content='*enter permission statements or url here*' name='accessRights'/>
+        <meta content='*insert any known warnings, bugs or errors here*' name='warning'/>
+        <meta content='*enter online Uniform Resource Identifier (URI) or Uniform Resource Locator (URL) address for this file here*' name='identifier'/>
+        <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+        <meta content='../license.html' name='license'/>
+        <!-- Additional authoring resources for meta-tags: http://www.dublincore.org/documents/dcmi-terms http://www.dublincore.org/documents/dces http://www.w3.org/TR/html4/struct/global.html#h-7.4.4 http://vancouver-webpages.com/META http://vancouver-webpages.com/META/about-mk-metas2.html Additional authoring resources for language codes: http://www.rfc-editor.org/rfc/bcp/bcp47.txt http://www.loc.gov/standards/iso639-2/langhome.html http://www.iana.org/numbers.html#L -->
+    </head>
+    <Scene>
+        <!-- Center of the model -> at the front (Oz) + bottom (Oy) + middle (Ox) -->
+        
+        <!-- *** Primary/Center base - Covering the corridor + back rooms (except two WCs) *** -->
+        <!-- Translation:
+                x = 0cm
+                y = 0.5*90cm (own height) = 45cm
+                z = -1614cm (total depth - from main gate to behind of back rooms) + 0.5*1224cm (own depth) = -1002cm -->
+        <Transform DEF='PrimaryBaseTransform' translation='0 0.45 -10.02'>
+            <Shape>
+                <Appearance DEF='BaseAppearance'>
+                    <Material diffuseColor='1 1 1'/>
+                </Appearance>
+                <!-- Size:
+                        w = 6*775cm (width of each room) = 4650cm
+                        h = 90cm (height of 3rd floor/base)
+                        d = 360cm (corridor's) + 864cm (back rooms' depth) = 1224cm -->
+                <Box size='46.50 0.9 12.24'/>
+            </Shape>
+        </Transform>
+        
+        <!-- *** Front bases - Covering front room(s) *** -->
+        <!-- Front inner base - Cover the inner (i.e. three) rooms in the middle -->
+        <!-- Translation:
+                x = 0cm
+                y = 0.5*90cm (own height) = 45cm
+                z = -0.5*390cm (own depth) = -195cm -->
+        <Transform DEF='FrontInnerBaseTransform' translation='0 0.45 -1.95'>
+            <Shape DEF='FrontInnerBaseShape'>
+                <Appearance USE='BaseAppearance'/>
+                <!-- Size:
+                        w = (5*90cm + 4*60cm + 8*300cm) = 3090cm
+                        h = 90cm (height of 3rd floor/base)
+                        d = 390cm (depth of the room) -->
+                <Box size='30.90 0.90 3.90'/>
+            </Shape>
+        </Transform>
+        <!-- RIGHT SIDE -->
+        <!-- Front right connected base - Cover the connected wall on the right side -->
+        <!-- Translation:
+                x = -[(5*0.5*90cm + 2*60cm + 4*300cm) + 0.5*320cm (own width)] = -1705cm
+                y = 0.5*90cm (own height) = 45cm
+                z = -390cm (main hall's depth) + 0.5*24cm (own depth) = -378cm -->
+        <Transform DEF='FrontRightConnectedBaseTransform' translation='-17.05 0.45 -3.78'>
+            <Shape DEF='FrontConnectedBaseShape'>
+                <Appearance USE='BaseAppearance'/>
+                <!-- Size:
+                        w = 320cm (width of the connected wall)
+                        h = 90cm (height of 2nd floor/base)
+                        d = 24cm (depth of the connected wall) -->
+                <Box DEF='FrontConnectedBaseBox' size='3.20 0.90 0.24'/>
+            </Shape>
+        </Transform>
+        <!-- Front right outer base - Cover the outer (i.e. last two) rooms in the right side -->
+        <!-- Translation:
+                x = -[(5*0.5*90cm + 2*60cm + 4*300cm) + 320cm (connected wall) + 0.5*460cm (own width)] = -2095cm
+                y = 45cm (same as above)
+                z = -[30cm ('padding') + 0.5*360cm (own depth)] = -210cm -->
+        <Transform DEF='FrontRightOuterBaseTransform' translation='-20.95 0.45 -2.10'>
+            <Shape DEF='FrontOuterBaseShape'>
+                <Appearance USE='BaseAppearance'/>
+                <!-- Size:
+                        w = 460cm (total width of the two outer rooms)
+                        h = 90cm (height of 2nd floor/base)
+                        d = 360cm (depth of both outer rooms) -->
+                <Box DEF='FrontOuterBaseBox' size='4.60 0.90 3.60'/>
+            </Shape>
+        </Transform>
+        <!-- LEFT SIDE -->
+        <!-- Front left connected base - Cover the connected wall on the left side -->
+        <Transform DEF='FrontLeftConnectedBaseTransform' translation='17.05 0.45 -3.78'>
+            <Shape USE='FrontConnectedBaseShape'/>
+        </Transform>
+        <!-- Front left outer base - Cover the outer (i.e. last two) rooms on the left side -->
+        <Transform DEF='FrontLeftOuterBaseTransform' translation='20.95 0.45 -2.10'>
+            <Shape USE='FrontOuterBaseShape'/>
+        </Transform>
+        
+        <!-- *** Connected Walls (connect two sets of front rooms) *** -->
+        <!-- Translation:
+                x = -[0.5*320cm (own width) + 4*(300cm + 0.5*90cm + 0.5*60cm) + 0.5*90cm = -1705cm
+                y = 0.5*320cm (own height) + 90cm (3rd base) = 250cm
+                z = -390cm (depth of room) + 0.5*24cm (own depth) = -378cm -->
+        <Transform DEF='RightConnectedWallTransform' translation='-17.05 2.50 -3.78'>
+            <Shape DEF='ConnectedWallShape'>
+                <Appearance DEF='WallAppearance'>
+                    <Material diffuseColor='1 1 1'/>
+                </Appearance>
+                <!-- Size:
+                        w = 320cm
+                        h = 320cm
+                        z = 24cm -->
+                <Box DEF='ConnectedWallBox' size='3.20 3.20 0.24'/>
+            </Shape>
+        </Transform>
+        <Transform DEF='LeftConnectedWallTransform' translation='17.05 2.50 -3.78'>
+            <Shape USE='ConnectedWallShape'/>
+        </Transform>
+    </Scene>
+</X3D>

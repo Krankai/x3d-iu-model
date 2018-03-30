@@ -3,11 +3,11 @@
 <X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
     <head>
         <!-- Authors need to replace asterisked values or delete unneeded meta tags as appropriate -->
-        <meta content='ThirdFloorA1.x3d' name='title'/>
-        <meta content='Model the entire third floor of the A1 building of IU' name='description'/>
+        <meta content='FifthFloorA1.x3d' name='title'/>
+        <meta content='Model the entire fifth floor of the A1 building of IU' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
-        <meta content='25th March, 2018' name='created'/>
-        <meta content='25th March, 2018' name='modified'/>
+        <meta content='28th March, 2018' name='created'/>
+        <meta content='28th March, 2018' name='modified'/>
         <meta content='v1.0' name='version'/>
         <meta content='*enter reference citation or relative/online url here*' name='reference'/>
         <meta content='*enter additional url/bibliographic reference information here*' name='reference'/>
@@ -17,7 +17,7 @@
         <meta content='*enter image filename/url here*' name='Image'/>
         <meta content='*enter movie filename/url here*' name='MovingImage'/>
         <meta content='*enter photo filename/url here*' name='photo'/>
-        <meta content='third floor, 3rd floor, A1 building, International University' name='subject'/>
+        <meta content='fifth floor, 5th floor, A1 building, International University' name='subject'/>
         <meta content='*enter permission statements or url here*' name='accessRights'/>
         <meta content='*insert any known warnings, bugs or errors here*' name='warning'/>
         <meta content='*enter online Uniform Resource Identifier (URI) or Uniform Resource Locator (URL) address for this file here*' name='identifier'/>
@@ -26,9 +26,9 @@
         <!-- Additional authoring resources for meta-tags: http://www.dublincore.org/documents/dcmi-terms http://www.dublincore.org/documents/dces http://www.w3.org/TR/html4/struct/global.html#h-7.4.4 http://vancouver-webpages.com/META http://vancouver-webpages.com/META/about-mk-metas2.html Additional authoring resources for language codes: http://www.rfc-editor.org/rfc/bcp/bcp47.txt http://www.loc.gov/standards/iso639-2/langhome.html http://www.iana.org/numbers.html#L -->
     </head>
     <Scene>
-        <!-- Third floor - A1 Building - the International University -->
+        <!-- Fifth floor - A1 Building - the International University -->
         <!-- Components:
-                Base        -> ThirdFloorBaseA1.x3d
+                Base        -> FifthFloorBaseA1.x3d
                 Rooms       -> ... -->
 
         <!-- Center of the scene = same as in A1Buildings.x3d
@@ -37,8 +37,8 @@
                 + Oz    -> at the front of the whole model -->
 
         <!-- Base/Floor -->
-        <Transform DEF='ThirdFloorBaseA1Transform' translation='0 0 0'>
-            <Inline url='ThirdFloorBaseA1.x3d'/>
+        <Transform DEF='FifthFloorBaseA1Transform' translation='0 0 0'>
+            <Inline url='FifthFloorBaseA1.x3d'/>
         </Transform>
         
         <!-- Front Rooms -->
@@ -46,33 +46,41 @@
         <Group DEF='FrontRoomsGroup'>
             <!-- INNER Rooms - From RIGHT to LEFT -->
             <Group DEF='FrontInnerRoomsGroup'>
+                <!-- Room O1-515 -->
                 <!-- Translation:
                         x = -[0.5*800cm (own width) + (0.5*90cm + 60cm + 2*300cm) + 40cm (padding)] = -1145cm
                         y = 90cm (3rd floor's base)
                         z = -0.5*390cm (own depth) = -195cm -->
-                <Transform DEF='RoomO1313Transform' translation='-11.45 0.90 -1.95'>
-                    <Inline url='RoomO1313.x3d'/>
+                <Transform DEF='RoomO1515Transform' translation='-11.45 0.90 -1.95'>
+                    <Inline url='RoomO1515.x3d'/>
                 </Transform>
                 <!-- Translation:
-                        x = -1145cm (previous) + 0.5*800cm (previous room's width) + 0.5*745cm (own width) = -372.5cm
+                        x = -1145cm (previous) + 0.5*800cm (previous room's width) + 0.5*710cm (own width) = -390cm
                         y = 90cm (same as above)
                         z = -195cm (same as above) -->
-                <Transform DEF='RoomO1312Transform' translation='-3.725 0.90 -1.95'>
-                    <Inline url='RoomO1312.x3d'/>
+                <Transform DEF='RoomO1514Transform' translation='-3.90 0.90 -1.95'>
+                    <Inline url='RoomO1514.x3d'/>
                 </Transform>
                 <!-- Translation:
-                        x = -372.5cm (previous) + 2*0.5*745cm = 372.5cm
+                        x = -390cm (previous) + 0.5*710cm (previous room's width) + 0.5*390cm (own width) = 160cm
                         y = 90cm (same as above)
                         z = -195cm (same as above) -->
-                <Transform DEF='RoomO1311Transform' translation='3.725 0.90 -1.95'>
-                    <Inline url='RoomO1311.x3d'/>
+                <Transform DEF='RoomO1413Transform' translation='1.60 0.90 -1.95'>
+                    <Inline url='RoomO1513.x3d'/>
                 </Transform>
                 <!-- Translation:
-                        x = 372.5cm (previous) + 0.5*745cm (previous room's width) + 0.5*420cm (own width) = 955cm
+                        x = 160cm (previous) + 0.5*390cm (previous room's width) + 0.5*390cm (own width) = 550cm
                         y = 90cm (same as above)
                         z = -195cm (same as above) -->
-                <Transform DEF='RoomO1310Transform' translation='9.55 0.90 -1.95'>
-                    <Inline url='RoomO1310.x3d'/>
+                <Transform DEF='RoomO1512Transform' translation='5.50 0.90 -1.95'>
+                    <Inline url='RoomO1512.x3d'/>
+                </Transform>
+                <!-- Translation:
+                        x = 550cm (previous) + 0.5*390cm (previous room's width) + 0.5*420cm (own width) = 955cm
+                        y = 90cm (same as above)
+                        z = -195cm (same as above) -->
+                <Transform DEF='RoomO1511Transform' translation='9.55 0.90 -1.95'>
+                    <Inline url='RoomO1511.x3d'/>
                 </Transform>
                 <!-- Translation:
                         x = 1260cm (same as in other floors)
@@ -126,53 +134,53 @@
             <!-- Normal Rooms -->
             <Group DEF='BackNormalRoomsGroup'>
                 <!-- *** From RIGHT to LEFT *** -->
-                <!-- Room A1-303 -->
+                <!-- Room A1-503 -->
                 <!-- Translation:
                         x = -[(5*0.5*90cm + 2*60cm + 4*300cm) + 320cm (connected) + 460cm (store room & elevators)] + 0.5*775cm (own width) = -1937.5cm
                         y = 90cm (3rd floor's base)
                         z = -1614cm (total depth) + 0.5*864cm (own depth) = -1182cm -->
-                <Transform DEF='RoomA1303Transform' translation='-19.375 0.90 -11.82'>
-                    <Inline url='RoomA1303.x3d'/>
+                <Transform DEF='RoomA1503Transform' translation='-19.375 0.90 -11.82'>
+                    <Inline url='RoomA1503.x3d'/>
                 </Transform>
-                <!-- Room A1-304 -->
+                <!-- Room LA1-504 -->
                 <!-- Translation:
                         x = -1162.5cm (same as that of Room LA-104)
                         y = 90cm (same as above)
                         z = -1182cm (same as above) -->
-                <Transform DEF='RoomA1304Transform' translation='-11.625 0.90 -11.82'>
-                    <Inline url='RoomA1304.x3d'/>
+                <Transform DEF='RoomLA1504Transform' translation='-11.625 0.90 -11.82'>
+                    <Inline url='RoomLA1504.x3d'/>
                 </Transform>
-                <!-- Room O1-305 -->
+                <!-- Room LA1-505 -->
                 <!-- Translation:
                         x = -387.5cm (same as that of Room O1-105)
                         y = 90cm (same as above)
                         z = -1182cm (same as above) -->
-                <Transform DEF='RoomO1305Transform' translation='-3.875 0.90 -11.82'>
-                    <Inline url='RoomO1305.x3d'/>
+                <Transform DEF='RoomLA1505Transform' translation='-3.875 0.90 -11.82'>
+                    <Inline url='RoomLA1505.x3d'/>
                 </Transform>
-                <!-- Room O1-306 -->
+                <!-- Room O1-506 -->
                 <!-- Translation:
                         x = -387.5cm (previous x) + 0.5*775cm (previous room's width) + 0.5*775cm (own width) = 387.5cm
                         y = 90cm (same as above)
                         z = -1182cm (same as above) -->
-                <Transform DEF='RoomO1306Transform' translation='3.875 0.90 -11.82'>
-                    <Inline url='RoomO1306.x3d'/>
+                <Transform DEF='RoomO1506Transform' translation='3.875 0.90 -11.82'>
+                    <Inline url='RoomO1506.x3d'/>
                 </Transform>
-                <!-- Room O1-307 -->
+                <!-- Room LA1-507 -->
                 <!-- Translation:
                         x = 387.5cm (previous x) + 0.5*775cm (previous room's width) + 0.5*775cm (own width) = 1162.5cm
                         y = 90cm (same as above)
                         z = -1182cm (same as above) -->
-                <Transform DEF='RoomO1307Transform' translation='11.625 0.90 -11.82'>
-                    <Inline url='RoomO1307.x3d'/>
+                <Transform DEF='RoomLA1507Transform' translation='11.625 0.90 -11.82'>
+                    <Inline url='RoomLA1507.x3d'/>
                 </Transform>
-                <!-- Room O1-308 -->
+                <!-- Room LA1-508 -->
                 <!-- Translation:
                         x = 1937.5cm (same as that of Room O1-108)
                         y = 90cm (same as above)
                         z = -1182cm (same as above) -->
-                <Transform DEF='RoomO1308Transform' translation='19.375 0.90 -11.82'>
-                    <Inline url='RoomO1308.x3d'/>
+                <Transform DEF='RoomLA1508Transform' translation='19.375 0.90 -11.82'>
+                    <Inline url='RoomLA1508.x3d'/>
                 </Transform>
             </Group>
             <!-- Right Water Closets (WCs) -->
