@@ -7,7 +7,7 @@
         <meta content='Model the second floor (base) of A1 building of the Internation University' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
         <meta content='14th March, 2018' name='created'/>
-        <meta content='25th March, 2018' name='modified'/>
+        <meta content='2nd April, 2018' name='modified'/>
         <meta content='v1.0' name='version'/>
         <meta content='*enter reference citation or relative/online url here*' name='reference'/>
         <meta content='*enter additional url/bibliographic reference information here*' name='reference'/>
@@ -31,9 +31,9 @@
         <!-- *** Primary/Center base - Covering the corridor + back rooms (except two WCs) *** -->
         <!-- Translation:
                 x = 0cm
-                y = -0.5*90cm (own base) + 102cm (1st floor base) + 320cm (distance b/t two floors) + 90cm ('expectation' of 2nd floor'base) = 467cm
+                y = 0.5*90cm (own height) = 45cm
                 z = -1614cm (total depth - from main gate to behind of back rooms) + 0.5*1118cm (own depth) = -1055cm -->
-        <Transform DEF='CenterBaseTransform' translation='0 4.67 -10.55'>
+        <Transform DEF='CenterBaseTransform' translation='0 0.45 -10.55'>
             <Shape>
                 <Appearance DEF='SecondFloorBaseAppearance'>
                     <Material diffuseColor='1 1 1'/>
@@ -48,9 +48,9 @@
         <!-- Cover two sides of the 'fence' part -->
         <!-- Translation:
                 x = -0.5*1580cm (own width) - (0.5*90cm + 60cm + 2*300cm) - 40cm (padding) = -1535cm
-                y = 467cm (same as above)
+                y = 45cm (same as above)
                 z = -[390cm (main hall) + 0.5*134cm (own depth)] = -457cm -->
-        <Transform DEF='RightFenceCenterBaseTransform' translation='-15.35 4.67 -4.57'>
+        <Transform DEF='RightFenceCenterBaseTransform' translation='-15.35 0.45 -4.57'>
             <Shape DEF='SideFenceCenterBaseShape'>
                 <Appearance USE='SecondFloorBaseAppearance'/>
                 <!-- Size:
@@ -60,7 +60,7 @@
                 <Box size='15.80 0.90 1.34'/>
             </Shape>
         </Transform>
-        <Transform DEF='LeftFenceCenterBaseTransform' translation='15.35 4.67 -4.57'>
+        <Transform DEF='LeftFenceCenterBaseTransform' translation='15.35 0.45 -4.57'>
             <Shape USE='SideFenceCenterBaseShape'/>
         </Transform>
         
@@ -69,9 +69,9 @@
         <!-- Front base right inner - Cover the inner (i.e. first) room on the right side -->
         <!-- Translation:
                 x = -[(0.5*90cm + 60cm + 2*300cm) + 0.5*800cm (own width) + 40cm (padding)] = -1145cm
-                y = 467cm (same as 'center' one)
+                y = 45cm (same as above)
                 z = -0.5*390cm (own depth) = -195cm -->
-        <Transform DEF='FrontBaseRightInnerTransform' translation='-11.45 4.67 -1.95'>
+        <Transform DEF='FrontBaseRightInnerTransform' translation='-11.45 0.45 -1.95'>
             <Shape DEF='FrontBaseInnerShape'>
                 <Appearance USE='SecondFloorBaseAppearance'/>
                 <!-- Size:
@@ -84,9 +84,9 @@
         <!-- Front base right connected - Cover the connected wall on the right side -->
         <!-- Translation:
                 x = -[(5*0.5*90cm + 2*60cm + 4*300cm) + 0.5*320cm (own width)] = -1705cm
-                y = 467cm (same as above)
+                y = 45cm (same as above)
                 z = -390cm (main hall's depth) + 0.5*24cm (own depth) = -378cm -->
-        <Transform DEF='FrontBaseRightConnectedTransform' translation='-17.05 4.67 -3.78'>
+        <Transform DEF='FrontBaseRightConnectedTransform' translation='-17.05 0.45 -3.78'>
             <Shape DEF='FrontBaseConnectedShape'>
                 <Appearance USE='SecondFloorBaseAppearance'/>
                 <!-- Size:
@@ -99,9 +99,9 @@
         <!-- Front base right outer - Cover the outer (i.e. last two) rooms in the right side -->
         <!-- Translation:
                 x = -[(5*0.5*90cm + 2*60cm + 4*300cm) + 320cm (connected wall) + 0.5*460cm (own width)] = -2095cm
-                y = 467cm (same as above)
+                y = 45cm (same as above)
                 z = -[30cm ('padding') + 0.5*360cm (own depth)] = -210cm -->
-        <Transform DEF='FrontBaseRightOuterTransform' translation='-20.95 4.67 -2.10'>
+        <Transform DEF='FrontBaseRightOuterTransform' translation='-20.95 0.45 -2.10'>
             <Shape DEF='FrontBaseOuterShape'>
                 <Appearance USE='SecondFloorBaseAppearance'/>
                 <!-- Size:
@@ -113,24 +113,24 @@
         </Transform>
         <!-- LEFT SIDE -->
         <!-- Front base left inner - Cover the inner (i.e. first two) rooms on the left side -->
-        <Transform DEF='FrontBaseLeftInnerTransform' translation='11.45 4.67 -1.95'>
+        <Transform DEF='FrontBaseLeftInnerTransform' translation='11.45 0.45 -1.95'>
             <Shape USE='FrontBaseInnerShape'/>
         </Transform>
         <!-- Front base left connected - Cover the connected wall on the left side -->
-        <Transform DEF='FrontBaseLeftConnectedTransform' translation='17.05 4.67 -3.78'>
+        <Transform DEF='FrontBaseLeftConnectedTransform' translation='17.05 0.45 -3.78'>
             <Shape USE='FrontBaseConnectedShape'/>
         </Transform>
         <!-- Front base left outer - Cover the outer (i.e. last two) rooms on the left side -->
-        <Transform DEF='FrontBaseLeftOuterTransform' translation='20.95 4.67 -2.10'>
+        <Transform DEF='FrontBaseLeftOuterTransform' translation='20.95 0.45 -2.10'>
             <Shape USE='FrontBaseOuterShape'/>
         </Transform>
         
         <!-- *** Connected Walls (connect two sets of front rooms) *** -->
         <!-- Translation:
                 x = -[0.5*320cm (own width) + 4*(300cm + 0.5*90cm + 0.5*60cm) + 0.5*90cm = -1705cm
-                y = 0.5*320cm (own height) + 102cm (1st base) + 320cm (b/t 1st and 2nd) + 90cm (2nd base) = 672cm
+                y = 0.5*320cm (own height) + 90cm (2nd base) = 250cm
                 z = -390cm (depth of room) + 0.5*24cm (own depth) = -378cm -->
-        <Transform DEF='RightConnectedWallTransform' translation='-17.05 6.72 -3.78'>
+        <Transform DEF='RightConnectedWallTransform' translation='-17.05 2.50 -3.78'>
             <Shape DEF='ConnectedWallShape'>
                 <Appearance DEF='WallAppearance'>
                     <Material diffuseColor='1 1 1'/>
@@ -142,7 +142,7 @@
                 <Box DEF='ConnectedWallBox' size='3.20 3.20 0.24'/>
             </Shape>
         </Transform>
-        <Transform DEF='LeftConnectedWallTransform' translation='17.05 6.72 -3.78'>
+        <Transform DEF='LeftConnectedWallTransform' translation='17.05 2.50 -3.78'>
             <Shape USE='ConnectedWallShape'/>
         </Transform>
     </Scene>

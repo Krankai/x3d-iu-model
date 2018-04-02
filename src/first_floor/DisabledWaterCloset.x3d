@@ -3,11 +3,11 @@
 <X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
     <head>
         <!-- Authors need to replace asterisked values or delete unneeded meta tags as appropriate -->
-        <meta content='RightDisabledWaterCloset.x3d' name='title'/>
+        <meta content='DisabledWaterCloset.x3d' name='title'/>
         <meta content='Model of WC for disabled, of the International University' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
         <meta content='11th March, 2018' name='created'/>
-        <meta content='11th March, 2018' name='modified'/>
+        <meta content='2nd April, 2018' name='modified'/>
         <meta content='v1.0' name='version'/>
         <meta content='*enter reference citation or relative/online url here*' name='reference'/>
         <meta content='*enter additional url/bibliographic reference information here*' name='reference'/>
@@ -28,7 +28,7 @@
     <Scene>
         <!-- WC for disabled people/students - On the left side of the building -->
         <!-- Center: at the middle of the room, but on the floor -->
-        <!-- Size: width = 208cm | heigth = 320 (height of square) | depth = 360cm -->
+        <!-- Size: width = 224cm | heigth = 320 (height of square) | depth = 360cm -->
         
         <Group DEF='WallGroup'>
             <!-- Front wall (with main door) -->
@@ -41,23 +41,23 @@
                         <Material diffuseColor='1 1 1'/>
                     </Appearance>
                     <!-- Size:
-                            w = 208cm (width of the room)
+                            w = 224cm (width of the room)
                             h = 320cm (height of the room)
                             d = 24cm (depth of the wall) -->
-                    <Box size='2.08 3.20 0.24'/>
+                    <Box size='2.24 3.20 0.24'/>
                 </Shape>
             </Transform>
             <!-- Back wall (with window) -->
             <Transform DEF='BackWallTransform' translation='0 1.6 -1.68'>
                 <Shape DEF='BackWallShape'>
                     <Appearance USE='WallAppearance'/>
-                    <Box size='2.08 3.20 0.24'/>
+                    <Box size='2.24 3.20 0.24'/>
                 </Shape>
             </Transform>
             <!-- Side walls (perspective: inside out; in the door direction) -->
             <!-- Translation:
-                    |x| = 0.5*208cm (room's width) - 0.5*24cm = 92cm -->
-            <Transform DEF='LeftSideWallTransform' translation='0.92 1.6 0'>
+                    |x| = 0.5*224cm (room's width) - 0.5*24cm = 100cm -->
+            <Transform DEF='LeftSideWallTransform' translation='1.00 1.6 0'>
                 <Shape DEF='SideWallShape'>
                     <Appearance USE='WallAppearance'/>
                     <!-- Size:
@@ -66,7 +66,7 @@
                     <Box size='0.24 3.20 3.12'/>
                 </Shape>
             </Transform>
-            <Transform DEF='RightSideWallTransform' translation='-0.92 1.6 0'>
+            <Transform DEF='RightSideWallTransform' translation='-1.00 1.6 0'>
                 <Shape USE='SideWallShape'/>
             </Transform>
         </Group>

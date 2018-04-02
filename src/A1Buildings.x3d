@@ -7,7 +7,7 @@
         <meta content='Model the entire A1 buildings of IU' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
         <meta content='30th Nov, 2017' name='created'/>
-        <meta content='30th March, 2018' name='modified'/>
+        <meta content='2nd APril, 2018' name='modified'/>
         <meta content='IU, A1Buildings, building, A1' name='subject'/>
         <meta content='Version 1.0' name='version'/>
         <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
@@ -20,11 +20,19 @@
         <!-- Floor -->
         <Group DEF='FloorGroup'>
             <!-- 1st Floor -->
+            <!-- Translation:
+                    x = 0cm
+                    y = 0cm
+                    z = 0cm -->
             <Transform DEF='FirstFloorTransform' translation='0 0 0'>
                 <Inline url='first_floor/FirstFloorA1.x3d'/>
             </Transform>
             <!-- 2nd Floor -->
-            <Transform DEF='SecondFloorTransform' translation='0 0 0'>
+            <!-- Translation:
+                    x = 0cm
+                    y = 102cm (1st floor) + 320cm = 422cm
+                    z = 0cm -->
+            <Transform DEF='SecondFloorTransform' translation='0 4.22 0'>
                 <Inline url='second_floor/SecondFloorA1.x3d'/>
             </Transform>
             <!-- 3rd Floor -->

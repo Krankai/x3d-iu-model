@@ -7,7 +7,7 @@
         <meta content='Model the entire first floor of the A1 building of IU' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
         <meta content='16th March, 2018' name='created'/>
-        <meta content='24th March, 2018' name='modified'/>
+        <meta content='2nd April, 2018' name='modified'/>
         <meta content='v1.0' name='version'/>
         <meta content='*enter reference citation or relative/online url here*' name='reference'/>
         <meta content='*enter additional url/bibliographic reference information here*' name='reference'/>
@@ -159,31 +159,43 @@
                 <!-- Translation:
                         |x| = (5*0.5*90cm + 2*60cm + 4*300cm + 320cm + 460cm) (half-width of corridor) + 0.5*360cm (depth of Male WC) = 2505cm
                         |y| = 102cm (height of base)
-                        |z| = 1614cm (total depth of base) - [0.5*456cm (width of Male WC) + 208cm (width of disabled WC) + 200cm (width of Female WC) = 978cm -->
-                <Transform DEF='BackRightMaleWCTransform' translation='-25.05 1.02 -9.78' rotation='0 1 0 -1.5708'>
+                        |z| = 390cm (main hall) + 360cm (main corridor) + 0.5*476cm (own width) = 988cm -->
+                <Transform DEF='BackRightMaleWCTransform' translation='-25.05 1.02 -9.88' rotation='0 1 0 -1.5708'>
                     <Inline url='RightMaleWaterCloset.x3d'/>
                 </Transform>
                 <!-- For Females -->
                 <!-- Translation:
                         |x| = (5*0.5*90cm + 2*60cm + 4*300cm + 320cm + 460cm) (half-width of corridor) + 0.5*360cm (depth of the room) = 2505cm
                         |y| = 102cm (height of base)
-                        |z| = 1614cm (total depth of base) - 0.5*408cm (width of the room) = 1410cm -->
-                <Transform DEF='BackRightFemaleWCTransform' translation='-25.05 1.02 -14.10' rotation='0 1 0 -1.5708'>
+                        |z| = 390cm (main hall) + 360cm (main corridor) + 476cm (male WC) + 0.5*438cm (onw width) = 1445cm -->
+                <Transform DEF='BackRightFemaleWCTransform' translation='-25.05 1.02 -14.45' rotation='0 1 0 -1.5708'>
                     <Inline url='RightFemaleWaterCloset.x3d'/>
                 </Transform>
             </Group>
             <!-- Left Water Closets (WCs) -->
             <Group DEF='BackLeftWCsGroup'>
                 <!-- For Males -->
-                <Transform DEF='BackLeftMaleWCTransform' translation='25.05 1.02 -9.78' rotation='0 1 0 1.5708'>
+                <!-- Translation:
+                        x = 2505cm
+                        y = 102cm
+                        z = -[390cm (main hall) + 360cm (main corridor) + 0.5*476cm (own width)] = -988cm -->
+                <Transform DEF='BackLeftMaleWCTransform' translation='25.05 1.02 -9.88' rotation='0 1 0 1.5708'>
                     <Inline url='LeftMaleWaterCloset.x3d'/>
                 </Transform>
                 <!-- For Disabled (people) -->
-                <Transform DEF='BackLeftDisabledWCTransform' translation='25.05 1.02 -13.10' rotation='0 1 0 1.5708'>
-                    <Inline url='LeftDisabledWaterCloset.x3d'/>
+                <!-- Translation:
+                        x = 2505cm
+                        y = 102cm
+                        z = -[390cm (main hall) + 360cm (main corridor) + 476cm (male WC) + 0.5*214cm (own width)] = -1333cm -->
+                <Transform DEF='BackLeftDisabledWCTransform' translation='25.05 1.02 -13.33' rotation='0 1 0 1.5708'>
+                    <Inline url='DisabledWaterCloset.x3d'/>
                 </Transform>
                 <!-- For Females -->
-                <Transform DEF='BackLeftFemaleWCTransform' translation='25.05 1.02 -15.14' rotation='0 1 0 1.5708'>
+                <!-- Translation:
+                        x = 2505cm
+                        y = 102cm
+                        z = -[390cm (main hall) + 360cm (main corridor) + 476cm (male WC) + 214cm (female WC) + 0.5*224cm (own width)] = -1552cm -->
+                <Transform DEF='BackLeftFemaleWCTransform' translation='25.05 1.02 -15.52' rotation='0 1 0 1.5708'>
                     <Inline url='LeftFemaleWaterCloset.x3d'/>
                 </Transform>
             </Group>
