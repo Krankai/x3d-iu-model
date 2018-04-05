@@ -7,7 +7,7 @@
         <meta content='Model the second floor (base) of A1 building of the Internation University' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
         <meta content='14th March, 2018' name='created'/>
-        <meta content='2nd April, 2018' name='modified'/>
+        <meta content='5th April, 2018' name='modified'/>
         <meta content='v1.0' name='version'/>
         <meta content='*enter reference citation or relative/online url here*' name='reference'/>
         <meta content='*enter additional url/bibliographic reference information here*' name='reference'/>
@@ -35,7 +35,7 @@
                 z = -1614cm (total depth - from main gate to behind of back rooms) + 0.5*1118cm (own depth) = -1055cm -->
         <Transform DEF='CenterBaseTransform' translation='0 0.45 -10.55'>
             <Shape>
-                <Appearance DEF='SecondFloorBaseAppearance'>
+                <Appearance DEF='BaseAppearance'>
                     <Material diffuseColor='1 1 1'/>
                 </Appearance>
                 <!-- Size:
@@ -45,22 +45,23 @@
                 <Box size='46.50 0.9 11.18'/>
             </Shape>
         </Transform>
+        
         <!-- Cover two sides of the 'fence' part -->
         <!-- Translation:
                 x = -0.5*1580cm (own width) - (0.5*90cm + 60cm + 2*300cm) - 40cm (padding) = -1535cm
                 y = 45cm (same as above)
-                z = -[390cm (main hall) + 0.5*134cm (own depth)] = -457cm -->
-        <Transform DEF='RightFenceCenterBaseTransform' translation='-15.35 0.45 -4.57'>
+                z = -[390cm (main hall) + 0.5*106cm (own depth)] = -443cm -->
+        <Transform DEF='RightFenceCenterBaseTransform' translation='-15.35 0.45 -4.43'>
             <Shape DEF='SideFenceCenterBaseShape'>
-                <Appearance USE='SecondFloorBaseAppearance'/>
+                <Appearance USE='BaseAppearance'/>
                 <!-- Size:
                         w = 800cm (inner room) + 320cm (connected) + 460cm (outer rooms) = 1580cm
                         h = 90cm (height of 2nd floor/base)
-                        d = 134cm (depth of 'fence' part) -->
-                <Box size='15.80 0.90 1.34'/>
+                        d = 106cm (depth of 'fence' part - the hollow part) -->
+                <Box size='15.80 0.90 1.06'/>
             </Shape>
         </Transform>
-        <Transform DEF='LeftFenceCenterBaseTransform' translation='15.35 0.45 -4.57'>
+        <Transform DEF='LeftFenceCenterBaseTransform' translation='15.35 0.45 -4.43'>
             <Shape USE='SideFenceCenterBaseShape'/>
         </Transform>
         
@@ -73,7 +74,7 @@
                 z = -0.5*390cm (own depth) = -195cm -->
         <Transform DEF='FrontBaseRightInnerTransform' translation='-11.45 0.45 -1.95'>
             <Shape DEF='FrontBaseInnerShape'>
-                <Appearance USE='SecondFloorBaseAppearance'/>
+                <Appearance USE='BaseAppearance'/>
                 <!-- Size:
                         w = 800cm (width of the room)
                         h = 90cm (height of 2nd floor/base)
@@ -88,7 +89,7 @@
                 z = -390cm (main hall's depth) + 0.5*24cm (own depth) = -378cm -->
         <Transform DEF='FrontBaseRightConnectedTransform' translation='-17.05 0.45 -3.78'>
             <Shape DEF='FrontBaseConnectedShape'>
-                <Appearance USE='SecondFloorBaseAppearance'/>
+                <Appearance USE='BaseAppearance'/>
                 <!-- Size:
                         w = 320cm (width of the connected wall)
                         h = 90cm (height of 2nd floor/base)
@@ -103,7 +104,7 @@
                 z = -[30cm ('padding') + 0.5*360cm (own depth)] = -210cm -->
         <Transform DEF='FrontBaseRightOuterTransform' translation='-20.95 0.45 -2.10'>
             <Shape DEF='FrontBaseOuterShape'>
-                <Appearance USE='SecondFloorBaseAppearance'/>
+                <Appearance USE='BaseAppearance'/>
                 <!-- Size:
                         w = 460cm (total width of the two outer rooms)
                         h = 90cm (height of 2nd floor/base)
@@ -145,5 +146,44 @@
         <Transform DEF='LeftConnectedWallTransform' translation='17.05 2.50 -3.78'>
             <Shape USE='ConnectedWallShape'/>
         </Transform>
+        
+        <!-- *** Side Hall *** -->
+        <!-- Right Side Hall - Covering {Student WCs -> Side Rooms} -->
+        <!-- Translation:
+                x = -[(4*300cm + 5*0.5*90cm + 2*60cm) + 320cm (connected wall) + 205cm (store room) +
+                    255cm (elevators) + 0.5*1920cm (own width)] = -3285cm
+                y = 0.5*90cm (own height) = 45cm
+                z = -[30cm (difference) + 0.5*1634cm (own depth)] = -847cm -->
+        <Transform DEF='RightSideHallTransform' translation='-32.85 0.45 -8.47'>
+            <Shape DEF='RightSideHallBase'>
+                <Appearance USE='BaseAppearance'/>
+                <!-- Size:
+                        w = 360cm (WCs) + 360cm (side corridor) + 1200cm (side room's depth) = 1920cm
+                        h = 90cm (2nd floor's base)
+                        d = (390cm - 30cm) (front-side rooms) + 360cm (main/center corridor) + 914cm (total depth of student WCs) = 1634cm -->
+                <Box size='19.20 0.90 16.34'/>
+            </Shape>
+        </Transform>
+        
+        <!-- *** Front Walls *** -->
+        <!-- Right Side Front Wall - On top of the right side entrance (first floor) -->
+        <Group DEF='RightSideFrontWallGroup'>
+            <!-- Translation:
+                    x = -[(4*300cm + 5*0.5*90cm + 2*60cm) + 320cm (connected wall) +
+                        (205cm + 255cm + 360cm) (side hall) + 0.5*360cm (own width)]
+                      = -2865cm
+                    y = 90cm (2nd floor's base) + 0.5*320cm (own height) = 250cm
+                    z = -[30cm (difference) + 0.5*24cm (own depth)] = -42cm -->
+            <Transform DEF='RightSideFrontWallTransform' translation='-28.65 2.50 -0.42'>
+                <Shape DEF='RightSideFrontWallShape'>
+                    <Appearance USE='WallAppearance'/>
+                    <!-- Size:
+                            w = 360cm (same as width of side corridor)
+                            h = 320cm
+                            d = 24cm (depth of wall) -->
+                    <Box size='3.60 3.20 0.24'/>
+                </Shape>
+            </Transform>
+        </Group>
     </Scene>
 </X3D>

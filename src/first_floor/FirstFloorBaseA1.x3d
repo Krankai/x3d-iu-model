@@ -7,7 +7,7 @@
         <meta content='Model the floor/base of the first floor of the International University (A1 Building)' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
         <meta content='8th March, 2018' name='created'/>
-        <meta content='14th March, 2018' name='modified'/>
+        <meta content='5th April, 2018' name='modified'/>
         <meta content='v1.0' name='version'/>
         <meta content='*enter reference citation or relative/online url here*' name='reference'/>
         <meta content='*enter additional url/bibliographic reference information here*' name='reference'/>
@@ -28,7 +28,7 @@
     <Scene>
         <!-- Center of the model = same as center of A1Buildings.x3d - (0 0 0) -->
         
-        <!-- Center corridor -->
+        <!-- CENTER Part - Cover up to 'connected' walls -->
         <!-- Translation:
                 |y| = 0.5*102cm (own height) = 51cm
                 |z| = 0.5*1614cm (temporary depth) = 807cm -->
@@ -45,28 +45,48 @@
             </Shape>
         </Transform>
         
-        <!-- Side corridor base (left/right) -->
+        <!-- INNER SIDE Parts - Cover {Store Room + Elevators} -->
         <!-- Translation:
-                |x| = 0.5*820cm (width) + (4*300cm + 5*0.5*90cm + 2*60cm) + 320cm (connected base) = 2275cm
-                |y| = 0.5*102cm (height) = 51cm
-                |z| = 1614cm (max depth of center) - 0.5*1584cm (depth of side - store room & elevators) = 822cm -->
-        <Transform DEF='RightCorridorBaseTransform' translation='-22.75 0.51 -8.22'>
-            <Shape DEF='CorridorSideBaseShape'>
+                x = -[(4*300cm + 5*0.5*90cm + 2*60cm) + 320cm (connected base) + 0.5*460cm (own width)] = -2095cm
+                y = 0.5*102cm (own height) = 51cm
+                z = -[30cm (difference b/t center and side) + 0.5*1584cm (own depth)] = -822cm -->
+        <Transform DEF='RightInnerSideBaseTransform' translation='-20.95 0.51 -8.22'>
+            <Shape DEF='InnerSideBaseShape'>
                 <Appearance>
                     <Material/>
                 </Appearance>
                 <!-- Size:
-                        w = 205cm (store room) + 255cm (elevator's depth) + 360cm (WCs at 'back-rooms') = 820cm
-                        h = 102cm (height of base - 'hall step')
-                        d = (390cm - 30cm) (*) + 360cm + 864cm = 1584cm
-                        (*)Note: depth of [store room + elevators] is slightly less than
-                                 total depth of the center part of corridor -->
-                <Box size='8.20 1.02 15.84'/>
+                        w = 205cm (store room) + 255cm (elevators) = 460cm
+                        h = 102cm (1st floor's base)
+                        d = (390cm - 30cm)* + 360cm (center corridor) + 864cm (back rooms) = 1584cm
+                        *Note: (front room) side rooms' depth are slightly less than center room's one -->
+                <Box size='4.60 1.02 15.84'/>
             </Shape>
         </Transform>
-        <Transform DEF='LeftCorridorBaseTransform' translation='22.75 0.51 -8.22'>
-            <Shape USE='CorridorSideBaseShape'/>
+        <Transform DEF='LeftInnerSideBaseTransform' translation='20.95 0.51 -8.22'>
+            <Shape USE='InnerSideBaseShape'/>
         </Transform>
+        
+        <!-- SIDE HALL (LEFT/RIGHT) -->
+        <!-- Right Side Hall - Covering from {Student WCs -> Side Rooms} -->
+        <!-- Translation:
+                x = -[(4*300cm + 5*0.5*90cm + 2*60cm) + 320cm (connected base) +
+                    460cm (store room + elevators) + 0.5*1920cm (own width)] = -3285cm
+                y = 51cm (same as above)
+                z = -[30cm (difference) + 0.5*1634cm (own depth)] = 847cm -->
+        <Transform DEF='RightHallBaseTransform' translation='-32.85 0.51 -8.47'>
+            <Shape DEF='RightHallSideBaseShape'>
+                <Appearance>
+                    <Material/>
+                </Appearance>
+                <!-- Size:
+                        w = 360cm (student WCs) + 360cm (side corridor) + 1200cm (side room's depth) = 1920cm
+                        h = 102cm (height of base - 'hall step')
+                        d = (390cm - 30cm) + 360cm (center corridor) + 914cm (total depth of student WCs) = 1634cm -->
+                <Box size='19.20 1.02 16.34'/>
+            </Shape>
+        </Transform>
+        
         
         <!-- Connected corridor base (right under connected wall) -->
         <!-- Translation:

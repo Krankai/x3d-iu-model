@@ -7,7 +7,7 @@
         <meta content='Model the entire second floor of the A1 building of IU' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
         <meta content='16th March, 2018' name='created'/>
-        <meta content='2nd April, 2018' name='modified'/>
+        <meta content='4th April, 2018' name='modified'/>
         <meta content='v1.0' name='version'/>
         <meta content='*enter reference citation or relative/online url here*' name='reference'/>
         <meta content='*enter additional url/bibliographic reference information here*' name='reference'/>
@@ -225,5 +225,32 @@
             </Group>
         </Group>
         
+        <!-- Side Rooms -->
+        <!-- Note: center for each room is at the middle, but on the floor -->
+        <Group DEF='SideRoomsGroup'>
+            <!-- RIGHT -->
+            <Group DEF='RightSideRoomsGroup'>
+                <!-- Room A1-201 -->
+                <!-- Translation:
+                        x = -3645cm (same as first floor)
+                        y = 90cm (2nd floor's base)
+                        z = -438.5cm (same as first floor)
+                     Rotation:
+                        angle = 1.5708 rad (Oy) -->
+                <Transform DEF='RoomA1201Transform' translation='-36.45 0.90 -4.385' rotation='0 1 0 1.5708'>
+                    <Inline url='RoomA1201.x3d'/>
+                </Transform>
+                <!-- Room A1-202 -->
+                <!-- Translation:
+                        x = -3645cm (same as first floor)
+                        y = 90cm (same as above)
+                        z = -1255.5cm (same as first floor)
+                     Rotation:
+                        angle = 1.5708 rad (Oy) -->
+                <Transform DEF='RoomA1202Transform' translation='-36.45 0.90 -12.555' rotation='0 1 0 1.5708'>
+                    <Inline url='RoomA1202.x3d'/>
+                </Transform>
+            </Group>
+        </Group>
     </Scene>
 </X3D>
