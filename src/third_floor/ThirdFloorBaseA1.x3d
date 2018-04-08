@@ -7,7 +7,7 @@
         <meta content='Model the third floor (base) of A1 building of the Internation University' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
         <meta content='25th March, 2018' name='created'/>
-        <meta content='5th April, 2018' name='modified'/>
+        <meta content='8th April, 2018' name='modified'/>
         <meta content='v1.0' name='version'/>
         <meta content='*enter reference citation or relative/online url here*' name='reference'/>
         <meta content='*enter additional url/bibliographic reference information here*' name='reference'/>
@@ -82,15 +82,15 @@
         <!-- Translation:
                 x = -[(5*0.5*90cm + 2*60cm + 4*300cm) + 320cm (connected wall) + 0.5*460cm (own width)] = -2095cm
                 y = 45cm (same as above)
-                z = -[30cm ('padding') + 0.5*360cm (own depth)] = -210cm -->
-        <Transform DEF='FrontRightOuterBaseTransform' translation='-20.95 0.45 -2.10'>
+                z = -[0.5*390cm (own depth)] = -195cm -->
+        <Transform DEF='FrontRightOuterBaseTransform' translation='-20.95 0.45 -1.95'>
             <Shape DEF='FrontOuterBaseShape'>
                 <Appearance USE='BaseAppearance'/>
                 <!-- Size:
                         w = 460cm (total width of the two outer rooms)
                         h = 90cm (height of 2nd floor/base)
-                        d = 360cm (depth of both outer rooms) -->
-                <Box DEF='FrontOuterBaseBox' size='4.60 0.90 3.60'/>
+                        d = 390cm (depth of both outer rooms) -->
+                <Box DEF='FrontOuterBaseBox' size='4.60 0.90 3.90'/>
             </Shape>
         </Transform>
         <!-- LEFT SIDE -->
@@ -99,7 +99,7 @@
             <Shape USE='FrontConnectedBaseShape'/>
         </Transform>
         <!-- Front left outer base - Cover the outer (i.e. last two) rooms on the left side -->
-        <Transform DEF='FrontLeftOuterBaseTransform' translation='20.95 0.45 -2.10'>
+        <Transform DEF='FrontLeftOuterBaseTransform' translation='20.95 0.45 -1.95'>
             <Shape USE='FrontOuterBaseShape'/>
         </Transform>
         
@@ -129,15 +129,15 @@
         <!-- Translation:
                 x = -[(4*300cm + 5*0.5*90cm + 2*60cm) + 320cm (connected) + (205cm + 255cm) + 0.5*1920cm (own width)] = -3285cm
                 y = 0.5*90cm (own height) = 45cm
-                z = -[30cm (difference) + 0.5*1634cm (own depth)] = -847cm -->
-        <Transform DEF='RightSideHallTransform' translation='-32.85 0.45 -8.47'>
+                z = -[0.5*1664cm (own depth)] = -832cm -->
+        <Transform DEF='RightSideHallTransform' translation='-32.85 0.45 -8.32'>
             <Shape DEF='RightSideHallShape'>
                 <Appearance USE='BaseAppearance'/>
                 <!-- Size:
                         w = 360cm (WCs) + 360cm (side corridor) + 1200cm (side rooms) = 1920cm
                         h = 90cm (3rd floor's base)
-                        d = (390cm - 30cm) (front rooms) + 360cm (center/main corridor) + 914cm (total depth of student WCs) = 1634cm -->
-                <Box size='19.20 0.90 16.34'/>
+                        d = 390cm (front rooms) + 360cm (center/main corridor) + 914cm (total depth of student WCs) = 1664cm -->
+                <Box size='19.20 0.90 16.64'/>
             </Shape>
         </Transform>
         
@@ -147,8 +147,8 @@
             <!-- Translation:
                     x = -2865cm (same as second floor)
                     y = 250cm (same as second floor)
-                    z = -42cm (same as second floor) -->
-            <Transform DEF='RightSideFrontWallTransform' translation='-28.65 2.50 -0.42'>
+                    z = -12cm (same as second floor) -->
+            <Transform DEF='RightSideFrontWallTransform' translation='-28.65 2.50 -0.12'>
                 <Shape DEF='RightSideFrontWallShape'>
                     <Appearance USE='WallAppearance'/>
                     <!-- Size:

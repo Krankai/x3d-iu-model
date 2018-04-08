@@ -7,7 +7,7 @@
         <meta content='Model the entire first floor of the A1 building of IU' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
         <meta content='16th March, 2018' name='created'/>
-        <meta content='4th April, 2018' name='modified'/>
+        <meta content='8th April, 2018' name='modified'/>
         <meta content='v1.0' name='version'/>
         <meta content='*enter reference citation or relative/online url here*' name='reference'/>
         <meta content='*enter additional url/bibliographic reference information here*' name='reference'/>
@@ -59,18 +59,18 @@
                 <!-- Translation:
                         |x| = 0.5*205cm (width) + (5*0.5*90cm + 2*60cm + 4*300cm) + 320cm (connected base) = 1967.5cm
                         |y| = 102cm (height of base)
-                        |z| = 0.5*360cm (depth of the room) + 30cm (slightly 'less' than center corridor) = 210cm -->
-                <Transform DEF='RightStoreRoomTransform' translation='-19.675 1.02 -2.10' rotation='0 1 0 3.1416'>
+                        |z| = 0.5*390cm (depth of the room) = 195cm -->
+                <Transform DEF='RightStoreRoomTransform' translation='-19.675 1.02 -1.95' rotation='0 1 0 3.1416'>
                     <Inline url='RightStoreRoom.x3d'/>
                 </Transform>
                 <!-- Elevators -->
                 <!-- Translation:
                         |x| = 0.5*255cm (depth) + (5*0.5*90cm + 2*60cm + 4*300cm) + 320cm (connected base) + 205cm (store room) = 2197.5cm
                         |y| = 102cm (height of base)
-                        |z| = 0.5*360cm (width of the room) + 30cm (slightly ...) = 210cm
+                        |z| = 0.5*390cm (width of the room) = 195cm
                      Rotation:
                         angle = -(pi/2) -->
-                <Transform DEF='RightElevatorsTransform' translation='-21.975 1.02 -2.10' rotation='0 1 0 -1.5708'>
+                <Transform DEF='RightElevatorsTransform' translation='-21.975 1.02 -1.95' rotation='0 1 0 -1.5708'>
                     <Inline url='Elevators.x3d'/>
                 </Transform>
             </Group>
@@ -104,11 +104,11 @@
                     <Inline url='StaffFemaleWaterCloset.x3d'/>
                 </Transform>
                 <!-- Store Room -->
-                <Transform DEF='LeftStoreRoomTransform' translation='19.675 1.02 -2.10' rotation='0 1 0 3.1416'>
+                <Transform DEF='LeftStoreRoomTransform' translation='19.675 1.02 -1.95' rotation='0 1 0 3.1416'>
                     <Inline url='LeftStoreRoom.x3d'/>
                 </Transform>
                 <!-- Elevators -->
-                <Transform DEF='LeftElevatorsTransform' translation='21.975 1.02 -2.10' rotation='0 1 0 1.5708'>
+                <Transform DEF='LeftElevatorsTransform' translation='21.975 1.02 -1.95' rotation='0 1 0 1.5708'>
                     <Inline url='Elevators.x3d'/>
                 </Transform>
             </Group>
@@ -220,21 +220,33 @@
                             255cm (elevators) + 360cm (WCs) + 360cm (side corridor) + 0.5*1200cm (own depth)]
                           = -3645cm
                         y = 102cm (1st floor's base)
-                        z = -[30cm (difference) + 0.5*817cm (own width)] = -438.5cm
+                        z = -[0.5*832cm (own width)] = -416cm
                      Rotation:
                         angle = 1.5708 rad (Oy) -->
-                <Transform DEF='RoomLA1101Transform' translation='-36.45 1.02 -4.385' rotation='0 1 0 1.5708'>
+                <Transform DEF='RoomLA1101Transform' translation='-36.45 1.02 -4.16' rotation='0 1 0 1.5708'>
                     <Inline url='RoomLA1101.x3d'/>
                 </Transform>
                 <!-- Room LA1-102 -->
                 <!-- Translation:
                         x = -3645cm (same as Room LA1-101's)
                         y = 102cm (same as above)
-                        z = -[30cm + 817cm (room LA1-101's width) + 0.5*817cm (own width)] = -1255.5cm
+                        z = -[832cm (room LA1-101's width) + 0.5*832cm (own width)] = -1248cm
                      Rotation:
                         angle = 1.5707 rad (Oy) -->
-                <Transform DEF='RoomLA1102Transform' translation='-36.45 1.02 -12.555' rotation='0 1 0 1.5708'>
+                <Transform DEF='RoomLA1102Transform' translation='-36.45 1.02 -12.48' rotation='0 1 0 1.5708'>
                     <Inline url='RoomLA1102.x3d'/>
+                </Transform>
+            </Group>
+            <!-- LEFT -->
+            <Group DEF='LeftSideRoomsGroup'>
+                <!-- Translation:
+                        x = 4410cm (same as room-part base)
+                        y = 102cm (same as above)
+                        z = -754cm (same as room-part base)
+                     Rotation:
+                        angle = -pi/2 = -1.5708 rad (Oy) -->
+                <Transform DEF='RoomA1109Transform' translation='44.10 1.02 -7.54' rotation='0 1 0 -1.5708'>
+                    <Inline url='RoomA1109.x3d'/>
                 </Transform>
             </Group>
         </Group>

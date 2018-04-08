@@ -52,7 +52,7 @@
             <!-- Translation:
                     |x| = 0.5*800cm (width of the room) - 0.5*24cm (depth of side wall) = 388cm
                     |y| = 0.5*320cm (height of the room) = 160cm -->
-            <Transform DEF='LeftSideWallTransform' translation='3.8 1.6 0'>
+            <Transform DEF='LeftSideWallTransform' translation='3.88 1.6 0'>
                 <Shape DEF='SideWallShape'>
                     <Appearance USE='WallAppearance'/>
                     <!-- Size:

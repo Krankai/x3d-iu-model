@@ -36,7 +36,7 @@ Main Buildings (A1 & A2)
                 2 outside Black	-> W = 136cm
                 4 inside Black	-> W = 134cm
                 Red		-> W = 210cm
-            Each 'group step' -> 1 base + 5 level (gradual decrease in height)
+            Each 'group step' -> 1 base + 5 level (gradual decrease in height - delta = 17cm)
                 Level: upper	-> W = [above] | H = 2cm |
 				   D = lower.depth + 2cm = 30cm + 2cm = 32cm
                        lower	-> W = [above] | D = 30cm
@@ -111,12 +111,16 @@ Main Buildings (A1 & A2)
                 Each room	-> W = 775cm (1 part) / 1550cm (2 parts)
 				   H = 320cm | D = 864cm
                 Total width = 4650cm	-> W = 775cm (1 part) | W = 1550cm (2 parts)
-        Side Rooms (LA1-101 and LA1-102)	-> W = 817cm | H = 320cm | D = 1200cm (?)
         Side Hall - Right Side
+            Side Rooms (LA1-101 and LA1-102)	-> W = 832cm | H = 320cm | D = 1200cm (?)
             Distance from elevators to left edge of side-gate = 360cm
             Side corridor width = 360cm (above/same as depth of main corridor)
         Side Hall - Left Side
-            ????
+            Side Room (A1-109)	-> W = 1180cm | H = 320cm (?) | D = 1500cm
+            Left Side Way (above room A1-109 - lead to outside) = 164cm
+                Size	-> W = 1504cm | H = 10cm (?) | D = 164cm | angle = +/- 0.0679 rad (~3.89 degree)
+            Right Side Way (below room A1-109 - lead to the back door) = 240cm
+            Distance between side room (A1-109) and student WCs = 360cm + (255cm + 360cm) = 975cm
     Second Floor (2nd)
         Floor	-> height = 90cm (horizontal column) [+ 10cm (padding)] = 90cm
             Note: excessive part is below (added later!!)
@@ -152,8 +156,8 @@ Main Buildings (A1 & A2)
             Distance to door
                 Room A1-203	-> d = ...cm (from the right - near the right)
                 Other rooms	-> d = ...cm (from the left - near the left)
-        Side Rooms (A1-201 & A1-202)	-> [size same as first floor's side rooms]
         Side Hall - Right Side	-> [same as first floor's]
+            Side Rooms (A1-201 & A1-202)	-> [size same as first floor's side rooms]
     Third Floor (3rd)
         [same as second floor except the 'fence' part]
         Front (inner) Rooms	-> Room O1-313	-> width = 800cm

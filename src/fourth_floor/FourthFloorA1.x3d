@@ -7,7 +7,7 @@
         <meta content='Model the entire fourth floor of the A1 building of IU' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
         <meta content='28th March, 2018' name='created'/>
-        <meta content='5th April, 2018' name='modified'/>
+        <meta content='8th April, 2018' name='modified'/>
         <meta content='v1.0' name='version'/>
         <meta content='*enter reference citation or relative/online url here*' name='reference'/>
         <meta content='*enter additional url/bibliographic reference information here*' name='reference'/>
@@ -95,26 +95,26 @@
                 <!-- Translation:
                         x = -[0.5*205cm (own width) + (0.5*5*90cm + 2*60cm + 4*300cm) + 320cm (connected)] = -1967.5cm
                         y = 90cm (3rd floor's base)
-                        z = -[0.5*360cm (own depth) + 30cm (difference b/t center and this)] = -210cm
+                        z = -[0.5*390cm (own depth)] = -195cm
                      Rotation:
                         angle = - pi/2 -->
-                <Transform DEF='RightStoreRoomTransform' translation='-19.675 0.90 -2.10' rotation='0 1 0 3.1416'>
+                <Transform DEF='RightStoreRoomTransform' translation='-19.675 0.90 -1.95' rotation='0 1 0 3.1416'>
                     <Inline url='../first_floor/RightStoreRoom.x3d'/>
                 </Transform>
                 <!-- Translation:
                         x = -[0.5*255cm (own depth) + (5*0.5*90cm + 2*60cm + 4*300cm) + 320cm (connected) + 205cm (store room)] = -2197.5cm
                         y = 90cm (same as above)
-                        z = -[0.5*360cm (own width) + 30cm (difference ...)] = -210cm
+                        z = -[0.5*390cm (own width)] = -195cm
                      Rotation:
                         angle = + pi/2 -->
-                <Transform DEF='RightElevatorsTransform' translation='-21.975 0.90 -2.10' rotation='0 1 0 -1.5708'>
+                <Transform DEF='RightElevatorsTransform' translation='-21.975 0.90 -1.95' rotation='0 1 0 -1.5708'>
                     <Inline url='../first_floor/Elevators.x3d'/>
                 </Transform>
                 <!-- LEFT -->
-                <Transform DEF='LeftStoreRoomTransform' translation='19.675 0.90 -2.10' rotation='0 1 0 3.1416'>
+                <Transform DEF='LeftStoreRoomTransform' translation='19.675 0.90 -1.95' rotation='0 1 0 3.1416'>
                     <Inline url='../first_floor/LeftStoreRoom.x3d'/>
                 </Transform>
-                <Transform DEF='LeftElevatorsTransform' translation='21.975 0.90 -2.10' rotation='0 1 0 1.5708'>
+                <Transform DEF='LeftElevatorsTransform' translation='21.975 0.90 -1.95' rotation='0 1 0 1.5708'>
                     <Inline url='../first_floor/Elevators.x3d'/>
                 </Transform>
             </Group>
@@ -236,20 +236,20 @@
                 <!-- Translation:
                         x = -3645cm (same as first floor)
                         y = 90cm (same as above)
-                        z = -438.5cm (same as first floor)
+                        z = -416cm (same as first floor)
                      Rotation:
                         angle = 1.5708 rad (Oy) -->
-                <Transform DEF='RoomA1401Transform' translation='-36.45 0.90 -4.385' rotation='0 1 0 1.5708'>
+                <Transform DEF='RoomA1401Transform' translation='-36.45 0.90 -4.16' rotation='0 1 0 1.5708'>
                     <Inline url='RoomA1401.x3d'/>
                 </Transform>
                 <!-- Room LA1-402 -->
                 <!-- Translation:
                         x = -3645cm (same as first floor)
                         y = 90cm (same as above)
-                        z = -1255.5cm (same as first floor)
+                        z = -1248cm (same as first floor)
                      Rotation:
                         angle = 1.5708 rad (Oy) -->
-                <Transform DEF='RoomA1402Transform' translation='-36.45 0.90 -12.555' rotation='0 1 0 1.5708'>
+                <Transform DEF='RoomA1402Transform' translation='-36.45 0.90 -12.48' rotation='0 1 0 1.5708'>
                     <Inline url='RoomA1402.x3d'/>
                 </Transform>
             </Group>

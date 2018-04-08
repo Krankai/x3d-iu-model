@@ -7,7 +7,7 @@
         <meta content='Model the floor/base of the first floor of the International University (A1 Building)' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
         <meta content='8th March, 2018' name='created'/>
-        <meta content='5th April, 2018' name='modified'/>
+        <meta content='8th April, 2018' name='modified'/>
         <meta content='v1.0' name='version'/>
         <meta content='*enter reference citation or relative/online url here*' name='reference'/>
         <meta content='*enter additional url/bibliographic reference information here*' name='reference'/>
@@ -49,8 +49,8 @@
         <!-- Translation:
                 x = -[(4*300cm + 5*0.5*90cm + 2*60cm) + 320cm (connected base) + 0.5*460cm (own width)] = -2095cm
                 y = 0.5*102cm (own height) = 51cm
-                z = -[30cm (difference b/t center and side) + 0.5*1584cm (own depth)] = -822cm -->
-        <Transform DEF='RightInnerSideBaseTransform' translation='-20.95 0.51 -8.22'>
+                z = -[0.5*1614cm (own depth)] = -807cm -->
+        <Transform DEF='RightInnerSideBaseTransform' translation='-20.95 0.51 -8.07'>
             <Shape DEF='InnerSideBaseShape'>
                 <Appearance>
                     <Material/>
@@ -58,12 +58,11 @@
                 <!-- Size:
                         w = 205cm (store room) + 255cm (elevators) = 460cm
                         h = 102cm (1st floor's base)
-                        d = (390cm - 30cm)* + 360cm (center corridor) + 864cm (back rooms) = 1584cm
-                        *Note: (front room) side rooms' depth are slightly less than center room's one -->
-                <Box size='4.60 1.02 15.84'/>
+                        d = 390cm (front rooms) + 360cm (center corridor) + 864cm (back rooms) = 1614cm -->
+                <Box size='4.60 1.02 16.14'/>
             </Shape>
         </Transform>
-        <Transform DEF='LeftInnerSideBaseTransform' translation='20.95 0.51 -8.22'>
+        <Transform DEF='LeftInnerSideBaseTransform' translation='20.95 0.51 -8.07'>
             <Shape USE='InnerSideBaseShape'/>
         </Transform>
         
@@ -73,8 +72,8 @@
                 x = -[(4*300cm + 5*0.5*90cm + 2*60cm) + 320cm (connected base) +
                     460cm (store room + elevators) + 0.5*1920cm (own width)] = -3285cm
                 y = 51cm (same as above)
-                z = -[30cm (difference) + 0.5*1634cm (own depth)] = 847cm -->
-        <Transform DEF='RightHallBaseTransform' translation='-32.85 0.51 -8.47'>
+                z = -[0.5*1664cm (own depth)] = -832cm -->
+        <Transform DEF='RightHallBaseTransform' translation='-32.85 0.51 -8.32'>
             <Shape DEF='RightHallSideBaseShape'>
                 <Appearance>
                     <Material/>
@@ -82,10 +81,96 @@
                 <!-- Size:
                         w = 360cm (student WCs) + 360cm (side corridor) + 1200cm (side room's depth) = 1920cm
                         h = 102cm (height of base - 'hall step')
-                        d = (390cm - 30cm) + 360cm (center corridor) + 914cm (total depth of student WCs) = 1634cm -->
-                <Box size='19.20 1.02 16.34'/>
+                        d = 390cm (front rooms) + 360cm (center corridor) + 914cm (total depth of student WCs) = 1664cm -->
+                <Box size='19.20 1.02 16.64'/>
             </Shape>
         </Transform>
+        <!-- Left Side Hall -->
+        <Group DEF='LeftSideHallBaseGroup'>
+            <!-- Hall Part - Cover from Student WCs to the edge of the side room -->
+            <!-- Translation:
+                    x = (4*300cm + 5*0.5*90cm + 2*60cm) + 320cm (connected wall)
+                        + 460cm (store room + elevators) + 0.5*1335cm (own width)
+                      = 2992.5cm
+                    y = 51cm (same as above - right side)
+                    z = -[0.5*1664cm (own depth)] = -832cm -->
+            <Transform DEF='HallPartBaseTransform' translation='29.925 0.51 -8.32'>
+                <Shape DEF='HallPartBaseShape'>
+                    <Appearance>
+                        <Material/>
+                    </Appearance>
+                    <!-- Size:
+                            w = 360cm (student WCs) + 975cm (distance from student WCs to side room) = 1335cm
+                            h = 102cm (1st floor's base)
+                            d = 1664cm (same as above - right side) -->
+                    <Box size='13.35 1.02 16.64'/>
+                </Shape>
+            </Transform>
+            <!-- Room Part - Cover the side room (A1-109) and two side ways (left/right) -->
+            <Group DEF='RoomSideWaysPartGroup'>
+                <!-- Room -->
+                <!-- Translation:
+                        x = 2992.5cm (previous) + 0.5*1335cm (width of hall part)
+                            + 0.5*1500cm (own width) = 4410cm
+                        y = 51cm (same as above)
+                        z = -[164cm (left side way - above) + 0.5*1180cm (own depth)] = -754cm
+                        Note: this part is at the same level at the center (no more 30cm deeper) -->
+                <Transform DEF='RoomBaseTransform' translation='44.10 0.51 -7.54'>
+                    <Shape DEF='RoomBaseShape'>
+                        <Appearance>
+                            <Material/>
+                        </Appearance>
+                        <!-- Size:
+                                w = 1500cm (depth of the room)
+                                h = 102cm (1st floor's base)
+                                d = 1180cm (width of the room) -->
+                        <Box size='15.00 1.02 11.80'/>
+                    </Shape>
+                </Transform>
+                <!-- Right Side Way - Contain stairs/steps -->
+                <Group DEF='RightSideWayBaseGroup'>
+                    <!-- Translation:
+                            x = 4410cm (same as room part)
+                            y = 51cm (same as above)
+                            z = -[164cm (left side way) + 1180cm (room part) + 0.5*240cm (own depth)] = -1464cm -->
+                    <Transform DEF='RightSideWayBaseTransform' translation='44.10 0.51 -14.64'>
+                        <Shape DEF='RightSideWayBaseShape'>
+                            <Appearance>
+                                <Material/>
+                            </Appearance>
+                            <!-- Size:
+                                    w = 1500cm (depth of the room)
+                                    h = 102cm (1st floor's base)
+                                    d = 240cm -->
+                            <Box size='15.00 1.02 2.40'/>
+                        </Shape>
+                    </Transform>
+                </Group>
+                <!-- Left Side Way -->
+                <!-- Translation:
+                        x = 4410cm (same as room part)
+                        y = 102cm (1st floor's base) - 0.5*10cm (own height) = 97cm
+                        z = -0.5*164cm (own depth) = -82cm
+                     Rotation:
+                        angle = -0.0679 rad
+                     Center of Rotation:
+                        x = -0.5*1504cm (own width) = -752cm
+                        y = 0.5*10cm (own height) = 5cm
+                        z = 0cm -->
+                <Transform DEF='LeftSideWayBaseTransform' translation='44.10 0.97 -0.82' rotation='0 0 1 0' center='-7.52 0.05 0'>
+                    <Shape DEF='LeftSideWayBaseShape'>
+                        <Appearance>
+                            <Material/>
+                        </Appearance>
+                        <!-- Size:
+                                w = 1504cm [~sqrt(102^2 (height of 1st floor's base) + 1500^2 (depth of room)]
+                                h = 10cm
+                                d = 164cm -->
+                        <Box size='15.04 0.10 1.64'/>
+                    </Shape>
+                </Transform>
+            </Group>
+        </Group>
         
         
         <!-- Connected corridor base (right under connected wall) -->
