@@ -36,7 +36,7 @@ Main Buildings (A1 & A2)
                 2 outside Black	-> W = 136cm
                 4 inside Black	-> W = 134cm
                 Red		-> W = 210cm
-            Each 'group step' -> 1 base + 5 level (gradual decrease in height - delta = 17cm)
+            Each 'group step' -> 1 base + 5 level (gradual decrease in height - delta = 15cm + 2cm = 17cm)
                 Level: upper	-> W = [above] | H = 2cm |
 				   D = lower.depth + 2cm = 30cm + 2cm = 32cm
                        lower	-> W = [above] | D = 30cm
@@ -58,7 +58,7 @@ Main Buildings (A1 & A2)
 				   D = 390cm (front rooms) + 360cm (main corridor) +
 				       864cm (back rooms) = 1614cm
         Front Rooms - Right Side (to the building)
-            Room O1-111	-> W = 830cm | H = 320cm | D = 390cm (main hall's depth)
+            Room O1-111	-> W = 800cm | H = 320cm | D = 390cm (main hall's depth)
                 Distance to door = 14*40cm + 30cm = 590cm (?)
 		(from the right edge - viewing from inside out, door direction)
                 Door	-> W = ~135cm | H = ?? | (?)
@@ -75,7 +75,7 @@ Main Buildings (A1 & A2)
                 From Elevator to Door 1 = ~5*40cm = 200cm (WALL)
                 From Door 1 to Door 2 = 40cm (WALL)
         Front Rooms - Left Side (to the building)
-            Room O1-110	-> W = 450cm | H = 320cm | D = 390cm
+            Room O1-110	-> W = 420cm | H = 320cm | D = 390cm
                 Distance to door = 7cm + 7*40cm + 15cm = 302cm (d' = 297cm)
 		(from the left edge - viewing from inside out, door direction)
                 Door	-> W = ~135cm | H = ??
@@ -116,10 +116,18 @@ Main Buildings (A1 & A2)
             Distance from elevators to left edge of side-gate = 360cm
             Side corridor width = 360cm (above/same as depth of main corridor)
         Side Hall - Left Side
-            Side Room (A1-109)	-> W = 1180cm | H = 320cm (?) | D = 1500cm
-            Left Side Way (above room A1-109 - lead to outside) = 164cm
+            Side Room (A1-109)	-> W = 1180cm | H = 320cm (?) | D = 1872cm
+            Left Side Way (above room A1-109 - lead to outside)	-> D = 164cm | W = 1872cm
                 Size	-> W = 1504cm | H = 10cm (?) | D = 164cm | angle = +/- 0.0679 rad (~3.89 degree)
-            Right Side Way (below room A1-109 - lead to the back door) = 240cm
+                Two parts (Front & Back)	-> [Front] At normal level | W = 1504cm | H = 320cm | D = 900cm (ratio 3/5) (?)
+						-> [Back]  At higher level (delta = 9*17cm = 153cm) | W = 1504cm | H = 320cm | D = 600cm (ratio 2/5) (?)
+            Right Side Way (below room A1-109 - lead to the back door)	-> D = 240cm | W = 600cm + 272cm + 1000cm = 1872cm
+                Front Part	-> W = 15*40cm = 600cm
+                Middle Part	-> W = 270cm
+                    Each 'step/stair level'	-> W (or D) = 30cm | H = 17cm
+                    No. of steps = 9	-> Delta(height) = 9*15cm = 135cm
+					-> Delta(width/depth) = 9*30cm = 270cm
+                Back Part	-> W = 25*40cm = 1000cm (at higher level)
             Distance between side room (A1-109) and student WCs = 360cm + (255cm + 360cm) = 975cm
     Second Floor (2nd)
         Floor	-> height = 90cm (horizontal column) [+ 10cm (padding)] = 90cm
