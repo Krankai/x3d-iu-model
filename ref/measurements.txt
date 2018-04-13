@@ -117,7 +117,7 @@ Main Buildings (A1 & A2)
             Distance from elevators to left edge of side-gate = 360cm (i.e. width of side corridor = width of side entrance)
             Side corridor width = 360cm (above/same as depth of main corridor)
         Side Hall - Left Side
-            Side Room (A1-109)	-> W = 1180cm (W' = 1564cm) | H = 320cm (?) | D = 1872cm
+            Side Room (A1-109)	-> W = 1180cm (W' = 1164cm) | H = 320cm (?) | D = 1872cm
             Left Side Way (above room A1-109 - lead to outside)
                 Size	-> W = 1872cm | H = 10cm (?) | D = 164cm (D' = 160cm) | angle = +/- 0.0679 rad (~3.89 degree) (...)
             Right Side Way (below room A1-109 - lead to the back door)
