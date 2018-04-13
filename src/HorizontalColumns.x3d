@@ -7,7 +7,7 @@
         <meta content='Model the set of horizontal columns (separating classrooms)' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
         <meta content='10th December, 2017' name='created'/>
-        <meta content='1st March, 2018' name='modified'/>
+        <meta content='12th April, 2018' name='modified'/>
         <meta content='Version 1.0' name='version'/>
         <meta content='HorizontalColumns, columns, horizontal' name='subject'/>
         <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
@@ -15,43 +15,57 @@
         <!-- Additional authoring resources for meta-tags: http://www.dublincore.org/documents/dcmi-terms http://www.dublincore.org/documents/dces http://www.w3.org/TR/html4/struct/global.html#h-7.4.4 http://vancouver-webpages.com/META http://vancouver-webpages.com/META/about-mk-metas2.html Additional authoring resources for language codes: http://www.rfc-editor.org/rfc/bcp/bcp47.txt http://www.loc.gov/standards/iso639-2/langhome.html http://www.iana.org/numbers.html#L -->
     </head>
     <Scene>
+        <!-- Center: at the middle of the fourth (4th) colum -->
+        
         <!-- Translation:
-                |x| = 3*300cm + 3*0.5*90cm + 3*0.5*60cm = 1125cm
-                |y| = 3*320cm + 3*90cm = 1230cm -->
-        <Transform DEF='HorizontalColumnTransformLeft1' translation='-11.25 -12.30 0'>
+                x = -[3*310cm (square's width) + 3*0.5*60cm + 3*0.5*90cm] = -1155cm
+                y = -[3*360cm (square's height) + 3*90cm] = -1350cm
+                z = 0cm -->
+        <Transform DEF='HorizontalColumnTransformLeft1' translation='-11.55 -13.50 0'>
             <Shape DEF='SmallHorizontalColumnShape'>
                 <Appearance DEF='MainRedAppearance'>
                     <Material DEF='MainRedMaterial' diffuseColor='1 0 0'/>
                 </Appearance>
-                <!-- Width = 2*300cm (width of square) + 60cm (width of small column) = 660cm -->
-                <Box size='6.60 0.9 0.5'/>
+                <!-- Size:
+                        w = 2*310cm (square's widht) + 60cm (small column's width) = 680cm
+                        h = 90cm (height of horizontal columns)
+                        d = 50cm (depth of ...) -->
+                <Box size='6.80 0.9 0.5'/>
             </Shape>
         </Transform>
-        <Transform DEF='HorizontalColumnTransformRight1' translation='11.25 -12.30 0'>
+        <Transform DEF='HorizontalColumnTransformRight1' translation='11.55 -13.50 0'>
             <Shape USE='SmallHorizontalColumnShape'/>
         </Transform>
         <!-- Translation:
-                |y| = 2*320cm + 2*90cm = 820cm -->
-        <Transform DEF='HorizontalColumnTransform2' translation='0 -8.20 0'>
+                x = 0cm
+                y = -(2*360cm + 2*90cm) = -900cm
+                z = 0cm -->
+        <Transform DEF='HorizontalColumnTransform2' translation='0 -9.00 0'>
             <Shape DEF='HorizontalColumnShape'>
                 <Appearance USE='MainRedAppearance'/>
                 <!-- Width = 8*300cm + 5*90cm + 4*60cm = 3090cm -->
-                <Box size='30.90 0.9 0.5'/>
+                <!-- Size:
+                        w = 8*310cm + 5*90cm + 4*60cm = 3170cm
+                        h = 90cm
+                        d = 50cm -->
+                <Box size='31.70 0.9 0.5'/>
             </Shape>
         </Transform>
         <!-- Translation:
-                |y| = 320cm (height of square) + 90cm (height of horizontal column) = 410cm -->
-        <Transform DEF='HorizontalColumnTransform3' translation='0 -4.10 0'>
+                x = 0cm
+                y = -[360cm (square's height) + 90cm] = -450cm
+                z = 0cm -->
+        <Transform DEF='HorizontalColumnTransform3' translation='0 -4.50 0'>
             <Shape USE='HorizontalColumnShape'/>
         </Transform>
         <!-- 'Center' horizontal column -->
         <Transform DEF='HorizontalColumnTransform4' translation='0 0 0'>
             <Shape USE='HorizontalColumnShape'/>
         </Transform>
-        <Transform DEF='HorizontalColumnTransform5' translation='0 4.10 0'>
+        <Transform DEF='HorizontalColumnTransform5' translation='0 4.50 0'>
             <Shape USE='HorizontalColumnShape'/>
         </Transform>
-        <Transform DEF='HorizontalColumnTransform6' translation='0 8.20 0'>
+        <Transform DEF='HorizontalColumnTransform6' translation='0 9.00 0'>
             <Shape USE='HorizontalColumnShape'/>
         </Transform>
     </Scene>
