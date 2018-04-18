@@ -133,7 +133,9 @@ Main Buildings (A1 & A2)
     Second Floor (2nd)
         Floor	-> height = 90cm (horizontal column) [+ 10cm (padding) (???)] = 90cm
             Note: excessive part is below (added later!!)
-        Fence	-> W = 3*40cm + 14cm = 134cm | H = ?? | D = ~20cm (?)
+        Fence
+            Size	-> W = (4*310cm + 2*60cm + 90cm) + 2*30cm + 2*20cm = 1550cm
+			   H = ?? | D = 20cm
             Pattern	-> 4 middle small-bars (box) + 1 top big-bar (cyclinder) [vertically]
 			-> 14 'blocks' (13 vertical small-bars (box)) + 2 outermost big-bars (cyclinder) [horizontally]
                 Each (cuboid/box) horizontal small-bar	-> width/depth = 3cm | height = 1~2cm (?) (two different rotations)
