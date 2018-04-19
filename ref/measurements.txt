@@ -171,9 +171,9 @@ Main Buildings (A1 & A2)
             Side Rooms (A1-201 & A1-202)	-> [size same as first floor's side rooms]
     Third Floor (3rd)
         [same as second floor except the 'fence' part]
-        Front (inner) Rooms	-> Room O1-313	-> width = 800cm
-				-> Room O1-312 & O1-311	-> width = 745cm
-				-> Room O1-310	-> width = 420cm
+        Front (inner) Rooms	-> Room O1-313	-> width = 830cm
+				-> Room O1-312 & O1-311	-> width = 755cm
+				-> Room O1-310	-> width = 430cm
     Fourth Floor (4th)
         [same as third floor]
     Fifth Floor (5th)

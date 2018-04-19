@@ -245,7 +245,8 @@
                         z = -403.5cm (same as first floor)
                      Rotation:
                         angle = 1.5708 rad (Oy) -->
-                <Transform DEF='RoomA1201Transform' translation='-37.05 0.90 -4.035' rotation='0 1 0 1.5708'>
+                <Transform DEF='RoomA1201Transform' translation='-37.05 0.90 -4.035'
+                           rotation='0 1 0 1.5708'>
                     <Inline url='RoomA1201.x3d'/>
                 </Transform>
                 <!-- Room A1-202 -->
@@ -255,7 +256,8 @@
                         z = -1210.5cm (same as first floor)
                      Rotation:
                         angle = 1.5708 rad (Oy) -->
-                <Transform DEF='RoomA1202Transform' translation='-37.05 0.90 -12.105' rotation='0 1 0 1.5708'>
+                <Transform DEF='RoomA1202Transform' translation='-37.05 0.90 -12.105'
+                           rotation='0 1 0 1.5708'>
                     <Inline url='RoomA1202.x3d'/>
                 </Transform>
             </Group>
