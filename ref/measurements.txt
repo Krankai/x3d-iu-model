@@ -1,15 +1,15 @@
 Main Buildings (A1 & A2)
     Front (Building)
         Vertical Columns
-            Big		-> W = 90cm | H = 2780cm (H' = 7*360cm + 6*90cm = 3060cm) | D = 50cm
-            Small 	-> W = 60cm | H = 2780cm (H' = 3060cm) | D = 50cm
-            Small-Gate	-> W = 60cm | H = 1960cm (H' = 5*360cm + 4*90cm = 2160cm) | D = 50cm
-            Distance	-> d = 300cm (between two consecutive ones) (d' = 320cm)
+            Big		-> W = 90cm | H = 7*360cm + 6*90cm = 3060cm | D = 50cm
+            Small 	-> W = 60cm | H = 3060cm | D = 50cm
+            Small-Gate	-> W = 60cm | H = 5*360cm + 4*90cm = 2160cm | D = 50cm
+            Distance	-> d = 310cm (between two consecutive ones)
         Horizontal Columns
-            Normal	-> W = 3090cm (W' = 5*90cm + 4*60cm + 8*310cm = 3170cm) | H = 90cm | D = 50cm
-            Small-Gate	-> W =  660cm (W' = 60cm + 2*310cm = 680cm) | H = 90cm | D = 50cm
+            Normal	-> W = 5*90cm + 4*60cm + 8*310cm = 3170cm | H = 90cm | D = 50cm
+            Small-Gate	-> W = 60cm + 2*310cm = 680cm | H = 90cm | D = 50cm
             (Note: HorizontalColumn.Height == VerticalColumn.Big.Width)
-            Distance	-> d = 320cm (between two consecutive ones) (d' = 360cm)
+            Distance	-> d = 360cm (between two consecutive ones)
         Square (beteen 'columns')
             W = 300cm (W' = 310cm)
             H = 320cm (H' = 360cm)
@@ -178,10 +178,10 @@ Main Buildings (A1 & A2)
         [same as third floor]
     Fifth Floor (5th)
         [same as third/fourth floor, except for the front-inner rooms]
-        Front (inner) Rooms	-> Room O1-515	-> width = 800cm
-				-> Room O1-514	-> width = 710cm
-				-> Room O1-513/O1-512	-> width = 390cm
-				-> Room O1-511	-> width = 420cm
+        Front (inner) Rooms	-> Room O1-515	-> width = 830cm
+				-> Room O1-514	-> width = 710cm (width' = 760cm)
+				-> Room O1-513/O1-512	-> width = 390cm (width' = 375cm)
+				-> Room O1-511	-> width = 430cm
     Sixth Floor (6th)
         [same as third/fourth floor]
 

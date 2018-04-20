@@ -30,41 +30,41 @@
             <!-- 2nd Floor -->
             <!-- Translation:
                     x = 0cm
-                    y = 102cm (1st floor) + 320cm = 422cm
+                    y = 102cm (1st floor) + 360cm (square's height) = 462cm
                     z = 0cm -->
-            <Transform DEF='SecondFloorTransform' translation='0 4.22 0'>
+            <Transform DEF='SecondFloorTransform' translation='0 4.62 0'>
                 <Inline url='second_floor/SecondFloorA1.x3d'/>
             </Transform>
             <!-- 3rd Floor -->
             <!-- Translation:
                     x = 0cm
-                    y = 102cm (1st floor) + 320cm + 90cm (2nd floor) + 320cm = 832cm
+                    y = 102cm (1st floor) + 360cm + 90cm (2nd floor) + 360cm = 912cm
                     z = 0cm -->
-            <Transform DEF='ThirdFloorTransform' translation='0 8.32 0'>
+            <Transform DEF='ThirdFloorTransform' translation='0 9.12 0'>
                 <Inline url='third_floor/ThirdFloorA1.x3d'/>
             </Transform>
             <!-- 4th Floor -->
             <!-- Translation:
                     x = 0cm
-                    y = 102cm (1st) + 320cm + 90cm (2nd) + 320cm + 90cm (3rd) + 320cm = 1242cm
+                    y = 102cm (1st) + 360cm + 90cm (2nd) + 360cm + 90cm (3rd) + 360cm = 1362cm
                     z = 0cm -->
-            <Transform DEF='FourthFloorTransform' translation='0 12.42 0'>
+            <Transform DEF='FourthFloorTransform' translation='0 13.62 0'>
                 <Inline url='fourth_floor/FourthFloorA1.x3d'/>
             </Transform>
             <!-- 5th Floor -->
             <!-- Translation:
                     x = 0cm
-                    y = 1242cm (previous) + 90cm (4th base) + 320cm = 1652cm
+                    y = 1362cm (previous) + 90cm (4th base) + 360cm = 1812cm
                     z = 0cm -->
-            <Transform DEF='FifthFloorTransform' translation='0 16.52 0'>
+            <Transform DEF='FifthFloorTransform' translation='0 18.12 0'>
                 <Inline url='fifth_floor/FifthFloorA1.x3d'/>
             </Transform>
             <!-- 6th Floor -->
             <!-- Translation:
                     x = 0cm
-                    y = 1652cm (previous) + 90cm (5th base) + 320cm = 2062cm
+                    y = 1812cm (previous) + 90cm (5th base) + 360cm = 2262cm
                     z = 0cm -->
-            <Transform DEF='SixthFloorTransform' translation='0 20.62 0'>
+            <Transform DEF='SixthFloorTransform' translation='0 22.62 0'>
                 <Inline url='sixth_floor/SixthFloorA1.x3d'/>
             </Transform>
         </Group>
