@@ -7,7 +7,7 @@
         <meta content='Model the entire A1 buildings of IU' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
         <meta content='30th Nov, 2017' name='created'/>
-        <meta content='2nd APril, 2018' name='modified'/>
+        <meta content='13th APril, 2018' name='modified'/>
         <meta content='IU, A1Buildings, building, A1' name='subject'/>
         <meta content='Version 1.0' name='version'/>
         <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
@@ -30,41 +30,41 @@
             <!-- 2nd Floor -->
             <!-- Translation:
                     x = 0cm
-                    y = 102cm (1st floor) + 320cm = 422cm
+                    y = 102cm (1st floor) + 360cm (square's height) = 462cm
                     z = 0cm -->
-            <Transform DEF='SecondFloorTransform' translation='0 4.22 0'>
+            <Transform DEF='SecondFloorTransform' translation='0 4.62 0'>
                 <Inline url='second_floor/SecondFloorA1.x3d'/>
             </Transform>
             <!-- 3rd Floor -->
             <!-- Translation:
                     x = 0cm
-                    y = 102cm (1st floor) + 320cm + 90cm (2nd floor) + 320cm = 832cm
+                    y = 102cm (1st floor) + 360cm + 90cm (2nd floor) + 360cm = 912cm
                     z = 0cm -->
-            <Transform DEF='ThirdFloorTransform' translation='0 8.32 0'>
+            <Transform DEF='ThirdFloorTransform' translation='0 9.12 0'>
                 <Inline url='third_floor/ThirdFloorA1.x3d'/>
             </Transform>
             <!-- 4th Floor -->
             <!-- Translation:
                     x = 0cm
-                    y = 102cm (1st) + 320cm + 90cm (2nd) + 320cm + 90cm (3rd) + 320cm = 1242cm
+                    y = 102cm (1st) + 360cm + 90cm (2nd) + 360cm + 90cm (3rd) + 360cm = 1362cm
                     z = 0cm -->
-            <Transform DEF='FourthFloorTransform' translation='0 12.42 0'>
+            <Transform DEF='FourthFloorTransform' translation='0 13.62 0'>
                 <Inline url='fourth_floor/FourthFloorA1.x3d'/>
             </Transform>
             <!-- 5th Floor -->
             <!-- Translation:
                     x = 0cm
-                    y = 1242cm (previous) + 90cm (4th base) + 320cm = 1652cm
+                    y = 1362cm (previous) + 90cm (4th base) + 360cm = 1812cm
                     z = 0cm -->
-            <Transform DEF='FifthFloorTransform' translation='0 16.52 0'>
+            <Transform DEF='FifthFloorTransform' translation='0 18.12 0'>
                 <Inline url='fifth_floor/FifthFloorA1.x3d'/>
             </Transform>
             <!-- 6th Floor -->
             <!-- Translation:
                     x = 0cm
-                    y = 1652cm (previous) + 90cm (5th base) + 320cm = 2062cm
+                    y = 1812cm (previous) + 90cm (5th base) + 360cm = 2262cm
                     z = 0cm -->
-            <Transform DEF='SixthFloorTransform' translation='0 20.62 0'>
+            <Transform DEF='SixthFloorTransform' translation='0 22.62 0'>
                 <Inline url='sixth_floor/SixthFloorA1.x3d'/>
             </Transform>
         </Group>
@@ -76,15 +76,20 @@
             <!-- Translation:
                     y = 0.5*2780cm (height) + 102cm (height of base) = 1492cm
                     z = 0.5*50cm (depth) = 25cm -->
-            <Transform DEF='VerticalColumnsTransform' translation='0 14.92 0.25'>
+            <!-- Translation:
+                    x = 0cm
+                    y = 102cm (1st floor's base) + 0.5*3060cm (own height of standard column) = 1632cm
+                    z = 0.5*50cm (own depth) = 25cm -->
+            <Transform DEF='VerticalColumnsTransform' translation='0 16.32 0.25'>
                 <Inline url='VerticalColumns.x3d'/>
             </Transform>
             <!-- Horizontal columns - From bottom to top. Pattern: -B(Left&Right)-B-B-B-B-B- -->
             <!-- Center: at the middle of the fourth (4th) colum -->
             <!-- Translation:
-                    y = 4*320cm + 3*90cm + 0.5*90cm + 102cm (height of base) = 1697cm
-                    z = 0.5*50cm (depth) = 25cm -->
-            <Transform DEF='HorizontalColumnsTransform' translation='0 16.97 0.25'>
+                    x = 0cm
+                    y = 4*360cm (square's height) + 7*0.5*90cm + 102cm (1st floor's base) = 1857cm
+                    z = 0.5*50cm (own depth) = 25cm -->
+            <Transform DEF='HorizontalColumnsTransform' translation='0 18.57 0.25'>
                 <Inline url='HorizontalColumns.x3d'/>
             </Transform>
         </Group>

@@ -7,7 +7,7 @@
         <meta content='Model of Room O1-313 (A1 Building) of the International University (VNU-IU)' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
         <meta content='25th March, 2018' name='created'/>
-        <meta content='25th March, 2018' name='modified'/>
+        <meta content='19th April, 2018' name='modified'/>
         <meta content='v1.0' name='version'/>
         <meta content='*enter reference citation or relative/online url here*' name='reference'/>
         <meta content='*enter additional url/bibliographic reference information here*' name='reference'/>
@@ -25,43 +25,49 @@
     </head>
     <Scene>
         <!-- Center: at the 'center' of the room, but on the floor (y = 0) -->
-        <!-- Size: width = 800cm | height = 320cm (height of square) | depth = 390cm (main hall) -->
+        <!-- Size: width = 830cm | height = 360cm (height of square) | depth = 390cm (main hall) -->
         
         <Group DEF='WallGroup'>
             <!-- Fron wall (with main door) -->
             <!-- Translation:
-                    |y| = 0.5*320cm (height of the room) = 160cm
-                    |z| = 0.5*390cm (depth of the room) - 0.5*24cm (depth of front wall) = 183cm -->
-            <Transform DEF='FrontWallTransform' translation='0 1.6 1.83'>
+                    x = 0cm
+                    y = 0.5*360cm (own height) = 180cm
+                    z = 0.5*390cm (room's depth) - 0.5*24cm (own depth) = 183cm -->
+            <Transform DEF='FrontWallTransform' translation='0 1.80 1.83'>
                 <Shape DEF='FrontWallShape'>
                     <Appearance DEF='WallAppearance'>
                         <Material diffuseColor='1 1 1'/>
                     </Appearance>
-                    <!-- Depth = 24cm -->
-                    <Box size='8.00 3.20 0.24'/>
+                    <!-- Size:
+                            w = 830cm (room's width)
+                            h = 360cm (room's height)
+                            d = 24cm (depth of wall) -->
+                    <Box size='8.30 3.60 0.24'/>
                 </Shape>
             </Transform>
             <!-- Back wall (with window) -->
-            <Transform DEF='BackWallTransform' translation='0 1.6 -1.83'>
+            <Transform DEF='BackWallTransform' translation='0 1.80 -1.83'>
                 <Shape DEF='BackWallShape'>
                     <Appearance USE='WallAppearance'/>
-                    <Box size='8.00 3.20 0.24'/>
+                    <Box size='8.30 3.60 0.24'/>
                 </Shape>
             </Transform>
             <!-- Side walls (perspective: inside looking out into the door direction) -->
             <!-- Translation:
-                    |x| = 0.5*800cm (width of the room) - 0.5*24cm (depth of side wall) = 388cm
-                    |y| = 0.5*320cm (height of the room) = 160cm -->
-            <Transform DEF='LeftSideWallTransform' translation='3.88 1.6 0'>
+                    x = 0.5*830cm (room's width) - 0.5*24cm (own width) = 403cm
+                    y = 0.5*360cm (own height) = 180cm
+                    z = 0cm -->
+            <Transform DEF='LeftSideWallTransform' translation='4.03 1.80 0'>
                 <Shape DEF='SideWallShape'>
                     <Appearance USE='WallAppearance'/>
                     <!-- Size:
-                        width = 24cm (depth of fron/back wall)
-                        depth = 390cm (depth of room) - 2*24cm (depth of fron/back wall) = 342cm -->
-                    <Box size='0.24 3.20 3.42'/>
+                            w = 24cm (= depth of front/back wall)
+                            h = 360cm (room's height)
+                            d = 390cm (room's depth) - 2*24cm (depth of front & back walls) = 342cm -->
+                    <Box size='0.24 3.60 3.42'/>
                 </Shape>
             </Transform>
-            <Transform DEF='RightSideWallTransform' translation='-3.88 1.6 0'>
+            <Transform DEF='RightSideWallTransform' translation='-4.03 1.80 0'>
                 <Shape USE='SideWallShape'/>
             </Transform>
         </Group>
