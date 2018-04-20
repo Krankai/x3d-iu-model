@@ -80,9 +80,11 @@
                     <Material/>
                 </Appearance>
                 <!-- Size:
-                        w = 360cm (depth of student WCs) + 360cm (side corridor) + 1200cm (side room's depth) = 1920cm
+                        w = 360cm (depth of student WCs) + 360cm (side corridor)
+                            + 1200cm (side room's depth) = 1920cm
                         h = 102cm (height of base - 'hall step')
-                        d = 390cm (front rooms) + 360cm (center corridor) + 864cm (total depth of student WCs) = 1614cm -->
+                        d = 390cm (front rooms) + 360cm (center corridor)
+                            + 864cm (total depth of student WCs) = 1614cm -->
                 <Box size='19.20 1.02 16.14'/>
             </Shape>
         </Transform>
@@ -101,7 +103,8 @@
                         <Material/>
                     </Appearance>
                     <!-- Size:
-                            w = 360cm (student WCs) + 975cm (distance from student WCs to side room) = 1335cm
+                            w = 360cm (student WCs) + 975cm (distance from student WCs to side room)
+                              = 1335cm
                             h = 102cm (1st floor's base)
                             d = 1614cm (same as above - right side) -->
                     <Box size='13.35 1.02 16.14'/>
@@ -109,7 +112,7 @@
             </Transform>
             <!-- Room Part - Cover the side room (A1-109) and two side ways (left/right) -->
             <Group DEF='RoomSideWaysPartGroup'>
-                <!-- Room Part -->
+                <!-- Room Main Part - Cover the room -->
                 <!-- Translation:
                         x = 3720cm (distance from center to edge of left-side room) + 0.5*1872cm (own width) = 4656cm
                         y = 0.5*102cm (own height) = 51cm
@@ -120,12 +123,13 @@
                             <Material/>
                         </Appearance>
                         <!-- Size:
-                                w = 1872cm (depth of the room)
+                                w = 1870cm (depth of the room)
                                 h = 102cm (1st floor's base)
                                 d = 1164cm (width of the room) -->
-                        <Box size='18.72 1.02 11.64'/>
+                        <Box size='18.70 1.02 11.64'/>
                     </Shape>
                 </Transform>
+                <!-- Room Part Additional - Cover the hollow parts caused by rising levels of the room -->
                 <!-- Right Side Way - Contain stairs/steps -->
                 <Group DEF='RightSideWayBaseGroup'>
                     <!-- Front Part (W = 600cm) -->

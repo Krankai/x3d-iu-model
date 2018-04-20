@@ -7,7 +7,7 @@
         <meta content='Model the entire first floor of the A1 building of IU' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
         <meta content='16th March, 2018' name='created'/>
-        <meta content='8th April, 2018' name='modified'/>
+        <meta content='20th April, 2018' name='modified'/>
         <meta content='v1.0' name='version'/>
         <meta content='*enter reference citation or relative/online url here*' name='reference'/>
         <meta content='*enter additional url/bibliographic reference information here*' name='reference'/>
@@ -272,16 +272,18 @@
             <!-- LEFT -->
             <Group DEF='LeftSideRoomsGroup'>
                 <!-- Translation:
-                        x = 4410cm (same as room-part base)
+                        x = (4*310cm + 5*0.5*90cm + 2*60cm) + 340cm (connected wall)
+                            + 460cm (store room + elevators) + 1335cm (WCs + side hall)
+                            + 0.5*1870cm (room's depth) = 4655cm
                         y = 102cm (same as above)
-                        z = -754cm (same as room-part base)
+                        z = -742cm (same as room-part base)
                      Rotation:
                         angle = -pi/2 = -1.5708 rad (Oy) -->
-                <Transform DEF='RoomA1109Transform' translation='44.10 1.02 -7.54' rotation='0 1 0 -1.5708'>
+                <Transform DEF='RoomA1109Transform' translation='46.55 1.02 -7.42'
+                           rotation='0 1 0 -1.5708'>
                     <Inline url='RoomA1109.x3d'/>
                 </Transform>
             </Group>
         </Group>
-        
     </Scene>
 </X3D>

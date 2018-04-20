@@ -7,7 +7,7 @@
         <meta content='Model of Room A1-109 of the International University' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
         <meta content='8th April, 2018' name='created'/>
-        <meta content='9th April, 2018' name='modified'/>
+        <meta content='20th April, 2018' name='modified'/>
         <meta content='v1.0' name='version'/>
         <meta content='*enter reference citation or relative/online url here*' name='reference'/>
         <meta content='*enter additional url/bibliographic reference information here*' name='reference'/>
@@ -29,8 +29,12 @@
         <!-- Room A1-109 -->
         <!-- Center: at the middle of the room, but on the floor -->
         <!-- Left Side Rooms -> divided into two parts at different height levels -->
-        <!-- Front Part:    width = 1180cm | height = 320cm | depth = 900cm (lower)
-             Back Part:     width = 1180cm | height = 320cm | depth = 600cm (higher; delta = 153cm) -->
+        <!-- Total size:
+                width = 1164cm | height = 360cm + 135cm = 495cm | depth = 1870cm
+             Three parts = {Front - Middle - Back}
+                Front Part:     width = 1164cm | height = 360cm | depth = 500cm
+                Middle Part:    width = 1164cm | height = 354.59cm | depth = 843.91cm | angle = 0.1736 rad
+                Back Part:      width = 1164cm | height = 360cm | depth = 600cm -->
         
         <Group DEF='WallsGroup'>
             <!-- Front Part -->
@@ -38,37 +42,69 @@
                 <!-- Front wall (with main door) -->
                 <!-- Translation:
                         x = 0cm
-                        y = 0.5*320cm (height of the wall) = 160cm
-                        z = 0.5*1500cm (total depth) - 0.5*24cm (depth of the wall) = 738cm -->
-                <Transform DEF='FrontWallTransform' translation='0 1.6 7.38'>
+                        y = 0.5*360cm (own height) = 180cm
+                        z = 0.5*1870cm (total depth) - 0.5*24cm (depth of the wall) = 923cm -->
+                <Transform DEF='FrontWallTransform' translation='0 1.8 9.23'>
                     <Shape DEF='FrontWallShape'>
                         <Appearance DEF='WallAppearance'>
                             <Material diffuseColor='1 1 1'/>
                         </Appearance>
                         <!-- Size:
-                                w = 1180cm (width of the room)
-                                h = 320cm (height of the room)
+                                w = 1164cm (width of the room)
+                                h = 360cm (height of 'front part')
                                 d = 24cm (depth of the wall) -->
-                        <Box size='11.80 3.20 0.24'/>
+                        <Box size='11.64 3.60 0.24'/>
                     </Shape>
                 </Transform>
                 <!-- Side walls (perspective: inside out; in the door direction) -->
                 <!-- Translation:
-                        x = 0.5*1180cm (room's width) - 0.5*24cm (width of wall) = 578cm
-                        y = 0.5*320cm (height of the wall) = 160cm
-                        z = -0.5*876cm (own depth) + 0.5*1500cm (total depth) - 24cm (depth of front wall) = 288cm -->
-                <Transform DEF='FrontPartLeftSideWallTransform' translation='5.78 1.6 2.88'>
+                        x = 0.5*1164cm (room's width) - 0.5*24cm (width of wall) = 570cm
+                        y = 0.5*360cm (own height) = 180cm
+                        z = -0.5*476cm (own depth) + 0.5*1870cm (total depth)
+                            - 24cm (depth of front wall) = 673cm -->
+                <Transform DEF='FrontPartLeftSideWallTransform' translation='5.70 1.80 6.73'>
                     <Shape DEF='FrontPartSideWallShape'>
                         <Appearance USE='WallAppearance'/>
                         <!-- Size:
                                 w = 24cm (width/depth of wall)
-                                h = 320cm (height of room)
-                                d = 900cm (depth of front part) - 24cm (depth of front wall) = 876cm -->
-                        <Box size='0.24 3.20 8.76'/>
+                                h = 360cm (height of 'front part')
+                                d = 500cm (depth of front part) - 24cm (depth of front wall) = 476cm -->
+                        <Box size='0.24 3.60 4.76'/>
                     </Shape>
                 </Transform>
-                <Transform DEF='FrontPartRightSideWallTransform' translation='-5.78 1.6 2.88'>
+                <Transform DEF='FrontPartRightSideWallTransform' translation='-5.70 1.80 6.73'>
                     <Shape USE='FrontPartSideWallShape'/>
+                </Transform>
+            </Group>
+            <!-- Middle Part -->
+            <Group DEF='MiddlePartGroup'>
+                <!-- Side walls -->
+                <!-- Translation:
+                        x = -570cm (same as other side walls)
+                        y = -0.5*354.59cm (own height) + 360cm + 135cm = 317.71cm
+                        z = 0.5*843.91cm (own depth) + 0.5*1870cm (room's total depth)
+                            - 500cm (front part) - 770cm (horizontal-depth of middle part)
+                          = 86.96cm
+                     Rotation:
+                        angle = 0.1736 rad (Ox)
+                     Center:
+                        x = 0cm
+                        y = 0.5*354.59cm (onw height) = 177.30cm
+                        z = -0.5*843.91cm (own depth) = -421.96cm -->
+                <Transform DEF='MiddlePartRightSideWallTransfrom' translation='-5.70 3.1771 0.8696'
+                           rotation='1 0 0 0.1736' center='0 1.7730 -4.2196'>
+                    <Shape DEF='MiddlePartSideWallShape'>
+                        <Appearance USE='WallAppearance'/>
+                        <!-- Size:
+                                w = 24cm (width of side wall)
+                                h = 354.59cm
+                                d = 843.91cm -->
+                        <Box size='0.24 3.5459 8.4391'/>
+                    </Shape>
+                </Transform>
+                <Transform DEF='MiddlePartLeftSideWallTransform' translation='5.70 3.1771 0.8696'
+                           rotation='1 0 0 0.1736' center='0 1.7730 -4.2196'>
+                    <Shape USE='MiddlePartSideWallShape'/>
                 </Transform>
             </Group>
             <!-- Back Part -->
@@ -76,30 +112,35 @@
                 <!-- Back wall (with window) -->
                 <!-- Translation:
                         x = 0cm
-                        y = 0.5*320cm (own height) + 153cm (delta - higher) = 313cm
-                        z = -[0.5*1500cm (total depth) + 0.5*24cm (depth of wall)] = -738cm -->
-                <Transform DEF='BackWallTransform' translation='0 3.13 -7.38'>
+                        y = 0.5*360cm (own height) + 135cm = 315cm
+                        z = -0.5*1870cm (total depth) + 0.5*24cm (depth of wall) = -923cm -->
+                <Transform DEF='BackWallTransform' translation='0 3.15 -9.23'>
                     <Shape DEF='BackWallShape'>
                         <Appearance USE='WallAppearance'/>
-                        <Box size='11.80 3.20 0.24'/>
+                        <!-- Size:
+                                w = 1164cm (room's width)
+                                h = 360cm
+                                d = 24cm (depth of front/back wall) -->
+                        <Box size='11.64 3.60 0.24'/>
                     </Shape>
                 </Transform>
                 <!-- Side walls (perspective: inside out; in the door direction) -->
                 <!-- Translation:
-                        x = 0.5*1180cm (room's width) - 0.5*24cm (width of wall) = 578cm
-                        y = 0.5*320cm (own height) + 153cm (delta - higher) = 313cmcm
-                        z = 0.5*576cm (own depth) - 0.5*1500cm (total depth) + 24cm (depth of back wall) = -438cm -->
-                <Transform DEF='BackPartLeftSideWallTransform' translation='5.78 3.13 -4.38'>
+                        x = 0.5*1164cm (room's width) - 0.5*24cm (width of wall) = 570cm
+                        y = 0.5*360cm (own height) + 135cm = 315cm
+                        z = 0.5*576cm (own depth) - 0.5*1870cm (total depth)
+                            + 24cm (depth of back wall) = -623cm -->
+                <Transform DEF='BackPartLeftSideWallTransform' translation='5.70 3.15 -6.23'>
                     <Shape DEF='BackPartSideWallShape'>
                         <Appearance USE='WallAppearance'/>
                         <!-- Size:
                                 w = 24cm (width/depth of wall)
-                                h = 320cm (height of room)
-                                d = 600cm (depth of front part) - 24cm (depth of front wall) = 576cm -->
-                        <Box size='0.24 3.20 5.76'/>
+                                h = 360cm
+                                d = 600cm (depth of back part) - 24cm (depth of back wall) = 576 -->
+                        <Box size='0.24 3.60 5.76'/>
                     </Shape>
                 </Transform>
-                <Transform DEF='BackPartRightSideWallTransform' translation='-5.78 3.13 -4.38'>
+                <Transform DEF='BackPartRightSideWallTransform' translation='-5.70 3.15 -6.23'>
                     <Shape USE='BackPartSideWallShape'/>
                 </Transform>
             </Group>
