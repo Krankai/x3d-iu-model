@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+    <head>
+        <!-- Authors need to replace asterisked values or delete unneeded meta tags as appropriate -->
+        <meta content='SideWayStairs.x3d' name='title'/>
+        <meta content='The stairs/steps in the right side way (of the left-side hall room' name='description'/>
+        <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
+        <meta content='25th April, 2017' name='created'/>
+        <meta content='25th April, 2018' name='modified'/>
+        <meta content='Version 1.0' name='version'/>
+        <meta content='lef-side hall, steps, stairs, side way' name='subject'/>
+        <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
+        <meta content='../license.html' name='license'/>
+        <!-- Additional authoring resources for meta-tags: http://www.dublincore.org/documents/dcmi-terms http://www.dublincore.org/documents/dces http://www.w3.org/TR/html4/struct/global.html#h-7.4.4 http://vancouver-webpages.com/META http://vancouver-webpages.com/META/about-mk-metas2.html Additional authoring resources for language codes: http://www.rfc-editor.org/rfc/bcp/bcp47.txt http://www.loc.gov/standards/iso639-2/langhome.html http://www.iana.org/numbers.html#L -->
+    </head>
+    <Scene>
+        <!-- Model the stairs in the right side way of left-side hall room (e.g. A1-109) -->
+        <!-- Center: at the front (Oz) | middle (Ox) | bottom (Oy) -->
+        
+        <!-- 1st Level -->
+        <!-- Translation:
+                x = 0cm
+                y = 0.5*15cm = 7.5cm
+                z = -0.5*30cm (own depth) = -15cm -->
+        <Transform DEF='StairLevel1Transform' translation='0 0.075 -0.15'>
+            <Shape DEF='StairLevel1Shape'>
+                <Appearance>
+                    <Material/>
+                </Appearance>
+                <!-- Size:
+                        w = 240cm (depth of right side way)
+                        h = 15cm (height of level)
+                        d = 30cm (depth of each level) -->
+                <Box size='2.40 0.15 0.30'/>
+            </Shape>
+        </Transform>
+        <!-- 2nd Level -->
+        <!-- Translation:
+                x = 0cm
+                y = 0.5*30cm (own height) = 15cm
+                z = -[30cm (1st) + 0.5*30cm (own depth)] = -45cm -->
+        <Transform DEF='StairLevel2Transform' translation='0 0.15 -0.45'>
+            <Shape DEF='StairLevel2Shape'>
+                <Appearance>
+                    <Material/>
+                </Appearance>
+                <!-- Size:
+                        w = 240cm (same as above)
+                        h = 15cm (1st) + 15cm (2nd) = 30cm
+                        d = 30cm (same as above) -->
+                <Box size='2.40 0.30 0.30'/>
+            </Shape>
+        </Transform>
+        <!-- 3rd Level -->
+        <!-- Translation:
+                x = 0cm
+                y = 0.5*45cm (own height) = 22.5cm
+                z = -[2*30cm (first two) + 0.5*30cm (own depth)] = -75cm -->
+        <Transform DEF='StairLevel3Transform' translation='0 0.225 -0.75'>
+            <Shape DEF='StairLevel3Shape'>
+                <Appearance>
+                    <Material/>
+                </Appearance>
+                <!-- Size:
+                        w = 240cm (same as above)
+                        h = 15cm (1st) + 15cm (2nd) + 15cm (3rd) = 45cm
+                        d = 30cm (same as above) -->
+                <Box size='2.40 0.45 0.30'/>
+            </Shape>
+        </Transform>
+        <!-- 4th Level -->
+        <!-- Translation:
+                x = 0cm
+                y = 0.5*60cm (own height) = 30cm
+                z = -[3*30cm (first three) + 15cm (own depth)] = -105cm -->
+        <Transform DEF='StairLevel4Transform' translation='0 0.30 -1.05'>
+            <Shape DEF='StairLevel4Shape'>
+                <Appearance>
+                    <Material/>
+                </Appearance>
+                <!-- Size:
+                        w = 240cm (same as above)
+                        h = 45cm (first three) + 15cm (4th) = 60cm
+                        d = 30cm (same as above) -->
+                <Box size='2.40 0.60 0.30'/>
+            </Shape>
+        </Transform>
+        <!-- 5th Level -->
+        <!-- Translation:
+                x = 0cm
+                y = 0.5*75cm (own height) = 37.5cm
+                z = -[4*30cm (first four) + 0.5*30cm (own depth)] = -135cm -->
+        <Transform DEF='StairLevel5Transform' translation='0 0.375 -1.35'>
+            <Shape DEF='StairLevel5Shape'>
+                <Appearance>
+                    <Material/>
+                </Appearance>
+                <!-- Size:
+                        w = 240cm (same as above)
+                        h = 60cm (firs four) + 15cm (5th) = 75cm
+                        d = 30cm (same as above) -->
+                <Box size='2.40 0.75 0.30'/>
+            </Shape>
+        </Transform>
+        <!-- 6th Level -->
+        <!-- Translation:
+                x = 0cm
+                y = 0.5*90cm (own height) = 45m
+                z = -[5*30cm (first five) + 0.5*30cm (own depth)] = -165cm -->
+        <Transform DEF='StairLevel6Transform' translation='0 0.45 -1.65'>
+            <Shape DEF='StairLevel6Shape'>
+                <Appearance>
+                    <Material/>
+                </Appearance>
+                <!-- Size:
+                        w = 240cm (same as above)
+                        h = 75cm (first five) + 15cm (6th) = 90cm
+                        d = 30cm (same as above) -->
+                <Box size='2.40 0.90 0.30'/>
+            </Shape>
+        </Transform>
+        <!-- 7th Level -->
+        <!-- Translation:
+                x = 0cm
+                y = 0.5*105cm (own height) = 52.5cm
+                z = -[6*30cm (first six) + 0.5*30cm (own depth)] = -195cm -->
+        <Transform DEF='StairLevel7Transform' translation='0 0.525 -1.95'>
+            <Shape DEF='StairLevel7Shape'>
+                <Appearance>
+                    <Material/>
+                </Appearance>
+                <!-- Size:
+                        w = 240cm (same as above)
+                        h = 90cm (first six) + 15cm (7th) = 105cm
+                        d = 30cm (same as above) -->
+                <Box size='2.40 1.05 0.30'/>
+            </Shape>
+        </Transform>
+        <!-- 8th Level -->
+        <!-- Translation:
+                x = 0cm
+                y = 0.5*120cm (own height) = 60cm
+                z = -[7*30cm (first seven) + 0.5*30cm (own depth)] = -225cm -->
+        <Transform DEF='StairLevel8Transform' translation='0 0.60 -2.25'>
+            <Shape DEF='StairLevel8Shape'>
+                <Appearance>
+                    <Material/>
+                </Appearance>
+                <!-- Size:
+                        w = 240cm (same as above)
+                        h = 105cm (first seven) + 15cm (8th) = 120cm
+                        d = 30cm (same as above) -->
+                <Box size='2.40 1.20 0.30'/>
+            </Shape>
+        </Transform>
+        <!-- 9th Level -->
+        <!-- Translation:
+                x = 0cm
+                y = 0.5*135cm (own height) = 67.5cm
+                z = -[8*30cm (first eight) + 0.5*30cm (own depth)] = -255cm -->
+        <Transform DEF='StairLevel9Transform' translation='0 0.675 -2.55'>
+            <Shape DEF='StairLevel9Shape'>
+                <Appearance>
+                    <Material/>
+                </Appearance>
+                <!-- Size:
+                        w = 240cm (same as above)
+                        h = 120cm (first eight) + 15cm (9th) = 135cm
+                        d = 30cm (same as above) -->
+                <Box size='2.40 1.35 0.30'/>
+            </Shape>
+        </Transform>
+    </Scene>
+</X3D>

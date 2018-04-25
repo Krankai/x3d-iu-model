@@ -7,7 +7,7 @@
         <meta content='Model the second floor (base) of A1 building of the Internation University' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
         <meta content='14th March, 2018' name='created'/>
-        <meta content='18th April, 2018' name='modified'/>
+        <meta content='25th April, 2018' name='modified'/>
         <meta content='v1.0' name='version'/>
         <meta content='*enter reference citation or relative/online url here*' name='reference'/>
         <meta content='*enter additional url/bibliographic reference information here*' name='reference'/>
@@ -167,6 +167,76 @@
                 <Box size='19.20 0.90 16.14'/>
             </Shape>
         </Transform>
+        <!-- Left Side Hall -->
+        <Group DEF='LeftSideHallGroup'>
+            <!-- Hall Part - Cover from Student WCs to the edge of the side room -->
+            <!-- Translation:
+                    x = 3052.5cm (same as first floor)
+                    y = 0.5*90cm (own height) = 45cm
+                    z = -[0.5*1614cm (own depth)] = -807cm -->
+            <Transform DEF='HallPartBaseTransform' translation='30.525 0.45 -8.07'>
+                <Shape DEF='HallPartBaseShape'>
+                    <Appearance USE='WallAppearance'/>
+                    <!-- Size:
+                            w = 360cm (student WCs) + 975cm (distance from student WCs to side room)
+                              = 1335cm
+                            h = 90cm (2nd floor's base)
+                            d = 1614cm (same as above - right side) -->
+                    <Box size='13.35 0.90 16.14'/>
+                </Shape>
+            </Transform>
+            <!-- Room Part - Cover the left-side room and two side ways (left/right) -->
+            <Group DEF='RoomSideWaysGroup'>
+                <!-- Main Part - Cover left side way & right side way & room base -->
+                <!-- Translation:
+                        x = 3720cm (distance from center to edge of left-side room)
+                            + 0.5*1870cm (own width) = 4655cm
+                        y = 0.5*90cm (own height) = 45cm
+                        z = -0.5*1564cm (own depth) = -782cm -->
+                <Transform DEF='RoomSideWaysMainTransform' translation='46.55 0.45 -7.82'>
+                    <Shape DEF='RoomSideWaysMainShape'>
+                        <Appearance USE='WallAppearance'/>
+                        <!-- Size:
+                                x = 1870cm (depth of left-side room)
+                                y = 90cm (2nd floor's base)
+                                z = 1164cm (width of left-side room) + 160cm (left side way)
+                                    + 240cm (right side way) = 1564cm -->
+                        <Box size='18.70 0.90 15.64'/>
+                    </Shape>
+                </Transform>
+                <!-- Right Side Way - Cover the 'upper' sections including stairs & back part -->
+                <Group DEF='RightSideWayGroup'>
+                    <!-- Stairs -->
+                    <!-- Translation:
+                            x = 3720cm (distance from center to edge of left-side room) + 600cm (front) = 4320cm
+                            y = 90cm (floor's base)
+                            z = -1444cm (same as front part)
+                         Rotation:
+                            angle = -1.5708 rad (-pi/2) (Oy) -->
+                    <Transform DEF='RightSideWayStairsTransform' translation='43.20 0.90 -14.44'
+                               rotation='0 1 0 -1.5708'>
+                        <Inline url='../SideWayStairs.x3d'/>
+                    </Transform>
+                    <!-- Upper 'Back' Part -->
+                    <!-- Translation:
+                            x = 3720cm (from center to edge of left-side room) + 600cm (front part)
+                                + 270cm (middle part) + 0.5*1000cm (own width) = 5090cm
+                            y = 90cm (floor's base) + 0.5*135cm (own height) = 157.5cm
+                            z = -[160cm (left side way) + 1164cm (width of room)
+                                + 0.5*240cm (own depth)] = -1444cm -->
+                    <Transform DEF='RightSideWayBackTransform' translation='50.90 1.575 -14.44'>
+                        <Shape DEF='RightSideWayBackShape'>
+                            <Appearance USE='WallAppearance'/>
+                            <!-- Size:
+                                    w = 1000cm
+                                    h = 135cm (total height of steps in stair way)
+                                    d = 240cm -->
+                            <Box size='10.00 1.35 2.40'/>
+                        </Shape>
+                    </Transform>
+                </Group>
+            </Group>
+        </Group>
         
         <!-- *** Front Walls *** -->
         <!-- Right Side Front Wall - On top of the right side entrance (first floor) -->

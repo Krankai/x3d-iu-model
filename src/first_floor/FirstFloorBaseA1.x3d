@@ -7,7 +7,7 @@
         <meta content='Model the floor/base of the first floor of the International University (A1 Building)' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
         <meta content='8th March, 2018' name='created'/>
-        <meta content='13th April, 2018' name='modified'/>
+        <meta content='25th April, 2018' name='modified'/>
         <meta content='v1.0' name='version'/>
         <meta content='*enter reference citation or relative/online url here*' name='reference'/>
         <meta content='*enter additional url/bibliographic reference information here*' name='reference'/>
@@ -114,10 +114,11 @@
             <Group DEF='RoomSideWaysPartGroup'>
                 <!-- Room Main Part - Cover the room -->
                 <!-- Translation:
-                        x = 3720cm (distance from center to edge of left-side room) + 0.5*1872cm (own width) = 4656cm
+                        x = 3720cm (distance from center to edge of left-side room)
+                            + 0.5*1870cm (own width) = 4655cm
                         y = 0.5*102cm (own height) = 51cm
                         z = -[160cm (left side way) + 0.5*1164cm (own depth)] = -742cm -->
-                <Transform DEF='RoomPartBaseTransform' translation='46.56 0.51 -7.42'>
+                <Transform DEF='RoomPartBaseTransform' translation='46.55 0.51 -7.42'>
                     <Shape DEF='RoomPartBaseShape'>
                         <Appearance>
                             <Material/>
@@ -129,7 +130,6 @@
                         <Box size='18.70 1.02 11.64'/>
                     </Shape>
                 </Transform>
-                <!-- Room Part Additional - Cover the hollow parts caused by rising levels of the room -->
                 <!-- Right Side Way - Contain stairs/steps -->
                 <Group DEF='RightSideWayBaseGroup'>
                     <!-- Front Part (W = 600cm) -->
@@ -151,117 +151,34 @@
                     </Transform>
                     <!-- Middle Part (with stairs) (W' = 270cm <-> horizontal deisplacement) -->
                     <Group DEF='RightSideWayMiddlePartBaseGroup'>
-                        <!-- 'Base' (diagonal) -->
-                        <!-- Translation:
-                                x = 3720cm (distance from center to edge of left-side room) + 600cm (front)
-                                    - 0.5*301.87cm (own width) + 270cm (projected horizontal 'width')
-                                  = 4439.07cm
-                                y = 0.5*102cm (own height) + 135cm (stairs) = 186cm
-                                z = -1444cm (same as front part)
-                             Rotation:
-                                angle = 0.4636 rad (Oz)
-                             Center (of rotation):
-                                x = 0.5*301.87cm (own width) = 150.94cm
+                        <!-- 'Base' -->
+                        <!--Translation:
+                                x = 3720cm (center to left-side room) + 600cm (front) + 0.5*270cm (own width) = 4455cm
                                 y = 0.5*102cm (own height) = 51cm
-                                z = 0cm -->
-                        <Transform DEF='RightSideWayMiddlePartBaseDiagonalBaseTransform'
-                                   translation='44.3907 1.86 -14.44' rotation='0 0 1 0.4636' center='1.5094 0.51 0'>
-                            <Shape>
+                                z = -1444cm (same as ...) -->
+                        <Transform DEF='RightSideWayMiddlePartBaseTransform' translation='44.55 0.51 -14.44'>
+                            <Shape DEF='RightSideWayMiddlePartBaseShape'>
                                 <Appearance>
                                     <Material/>
                                 </Appearance>
                                 <!-- Size:
-                                        w = 301.87cm (sqrt(delta-height^2 + delta-width^2))
-                                        h = 102cm (same as base)
+                                        w = 270cm (horizontal 'width' of middle part)
+                                        h = 102cm (base)
                                         d = 240cm -->
-                                <Box size='3.0187 1.02 2.40'/>
+                                <Box size='2.70 1.02 2.40'/>
                             </Shape>
                         </Transform>
                         <!-- Steps/Stairs -->
-                        <Group DEF='RightSideWayMiddlePartStairsGroup'>
-                            <!-- 1st Level -->
-                            <!-- Translation:
-                                    x = 3720cm (from center to edge of left-side room) +
-                                        600cm (front part) + 0.5*30cm (own width) = 4335cm
-                                    y = 102cm (1st floor's base) + 0.5*15cm (own height) = 109.5cm
-                                    z = -1444cm (same as ...) -->
-                            <Transform DEF='StairLevel1Transform' translation='43.35 1.095 -14.44'>
-                                <Shape DEF='StairLevelShape'>
-                                    <Appearance>
-                                        <Material/>
-                                    </Appearance>
-                                    <!-- Size:
-                                            w = 30cm
-                                            h = 15cm
-                                            d = 240cm -->
-                                    <Box size='0.30 0.15 2.40'/>
-                                </Shape>
-                            </Transform>
-                            <!-- 2nd Level -->
-                            <!-- Translation:
-                                    x = 4335cm (previous) + 30cm (own width) = 4365cm
-                                    y = 109.5cm (previous) + 15cm (own height) = 124.5cm
-                                    z = -1444cm (same as ...) -->
-                            <Transform DEF='StairLevel2Transform' translation='43.65 1.245 -14.44'>
-                                <Shape USE='StairLevelShape'/>
-                            </Transform>
-                            <!-- 3rd Level -->
-                            <!-- Translation:
-                                    x = 4365cm (previous) + 30cm (own width) = 4395cm
-                                    y = 124.5cm (previous) + 15cm (own height) = 139.5cm
-                                    z = -1444cm (same as ...) -->
-                            <Transform DEF='StairLevel3Transform' translation='43.95 1.395 -14.44'>
-                                <Shape USE='StairLevelShape'/>
-                            </Transform>
-                            <!-- 4th Level -->
-                            <!-- Translation:
-                                    x = 4395cm (previous) + 30cm (own width) = 4425cm
-                                    y = 139.5cm (previous) + 15cm (own height) = 154.5cm
-                                    z = -1444cm (same as ...) -->
-                            <Transform DEF='StairLevel4Transform' translation='44.25 1.545 -14.44'>
-                                <Shape USE='StairLevelShape'/>
-                            </Transform>
-                            <!-- 5th Level -->
-                            <!-- Translation:
-                                    x = 4425cm (previous) + 30cm (own width) = 4455cm
-                                    y = 154.5cm (previous) + 15cm (own height) = 169.5cm
-                                    z = -1444cm (same as ...) -->
-                            <Transform DEF='StairLevel5Transform' translation='44.55 1.695 -14.44'>
-                                <Shape USE='StairLevelShape'/>
-                            </Transform>
-                            <!-- 6th Level -->
-                            <!-- Translation:
-                                    x = 4455cm (previous) + 30cm (own width) = 4485cm
-                                    y = 169.5cm (previous) + 15cm (own height) = 184.5cm
-                                    z = -1444cm (same as ...) -->
-                            <Transform DEF='StairLevel6Transform' translation='44.85 1.845 -14.44'>
-                                <Shape USE='StairLevelShape'/>
-                            </Transform>
-                            <!-- 7th Level -->
-                            <!-- Translation:
-                                    x = 4485cm (previous) + 30cm (own width) = 4515cm
-                                    y = 184.5cm (previous) + 15cm (own height) = 199.5cm
-                                    z = -1444cm (same as ...) -->
-                            <Transform DEF='StairLevel7Transform' translation='45.15 1.995 -14.44'>
-                                <Shape USE='StairLevelShape'/>
-                            </Transform>
-                            <!-- 8th Level -->
-                            <!-- Translation:
-                                    x = 4515cm (previous) + 30cm (own width) = 4545cm
-                                    y = 199.5cm (previous) + 15cm (own height) = 214.5cm
-                                    z = -1444cm (same as ...) -->
-                            <Transform DEF='StairLevel8Transform' translation='45.45 2.145 -14.44'>
-                                <Shape USE='StairLevelShape'/>
-                            </Transform>
-                            <!-- 9th Level -->
-                            <!-- Translation:
-                                    x = 4545cm (previous) + 30cm (own width) = 4575cm
-                                    y = 214.5cm (previous) + 15cm (own height) = 229.5cm
-                                    z = -1444cm (same as ...) -->
-                            <Transform DEF='StairLevel9Transform' translation='45.75 2.295 -14.44'>
-                                <Shape USE='StairLevelShape'/>
-                            </Transform>
-                        </Group>
+                        <!-- Translation:
+                                x = 3720cm (distance from center to edge of left-side room) + 600cm (front) = 4320cm
+                                y = 102cm (1st floor's base)
+                                z = -1444cm (same as front part)
+                             Rotation:
+                                angle = -1.5708 rad (-pi/2) (Oy) -->
+                        <Transform DEF='RightSideWayMiddlePartStairsTransform' translation='43.20 1.02 -14.44'
+                                   rotation='0 1 0 -1.5708'>
+                            <Inline url='../SideWayStairs.x3d'/>
+                        </Transform>
                     </Group>
                     <!-- Back Part (W = 1000cm) -->
                     <!-- Translation:
@@ -281,64 +198,30 @@
                             <Box size='10.00 2.37 2.40'/>
                         </Shape>
                     </Transform>
-                    <!-- Dummy - Covering hollow parts -->
-                    <Group DEF='DummyGroup'>
-                        <!--Translation:
-                                x = 3720cm (center to left-side room) + 600cm (front) + 0.5*270cm (own width) = 4455cm
-                                y = 0.5*102cm (own height) = 51cm
-                                z = -1444cm (same as ...) -->
-                        <Transform DEF='Dummy1Transform' translation='44.55 0.51 -14.44'>
-                            <Shape DEF='Dummy1Shape'>
-                                <Appearance>
-                                    <Material/>
-                                </Appearance>
-                                <!-- Size:
-                                        w = 270cm (horizontal 'width' of middle part)
-                                        h = 102cm (base)
-                                        d = 240cm -->
-                                <Box size='2.70 1.02 2.40'/>
-                            </Shape>
-                        </Transform>
-                        <!-- Translation:
-                                x = 3720cm (...) + 600cm (front) + 270cm (horizontal 'width' of middle) - 0.5*80cm (own widh) = 4550cm
-                                y = 102cm (base) + 0.5*80cm (own height) = 142cm
-                                z = -1444cm (same as ...) -->
-                        <Transform DEF='Dummy2Transform' translation='45.50 1.42 -14.44'>
-                            <Shape DEF='Dummy2Shape'>
-                                <Appearance>
-                                    <Material/>
-                                </Appearance>
-                                <!-- Size:
-                                        w = 80cm (random)
-                                        h = 80cm (random)
-                                        d = 240cm -->
-                                <Box size='0.80 0.80 2.40'/>
-                            </Shape>
-                        </Transform>
-                    </Group>
                 </Group>
                 <!-- Left Side Way -->
                 <!-- Translation:
-                        x = 3720cm (from center to edge of left-side room) + 0.5*1874.75cm (own width) = 4657.38cm
+                        x = 3720cm (from center to edge of left-side room)
+                            + 0.5*1872.75cm (own width) = 4656.38cm
                         y = 102cm (1st floor's base) - 0.5*10cm (own height) = 97cm
                         z = -0.5*160cm (own depth) = -80cm
                      Rotation:
-                        angle = -0.0491 rad
+                        angle = -0.0492 rad
                      Center of Rotation:
-                        x = -0.5*1874.75cm (own width) = -937.38cm
+                        x = -0.5*1872.75cm (own width) = -936.38cm
                         y = 0.5*10cm (own height) = 5cm
                         z = 0cm -->
-                <Transform DEF='LeftSideWayBaseTransform' translation='46.5738 0.97 -0.80'
-                           rotation='0 0 1 -0.0491' center='-9.3738 0.05 0'>
+                <Transform DEF='LeftSideWayBaseTransform' translation='46.5638 0.97 -0.80'
+                           rotation='0 0 1 -0.0492' center='-9.3638 0.05 0'>
                     <Shape DEF='LeftSideWayBaseShape'>
                         <Appearance>
                             <Material/>
                         </Appearance>
                         <!-- Size:
-                                w = 1874.75cm (= sqrt{(102cm)^2 + (1872cm)^2 - (10cm)^2})
+                                w = 1872.75cm (= sqrt{(102cm)^2 + (1870cm)^2 - (10cm)^2})
                                 h = 10cm
                                 d = 160cm -->
-                        <Box size='18.7475 0.10 1.60'/>
+                        <Box size='18.7275 0.10 1.60'/>
                     </Shape>
                 </Transform>
             </Group>

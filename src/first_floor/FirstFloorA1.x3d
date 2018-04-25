@@ -276,7 +276,7 @@
                             + 460cm (store room + elevators) + 1335cm (WCs + side hall)
                             + 0.5*1870cm (room's depth) = 4655cm
                         y = 102cm (same as above)
-                        z = -742cm (same as room-part base)
+                        z = -[160cm (left side way) + 0.5*1164cm (own width)] = -742cm
                      Rotation:
                         angle = -pi/2 = -1.5708 rad (Oy) -->
                 <Transform DEF='RoomA1109Transform' translation='46.55 1.02 -7.42'
