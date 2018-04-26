@@ -7,7 +7,7 @@
         <meta content='Model the fourth floor (base) of A1 building of the Internation University' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
         <meta content='28th March, 2018' name='created'/>
-        <meta content='25th April, 2018' name='modified'/>
+        <meta content='26th April, 2018' name='modified'/>
         <meta content='v1.0' name='version'/>
         <meta content='*enter reference citation or relative/online url here*' name='reference'/>
         <meta content='*enter additional url/bibliographic reference information here*' name='reference'/>
@@ -129,18 +129,18 @@
         <!-- Right Side Hall - Covering {Student WCs -> Side Rooms} -->
         <!-- Translation:
                 x = -[(4*310cm + 5*0.5*90cm + 2*60cm) + 340cm (connected)
-                    + (205cm + 255cm) + 0.5*1920cm (own width)] = -3345cm
+                    + (205cm + 255cm) + 0.5*1888cm (own width)] = -3329cm
                 y = 0.5*90cm (own height) = 45cm
                 z = -[0.5*1614cm (own depth)] = -807cm -->
-        <Transform DEF='RightSideHallTransform' translation='-33.45 0.45 -8.07'>
+        <Transform DEF='RightSideHallTransform' translation='-33.29 0.45 -8.07'>
             <Shape DEF='RightSideHallShape'>
                 <Appearance USE='BaseAppearance'/>
                 <!-- Size:
-                        w = 360cm (WCs) + 360cm (side corridor) + 1200cm (side rooms) = 1920cm
+                        w = 360cm (WCs) + 360cm (side corridor) + 1200cm (side rooms) = 1888cm
                         h = 90cm (4th floor's base)
                         d = 390cm (front rooms) + 360cm (center/main corridor)
                             + 864cm (total depth of student WCs) = 1614cm -->
-                <Box size='19.20 0.90 16.14'/>
+                <Box size='18.88 0.90 16.14'/>
             </Shape>
         </Transform>
         <!-- Left Side Hall -->
@@ -230,6 +230,44 @@
                             h = 360cm (height of rooms)
                             d = 24cm -->
                     <Box size='3.60 3.60 0.24'/>
+                </Shape>
+            </Transform>
+        </Group>
+        <!-- Left Side Front Walls -->
+        <Group DEF='LeftSideFrontWallsGroup'>
+            <!-- Translation:
+                    x = 3412.5cm (same as first floor)
+                    y = 90cm (floor's base) + 0.5*360cm (own height) = 270cm
+                    z = -0.5*24cm (own depth) = -12cm -->
+            <Transform DEF='LeftSideFrontWallTransform1' translation='34.125 2.70 -0.12'>
+                <Shape DEF='LeftSideFrontWallShape1'>
+                    <Appearance USE='WallAppearance'/>
+                    <!-- Size:
+                            w = 360cm + 255cm = 615cm (same as first floor)
+                            h = 360cm (room's height)
+                            d = 24cm (depth of wall) -->
+                    <Box size='6.15 3.60 0.24'/>
+                </Shape>
+            </Transform>
+        </Group>
+        
+        <!-- *** Entrance Base *** -->
+        <!-- Left Side Entrance Base - Directly on top of the left-side hall side entrances -->
+        <Group DEF='LeftSideEntranceBaseGroup'>
+            <!-- Front -->
+            <!-- Translation:
+                    x = (4*310cm + 5*0.5*90cm + 2*60cm) + 340cm + 460cm + 360cm
+                        + 0.5*360cm (own width) = 2925cm
+                    y = 0.5*90cm (own height) = 45cm
+                    z = 0.5*420cm (own depth) = 210cm -->
+            <Transform DEF='LeftSideFrontEntranceBaseTransform' translation='29.25 0.45 2.10'>
+                <Shape DEF='LeftSideEntranceBaseShape'>
+                    <Appearance USE='BaseAppearance'/>
+                    <!-- Size:
+                            w = 360cm (side corridor)
+                            h = 90cm (floor's base)
+                            d = 420cm (?) -->
+                    <Box size='3.60 0.90 4.20'/>
                 </Shape>
             </Transform>
         </Group>

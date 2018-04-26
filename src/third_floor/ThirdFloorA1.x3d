@@ -7,7 +7,7 @@
         <meta content='Model the entire third floor of the A1 building of IU' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
         <meta content='25th March, 2018' name='created'/>
-        <meta content='25th April, 2018' name='modified'/>
+        <meta content='26th April, 2018' name='modified'/>
         <meta content='v1.0' name='version'/>
         <meta content='*enter reference citation or relative/online url here*' name='reference'/>
         <meta content='*enter additional url/bibliographic reference information here*' name='reference'/>
@@ -249,29 +249,30 @@
             <Group DEF='RightSideRoomsGroup'>
                 <!-- Room LA1-301 -->
                 <!-- Translation:
-                        x = -3705cm (same as first floor)
+                        x = -3689cm (same as first floor)
                         y = 90cm (2nd floor's base)
                         z = -403.5cm (same as first floor)
                      Rotation:
                         angle = 1.5708 rad (Oy) -->
-                <Transform DEF='RoomLA1301Transform' translation='-37.05 0.90 -4.035'
+                <Transform DEF='RoomLA1301Transform' translation='-36.89 0.90 -4.035'
                            rotation='0 1 0 1.5708'>
                     <Inline url='RoomLA1301.x3d'/>
                 </Transform>
                 <!-- Room LA1-302 -->
                 <!-- Translation:
-                        x = -3705cm (same as first floor)
+                        x = -3689cm (same as first floor)
                         y = 90cm (same as above)
                         z = -1210.5cm (same as first floor)
                      Rotation:
                         angle = 1.5708 rad (Oy) -->
-                <Transform DEF='RoomLA1302Transform' translation='-37.05 0.90 -12.105'
+                <Transform DEF='RoomLA1302Transform' translation='-36.89 0.90 -12.105'
                            rotation='0 1 0 1.5708'>
                     <Inline url='RoomLA1302.x3d'/>
                 </Transform>
             </Group>
             <!-- LEFT -->
             <Group DEF='LeftSideRoomsGroup'>
+                <!-- Room A1-309 -->
                 <!-- Translation:
                         x = 4655cm (same as first floor)
                         y = 90cm (floor's base)

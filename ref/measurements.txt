@@ -113,7 +113,7 @@ Main Buildings (A1 & A2)
                 Each room	-> W = 795cm (1 part) / 1590cm (2 parts)
 				   H = 360cm | D = 814cm
         Side Hall - Right Side
-            Side Rooms (LA1-101 and LA1-102)	-> W = 807cm | H = 360cm | D = 1200cm (?)
+            Side Rooms (LA1-101 and LA1-102)	-> W = 807cm | H = 360cm | D = 1200cm (D' = 1168cm)
             Distance from elevators to left edge of side-gate = 360cm (i.e. width of side corridor = width of side entrance)
             Side corridor width = 360cm (above/same as depth of main corridor)
         Side Hall - Left Side
@@ -158,12 +158,7 @@ Main Buildings (A1 & A2)
             Room O1-209	-> W = 450cm | H = 320cm | D = 390cm [ same as first floor one]
             Male/Female Staff WCs	-> [same as first floor ones]
             Store Room + Elevators	-> [same as first floor ones]
-        Back Rooms (Pattern: 1WCs + 6 rooms + 1 WCs)
-            Size	-> Total width = 5370cm | Height (each) = 320cm | Depth (each) = 864cm [same as 1st floor one]
-            WCs (for students)	-> [same as first floor ones]
-            Center Normal rooms - 6 rooms with same size (different door position)
-                { (right) A1-203 | A1-204 | A1-205 | A1-206 | A1-207A | A1-207B (left)}
-                Each room	-> W = 775cm | H = 320cm | D = 864cm
+        Back Rooms (Pattern: 1WCs + 6 rooms + 1 WCs)	-> [same as first floor]
             Distance to door
                 Room A1-203	-> d = ...cm (from the right - near the right)
                 Other rooms	-> d = ...cm (from the left - near the left)
@@ -185,6 +180,9 @@ Main Buildings (A1 & A2)
             Note: No 'Left Side Way'
     Fourth Floor (4th)
         [same as third floor]
+        Side Hall - Left Side
+            Room Lab A1.410a	-> W = 360cm | H = 360cm | D = 444cm (= 420cm (?) + 24cm)
+
     Fifth Floor (5th)
         [same as third/fourth floor, except for the front-inner rooms]
         Front (inner) Rooms	-> Room O1-515	-> width = 830cm
@@ -192,10 +190,12 @@ Main Buildings (A1 & A2)
 				-> Room O1-513/O1-512	-> width = 390cm (width' = 375cm)
 				-> Room O1-511	-> width = 430cm
         Side Hall - Left Side
-            Side Rooms (O1-510 & LA1-509)	-> W = 782cm (?) | H = 360cm | D = ??? | angle = -1.5708 rad (-pi/2)
-            Distance from student WCs to side rooms = 360cm (?)
+            Side Rooms (O1-510 & LA1-509)	-> W = 807cm | H = 360cm | D = 1168cm | angle = -1.5708 rad (-pi/2)
+            Distance from student WCs to side rooms = 360cm
     Sixth Floor (6th)
         [same as third/fourth floor]
+    Seventh Floor (7th)
+        [same as sixth floor]
 
     Door Glasses + Roofs
         Horizontal Columns of 2 doors (where the roofs are)

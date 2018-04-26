@@ -3,10 +3,10 @@
 <X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
     <head>
         <!-- Authors need to replace asterisked values or delete unneeded meta tags as appropriate -->
-        <meta content='ThirdFloorBaseA1.x3d' name='title'/>
-        <meta content='Model the third floor (base) of A1 building of the Internation University' name='description'/>
+        <meta content='SeventhFloorBaseA1.x3d' name='title'/>
+        <meta content='Model the seventh floor (base) of A1 building of the Internation University' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
-        <meta content='25th March, 2018' name='created'/>
+        <meta content='26th April, 2018' name='created'/>
         <meta content='26th April, 2018' name='modified'/>
         <meta content='v1.0' name='version'/>
         <meta content='*enter reference citation or relative/online url here*' name='reference'/>
@@ -17,7 +17,7 @@
         <meta content='*enter image filename/url here*' name='Image'/>
         <meta content='*enter movie filename/url here*' name='MovingImage'/>
         <meta content='*enter photo filename/url here*' name='photo'/>
-        <meta content='third floor, 3rd floor, A1 building, base, floor, International University' name='subject'/>
+        <meta content='seventh floor, 7th floor, A1 building, base, floor, International University' name='subject'/>
         <meta content='*enter permission statements or url here*' name='accessRights'/>
         <meta content='*insert any known warnings, bugs or errors here*' name='warning'/>
         <meta content='*enter online Uniform Resource Identifier (URI) or Uniform Resource Locator (URL) address for this file here*' name='identifier'/>
@@ -40,7 +40,7 @@
                 </Appearance>
                 <!-- Size:
                         w = 6*795cm (width of each room) = 4770cm
-                        h = 90cm (height of 3rd floor/base)
+                        h = 90cm (height of 4th floor's base)
                         d = 360cm (corridor's) + 814cm (back rooms' depth) = 1174cm -->
                 <Box size='47.70 0.9 11.74'/>
             </Shape>
@@ -57,7 +57,7 @@
                 <Appearance USE='BaseAppearance'/>
                 <!-- Size:
                         w = (5*90cm + 4*60cm + 8*310cm) = 3170cm
-                        h = 90cm (height of 3rd floor/base)
+                        h = 90cm (height of 4th floor/base)
                         d = 390cm (depth of the room) -->
                 <Box size='31.70 0.90 3.90'/>
             </Shape>
@@ -73,7 +73,7 @@
                 <Appearance USE='BaseAppearance'/>
                 <!-- Size:
                         w = 340cm (width of the connected wall)
-                        h = 90cm (height of 2nd floor/base)
+                        h = 90cm (height of 4th floor/base)
                         d = 24cm (depth of the connected wall) -->
                 <Box DEF='FrontConnectedBaseBox' size='3.40 0.90 0.24'/>
             </Shape>
@@ -89,7 +89,7 @@
                 <Appearance USE='BaseAppearance'/>
                 <!-- Size:
                         w = 460cm (total width of the two outer rooms)
-                        h = 90cm (height of 2nd floor/base)
+                        h = 90cm (height of 4th floor/base)
                         d = 390cm (depth of both outer rooms) -->
                 <Box DEF='FrontOuterBaseBox' size='4.60 0.90 3.90'/>
             </Shape>
@@ -107,7 +107,7 @@
         <!-- *** Connected Walls (connect two sets of front rooms) *** -->
         <!-- Translation:
                 x = -[0.5*340cm (own width) + (5*0.5*90cm + 2*60cm + 4*310cm) = -1755cm
-                y = 0.5*360cm (own height) + 90cm (3rd base) = 270cm
+                y = 0.5*360cm (own height) + 90cm (4th base) = 270cm
                 z = -390cm (depth of room) + 0.5*24cm (own depth) = -378cm -->
         <Transform DEF='RightConnectedWallTransform' translation='-17.55 2.70 -3.78'>
             <Shape DEF='ConnectedWallShape'>
@@ -137,83 +137,29 @@
                 <Appearance USE='BaseAppearance'/>
                 <!-- Size:
                         w = 360cm (WCs) + 360cm (side corridor) + 1168cm (side rooms) = 1888cm
-                        h = 90cm (3rd floor's base)
+                        h = 90cm (4th floor's base)
                         d = 390cm (front rooms) + 360cm (center/main corridor)
                             + 864cm (total depth of student WCs) = 1614cm -->
                 <Box size='18.88 0.90 16.14'/>
             </Shape>
         </Transform>
-        <!-- Left Side Hall -->
-        <Group DEF='LeftSideHallGroup'>
-            <!-- Hall Part - Cover from Student WCs to the edge of the side room -->
-            <!-- Translation:
-                    x = 3052.5cm (same as first floor)
-                    y = 0.5*90cm (own height) = 45cm
-                    z = -[0.5*1614cm (own depth)] = -807cm -->
-            <Transform DEF='HallPartBaseTransform' translation='30.525 0.45 -8.07'>
-                <Shape DEF='HallPartBaseShape'>
-                    <Appearance USE='WallAppearance'/>
-                    <!-- Size:
-                            w = 360cm (student WCs) + 975cm (distance from student WCs to side room)
-                              = 1335cm
-                            h = 90cm (floor's base)
-                            d = 1614cm (same as above - right side) -->
-                    <Box size='13.35 0.90 16.14'/>
-                </Shape>
-            </Transform>
-            <!-- Room Part - Cover the left-side room and two side ways (left/right) -->
-            <Group DEF='RoomSideWaysGroup'>
-                <!-- Main Part - Cover left side way & right side way & room base -->
-                <!-- Translation:
-                        x = 3720cm (distance from center to edge of left-side room)
-                            + 0.5*1870cm (own width) = 4655cm
-                        y = 0.5*90cm (own height) = 45cm
-                        z = -0.5*1564cm (own depth) = -782cm -->
-                <Transform DEF='RoomSideWaysMainTransform' translation='46.55 0.45 -7.82'>
-                    <Shape DEF='RoomSideWaysMainShape'>
-                        <Appearance USE='WallAppearance'/>
-                        <!-- Size:
-                                x = 1870cm (depth of left-side room)
-                                y = 90cm (floor's base)
-                                z = 1164cm (width of left-side room) + 160cm (left side way)
-                                    + 240cm (right side way) = 1564cm -->
-                        <Box size='18.70 0.90 15.64'/>
-                    </Shape>
-                </Transform>
-                <!-- Right Side Way - Cover the 'upper' sections including stairs & back part -->
-                <Group DEF='RightSideWayGroup'>
-                    <!-- Stairs -->
-                    <!-- Translation:
-                            x = 3720cm (distance from center to edge of left-side room)
-                                + 600cm (front) = 4320cm
-                            y = 90cm (floor's base)
-                            z = -1444cm (same as front part)
-                         Rotation:
-                            angle = -1.5708 rad (-pi/2) (Oy) -->
-                    <Transform DEF='RightSideWayStairsTransform' translation='43.20 0.90 -14.44'
-                               rotation='0 1 0 -1.5708'>
-                        <Inline url='../SideWayStairs.x3d'/>
-                    </Transform>
-                    <!-- Upper 'Back' Part -->
-                    <!-- Translation:
-                            x = 3720cm (from center to edge of left-side room) + 600cm (front part)
-                                + 270cm (middle part) + 0.5*1000cm (own width) = 5090cm
-                            y = 90cm (floor's base) + 0.5*135cm (own height) = 157.5cm
-                            z = -[160cm (left side way) + 1164cm (width of room)
-                                + 0.5*240cm (own depth)] = -1444cm -->
-                    <Transform DEF='RightSideWayBackTransform' translation='50.90 1.575 -14.44'>
-                        <Shape DEF='RightSideWayBackShape'>
-                            <Appearance USE='WallAppearance'/>
-                            <!-- Size:
-                                    w = 1000cm
-                                    h = 135cm (total height of steps in stair way)
-                                    d = 240cm -->
-                            <Box size='10.00 1.35 2.40'/>
-                        </Shape>
-                    </Transform>
-                </Group>
-            </Group>
-        </Group>
+        <!-- Left Side Hall - Cover {Students WCs -> Side Rooms} -->
+        <!-- Translation:
+                x = (4*310cm + 5*0.5*90cm + 2*60cm) + 340cm (connected)
+                    + (205cm + 255cm) + 0.5*1888cm (own width) = 3329cm
+                y = 0.5*90cm (own height) = 45cm
+                z = -0.5*1614cm (own depth) = -807cm -->
+        <Transform DEF='LeftSideHallTransform' translation='33.29 0.45 -8.07'>
+            <Shape DEF='LeftSideHallShape'>
+                <Appearance USE='BaseAppearance'/>
+                <!-- Size:
+                    w = 360cm (WCs) + 360cm (distance between / side corridor)
+                        + 1168cm (depth of side rooms) = 1888cm
+                    h = 90cm (floor's base)
+                    d = 390cm (main hall) + 360cm (main corridor) + 864cm (WCs) = 1614cm -->
+                <Box size='18.88 0.90 16.14'/>
+            </Shape>
+        </Transform>
         
         <!-- *** Front Walls *** -->
         <!-- Right Side Front Wall - On top of the right side entrance (first floor) -->
@@ -223,7 +169,7 @@
                     y = 270cm (same as second floor)
                     z = -12cm (same as second floor) -->
             <Transform DEF='RightSideFrontWallTransform' translation='-29.25 2.70 -0.12'>
-                <Shape DEF='RightSideFrontWallShape'>
+                <Shape DEF='SideFrontWallShape'>
                     <Appearance USE='WallAppearance'/>
                     <!-- Size:
                             w = 360cm (width of side corridor)
@@ -233,74 +179,14 @@
                 </Shape>
             </Transform>
         </Group>
-<!-- Left Side Front Walls - Cover
-                + Distance from side rooms to side corridor - (1)
-                + The 'base' directly above side entrance (first floor) - (2) & (3)-->
-        <Group DEF='LeftSideFrontWallsGroup'>
+        <!-- Left Side Front Wall - On top of the left side entrance (first floor) -->
+        <Group DEF='LeftSideFrontWallGroup'>
             <!-- Translation:
-                    x = 3412.5cm (same as first floor)
-                    y = 90cm (floor's base) + 0.5*360cm (own height) = 270cm
-                    z = -0.5*24cm (own depth) = -12cm -->
-            <Transform DEF='LeftSideFrontWallTransform1' translation='34.125 2.70 -0.12'>
-                <Shape DEF='LeftSideFrontWallShape1'>
-                    <Appearance USE='WallAppearance'/>
-                    <!-- Size:
-                            w = 360cm + 255cm = 615cm (same as first floor)
-                            h = 360cm (room's height)
-                            d = 24cm (depth of wall) -->
-                    <Box size='6.15 3.60 0.24'/>
-                </Shape>
-            </Transform>
-            <!-- Translation:
-                    x = (4*310cm + 5*0.5*90cm + 2*60cm) + 340cm + 460cm + 360cm
-                        + 360cm (side corridor) - 0.5*24cm (own width) = 3093cm
+                    x = 2925cm (opposite ...)
                     y = 270cm (same as above)
-                    z = 0.5*444cm (own depth) - 24cm (depth of wall) = 198cm -->
-            <Transform DEF='LeftSideFrontWallTransform2' translation='30.93 2.70 1.98'>
-                <Shape DEF='LeftSideFrontWallShape2'>
-                    <Appearance USE='WallAppearance'/>
-                    <!-- Size:
-                            w = 24cm (wall)
-                            h = 360cm (room's height)
-                            d = 420cm (?) (side corridor's width) + 24cm (depth of wall) = 444 -->
-                    <Box size='0.24 3.60 4.44'/>
-                </Shape>
-            </Transform>
-            <!-- Translation:
-                    x = (4*310cm + 5*0.5*90cm + 2*60cm) + 340cm + 460cm + 360cm
-                        + 0.5*336cm (own width) = 2913cm
-                    y = 270cm (same as above)
-                    z = 420cm (depth of entrance-base) - 0.5*24cm (own depth) = 408cm -->
-            <Transform DEF='LeftSideFrontWallTransform3' translation='29.13 2.70 4.08'>
-                <Shape DEF='LeftSideFrontWallShape3'>
-                    <Appearance USE='WallAppearance'/>
-                    <!-- Size:
-                            w = 360cm (side corridor) - 24cm (wall) = 336cm
-                            h = 360cm (same as above)
-                            d = 24cm (wall) -->
-                    <Box size='3.36 3.60 0.24'/>
-                </Shape>
-            </Transform>
-        </Group>
-        
-        <!-- *** Entrance Base *** -->
-        <!-- Left Side Entrance Base - Directly on top of the left-side hall side entrances -->
-        <Group DEF='LeftSideEntranceBaseGroup'>
-            <!-- Front -->
-            <!-- Translation:
-                    x = (4*310cm + 5*0.5*90cm + 2*60cm) + 340cm + 460cm + 360cm
-                        + 0.5*360cm (own width) = 2925cm
-                    y = 0.5*90cm (own height) = 45cm
-                    z = 0.5*420cm (own depth) = 210cm -->
-            <Transform DEF='LeftSideFrontEntranceBaseTransform' translation='29.25 0.45 2.10'>
-                <Shape DEF='LeftSideEntranceBaseShape'>
-                    <Appearance USE='BaseAppearance'/>
-                    <!-- Size:
-                            w = 360cm (side corridor)
-                            h = 90cm (floor's base)
-                            d = 420cm (?) -->
-                    <Box size='3.60 0.90 4.20'/>
-                </Shape>
+                    z = -12cm (same as above) -->
+            <Transform DEF='LeftSideFrontWallTransform' translation='29.25 2.70 -0.12'>
+                <Shape USE='SideFrontWallShape'/>
             </Transform>
         </Group>
     </Scene>

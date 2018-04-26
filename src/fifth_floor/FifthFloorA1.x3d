@@ -7,7 +7,7 @@
         <meta content='Model the entire fifth floor of the A1 building of IU' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
         <meta content='28th March, 2018' name='created'/>
-        <meta content='19th April, 2018' name='modified'/>
+        <meta content='26th April, 2018' name='modified'/>
         <meta content='v1.0' name='version'/>
         <meta content='*enter reference citation or relative/online url here*' name='reference'/>
         <meta content='*enter additional url/bibliographic reference information here*' name='reference'/>
@@ -258,25 +258,52 @@
             <Group DEF='RightSideRoomsGroup'>
                 <!-- Room LA1-501 -->
                 <!-- Translation:
-                        x = -3705cm (same as first floor)
+                        x = -3689cm (same as first floor)
                         y = 90cm (4th floor's base)
                         z = -403.5cm (same as first floor)
                      Rotation:
                         angle = 1.5708 rad (Oy) -->
-                <Transform DEF='RoomLA1501Transform' translation='-37.05 0.90 -4.035'
+                <Transform DEF='RoomLA1501Transform' translation='-36.89 0.90 -4.035'
                            rotation='0 1 0 1.5708'>
                     <Inline url='RoomLA1501.x3d'/>
                 </Transform>
                 <!-- Room LA1-502 -->
                 <!-- Translation:
-                        x = -3705cm (same as first floor)
+                        x = -3689cm (same as first floor)
                         y = 90cm (same as above)
                         z = -1210.5cm (same as first floor)
                      Rotation:
                         angle = 1.5708 rad (Oy) -->
-                <Transform DEF='RoomLA1502Transform' translation='-37.05 0.90 -12.105'
+                <Transform DEF='RoomLA1502Transform' translation='-36.89 0.90 -12.105'
                            rotation='0 1 0 1.5708'>
                     <Inline url='RoomLA1502.x3d'/>
+                </Transform>
+            </Group>
+            <!-- LEFT -->
+            <Group DEF='LeftSideRoomsGroup'>
+                <!-- Room O1-510 -->
+                <!-- Translation:
+                        x = (4*310cm + 5*0.5*90cm + 2*60cm) + 340cm (connected)
+                            + (205cm + 255cm) + 360cm (WCs) + 360cm (distance)
+                            + 0.5*1168cm (own depth) = 3689cm
+                        y = 90cm (floor's base)
+                        z = -0.5*807cm (own width) = -403.5cm
+                     Rotation:
+                        angle = 1.5708 rad (Oy) -->
+                <Transform DEF='RoomO1510Transform' translation='36.89 0.90 -4.035'
+                           rotation='0 1 0 1.5708'>
+                    <Inline url='RoomO1510.x3d'/>
+                </Transform>
+                <!-- Room LA1-509 -->
+                <!-- Translation:
+                        x = 3689cm (same as above)
+                        y = 90cm (same as above)
+                        z = -[807cm (previous room's width) + 0.5*807cm (own width)] = -1210.5cm
+                     Rotation:
+                        angle = 1.5708 rad (Oy) -->
+                <Transform DEF='RoomLA1509Transfrom' translation='36.89 0.90 -12.105'
+                           rotation='0 1 0 1.5708'>
+                    <Inline url='RoomLA1509.x3d'/>
                 </Transform>
             </Group>
         </Group>

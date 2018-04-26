@@ -7,7 +7,7 @@
         <meta content='Model the entire A1 buildings of IU' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
         <meta content='30th Nov, 2017' name='created'/>
-        <meta content='13th APril, 2018' name='modified'/>
+        <meta content='26th APril, 2018' name='modified'/>
         <meta content='IU, A1Buildings, building, A1' name='subject'/>
         <meta content='Version 1.0' name='version'/>
         <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
@@ -67,15 +67,20 @@
             <Transform DEF='SixthFloorTransform' translation='0 22.62 0'>
                 <Inline url='sixth_floor/SixthFloorA1.x3d'/>
             </Transform>
+            <!-- 7th Floor -->
+            <!-- Translation:
+                    x = 0cm
+                    y = 2262cm (previous) + 90cm (6th base) + 360cm = 2712cm
+                    z = 0cm -->
+            <Transform DEF='SeventhFloorTransform' translation='0 27.12 0'>
+                <Inline url='seventh_floor/SeventhFloorA1.x3d'/>
+            </Transform>
         </Group>
         
         <!-- Front columns on the surface of the main building -->
         <Group DEF='FrontColumnsGroup'>
             <!-- Vertical columns - From left to right. Pattern: B-S-B-DS-B-DS-B-S-B -->
             <!-- Center: at the middle of the fifth (5th) column -->
-            <!-- Translation:
-                    y = 0.5*2780cm (height) + 102cm (height of base) = 1492cm
-                    z = 0.5*50cm (depth) = 25cm -->
             <!-- Translation:
                     x = 0cm
                     y = 102cm (1st floor's base) + 0.5*3060cm (own height of standard column) = 1632cm
