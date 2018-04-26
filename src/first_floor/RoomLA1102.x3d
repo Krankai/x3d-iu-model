@@ -7,7 +7,7 @@
         <meta content='Model of Room LA1-102 of the International University' name='description'/>
         <meta content='Do Quoc Thinh (Krankai)' name='creator'/>
         <meta content='4th April, 2018' name='created'/>
-        <meta content='14th April, 2018' name='modified'/>
+        <meta content='26th April, 2018' name='modified'/>
         <meta content='v1.0' name='version'/>
         <meta content='*enter reference citation or relative/online url here*' name='reference'/>
         <meta content='*enter additional url/bibliographic reference information here*' name='reference'/>
@@ -28,15 +28,15 @@
     <Scene>
         <!-- Room LA1-102 -->
         <!-- Center: at the middle of the room, but on the floor -->
-        <!-- Size: width = 807cm | heigth = 360 (height of square) | depth = 1200cm -->
+        <!-- Size: width = 807cm | heigth = 360 (height of square) | depth = 1168cm -->
         
         <Group DEF='WallGroup'>
             <!-- Front wall (with main door) -->
             <!-- Translation:
                     x = 0cm
                     y = 0.5*360cm (own height) = 180cm
-                    z = 0.5*1200cm (room's depth) - 0.5*24cm (own depth) = 588cm -->
-            <Transform DEF='FrontWallTransform' translation='0 1.80 5.88'>
+                    z = 0.5*1168cm (room's depth) - 0.5*24cm (own depth) = 572cm -->
+            <Transform DEF='FrontWallTransform' translation='0 1.80 5.72'>
                 <Shape DEF='FrontWallShape'>
                     <Appearance DEF='WallAppearance'>
                         <Material diffuseColor='1 1 1'/>
@@ -49,7 +49,7 @@
                 </Shape>
             </Transform>
             <!-- Back wall (with window) -->
-            <Transform DEF='BackWallTransform' translation='0 1.80 -5.88'>
+            <Transform DEF='BackWallTransform' translation='0 1.80 -5.72'>
                 <Shape DEF='BackWallShape'>
                     <Appearance USE='WallAppearance'/>
                     <Box size='8.07 3.60 0.24'/>
@@ -66,8 +66,8 @@
                     <!-- Size:
                             w = 24cm (width/depth of wall)
                             h = 360cm (height of room)
-                            d = 1200cm (depth of room) - 2*24cm (depth of fron/back wall) = 1152cm -->
-                    <Box size='0.24 3.60 11.52'/>
+                            d = 1168cm (depth of room) - 2*24cm (depth of fron/back wall) = 1120cm -->
+                    <Box size='0.24 3.60 11.20'/>
                 </Shape>
             </Transform>
             <Transform DEF='RightSideWallTransform' translation='-3.915 1.80 0'>

@@ -33,9 +33,9 @@ Main Buildings (A1 & A2)
                 Part4 (dummy)	-> W = 50cm | H = 5cm | D = 5cm
         Main steps -> divided into 10 'group steps' horizontally.
             Pattern for 'group steps': 2 (Black) + 1 (Red) + 4B + 1R + 2B
-                4 outside Black	-> W = 136cm (W' = 140cm)
-                4 inside Black	-> W = 134cm (W' = 140cm)
-                2 Red		-> W = 210cm (W' = 210cm)
+                4 outside Black	-> W = 140cm
+                4 inside Black	-> W = 140cm
+                2 Red		-> W = 210cm
             Each 'group step' -> 1 base + 5 level (gradual decrease in height - delta = 15cm + 2cm = 17cm)
                 Level: upper	-> W = [above] | H = 2cm |
 				   D = lower.depth + 2cm = 30cm + 2cm = 32cm
@@ -60,15 +60,15 @@ Main Buildings (A1 & A2)
             Size	-> W = 360cm (same as Main Corridor's depth)
 			   D = 390cm (front rooms) + 360cm (main corridor) + 814cm (back rooms) = 1564cm
         Front Rooms - Right Side (to the building)
-            Room O1-111	-> W = 800cm (W' = 830cm) | H = 320cm (H' = 360cm) | D = 390cm (main hall's depth)
+            Room O1-111	-> W = 830cm | H = 360cm | D = 390cm (main hall's depth)
                 Distance to door = 14*40cm + 30cm = 590cm (?)
 		(from the right edge - viewing from inside out, door direction)
                 Door	-> W = ~135cm | H = ?? | (?)
-            Connected Wall	-> W = 320cm (W' = 340cm) | H = 320cm (H' = 360cm) | D = 24cm
-            Store Room	-> W = 205cm | H = 320cm (H' = 360cm) | D = 390cm
+            Connected Wall	-> W = 340cm | H = 360cm | D = 24cm
+            Store Room	-> W = 205cm | H = 360cm | D = 390cm
                 Distance to door = 40cm + 28cm = 68cm (from the right edge - inside out)
                 Door	-> W = 75cm (?) | H = ?? (?)
-            Elevators	-> W = 390cm | H = 320cm (H' = 360cm) | D = 255cm
+            Elevators	-> W = 390cm | H = 360cm | D = 255cm
                 Angle = |pi/2| (face to the side of the building)
             Side Hall (leading to canteen / leading to library-corridor) (?)
                 From Elevator to edge of toiler = 25cm + 8*40cm = 345cm
@@ -77,16 +77,16 @@ Main Buildings (A1 & A2)
                 From Elevator to Door 1 = ~5*40cm = 200cm (WALL)
                 From Door 1 to Door 2 = 40cm (WALL)
         Front Rooms - Left Side (to the building)
-            Room O1-110	-> W = 420cm (W' = 430cm) | H = 320cm (H' = 360cm) | D = 390cm
+            Room O1-110	-> W = 430cm | H = 360cm | D = 390cm
                 Distance to door = 7cm + 7*40cm + 15cm = 302cm (d' = 297cm)
 		(from the left edge - viewing from inside out, door direction)
                 Door	-> W = ~135cm | H = ??
-            Male/Female Staff WC	-> W = 190cm (W' = 200cm) | H = 320cm (H' = 360cm) | D = 390cm
+            Male/Female Staff WC	-> W = 200cm | H = 360cm | D = 390cm
                 Distance to door (men) = 26cm (from the left ...) (d' = 25cm)
                 Distance to door (women) = 26cm (from the right ...) (d' = 25cm)
                 Door	-> W = ~74cm | H = ??
-            Connected Wall	-> W = 320cm (W' = 340cm) | H = 320cm (H' = 360cm) | D = 24cm
-            Store Room	-> W = 205cm | H = 320cm (H' = 360cm) | D = 390cm
+            Connected Wall	-> W = 340cm | H = 360cm | D = 24cm
+            Store Room	-> W = 205cm | H = 360cm | D = 390cm
                 Distance to door = ~10cm + 40cm = 50cm (from the left edge) (?)
                 Door	-> W = ~74cm | H = ?? (?)
             Elevator (same as one in the right side)
@@ -96,13 +96,13 @@ Main Buildings (A1 & A2)
             WCs - Water Closet (for students)
                 Pattern	-> Left		{Male - Disabled - Female}
 			   Right	{Male - Female}
-                Male WC	-> W = 476cm (W' = 456cm) | H = 320cm (H' = 360cm) | D = 360cm | abs(angle) = pi/2
+                Male WC	-> W = 456cm | H = 360cm | D = 360cm | abs(angle) = pi/2
                     Distance to door = ~27cm (from the right)
-                Female WC	-> (right) W = 438cm (W' = 408cm) | H = 320cm (H' = 360cm) | D = 360cm
-				-> (left) W = 214cm (W' = 200cm) | H = 320cm (H' = 360cm) | D = 360cm
+                Female WC	-> (right) W = 408cm | H = 360cm | D = 360cm
+				-> (left)  W = 200cm | H = 360cm | D = 360cm
                     abs(Angle) = pi/2 (facing to the side)
                     Distance to door = ~40cm (from the left)
-                Distabled	-> W = 224cm (W' = 208cm) | H = 320cm (H' = 360cm) | D = 360cm
+                Distabled	-> W = 208cm | H = 360cm | D = 360cm
                     Distance to door = 10cm (from the left)
                     abs(Angle) = pi/2 (facing to the side)
                     Note: only in the left side
@@ -110,22 +110,22 @@ Main Buildings (A1 & A2)
                 => {(left) LA1-108 (1 part) | O1-106 (VASS) (2 parts) | O1-105 (1 part)
 		    LA1-104 (1 part) | LA1-103 (1 part) (right)}
                 Total width = 4650cm (4730cm)
-                Each room	-> W = 775cm (W' = 795cm) (1 part) / 1550cm (W' = 1590cm) (2 parts)
-				   H = 320cm (H' = 360cm) | D = 864cm (D' = 814cm)
+                Each room	-> W = 795cm (1 part) / 1590cm (2 parts)
+				   H = 360cm | D = 814cm
         Side Hall - Right Side
-            Side Rooms (LA1-101 and LA1-102)	-> W = 832cm (W' = 807cm) | H = 320cm (H' = 360cm) | D = 1200cm (?)
+            Side Rooms (LA1-101 and LA1-102)	-> W = 807cm | H = 360cm | D = 1200cm (D' = 1168cm)
             Distance from elevators to left edge of side-gate = 360cm (i.e. width of side corridor = width of side entrance)
             Side corridor width = 360cm (above/same as depth of main corridor)
         Side Hall - Left Side
-            Side Room (A1-109)	-> W = 1180cm (W' = 1164cm) | H = 320cm (?) | D = 1872cm
+            Side Room (A1-109)	-> W = 1164cm | H = 360cm | D = 1870cm
             Left Side Way (above room A1-109 - lead to outside)
-                Size	-> W = 1872cm | H = 10cm (?) | D = 164cm (D' = 160cm) | angle = +/- 0.0679 rad (~3.89 degree) (...)
+                Size	-> (horizontal) W = 1870cm | H = 10cm (?) | D = 160cm | angle = +/- 0.0492 rad (~2.8162 degree) (...)
             Right Side Way (below room A1-109 - lead to the back door)
-                Size	-> D = 240cm | W = 600cm + 272cm + 1000cm = 1872cm
+                Size	-> D = 240cm | W = 600cm + 270cm + 1000cm = 1870cm
                 Three parts: {Front Part - Middle Part - Back Part}
                     Front Part	-> W = 15*40cm = 600cm
                     Middle Part	-> W = 270cm
-                        Each 'step/stair level'	-> W (or D) = 30cm | H = 17cm
+                        Each 'step/stair level'	-> W (or D) = 30cm | H = 15cm
                         No. of steps = 9	-> Delta(height) = 9*15cm = 135cm
 						-> Delta(width/depth) = 9*30cm = 270cm
                     Back Part	-> W = 25*40cm = 1000cm (at higher level)
@@ -158,32 +158,44 @@ Main Buildings (A1 & A2)
             Room O1-209	-> W = 450cm | H = 320cm | D = 390cm [ same as first floor one]
             Male/Female Staff WCs	-> [same as first floor ones]
             Store Room + Elevators	-> [same as first floor ones]
-        Back Rooms (Pattern: 1WCs + 6 rooms + 1 WCs)
-            Size	-> Total width = 5370cm | Height (each) = 320cm | Depth (each) = 864cm [same as 1st floor one]
-            WCs (for students)	-> [same as first floor ones]
-            Center Normal rooms - 6 rooms with same size (different door position)
-                { (right) A1-203 | A1-204 | A1-205 | A1-206 | A1-207A | A1-207B (left)}
-                Each room	-> W = 775cm | H = 320cm | D = 864cm
+        Back Rooms (Pattern: 1WCs + 6 rooms + 1 WCs)	-> [same as first floor]
             Distance to door
                 Room A1-203	-> d = ...cm (from the right - near the right)
                 Other rooms	-> d = ...cm (from the left - near the left)
         Side Hall - Right Side	-> [same as first floor's]
             Side Rooms (A1-201 & A1-202)	-> [size same as first floor's side rooms]
+        Side Hall - Left Side
+            Side Rooms
+                Room A1-208		-> [same as first floor]
+                Room left-side way	-> W = 160cm | H = 360cm | D = 1870cm | angle = -pi/2 (-1.5708 rad)
+            Right Side Way	-> [same as first floor]
     Third Floor (3rd)
         [same as second floor except the 'fence' part]
         Front (inner) Rooms	-> Room O1-313	-> width = 830cm
 				-> Room O1-312 & O1-311	-> width = 755cm
 				-> Room O1-310	-> width = 430cm
+        Side Hall - Left Side
+            Side Rooms (A1-309)	-> W = 1164cm + 160cm = 1324cm | H = 360cm | D = 1870cm
+            Right Side Way	-> [same as first floor]
+            Note: No 'Left Side Way'
     Fourth Floor (4th)
         [same as third floor]
+        Side Hall - Left Side
+            Room Lab A1.410a	-> W = 360cm | H = 360cm | D = 444cm (= 420cm (?) + 24cm)
+
     Fifth Floor (5th)
         [same as third/fourth floor, except for the front-inner rooms]
         Front (inner) Rooms	-> Room O1-515	-> width = 830cm
 				-> Room O1-514	-> width = 710cm (width' = 760cm)
 				-> Room O1-513/O1-512	-> width = 390cm (width' = 375cm)
 				-> Room O1-511	-> width = 430cm
+        Side Hall - Left Side
+            Side Rooms (O1-510 & LA1-509)	-> W = 807cm | H = 360cm | D = 1168cm | angle = -1.5708 rad (-pi/2)
+            Distance from student WCs to side rooms = 360cm
     Sixth Floor (6th)
         [same as third/fourth floor]
+    Seventh Floor (7th)
+        [same as sixth floor]
 
     Door Glasses + Roofs
         Horizontal Columns of 2 doors (where the roofs are)
